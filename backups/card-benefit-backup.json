@@ -1,10 +1,10 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-14T14:17:48.497Z",
-  "savedAtMs": 1781446668497,
-  "deviceId": "dev_1781446396683_22700e954eedd",
-  "deviceName": "iPad",
+  "savedAt": "2026-06-14T14:24:08.550Z",
+  "savedAtMs": 1781447048550,
+  "deviceId": "dev_1781447045649_c392a739a6556",
+  "deviceName": "iPhone",
   "data": {
     "pinMboost": false,
     "history": [],
@@ -41,7 +41,7 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 491966,
+        "spent": 2190062,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
@@ -63,7 +63,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -79,7 +79,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -95,7 +95,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -111,7 +111,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 10,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -131,10 +131,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1781446668497,
-      "deviceId": "dev_1781446396683_22700e954eedd",
-      "deviceName": "iPad",
-      "savedAt": 1781446668497
+      "updatedAt": 1781447048550,
+      "deviceId": "dev_1781447045649_c392a739a6556",
+      "deviceName": "iPhone",
+      "savedAt": 1781447048550
     }
   }
 }
