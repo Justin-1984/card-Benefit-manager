@@ -1,12 +1,15 @@
 {
   "app": "card-benefit-manager",
-  "version": "5.1",
-  "savedAt": "2026-06-14T13:56:51.871Z",
+  "version": "6.0",
+  "savedAt": "2026-06-14T14:14:31.640Z",
+  "savedAtMs": 1781446471640,
+  "deviceId": "dev_1781446396683_22700e954eedd",
+  "deviceName": "iPad",
   "data": {
     "pinMboost": false,
     "history": [],
     "monthlyRecords": {},
-    "lastBackupAt": 1781445208603,
+    "lastBackupAt": null,
     "groups": [
       "현대",
       "생활",
@@ -26,7 +29,7 @@
         "hidden": false,
         "kind": "normal",
         "periodType": "hyundai",
-        "memo": "연 1,200만원 실적 목표",
+        "memo": "연 1,200만원 실적 목표 연회비: 300,000",
         "collapsed": false,
         "annualGoal": 12000000,
         "annualSpent": 1048382
@@ -35,16 +38,18 @@
         "id": "mboost",
         "name": "SC 현대카드 M BOOST",
         "short": "M",
+        "group": "현대",
         "color": "#0ea5e9",
-        "target": 500000,
+        "target": 1000000,
         "spent": 491966,
         "hidden": false,
         "kind": "mboost",
-        "mPoint": 0,
         "periodType": "hyundai",
+        "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
         "collapsed": false,
-        "memo": "간편결제 5% M포인트 확인",
-        "group": "현대"
+        "annualGoal": 0,
+        "annualSpent": 0,
+        "mPoint": 10000
       },
       {
         "id": "woori",
@@ -109,13 +114,19 @@
         "color": "#0ea5e9",
         "target": 100000,
         "spent": 0,
-        "hidden": false,
+        "hidden": true,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
+        "collapsed": false,
         "memo": "",
         "group": "교통"
       }
-    ]
+    ],
+    "meta": {
+      "updatedAt": 1781446471640,
+      "deviceId": "dev_1781446396683_22700e954eedd",
+      "deviceName": "iPad",
+      "savedAt": 1781446471640
+    }
   }
 }
