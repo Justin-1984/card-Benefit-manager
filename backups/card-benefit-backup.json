@@ -1,15 +1,15 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-14T14:25:27.307Z",
-  "savedAtMs": 1781447127307,
+  "savedAt": "2026-06-14T14:26:47.615Z",
+  "savedAtMs": 1781447207615,
   "deviceId": "dev_1781447045649_c392a739a6556",
   "deviceName": "iPhone",
   "data": {
     "pinMboost": false,
     "history": [],
     "monthlyRecords": {},
-    "lastBackupAt": 1781447049706,
+    "lastBackupAt": 1781447128122,
     "groups": [
       "현대",
       "생활",
@@ -30,7 +30,7 @@
         "kind": "normal",
         "periodType": "hyundai",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 991682
       },
@@ -58,7 +58,7 @@
         "group": "엘지 할인용",
         "color": "#a855f7",
         "target": 300000,
-        "spent": 297000,
+        "spent": 235900,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -74,12 +74,12 @@
         "group": "엘지 할인용",
         "color": "#e11d48",
         "target": 300000,
-        "spent": 318300,
+        "spent": 315364,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -131,10 +131,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1781447127307,
+      "updatedAt": 1781447207614,
       "deviceId": "dev_1781447045649_c392a739a6556",
       "deviceName": "iPhone",
-      "savedAt": 1781447127307
+      "savedAt": 1781447207615
     }
   }
 }
