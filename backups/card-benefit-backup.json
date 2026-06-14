@@ -1,0 +1,121 @@
+{
+  "app": "card-benefit-manager",
+  "version": "5.1",
+  "savedAt": "2026-06-14T13:40:56.814Z",
+  "data": {
+    "cards": [
+      {
+        "id": "red",
+        "name": "SC제일은행-the Red",
+        "short": "RED",
+        "color": "#e11d48",
+        "target": 300000,
+        "spent": 1048382,
+        "hidden": false,
+        "kind": "normal",
+        "periodType": "hyundai",
+        "collapsed": false,
+        "memo": "",
+        "group": "현대",
+        "annualGoal": 12000000,
+        "annualSpent": 1048382
+      },
+      {
+        "id": "mboost",
+        "name": "SC 현대카드 M BOOST",
+        "short": "M",
+        "color": "#0ea5e9",
+        "target": 500000,
+        "spent": 491966,
+        "hidden": false,
+        "kind": "mboost",
+        "mPoint": 10000,
+        "periodType": "hyundai",
+        "collapsed": false,
+        "memo": "",
+        "group": "현대"
+      },
+      {
+        "id": "woori",
+        "name": "LG전자 우리카드",
+        "short": "W",
+        "color": "#94a3b8",
+        "target": 300000,
+        "spent": 318300,
+        "hidden": false,
+        "kind": "normal",
+        "periodType": "monthly",
+        "collapsed": true,
+        "memo": "",
+        "group": "기타"
+      },
+      {
+        "id": "lotte",
+        "name": "스페셜 롯데카드(LG전자)",
+        "short": "L",
+        "color": "#a855f7",
+        "target": 300000,
+        "spent": 297000,
+        "hidden": false,
+        "kind": "normal",
+        "periodType": "monthly",
+        "collapsed": true,
+        "memo": "",
+        "group": "기타"
+      },
+      {
+        "id": "ssg",
+        "name": "SSG닷컴 삼성카드",
+        "short": "SSG",
+        "color": "#f97316",
+        "target": 100000,
+        "spent": 49185,
+        "hidden": false,
+        "kind": "normal",
+        "periodType": "monthly",
+        "collapsed": true,
+        "memo": "",
+        "group": "기타"
+      },
+      {
+        "id": "kakao",
+        "name": "카카오페이신용카드",
+        "short": "K",
+        "color": "#22c55e",
+        "target": 200000,
+        "spent": 48800,
+        "hidden": false,
+        "kind": "normal",
+        "periodType": "monthly",
+        "collapsed": true,
+        "memo": "",
+        "group": "기타"
+      },
+      {
+        "id": "hipass",
+        "name": "카드의정석2 후불하이패스+",
+        "short": "H",
+        "color": "#0ea5e9",
+        "target": 100000,
+        "spent": 0,
+        "hidden": false,
+        "kind": "normal",
+        "periodType": "monthly",
+        "collapsed": true,
+        "memo": "",
+        "group": "기타"
+      }
+    ],
+    "pinMboost": false,
+    "history": [],
+    "monthlyRecords": {},
+    "groups": [
+      "현대",
+      "생활",
+      "자동결제",
+      "교통",
+      "기타"
+    ],
+    "lastBackupAt": 1781443518884
+  }
+}
