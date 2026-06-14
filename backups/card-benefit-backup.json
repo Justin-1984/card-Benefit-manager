@@ -1,7 +1,7 @@
 {
   "app": "card-benefit-manager",
   "version": "5.1",
-  "savedAt": "2026-06-14T13:40:56.814Z",
+  "savedAt": "2026-06-14T13:42:54.056Z",
   "data": {
     "cards": [
       {
@@ -67,15 +67,17 @@
         "id": "ssg",
         "name": "SSG닷컴 삼성카드",
         "short": "SSG",
+        "group": "기타",
         "color": "#f97316",
-        "target": 100000,
+        "target": 400000,
         "spent": 49185,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
         "memo": "",
-        "group": "기타"
+        "collapsed": false,
+        "annualGoal": 0,
+        "annualSpent": 0
       },
       {
         "id": "kakao",
