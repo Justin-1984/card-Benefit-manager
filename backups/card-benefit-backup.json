@@ -1,8 +1,17 @@
 {
   "app": "card-benefit-manager",
   "version": "5.1",
-  "savedAt": "2026-06-14T13:46:30.998Z",
+  "savedAt": "2026-06-14T13:51:33.449Z",
   "data": {
+    "pinMboost": false,
+    "history": [],
+    "groups": [
+      "현대",
+      "생활",
+      "자동결제",
+      "교통",
+      "기타"
+    ],
     "cards": [
       {
         "id": "red",
@@ -14,8 +23,8 @@
         "hidden": false,
         "kind": "normal",
         "periodType": "hyundai",
-        "collapsed": false,
-        "memo": "",
+        "collapsed": true,
+        "memo": "연 1,200만원 실적 목표",
         "group": "현대",
         "annualGoal": 12000000,
         "annualSpent": 1048382
@@ -29,27 +38,25 @@
         "spent": 491966,
         "hidden": false,
         "kind": "mboost",
-        "mPoint": 10000,
+        "mPoint": 0,
         "periodType": "hyundai",
-        "collapsed": false,
-        "memo": "",
+        "collapsed": true,
+        "memo": "간편결제 5% M포인트 확인",
         "group": "현대"
       },
       {
         "id": "woori",
         "name": "LG전자 우리카드",
         "short": "W",
-        "group": "기타",
-        "color": "#e11d48",
-        "target": 0,
+        "color": "#94a3b8",
+        "target": 300000,
         "spent": 318300,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "memo": "",
         "collapsed": false,
-        "annualGoal": 0,
-        "annualSpent": 0
+        "memo": "30만원 정기결제용",
+        "group": "자동결제"
       },
       {
         "id": "lotte",
@@ -63,23 +70,21 @@
         "periodType": "monthly",
         "collapsed": true,
         "memo": "",
-        "group": "기타"
+        "group": "자동결제"
       },
       {
         "id": "ssg",
         "name": "SSG닷컴 삼성카드",
         "short": "SSG",
-        "group": "기타",
         "color": "#f97316",
-        "target": 400000,
+        "target": 100000,
         "spent": 49185,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
+        "collapsed": true,
         "memo": "",
-        "collapsed": false,
-        "annualGoal": 0,
-        "annualSpent": 0
+        "group": "생활"
       },
       {
         "id": "kakao",
@@ -93,7 +98,7 @@
         "periodType": "monthly",
         "collapsed": true,
         "memo": "",
-        "group": "기타"
+        "group": "생활"
       },
       {
         "id": "hipass",
@@ -102,24 +107,15 @@
         "color": "#0ea5e9",
         "target": 100000,
         "spent": 0,
-        "hidden": false,
+        "hidden": true,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
+        "collapsed": false,
         "memo": "",
-        "group": "기타"
+        "group": "교통"
       }
     ],
-    "pinMboost": false,
-    "history": [],
     "monthlyRecords": {},
-    "groups": [
-      "현대",
-      "생활",
-      "자동결제",
-      "교통",
-      "기타"
-    ],
-    "lastBackupAt": 1781444628940
+    "lastBackupAt": null
   }
 }
