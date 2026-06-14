@@ -1,19 +1,19 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-14T14:15:33.684Z",
-  "savedAtMs": 1781446533684,
+  "savedAt": "2026-06-14T14:16:35.636Z",
+  "savedAtMs": 1781446595636,
   "deviceId": "dev_1781446396683_22700e954eedd",
   "deviceName": "iPad",
   "data": {
     "pinMboost": false,
     "history": [],
     "monthlyRecords": {},
-    "lastBackupAt": 1781446472763,
+    "lastBackupAt": 1781446534604,
     "groups": [
       "현대",
       "생활",
-      "자동결제",
+      "엘지 할인용",
       "교통",
       "기타"
     ],
@@ -52,10 +52,26 @@
         "mPoint": 10000
       },
       {
+        "id": "lotte",
+        "name": "스페셜 롯데카드(LG전자)",
+        "short": "L",
+        "group": "엘지 할인용",
+        "color": "#a855f7",
+        "target": 300000,
+        "spent": 297000,
+        "hidden": false,
+        "kind": "normal",
+        "periodType": "monthly",
+        "memo": "연회비: 15,000",
+        "collapsed": false,
+        "annualGoal": 0,
+        "annualSpent": 0
+      },
+      {
         "id": "woori",
         "name": "LG전자 우리카드",
         "short": "W",
-        "group": "자동결제",
+        "group": "엘지 할인용",
         "color": "#e11d48",
         "target": 300000,
         "spent": 318300,
@@ -68,20 +84,6 @@
         "annualSpent": 0
       },
       {
-        "id": "lotte",
-        "name": "스페셜 롯데카드(LG전자)",
-        "short": "L",
-        "color": "#a855f7",
-        "target": 300000,
-        "spent": 297000,
-        "hidden": false,
-        "kind": "normal",
-        "periodType": "monthly",
-        "collapsed": true,
-        "memo": "",
-        "group": "자동결제"
-      },
-      {
         "id": "ssg",
         "name": "SSG닷컴 삼성카드",
         "short": "SSG",
@@ -91,7 +93,7 @@
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
+        "collapsed": false,
         "memo": "",
         "group": "생활"
       },
@@ -125,10 +127,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1781446533684,
+      "updatedAt": 1781446595636,
       "deviceId": "dev_1781446396683_22700e954eedd",
       "deviceName": "iPad",
-      "savedAt": 1781446533684
+      "savedAt": 1781446595636
     }
   }
 }
