@@ -1,15 +1,15 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-14T14:14:31.640Z",
-  "savedAtMs": 1781446471640,
+  "savedAt": "2026-06-14T14:15:33.684Z",
+  "savedAtMs": 1781446533684,
   "deviceId": "dev_1781446396683_22700e954eedd",
   "deviceName": "iPad",
   "data": {
     "pinMboost": false,
     "history": [],
     "monthlyRecords": {},
-    "lastBackupAt": null,
+    "lastBackupAt": 1781446472763,
     "groups": [
       "현대",
       "생활",
@@ -55,15 +55,17 @@
         "id": "woori",
         "name": "LG전자 우리카드",
         "short": "W",
-        "color": "#94a3b8",
+        "group": "자동결제",
+        "color": "#e11d48",
         "target": 300000,
         "spent": 318300,
-        "hidden": true,
+        "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
-        "memo": "30만원 정기결제용",
-        "group": "자동결제"
+        "memo": "30만원 정기결제용 연회비: 15,000",
+        "collapsed": false,
+        "annualGoal": 0,
+        "annualSpent": 0
       },
       {
         "id": "lotte",
@@ -123,10 +125,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1781446471640,
+      "updatedAt": 1781446533684,
       "deviceId": "dev_1781446396683_22700e954eedd",
       "deviceName": "iPad",
-      "savedAt": 1781446471640
+      "savedAt": 1781446533684
     }
   }
 }
