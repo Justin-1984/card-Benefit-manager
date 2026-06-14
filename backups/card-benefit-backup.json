@@ -1,10 +1,12 @@
 {
   "app": "card-benefit-manager",
   "version": "5.1",
-  "savedAt": "2026-06-14T13:51:33.449Z",
+  "savedAt": "2026-06-14T13:56:51.871Z",
   "data": {
     "pinMboost": false,
     "history": [],
+    "monthlyRecords": {},
+    "lastBackupAt": 1781445208603,
     "groups": [
       "현대",
       "생활",
@@ -17,15 +19,15 @@
         "id": "red",
         "name": "SC제일은행-the Red",
         "short": "RED",
+        "group": "현대",
         "color": "#e11d48",
-        "target": 300000,
+        "target": 1000000,
         "spent": 1048382,
         "hidden": false,
         "kind": "normal",
         "periodType": "hyundai",
-        "collapsed": true,
         "memo": "연 1,200만원 실적 목표",
-        "group": "현대",
+        "collapsed": false,
         "annualGoal": 12000000,
         "annualSpent": 1048382
       },
@@ -40,7 +42,7 @@
         "kind": "mboost",
         "mPoint": 0,
         "periodType": "hyundai",
-        "collapsed": true,
+        "collapsed": false,
         "memo": "간편결제 5% M포인트 확인",
         "group": "현대"
       },
@@ -51,10 +53,10 @@
         "color": "#94a3b8",
         "target": 300000,
         "spent": 318300,
-        "hidden": false,
+        "hidden": true,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": false,
+        "collapsed": true,
         "memo": "30만원 정기결제용",
         "group": "자동결제"
       },
@@ -107,15 +109,13 @@
         "color": "#0ea5e9",
         "target": 100000,
         "spent": 0,
-        "hidden": true,
+        "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": false,
+        "collapsed": true,
         "memo": "",
         "group": "교통"
       }
-    ],
-    "monthlyRecords": {},
-    "lastBackupAt": null
+    ]
   }
 }
