@@ -1,15 +1,15 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-14T14:16:35.636Z",
-  "savedAtMs": 1781446595636,
+  "savedAt": "2026-06-14T14:17:48.497Z",
+  "savedAtMs": 1781446668497,
   "deviceId": "dev_1781446396683_22700e954eedd",
   "deviceName": "iPad",
   "data": {
     "pinMboost": false,
     "history": [],
     "monthlyRecords": {},
-    "lastBackupAt": 1781446534604,
+    "lastBackupAt": 1781446596455,
     "groups": [
       "현대",
       "생활",
@@ -87,29 +87,33 @@
         "id": "ssg",
         "name": "SSG닷컴 삼성카드",
         "short": "SSG",
+        "group": "생활",
         "color": "#f97316",
-        "target": 100000,
+        "target": 400000,
         "spent": 49185,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
+        "memo": "연회비: 15,000",
         "collapsed": false,
-        "memo": "",
-        "group": "생활"
+        "annualGoal": 0,
+        "annualSpent": 0
       },
       {
         "id": "kakao",
-        "name": "카카오페이신용카드",
+        "name": "카카오페이신용카드 삼성",
         "short": "K",
+        "group": "생활",
         "color": "#22c55e",
-        "target": 200000,
+        "target": 300000,
         "spent": 48800,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
-        "memo": "",
-        "group": "생활"
+        "memo": "연회비: 10,000",
+        "collapsed": false,
+        "annualGoal": 0,
+        "annualSpent": 0
       },
       {
         "id": "hipass",
@@ -127,10 +131,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1781446595636,
+      "updatedAt": 1781446668497,
       "deviceId": "dev_1781446396683_22700e954eedd",
       "deviceName": "iPad",
-      "savedAt": 1781446595636
+      "savedAt": 1781446668497
     }
   }
 }
