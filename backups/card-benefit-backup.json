@@ -1,15 +1,15 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-14T14:24:08.550Z",
-  "savedAtMs": 1781447048550,
+  "savedAt": "2026-06-14T14:25:27.307Z",
+  "savedAtMs": 1781447127307,
   "deviceId": "dev_1781447045649_c392a739a6556",
   "deviceName": "iPhone",
   "data": {
     "pinMboost": false,
     "history": [],
     "monthlyRecords": {},
-    "lastBackupAt": 1781446596455,
+    "lastBackupAt": 1781447049706,
     "groups": [
       "현대",
       "생활",
@@ -25,14 +25,14 @@
         "group": "현대",
         "color": "#e11d48",
         "target": 1000000,
-        "spent": 1048382,
+        "spent": 991682,
         "hidden": false,
         "kind": "normal",
         "periodType": "hyundai",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
         "collapsed": false,
         "annualGoal": 12000000,
-        "annualSpent": 1048382
+        "annualSpent": 991682
       },
       {
         "id": "mboost",
@@ -46,7 +46,7 @@
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 10000
@@ -131,10 +131,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1781447048550,
+      "updatedAt": 1781447127307,
       "deviceId": "dev_1781447045649_c392a739a6556",
       "deviceName": "iPhone",
-      "savedAt": 1781447048550
+      "savedAt": 1781447127307
     }
   }
 }
