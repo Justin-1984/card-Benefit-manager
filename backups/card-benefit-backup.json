@@ -1,7 +1,7 @@
 {
   "app": "card-benefit-manager",
   "version": "5.1",
-  "savedAt": "2026-06-14T13:43:47.619Z",
+  "savedAt": "2026-06-14T13:46:30.998Z",
   "data": {
     "cards": [
       {
@@ -39,15 +39,17 @@
         "id": "woori",
         "name": "LG전자 우리카드",
         "short": "W",
-        "color": "#94a3b8",
-        "target": 300000,
+        "group": "기타",
+        "color": "#e11d48",
+        "target": 0,
         "spent": 318300,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
         "memo": "",
-        "group": "기타"
+        "collapsed": false,
+        "annualGoal": 0,
+        "annualSpent": 0
       },
       {
         "id": "lotte",
@@ -71,7 +73,7 @@
         "color": "#f97316",
         "target": 400000,
         "spent": 49185,
-        "hidden": true,
+        "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "",
@@ -86,10 +88,10 @@
         "color": "#22c55e",
         "target": 200000,
         "spent": 48800,
-        "hidden": true,
+        "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": false,
+        "collapsed": true,
         "memo": "",
         "group": "기타"
       },
@@ -100,10 +102,10 @@
         "color": "#0ea5e9",
         "target": 100000,
         "spent": 0,
-        "hidden": true,
+        "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": false,
+        "collapsed": true,
         "memo": "",
         "group": "기타"
       }
@@ -118,6 +120,6 @@
       "교통",
       "기타"
     ],
-    "lastBackupAt": 1781444595314
+    "lastBackupAt": 1781444628940
   }
 }
