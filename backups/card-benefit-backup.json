@@ -1,7 +1,7 @@
 {
   "app": "card-benefit-manager",
   "version": "5.1",
-  "savedAt": "2026-06-14T13:42:54.056Z",
+  "savedAt": "2026-06-14T13:43:14.254Z",
   "data": {
     "cards": [
       {
@@ -118,6 +118,6 @@
       "교통",
       "기타"
     ],
-    "lastBackupAt": 1781443518884
+    "lastBackupAt": 1781444575087
   }
 }
