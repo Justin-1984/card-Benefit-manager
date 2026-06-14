@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v3.2</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v3.3</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -16,18 +16,19 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
-<div class="notice">v3.2: 숨김 카드 보기/복구, 그룹, 검색, 히스토리 저장을 포함했습니다. 아이폰 Safari 호환성을 위해 순서 변경은 ⬆️/⬇️ 버튼을 기본 방식으로 사용합니다. 현대카드는 24~23, 기타 카드는 1일~말일 기준입니다.</div>
+<div class="notice">v3.3: 숨김 카드 보기/복구, 그룹, 검색, 히스토리 저장을 포함했습니다. 아이폰 Safari 호환성을 위해 순서 변경은 ⬆️/⬇️ 버튼을 기본 방식으로 사용합니다. 그룹은 직접 추가/삭제/이름 변경할 수 있습니다. 현대카드는 24~23, 기타 카드는 1일~말일 기준입니다.</div>
 <div class="summary"><div class="tile"><div class="tl">총 월 사용금액</div><div class="tv" id="sumSpent">0원</div><div class="ts">숨김 카드 제외</div></div><div class="tile"><div class="tl">M BOOST 추가 사용 가능</div><div class="tv" id="sumEasyRemain">0원</div><div class="ts">입력 M포인트 기준</div></div></div>
 <input class="search" id="search" placeholder="카드 검색..." oninput="render()">
-<div class="row" style="padding:0 0 12px"><button class="btn primary" onclick="openCard()">+ 카드 추가</button><button class="btn orange" onclick="togglePin()">M BOOST 상단 고정: <span id="pinState">ON</span></button><button class="btn blue" onclick="toggleHiddenView()">숨김 카드 보기: <span id="hiddenState">OFF</span></button></div>
+<div class="row" style="padding:0 0 12px"><button class="btn primary" onclick="openCard()">+ 카드 추가</button><button class="btn blue" onclick="openGroupManager()">그룹 관리</button><button class="btn orange" onclick="togglePin()">M BOOST 상단 고정: <span id="pinState">ON</span></button><button class="btn blue" onclick="toggleHiddenView()">숨김 카드 보기: <span id="hiddenState">OFF</span></button></div>
 <div id="cards"></div>
 <div class="tools"><h3>관리</h3><div class="row"><button class="btn" onclick="resetMonth(false)">사용금액 초기화</button><button class="btn red" onclick="resetMonth(true)">전체 초기화</button><button class="btn blue" onclick="backup()">백업</button><button class="btn" onclick="restoreBtn.click()">복원</button><button class="btn orange" onclick="showHistory()">히스토리 보기</button><input id="restoreBtn" type="file" accept="application/json" style="display:none" onchange="restore(event)"></div></div>
 </main>
 <div class="modal" id="modal" onclick="closeModal()"><div class="sheet" onclick="event.stopPropagation()"><div class="handle"></div><div class="mh"><b id="mt">수정</b><button class="x" onclick="closeModal()">×</button></div><div id="mb"></div></div></div><div class="toast" id="toast"></div>
 <script>
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js');}
-const STORE='benefit-manager-v3.2', MONTH='benefit-manager-period-key-v3.2';
-const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'], GROUPS=['현대','생활','자동결제','교통','기타'];
+const STORE='benefit-manager-v3.3', MONTH='benefit-manager-period-key-v3.3';
+const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
+const defaultGroups=['현대','생활','자동결제','교통','기타'];
 const defaultCards=[
 {id:'red',name:'SC제일은행-the Red',short:'RED',color:'#e11d48',target:300000,spent:1048382,hidden:false,kind:'normal',periodType:'hyundai',collapsed:true,memo:'연 1,200만원 실적 목표',group:'현대',annualGoal:12000000,annualSpent:1048382},
 {id:'mboost',name:'SC 현대카드 M BOOST',short:'M',color:'#0ea5e9',target:500000,spent:491966,hidden:false,kind:'mboost',mPoint:0,periodType:'hyundai',collapsed:false,memo:'간편결제 5% M포인트 확인',group:'현대'},
@@ -37,7 +38,7 @@ const defaultCards=[
 {id:'kakao',name:'카카오페이신용카드',short:'K',color:'#22c55e',target:200000,spent:48800,hidden:false,kind:'normal',periodType:'monthly',collapsed:true,memo:'',group:'생활'},
 {id:'hipass',name:'카드의정석2 후불하이패스+',short:'H',color:'#0ea5e9',target:100000,spent:0,hidden:false,kind:'normal',periodType:'monthly',collapsed:true,memo:'',group:'교통'}];
 let data=load(), editing=null, dragId=null, showHidden=false;
-function load(){try{let r=localStorage.getItem(STORE)||localStorage.getItem('benefit-manager-v2.3')||localStorage.getItem('benefit-manager-v2.1')||localStorage.getItem('benefit-manager-v2.0');if(r){let d=JSON.parse(r);if(d.pinMboost===undefined)d.pinMboost=true;if(!d.history)d.history=[];d.cards.forEach(c=>{if(c.id==='mboost'&&c.mPoint===undefined)c.mPoint=0;if(c.hidden===undefined)c.hidden=!!c.hide;if(!c.periodType)c.periodType=(c.id==='red'||c.id==='mboost'||/현대|Hyundai|M BOOST|Red/i.test(c.name))?'hyundai':'monthly';if(c.collapsed===undefined)c.collapsed=(c.kind==='mboost'?false:true);if(c.memo===undefined)c.memo='';if(!c.group)c.group=(c.periodType==='hyundai'?'현대':'기타');if(c.id==='red'||/red|레드/i.test(c.name)){if(c.annualGoal===undefined)c.annualGoal=12000000;if(c.annualSpent===undefined)c.annualSpent=Number(c.spent||0)}});return d}}catch(e){}return{pinMboost:true,history:[],cards:JSON.parse(JSON.stringify(defaultCards))}}
+function load(){try{let r=localStorage.getItem(STORE)||localStorage.getItem('benefit-manager-v2.3')||localStorage.getItem('benefit-manager-v2.1')||localStorage.getItem('benefit-manager-v2.0');if(r){let d=JSON.parse(r);if(d.pinMboost===undefined)d.pinMboost=true;if(!d.history)d.history=[];if(!d.groups)d.groups=[...defaultGroups];d.cards.forEach(c=>{if(c.id==='mboost'&&c.mPoint===undefined)c.mPoint=0;if(c.hidden===undefined)c.hidden=!!c.hide;if(!c.periodType)c.periodType=(c.id==='red'||c.id==='mboost'||/현대|Hyundai|M BOOST|Red/i.test(c.name))?'hyundai':'monthly';if(c.collapsed===undefined)c.collapsed=(c.kind==='mboost'?false:true);if(c.memo===undefined)c.memo='';if(!c.group)c.group=(c.periodType==='hyundai'?'현대':'기타');if(c.id==='red'||/red|레드/i.test(c.name)){if(c.annualGoal===undefined)c.annualGoal=12000000;if(c.annualSpent===undefined)c.annualSpent=Number(c.spent||0)}});return d}}catch(e){}return{pinMboost:true,history:[],groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}
 function save(){localStorage.setItem(STORE,JSON.stringify(data))}
 function fmt(n){return Math.round(Number(n||0)).toLocaleString('ko-KR')+'원'}function num(n){return Math.round(Number(n||0)).toLocaleString('ko-KR')}
 function getPeriod(type){let now=new Date(),y=now.getFullYear(),m=now.getMonth(),start,end,labelName;if(type==='hyundai'){start=new Date(y,m-1,24);end=new Date(y,m,23);if(now.getDate()>23){start=new Date(y,m,24);end=new Date(y,m+1,23)}labelName='현대 24~23'}else{start=new Date(y,m,1);end=new Date(y,m+1,0);labelName='월 1일~말일'}let dleft=Math.max(0,Math.ceil((new Date(end.getFullYear(),end.getMonth(),end.getDate()+1)-new Date(y,m,now.getDate()))/86400000)-1);let key=type+'_'+start.toISOString().slice(0,10)+'_'+end.toISOString().slice(0,10);let label=`${start.getFullYear()}.${String(start.getMonth()+1).padStart(2,'0')}.${String(start.getDate()).padStart(2,'0')} ~ ${end.getFullYear()}.${String(end.getMonth()+1).padStart(2,'0')}.${String(end.getDate()).padStart(2,'0')}`;return{key,dleft,label,labelName}}
@@ -52,16 +53,62 @@ function attachDrag(){document.querySelectorAll('.drag').forEach(h=>{h.addEventL
 function moveTo(from,to){let i=data.cards.findIndex(c=>c.id===from),j=data.cards.findIndex(c=>c.id===to);if(i<0||j<0)return;let [x]=data.cards.splice(i,1);data.cards.splice(j,0,x);render();toast('순서를 변경했습니다')}
 function moveCard(id,dir){let i=data.cards.findIndex(c=>c.id===id);let j=i+dir;if(i<0||j<0||j>=data.cards.length){toast('더 이동할 수 없습니다');return;}let [x]=data.cards.splice(i,1);data.cards.splice(j,0,x);render();toast('순서를 변경했습니다')}
 function toggleCollapse(id){let c=data.cards.find(x=>x.id===id);c.collapsed=!c.collapsed;render()}function togglePin(){data.pinMboost=!data.pinMboost;render()}function toggleHiddenView(){showHidden=!showHidden;render()}function toggleHidden(id){let c=data.cards.find(x=>x.id===id);c.hidden=!c.hidden;render();toast(c.hidden?'숨김 처리했습니다':'다시 표시했습니다')}
+
+function getGroups(){
+  const set=new Set([...(data.groups||defaultGroups)]);
+  data.cards.forEach(c=>{if(c.group)set.add(c.group)});
+  if(!set.has('기타'))set.add('기타');
+  return [...set];
+}
+function openGroupManager(){
+  const groups=getGroups();
+  mt.innerText='그룹 관리';
+  mb.innerHTML=`<div class="hint" style="margin-bottom:12px">그룹명을 바꾸면 해당 그룹에 속한 카드들도 함께 이동합니다. 삭제하면 그 그룹의 카드는 '기타'로 이동합니다.</div>
+  <div id="groupList">${groups.map(g=>`<div class="fg"><label>그룹명</label><div class="row" style="padding:0"><input class="groupName" data-old="${g}" value="${g}" style="flex:1"><button class="btn red" style="flex:0 0 70px" onclick="deleteGroup('${g}')">삭제</button></div></div>`).join('')}</div>
+  <div class="fg"><label>새 그룹 추가</label><input id="newGroupName" placeholder="예: 해외, 구독, 가족카드"></div>
+  <button class="btn blue" style="width:100%;margin-bottom:8px" onclick="addGroup()">그룹 추가</button>
+  <button class="btn primary" style="width:100%" onclick="saveGroups()">저장</button>`;
+  openModal();
+}
+function addGroup(){
+  const name=(newGroupName.value||'').trim();
+  if(!name){toast('그룹명을 입력하세요');return;}
+  data.groups=getGroups();
+  if(!data.groups.includes(name))data.groups.push(name);
+  openGroupManager();
+  toast('그룹을 추가했습니다');
+}
+function saveGroups(){
+  let next=[];
+  document.querySelectorAll('.groupName').forEach(inp=>{
+    const old=inp.dataset.old;
+    const name=(inp.value||'').trim()||'기타';
+    if(!next.includes(name))next.push(name);
+    data.cards.forEach(c=>{if(c.group===old)c.group=name});
+  });
+  if(!next.includes('기타'))next.push('기타');
+  data.groups=next;
+  closeModal();render();toast('그룹을 저장했습니다');
+}
+function deleteGroup(g){
+  if(g==='기타'){toast('기타 그룹은 삭제할 수 없습니다');return;}
+  if(!confirm(`'${g}' 그룹을 삭제할까요? 이 그룹의 카드는 기타로 이동합니다.`))return;
+  data.cards.forEach(c=>{if(c.group===g)c.group='기타'});
+  data.groups=getGroups().filter(x=>x!==g);
+  if(!data.groups.includes('기타'))data.groups.push('기타');
+  openGroupManager();
+}
+
 function openSpend(id){let c=data.cards.find(x=>x.id===id);editing=id;mt.innerText=c.name+' 실적 입력';mb.innerHTML=`<div class="fg"><label>현재 사용금액</label><input id="spendInput" type="number" value="${c.spent||0}"></div><div class="fg"><label>실적 목표</label><input id="targetInput" type="number" value="${c.target||0}"></div>${c.annualGoal?`<div class="fg"><label>연간 누적 실적</label><input id="annualSpentInput" type="number" value="${c.annualSpent||0}"><div class="hint">RED 카드 연간 누적액도 함께 수정할 수 있습니다.</div></div>`:''}<button class="btn primary" style="width:100%" onclick="saveSpend()">저장</button>`;openModal()}
 function saveSpend(){let c=data.cards.find(x=>x.id===editing);c.spent=Number(spendInput.value)||0;c.target=Number(targetInput.value)||0;if(c.annualGoal&&document.getElementById('annualSpentInput'))c.annualSpent=Number(annualSpentInput.value)||0;closeModal();render()}
 function openMPoint(){let c=data.cards.find(x=>x.kind==='mboost');mt.innerText='M BOOST 현재 적립 M포인트';mb.innerHTML=`<div class="fg"><label>간편결제 5% 현재 적립 M포인트</label><input id="mpInput" type="number" value="${c.mPoint||0}"><div class="hint">예: 7250 입력 → 추가 사용 가능 55,000원.</div></div><button class="btn primary" style="width:100%" onclick="saveMPoint()">저장</button>`;openModal()}
 function saveMPoint(){let c=data.cards.find(x=>x.kind==='mboost');c.mPoint=Number(mpInput.value)||0;closeModal();render()}
-function openCard(id){editing=id||null;let c=id?data.cards.find(x=>x.id===id):{name:'',short:'',color:COLORS[0],target:0,spent:0,hidden:false,kind:'normal',periodType:'monthly',memo:'',collapsed:true,group:'기타'};mt.innerText=id?'카드 수정':'카드 추가';mb.innerHTML=`<div class="fg"><label>카드명</label><input id="cardName" value="${c.name||''}"></div><div class="fg"><label>카드 약칭</label><input id="cardShort" value="${c.short||''}" maxlength="4"></div><div class="fg"><label>그룹</label><select id="cardGroup">${GROUPS.map(g=>`<option ${g===(c.group||'기타')?'selected':''}>${g}</option>`).join('')}</select></div><div class="fg"><label>실적 목표</label><input id="cardTarget" type="number" value="${c.target||0}"></div><div class="fg"><label>현재 사용금액</label><input id="cardSpent" type="number" value="${c.spent||0}"></div><div class="fg"><label>연간 목표금액 (RED 카드용, 없으면 0)</label><input id="annualGoal" type="number" value="${c.annualGoal||0}"><div class="hint">RED 카드 연 1,200만원 목표는 12000000 입력</div></div><div class="fg"><label>연간 누적 실적</label><input id="annualSpent" type="number" value="${c.annualSpent||0}"><div class="hint">월별 히스토리와 별개로 현재까지의 누적 실적을 직접 보정할 수 있습니다.</div></div><div class="fg"><label>메모</label><textarea id="cardMemo">${c.memo||''}</textarea></div><div class="fg"><label>산정기간</label><select id="cardPeriod"><option value="monthly" ${c.periodType!=='hyundai'?'selected':''}>해당월 1일~말일</option><option value="hyundai" ${c.periodType==='hyundai'?'selected':''}>현대카드 24일~23일</option></select></div><div class="fg"><label>색상</label><select id="cardColor">${COLORS.map(x=>`<option value="${x}" ${x===c.color?'selected':''}>${x}</option>`).join('')}</select></div><div class="fg"><label>카드 종류</label><select id="cardKind"><option value="normal" ${c.kind!=='mboost'?'selected':''}>일반 실적 카드</option><option value="mboost" ${c.kind==='mboost'?'selected':''}>M BOOST 간편결제 카드</option></select></div><div class="fg"><label>표시 상태</label><select id="cardHidden"><option value="false" ${!c.hidden?'selected':''}>표시</option><option value="true" ${c.hidden?'selected':''}>숨김</option></select></div><button class="btn primary" style="width:100%;margin-bottom:8px" onclick="saveCard()">저장</button>${id?`<button class="btn red" style="width:100%" onclick="deleteCard()">삭제</button>`:''}`;openModal()}
+function openCard(id){editing=id||null;let c=id?data.cards.find(x=>x.id===id):{name:'',short:'',color:COLORS[0],target:0,spent:0,hidden:false,kind:'normal',periodType:'monthly',memo:'',collapsed:true,group:'기타'};mt.innerText=id?'카드 수정':'카드 추가';mb.innerHTML=`<div class="fg"><label>카드명</label><input id="cardName" value="${c.name||''}"></div><div class="fg"><label>카드 약칭</label><input id="cardShort" value="${c.short||''}" maxlength="4"></div><div class="fg"><label>그룹</label><select id="cardGroup">${getGroups().map(g=>`<option ${g===(c.group||'기타')?'selected':''}>${g}</option>`).join('')}</select></div><div class="fg"><label>실적 목표</label><input id="cardTarget" type="number" value="${c.target||0}"></div><div class="fg"><label>현재 사용금액</label><input id="cardSpent" type="number" value="${c.spent||0}"></div><div class="fg"><label>연간 목표금액 (RED 카드용, 없으면 0)</label><input id="annualGoal" type="number" value="${c.annualGoal||0}"><div class="hint">RED 카드 연 1,200만원 목표는 12000000 입력</div></div><div class="fg"><label>연간 누적 실적</label><input id="annualSpent" type="number" value="${c.annualSpent||0}"><div class="hint">월별 히스토리와 별개로 현재까지의 누적 실적을 직접 보정할 수 있습니다.</div></div><div class="fg"><label>메모</label><textarea id="cardMemo">${c.memo||''}</textarea></div><div class="fg"><label>산정기간</label><select id="cardPeriod"><option value="monthly" ${c.periodType!=='hyundai'?'selected':''}>해당월 1일~말일</option><option value="hyundai" ${c.periodType==='hyundai'?'selected':''}>현대카드 24일~23일</option></select></div><div class="fg"><label>색상</label><select id="cardColor">${COLORS.map(x=>`<option value="${x}" ${x===c.color?'selected':''}>${x}</option>`).join('')}</select></div><div class="fg"><label>카드 종류</label><select id="cardKind"><option value="normal" ${c.kind!=='mboost'?'selected':''}>일반 실적 카드</option><option value="mboost" ${c.kind==='mboost'?'selected':''}>M BOOST 간편결제 카드</option></select></div><div class="fg"><label>표시 상태</label><select id="cardHidden"><option value="false" ${!c.hidden?'selected':''}>표시</option><option value="true" ${c.hidden?'selected':''}>숨김</option></select></div><button class="btn primary" style="width:100%;margin-bottom:8px" onclick="saveCard()">저장</button>${id?`<button class="btn red" style="width:100%" onclick="deleteCard()">삭제</button>`:''}`;openModal()}
 function saveCard(){let old=editing?data.cards.find(x=>x.id===editing):null;let obj={id:editing||('card_'+Date.now()),name:cardName.value.trim()||'새 카드',short:cardShort.value.trim()||'C',group:cardGroup.value,color:cardColor.value,target:Number(cardTarget.value)||0,spent:Number(cardSpent.value)||0,hidden:cardHidden.value==='true',kind:cardKind.value,periodType:cardPeriod.value,memo:cardMemo.value.trim(),collapsed:old?old.collapsed:true,annualGoal:Number(annualGoal.value)||0,annualSpent:Number(annualSpent.value)||0};if(obj.kind==='mboost')obj.mPoint=old&&old.mPoint?old.mPoint:0;if(editing)data.cards=data.cards.map(c=>c.id===editing?obj:c);else data.cards.push(obj);closeModal();render()}
 function deleteCard(){if(!confirm('이 카드를 삭제할까요?'))return;data.cards=data.cards.filter(c=>c.id!==editing);closeModal();render()}
 function showHistory(){let h=data.history||[];mt.innerText='월별 히스토리';mb.innerHTML=h.length?h.map(x=>`<div class="notice"><b>${x.time}</b><br>${x.reason}<br>총액 ${fmt(x.total)}<br>현대 ${x.hyundai}<br>기타 ${x.monthly}</div>`).join(''):'<div class="hint">저장된 히스토리가 없습니다. 산정기간 변경/초기화 시 자동 저장됩니다.</div>';openModal()}
 function openModal(){modal.style.display='flex'}function closeModal(){modal.style.display='none'}
-function resetMonth(all){if(!confirm(all?'전체 데이터를 기본값으로 초기화할까요?':'현재 사용금액/M포인트만 초기화할까요?'))return;if(all){data={pinMboost:true,history:[],cards:JSON.parse(JSON.stringify(defaultCards))}}else{saveSnapshot('수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;if(c.kind==='mboost')c.mPoint=0})}localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key);render()}
+function resetMonth(all){if(!confirm(all?'전체 데이터를 기본값으로 초기화할까요?':'현재 사용금액/M포인트만 초기화할까요?'))return;if(all){data={pinMboost:true,history:[],groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}else{saveSnapshot('수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;if(c.kind==='mboost')c.mPoint=0})}localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key);render()}
 function backup(){let b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='card-benefit-backup.json';a.click()}
 function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);save();render();toast('복원했습니다')}catch(err){alert('복원 실패')}};r.readAsText(f)}
 function toast(msg){let t=document.getElementById('toast');t.innerText=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
