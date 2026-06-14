@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v5.0</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v5.1</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -12,11 +12,7 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 .barw{height:9px;background:#eef2f7;border-radius:999px;overflow:hidden;margin:0 15px 12px}.bar{height:100%;border-radius:999px}.detail{display:block}.card.collapsed .detail{display:none}.card.collapsed .barw{margin-bottom:15px}
 .annual{margin:0 15px 15px;background:linear-gradient(135deg,#be123c,#7f1d1d);color:white;border-radius:16px;padding:14px}.annual .barw{margin:10px 0 5px;background:rgba(255,255,255,.25)}.annual .bar{background:white}.annual-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.annual-tile{background:rgba(255,255,255,.13);border-radius:12px;padding:10px}.annual-l{font-size:10px;opacity:.78;font-weight:800}.annual-v{font-size:18px;font-weight:900;margin-top:2px}.annual-s{font-size:10px;opacity:.7;margin-top:2px}.annual-note{font-size:11px;opacity:.8;display:flex;justify-content:space-between}.boost{margin:0 15px 15px;background:linear-gradient(135deg,#1d4ed8,#0f172a);color:white;border-radius:16px;padding:14px}.bt{font-size:14px;font-weight:900;margin-bottom:10px;display:flex;justify-content:space-between}.bg{display:grid;grid-template-columns:1fr 1fr;gap:8px}.bi{background:rgba(255,255,255,.13);border-radius:12px;padding:10px}.bl{font-size:10px;opacity:.78;font-weight:800}.bv{font-size:18px;font-weight:900;margin-top:2px}.bs{font-size:10px;opacity:.7;margin-top:2px}.boost .barw{margin:10px 0 5px;background:rgba(255,255,255,.25)}.boost .bar{background:white}.bn{font-size:11px;opacity:.8;display:flex;justify-content:space-between}
 .tools{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:13px;margin-top:14px}.tools h3{font-size:15px;margin-bottom:8px}.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:flex-end;z-index:50}.sheet{background:white;width:100%;border-radius:24px 24px 0 0;padding:18px;max-height:88vh;overflow:auto}.handle{width:38px;height:4px;background:#d1d5db;border-radius:99px;margin:0 auto 14px}.mh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.mh b{font-size:18px}.x{border:0;background:#f3f4f6;border-radius:10px;width:34px;height:34px;font-size:18px}.fg{margin-bottom:12px}.fg label{display:block;font-size:12px;color:#6b7280;font-weight:900;margin-bottom:5px}.fg input,.fg select,.fg textarea{width:100%;border:1.5px solid #e5e7eb;border-radius:12px;padding:12px;font-size:16px;font-family:inherit;background:white}.fg textarea{min-height:70px;resize:vertical}.hint{font-size:11px;color:#6b7280;line-height:1.5;margin-top:4px}
-
-.github-panel{background:#eef2ff;border:1px solid #c7d2fe;color:#312e81;border-radius:16px;padding:12px;margin-bottom:12px;font-size:12px;line-height:1.55}
-.github-panel b{font-size:13px}
-.status-ok{color:#047857;font-weight:900}.status-bad{color:#dc2626;font-weight:900}
-.backup-warn{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;border-radius:16px;padding:12px;margin-bottom:12px;font-size:12px;line-height:1.55;display:none}
+.github-panel{background:#eef2ff;border:1px solid #c7d2fe;color:#312e81;border-radius:16px;padding:12px;margin-bottom:12px;font-size:12px;line-height:1.55}.github-panel b{font-size:13px}.backup-warn{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;border-radius:16px;padding:12px;margin-bottom:12px;font-size:12px;line-height:1.55;display:none}
 .backup-warn.show{display:block}
 .month-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .month-row{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;font-size:12px}
@@ -28,7 +24,7 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
-<div class="notice">v5.0: 숨김 카드 보기/복구, 그룹, 검색, 히스토리 저장을 포함했습니다. 아이폰 Safari 호환성을 위해 순서 변경은 ⬆️/⬇️ 버튼을 기본 방식으로 사용합니다. 그룹은 직접 추가/삭제/이름 변경할 수 있습니다. 현대카드는 24~23, 기타 카드는 1일~말일 기준입니다.</div>
+<div class="notice">v5.1: 숨김 카드 보기/복구, 그룹, 검색, 히스토리 저장을 포함했습니다. 아이폰 Safari 호환성을 위해 순서 변경은 ⬆️/⬇️ 버튼을 기본 방식으로 사용합니다. 그룹은 직접 추가/삭제/이름 변경할 수 있습니다. 현대카드는 24~23, 기타 카드는 1일~말일 기준입니다.</div>
 <div class="backup-warn" id="backupWarn"></div>
 <div class="github-panel" id="githubPanel"></div>
 <div class="summary"><div class="tile"><div class="tl">총 월 사용금액</div><div class="tv" id="sumSpent">0원</div><div class="ts">숨김 카드 제외</div></div><div class="tile"><div class="tl">M BOOST 추가 사용 가능</div><div class="tv" id="sumEasyRemain">0원</div><div class="ts">입력 M포인트 기준</div></div></div>
@@ -40,8 +36,8 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 <div class="modal" id="modal" onclick="closeModal()"><div class="sheet" onclick="event.stopPropagation()"><div class="handle"></div><div class="mh"><b id="mt">수정</b><button class="x" onclick="closeModal()">×</button></div><div id="mb"></div></div></div><div class="toast" id="toast"></div>
 <script>
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js');}
-const STORE='benefit-manager-v5.0', MONTH='benefit-manager-period-key-v5.0';
-const GHCFG='benefit-manager-github-config-v5.0';
+const STORE='benefit-manager-v5.1', MONTH='benefit-manager-period-key-v5.1';
+const GHCFG='benefit-manager-github-config-v5.1';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
 const defaultCards=[
@@ -53,7 +49,7 @@ const defaultCards=[
 {id:'kakao',name:'카카오페이신용카드',short:'K',color:'#22c55e',target:200000,spent:48800,hidden:false,kind:'normal',periodType:'monthly',collapsed:true,memo:'',group:'생활'},
 {id:'hipass',name:'카드의정석2 후불하이패스+',short:'H',color:'#0ea5e9',target:100000,spent:0,hidden:false,kind:'normal',periodType:'monthly',collapsed:true,memo:'',group:'교통'}];
 let data=load(), editing=null, dragId=null, showHidden=false;
-function load(){try{let r=localStorage.getItem(STORE)||localStorage.getItem('benefit-manager-v2.3')||localStorage.getItem('benefit-manager-v2.1')||localStorage.getItem('benefit-manager-v2.0');if(r){let d=JSON.parse(r);if(d.pinMboost===undefined)d.pinMboost=true;if(!d.history)d.history=[];if(!d.monthlyRecords)d.monthlyRecords={};if(!d.groups)d.groups=[...defaultGroups];if(d.lastBackupAt===undefined)d.lastBackupAt=null;d.cards.forEach(c=>{if(c.id==='mboost'&&c.mPoint===undefined)c.mPoint=0;if(c.hidden===undefined)c.hidden=!!c.hide;if(!c.periodType)c.periodType=(c.id==='red'||c.id==='mboost'||/현대|Hyundai|M BOOST|Red/i.test(c.name))?'hyundai':'monthly';if(c.collapsed===undefined)c.collapsed=(c.kind==='mboost'?false:true);if(c.memo===undefined)c.memo='';if(!c.group)c.group=(c.periodType==='hyundai'?'현대':'기타');if(c.id==='red'||/red|레드/i.test(c.name)){if(c.annualGoal===undefined)c.annualGoal=12000000;if(c.annualSpent===undefined)c.annualSpent=Number(c.spent||0)}});return d}}catch(e){}return{pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}
+function load(){try{let r=localStorage.getItem(STORE)||localStorage.getItem('benefit-manager-v4.2')||localStorage.getItem('benefit-manager-v3.3')||localStorage.getItem('benefit-manager-v2.3')||localStorage.getItem('benefit-manager-v2.1')||localStorage.getItem('benefit-manager-v2.0');if(r){let d=JSON.parse(r);if(d.pinMboost===undefined)d.pinMboost=true;if(!d.cards||!Array.isArray(d.cards)||d.cards.length===0)d.cards=JSON.parse(JSON.stringify(defaultCards));if(!d.history)d.history=[];if(!d.monthlyRecords)d.monthlyRecords={};if(!d.groups)d.groups=[...defaultGroups];if(d.lastBackupAt===undefined)d.lastBackupAt=null;d.cards.forEach(c=>{if(c.id==='mboost'&&c.mPoint===undefined)c.mPoint=0;if(c.hidden===undefined)c.hidden=!!c.hide;if(!c.periodType)c.periodType=(c.id==='red'||c.id==='mboost'||/현대|Hyundai|M BOOST|Red/i.test(c.name))?'hyundai':'monthly';if(c.collapsed===undefined)c.collapsed=(c.kind==='mboost'?false:true);if(c.memo===undefined)c.memo='';if(!c.group)c.group=(c.periodType==='hyundai'?'현대':'기타');if(c.id==='red'||/red|레드/i.test(c.name)){if(c.annualGoal===undefined)c.annualGoal=12000000;if(c.annualSpent===undefined)c.annualSpent=Number(c.spent||0)}});return d}}catch(e){}return{pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}
 function save(){localStorage.setItem(STORE,JSON.stringify(data))}
 function fmt(n){return Math.round(Number(n||0)).toLocaleString('ko-KR')+'원'}function num(n){return Math.round(Number(n||0)).toLocaleString('ko-KR')}
 function getPeriod(type){let now=new Date(),y=now.getFullYear(),m=now.getMonth(),start,end,labelName;if(type==='hyundai'){start=new Date(y,m-1,24);end=new Date(y,m,23);if(now.getDate()>23){start=new Date(y,m,24);end=new Date(y,m+1,23)}labelName='현대 24~23'}else{start=new Date(y,m,1);end=new Date(y,m+1,0);labelName='월 1일~말일'}let dleft=Math.max(0,Math.ceil((new Date(end.getFullYear(),end.getMonth(),end.getDate()+1)-new Date(y,m,now.getDate()))/86400000)-1);let key=type+'_'+start.toISOString().slice(0,10)+'_'+end.toISOString().slice(0,10);let label=`${start.getFullYear()}.${String(start.getMonth()+1).padStart(2,'0')}.${String(start.getDate()).padStart(2,'0')} ~ ${end.getFullYear()}.${String(end.getMonth()+1).padStart(2,'0')}.${String(end.getDate()).padStart(2,'0')}`;return{key,dleft,label,labelName}}
@@ -188,129 +184,27 @@ function openHiddenManager(){
 
 function showHistory(){ensureMonthly();mt.innerText='월별 히스토리';let parts=[];data.cards.forEach(c=>{let rec=data.monthlyRecords[c.id]||{};let rows=Object.entries(rec).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,12);if(rows.length){parts.push(`<div class="notice"><b>${c.name}</b>${rows.map(([k,v])=>`<div class="month-row light"><span>${v.label}</span><b>${fmt(v.spent)}</b></div>`).join('')}</div>`)}});let h=data.history||[];if(h.length){parts.push(`<div class="notice"><b>초기화 스냅샷</b>${h.map(x=>`<div class="month-row light"><span>${x.time}<br>${x.reason}</span><b>${fmt(x.total)}</b></div>`).join('')}</div>`)}mb.innerHTML=parts.length?parts.join(''):'<div class="hint">저장된 히스토리가 없습니다. 실적 입력 후 저장하면 카드별 월별 기록이 표시됩니다.</div>';openModal()}
 
-function getGithubConfig(){
-  try{return JSON.parse(localStorage.getItem(GHCFG)||'{}')}catch(e){return {}}
-}
-function saveGithubConfig(cfg){
-  localStorage.setItem(GHCFG,JSON.stringify(cfg));
-}
-function githubHeaders(token){
-  return {
-    'Authorization':'Bearer '+token,
-    'Accept':'application/vnd.github+json',
-    'Content-Type':'application/json'
-  };
-}
-function githubApiBase(cfg){
-  return `https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/contents/${cfg.path||'backups/card-benefit-backup.json'}`;
-}
-function exportDataForGithub(){
-  return JSON.stringify({
-    app:'card-benefit-manager',
-    version:'5.0',
-    savedAt:new Date().toISOString(),
-    data
-  },null,2);
-}
-function b64EncodeUnicode(str){
-  return btoa(unescape(encodeURIComponent(str)));
-}
-function b64DecodeUnicode(str){
-  return decodeURIComponent(escape(atob(str.replace(/\n/g,''))));
-}
-function updateGithubPanel(){
-  const el=document.getElementById('githubPanel');if(!el)return;
-  const cfg=getGithubConfig();
-  if(!cfg.owner||!cfg.repo||!cfg.token){
-    el.innerHTML='☁️ <b>GitHub 백업 미설정</b><br>GitHub 설정에서 ID, Repository, Token을 입력하면 클라우드 백업/복원이 가능합니다.';
-    return;
-  }
-  el.innerHTML=`☁️ <b>GitHub 백업 설정됨</b><br>${cfg.owner}/${cfg.repo}<br>경로: ${cfg.path||'backups/card-benefit-backup.json'} · 자동백업 ${cfg.autoBackup?'ON':'OFF'}<br>마지막 GitHub 백업: ${cfg.lastGithubBackup?new Date(cfg.lastGithubBackup).toLocaleString('ko-KR'):'없음'}`;
-}
-function openGithubSettings(){
-  const cfg=getGithubConfig();
-  mt.innerText='GitHub 백업 설정';
-  mb.innerHTML=`<div class="hint" style="margin-bottom:12px">토큰은 이 기기 LocalStorage에만 저장됩니다. 앱 주소를 다른 사람과 공유하지 마세요.</div>
-  <div class="fg"><label>GitHub ID / Owner</label><input id="ghOwner" value="${cfg.owner||'Justin-1984'}"></div>
-  <div class="fg"><label>Repository</label><input id="ghRepo" value="${cfg.repo||'card-Benefit-manager'}"></div>
-  <div class="fg"><label>Branch</label><input id="ghBranch" value="${cfg.branch||'main'}"></div>
-  <div class="fg"><label>백업 파일 경로</label><input id="ghPath" value="${cfg.path||'backups/card-benefit-backup.json'}"></div>
-  <div class="fg"><label>Fine-grained PAT Token</label><input id="ghToken" type="password" value="${cfg.token||''}" placeholder="github_pat_..."></div>
-  <div class="fg"><label>자동 백업</label><select id="ghAuto"><option value="true" ${cfg.autoBackup?'selected':''}>ON</option><option value="false" ${!cfg.autoBackup?'selected':''}>OFF</option></select><div class="hint">실적/카드 수정 후 자동으로 GitHub 백업을 시도합니다.</div></div>
-  <button class="btn primary" style="width:100%;margin-bottom:8px" onclick="saveGithubSettings()">설정 저장</button>
-  <button class="btn blue" style="width:100%;margin-bottom:8px" onclick="githubTest()">연결 테스트</button>
-  <button class="btn red" style="width:100%" onclick="clearGithubSettings()">GitHub 설정 삭제</button>`;
-  openModal();
-}
-function saveGithubSettings(){
-  const cfg={owner:ghOwner.value.trim(),repo:ghRepo.value.trim(),branch:ghBranch.value.trim()||'main',path:ghPath.value.trim()||'backups/card-benefit-backup.json',token:ghToken.value.trim(),autoBackup:ghAuto.value==='true',lastGithubBackup:getGithubConfig().lastGithubBackup||null};
-  saveGithubConfig(cfg);closeModal();updateGithubPanel();toast('GitHub 설정을 저장했습니다');
-}
-function clearGithubSettings(){
-  if(!confirm('GitHub 토큰과 설정을 삭제할까요?'))return;
-  localStorage.removeItem(GHCFG);closeModal();updateGithubPanel();toast('GitHub 설정을 삭제했습니다');
-}
-async function githubGetFile(cfg){
-  const url=githubApiBase(cfg)+'?ref='+encodeURIComponent(cfg.branch||'main');
-  const r=await fetch(url,{headers:githubHeaders(cfg.token)});
-  if(r.status===404)return null;
-  if(!r.ok)throw new Error('GitHub 파일 조회 실패: '+r.status);
-  return await r.json();
-}
-async function githubPutFile(cfg,content,message){
-  const existing=await githubGetFile(cfg);
-  const body={message:message||'Update card benefit backup',content:b64EncodeUnicode(content),branch:cfg.branch||'main'};
-  if(existing&&existing.sha)body.sha=existing.sha;
-  const r=await fetch(githubApiBase(cfg),{method:'PUT',headers:githubHeaders(cfg.token),body:JSON.stringify(body)});
-  if(!r.ok){const t=await r.text();throw new Error('GitHub 저장 실패: '+r.status+' '+t.slice(0,160))}
-  return await r.json();
-}
-async function githubBackup(silent=false){
-  const cfg=getGithubConfig();
-  if(!cfg.owner||!cfg.repo||!cfg.token){if(!silent)alert('GitHub 설정을 먼저 입력하세요.');return false;}
-  try{
-    await githubPutFile(cfg,exportDataForGithub(),'Backup card benefit data');
-    cfg.lastGithubBackup=Date.now();saveGithubConfig(cfg);
-    data.lastBackupAt=Date.now();save();
-    updateGithubPanel();backupWarning();
-    if(!silent)toast('GitHub 백업 완료');
-    return true;
-  }catch(e){
-    if(!silent)alert(e.message);
-    return false;
-  }
-}
-async function githubRestore(){
-  const cfg=getGithubConfig();
-  if(!cfg.owner||!cfg.repo||!cfg.token){alert('GitHub 설정을 먼저 입력하세요.');return;}
-  if(!confirm('GitHub 백업 데이터로 현재 데이터를 덮어쓸까요? 현재 데이터는 먼저 로컬 백업을 권장합니다.'))return;
-  try{
-    const f=await githubGetFile(cfg);
-    if(!f||!f.content){alert('GitHub 백업 파일이 없습니다.');return;}
-    const parsed=JSON.parse(b64DecodeUnicode(f.content));
-    data=parsed.data||parsed;
-    save();render();toast('GitHub에서 복원했습니다');
-  }catch(e){alert(e.message)}
-}
-async function githubTest(){
-  const cfg={owner:ghOwner.value.trim(),repo:ghRepo.value.trim(),branch:ghBranch.value.trim()||'main',path:ghPath.value.trim()||'backups/card-benefit-backup.json',token:ghToken.value.trim(),autoBackup:ghAuto.value==='true'};
-  try{
-    const url=`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}`;
-    const r=await fetch(url,{headers:githubHeaders(cfg.token)});
-    if(!r.ok)throw new Error('연결 실패: '+r.status);
-    toast('GitHub 연결 성공');
-  }catch(e){alert(e.message)}
-}
-let autoBackupTimer=null;
-function scheduleGithubAutoBackup(){
-  const cfg=getGithubConfig();
-  if(!cfg.autoBackup||!cfg.owner||!cfg.repo||!cfg.token)return;
-  clearTimeout(autoBackupTimer);
-  autoBackupTimer=setTimeout(()=>githubBackup(true),2500);
-}
+function getGithubConfig(){try{return JSON.parse(localStorage.getItem(GHCFG)||'{}')}catch(e){return {}}}
+function saveGithubConfig(cfg){localStorage.setItem(GHCFG,JSON.stringify(cfg))}
+function githubHeaders(token){return {'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'}}
+function githubPath(cfg){return cfg.path||'backups/card-benefit-backup.json'}
+function githubApiBase(cfg){return `https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/contents/${githubPath(cfg)}`}
+function b64EncodeUnicode(str){return btoa(unescape(encodeURIComponent(str)))}
+function b64DecodeUnicode(str){return decodeURIComponent(escape(atob(str.replace(/\n/g,''))))}
+function exportDataForGithub(){return JSON.stringify({app:'card-benefit-manager',version:'5.1',savedAt:new Date().toISOString(),data:data},null,2)}
+function updateGithubPanel(){const el=document.getElementById('githubPanel');if(!el)return;const cfg=getGithubConfig();if(!cfg.owner||!cfg.repo||!cfg.token){el.innerHTML='☁️ <b>GitHub 백업 미설정</b><br>GitHub 설정에서 ID, Repository, Token을 입력하면 클라우드 백업/복원이 가능합니다.';return;}el.innerHTML=`☁️ <b>GitHub 백업 설정됨</b><br>${cfg.owner}/${cfg.repo}<br>경로: ${githubPath(cfg)} · 자동백업 ${cfg.autoBackup?'ON':'OFF'}<br>마지막 GitHub 백업: ${cfg.lastGithubBackup?new Date(cfg.lastGithubBackup).toLocaleString('ko-KR'):'없음'}`}
+function openGithubSettings(){const cfg=getGithubConfig();mt.innerText='GitHub 백업 설정';mb.innerHTML=`<div class="hint" style="margin-bottom:12px">토큰은 이 기기 LocalStorage에만 저장됩니다. 앱 주소를 다른 사람과 공유하지 마세요.</div><div class="fg"><label>GitHub ID / Owner</label><input id="ghOwner" value="${cfg.owner||'Justin-1984'}"></div><div class="fg"><label>Repository</label><input id="ghRepo" value="${cfg.repo||'card-Benefit-manager'}"></div><div class="fg"><label>Branch</label><input id="ghBranch" value="${cfg.branch||'main'}"></div><div class="fg"><label>백업 파일 경로</label><input id="ghPath" value="${cfg.path||'backups/card-benefit-backup.json'}"></div><div class="fg"><label>Fine-grained PAT Token</label><input id="ghToken" type="password" value="${cfg.token||''}" placeholder="github_pat_..."></div><div class="fg"><label>자동 백업</label><select id="ghAuto"><option value="true" ${cfg.autoBackup?'selected':''}>ON</option><option value="false" ${!cfg.autoBackup?'selected':''}>OFF</option></select><div class="hint">실적/카드 수정 후 자동으로 GitHub 백업을 시도합니다.</div></div><button class="btn primary" style="width:100%;margin-bottom:8px" onclick="saveGithubSettings()">설정 저장</button><button class="btn blue" style="width:100%;margin-bottom:8px" onclick="githubTest()">연결 테스트</button><button class="btn red" style="width:100%" onclick="clearGithubSettings()">GitHub 설정 삭제</button>`;openModal()}
+function saveGithubSettings(){const cfg={owner:ghOwner.value.trim(),repo:ghRepo.value.trim(),branch:ghBranch.value.trim()||'main',path:ghPath.value.trim()||'backups/card-benefit-backup.json',token:ghToken.value.trim(),autoBackup:ghAuto.value==='true',lastGithubBackup:getGithubConfig().lastGithubBackup||null};saveGithubConfig(cfg);closeModal();updateGithubPanel();toast('GitHub 설정을 저장했습니다')}
+function clearGithubSettings(){if(!confirm('GitHub 토큰과 설정을 삭제할까요?'))return;localStorage.removeItem(GHCFG);closeModal();updateGithubPanel();toast('GitHub 설정을 삭제했습니다')}
+async function githubGetFile(cfg){const url=githubApiBase(cfg)+'?ref='+encodeURIComponent(cfg.branch||'main');const r=await fetch(url,{headers:githubHeaders(cfg.token)});if(r.status===404)return null;if(!r.ok)throw new Error('GitHub 파일 조회 실패: '+r.status);return await r.json()}
+async function githubPutFile(cfg,content,message){const existing=await githubGetFile(cfg);const body={message:message||'Update card benefit backup',content:b64EncodeUnicode(content),branch:cfg.branch||'main'};if(existing&&existing.sha)body.sha=existing.sha;const r=await fetch(githubApiBase(cfg),{method:'PUT',headers:githubHeaders(cfg.token),body:JSON.stringify(body)});if(!r.ok){const t=await r.text();throw new Error('GitHub 저장 실패: '+r.status+' '+t.slice(0,160))}return await r.json()}
+async function githubBackup(silent=false){const cfg=getGithubConfig();if(!cfg.owner||!cfg.repo||!cfg.token){if(!silent)alert('GitHub 설정을 먼저 입력하세요.');return false;}try{await githubPutFile(cfg,exportDataForGithub(),'Backup card benefit data');cfg.lastGithubBackup=Date.now();saveGithubConfig(cfg);data.lastBackupAt=Date.now();save();updateGithubPanel();backupWarning();if(!silent)toast('GitHub 백업 완료');return true}catch(e){if(!silent)alert(e.message);return false}}
+async function githubRestore(){const cfg=getGithubConfig();if(!cfg.owner||!cfg.repo||!cfg.token){alert('GitHub 설정을 먼저 입력하세요.');return;}if(!confirm('GitHub 백업 데이터로 현재 데이터를 덮어쓸까요? 현재 데이터는 먼저 로컬 백업을 권장합니다.'))return;try{const f=await githubGetFile(cfg);if(!f||!f.content){alert('GitHub 백업 파일이 없습니다.');return;}const parsed=JSON.parse(b64DecodeUnicode(f.content));data=parsed.data||parsed;if(!data.cards||!data.cards.length)data.cards=JSON.parse(JSON.stringify(defaultCards));save();render();toast('GitHub에서 복원했습니다')}catch(e){alert(e.message)}}
+async function githubTest(){const cfg={owner:ghOwner.value.trim(),repo:ghRepo.value.trim(),branch:ghBranch.value.trim()||'main',path:ghPath.value.trim()||'backups/card-benefit-backup.json',token:ghToken.value.trim(),autoBackup:ghAuto.value==='true'};try{const url=`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}`;const r=await fetch(url,{headers:githubHeaders(cfg.token)});if(!r.ok)throw new Error('연결 실패: '+r.status);toast('GitHub 연결 성공')}catch(e){alert(e.message)}}
+let autoBackupTimer=null;function scheduleGithubAutoBackup(){const cfg=getGithubConfig();if(!cfg.autoBackup||!cfg.owner||!cfg.repo||!cfg.token)return;clearTimeout(autoBackupTimer);autoBackupTimer=setTimeout(()=>githubBackup(true),2500)}
 
 function openModal(){modal.style.display='flex'}function closeModal(){modal.style.display='none'}
-function resetMonth(all){if(!confirm(all?'전체 데이터를 기본값으로 초기화할까요?':'현재 사용금액/M포인트만 초기화할까요?'))return;if(all){data={pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}else{saveSnapshot('수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;if(c.kind==='mboost')c.mPoint=0})}localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key);render();scheduleGithubAutoBackup()
+function resetMonth(all){if(!confirm(all?'전체 데이터를 기본값으로 초기화할까요?':'현재 사용금액/M포인트만 초기화할까요?'))return;if(all){data={pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}else{saveSnapshot('수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;if(c.kind==='mboost')c.mPoint=0})}localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key);render();scheduleGithubAutoBackup()}
 function backup(){data.lastBackupAt=Date.now();save();let b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='card-benefit-backup.json';a.click();render();updateGithubPanel();toast('백업 파일을 만들었습니다')}
 function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);save();render();toast('복원했습니다')}catch(err){alert('복원 실패')}};r.readAsText(f)}
 function toast(msg){let t=document.getElementById('toast');t.innerText=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
