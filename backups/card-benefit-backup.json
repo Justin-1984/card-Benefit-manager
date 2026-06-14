@@ -1,7 +1,7 @@
 {
   "app": "card-benefit-manager",
   "version": "5.1",
-  "savedAt": "2026-06-14T13:43:14.254Z",
+  "savedAt": "2026-06-14T13:43:47.619Z",
   "data": {
     "cards": [
       {
@@ -71,7 +71,7 @@
         "color": "#f97316",
         "target": 400000,
         "spent": 49185,
-        "hidden": false,
+        "hidden": true,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "",
@@ -86,10 +86,10 @@
         "color": "#22c55e",
         "target": 200000,
         "spent": 48800,
-        "hidden": false,
+        "hidden": true,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
+        "collapsed": false,
         "memo": "",
         "group": "기타"
       },
@@ -100,10 +100,10 @@
         "color": "#0ea5e9",
         "target": 100000,
         "spent": 0,
-        "hidden": false,
+        "hidden": true,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
+        "collapsed": false,
         "memo": "",
         "group": "기타"
       }
@@ -118,6 +118,6 @@
       "교통",
       "기타"
     ],
-    "lastBackupAt": 1781444575087
+    "lastBackupAt": 1781444595314
   }
 }
