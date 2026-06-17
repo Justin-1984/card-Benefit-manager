@@ -1,15 +1,24 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-14T14:36:03.091Z",
-  "savedAtMs": 1781447763091,
+  "savedAt": "2026-06-17T21:32:24.498Z",
+  "savedAtMs": 1781731944498,
   "deviceId": "dev_1781447045649_c392a739a6556",
   "deviceName": "iPhone",
   "data": {
     "pinMboost": false,
     "history": [],
-    "monthlyRecords": {},
-    "lastBackupAt": 1781447680473,
+    "monthlyRecords": {
+      "lotte": {
+        "monthly_2026-05-31_2026-06-29": {
+          "label": "2026.06.01 ~ 2026.06.30",
+          "spent": 293900,
+          "target": 300000,
+          "savedAt": "2026. 6. 18. 오전 6:32:21"
+        }
+      }
+    },
+    "lastBackupAt": 1781447763945,
     "groups": [
       "현대",
       "생활",
@@ -58,12 +67,12 @@
         "group": "엘지 할인용",
         "color": "#a855f7",
         "target": 300000,
-        "spent": 235900,
+        "spent": 293900,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -79,7 +88,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -131,10 +140,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1781447763091,
+      "updatedAt": 1781731944498,
       "deviceId": "dev_1781447045649_c392a739a6556",
       "deviceName": "iPhone",
-      "savedAt": 1781447763091
+      "savedAt": 1781731944498
     }
   }
 }
