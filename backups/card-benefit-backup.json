@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-17T21:32:24.498Z",
-  "savedAtMs": 1781731944498,
+  "savedAt": "2026-06-17T21:34:27.140Z",
+  "savedAtMs": 1781732067140,
   "deviceId": "dev_1781447045649_c392a739a6556",
   "deviceName": "iPhone",
   "data": {
@@ -16,9 +16,17 @@
           "target": 300000,
           "savedAt": "2026. 6. 18. 오전 6:32:21"
         }
+      },
+      "red": {
+        "hyundai_2026-05-23_2026-06-22": {
+          "label": "2026.05.24 ~ 2026.06.23",
+          "spent": 1048382,
+          "target": 1000000,
+          "savedAt": "2026. 6. 18. 오전 6:34:24"
+        }
       }
     },
-    "lastBackupAt": 1781447763945,
+    "lastBackupAt": 1781731945888,
     "groups": [
       "현대",
       "생활",
@@ -34,14 +42,14 @@
         "group": "현대",
         "color": "#e11d48",
         "target": 1000000,
-        "spent": 991682,
+        "spent": 1048382,
         "hidden": false,
         "kind": "normal",
         "periodType": "hyundai",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 12000000,
-        "annualSpent": 991682
+        "annualSpent": 1048382
       },
       {
         "id": "mboost",
@@ -99,7 +107,7 @@
         "group": "생활",
         "color": "#f97316",
         "target": 400000,
-        "spent": 49185,
+        "spent": 223945,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -140,10 +148,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1781731944498,
+      "updatedAt": 1781732067139,
       "deviceId": "dev_1781447045649_c392a739a6556",
       "deviceName": "iPhone",
-      "savedAt": 1781731944498
+      "savedAt": 1781732067140
     }
   }
 }
