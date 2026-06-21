@@ -1,9 +1,9 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-17T21:34:27.140Z",
-  "savedAtMs": 1781732067140,
-  "deviceId": "dev_1781447045649_c392a739a6556",
+  "savedAt": "2026-06-21T14:45:07.182Z",
+  "savedAtMs": 1782053107182,
+  "deviceId": "dev_1782053103875_82e1768653e2c8",
   "deviceName": "iPhone",
   "data": {
     "pinMboost": false,
@@ -23,6 +23,14 @@
           "spent": 1048382,
           "target": 1000000,
           "savedAt": "2026. 6. 18. 오전 6:34:24"
+        }
+      },
+      "mboost": {
+        "hyundai_2026-05-23_2026-06-22": {
+          "label": "2026.05.24 ~ 2026.06.23",
+          "spent": 2268130,
+          "target": 1000000,
+          "savedAt": "2026. 6. 21. 오후 11:45:03"
         }
       }
     },
@@ -47,7 +55,7 @@
         "kind": "normal",
         "periodType": "hyundai",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 1048382
       },
@@ -58,12 +66,12 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 2190062,
+        "spent": 2268130,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 10000
@@ -148,10 +156,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1781732067139,
-      "deviceId": "dev_1781447045649_c392a739a6556",
+      "updatedAt": 1782053107182,
+      "deviceId": "dev_1782053103875_82e1768653e2c8",
       "deviceName": "iPhone",
-      "savedAt": 1781732067140
+      "savedAt": 1782053107182
     }
   }
 }
