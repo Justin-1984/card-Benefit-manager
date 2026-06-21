@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-21T14:45:07.182Z",
-  "savedAtMs": 1782053107182,
+  "savedAt": "2026-06-21T14:46:31.898Z",
+  "savedAtMs": 1782053191898,
   "deviceId": "dev_1782053103875_82e1768653e2c8",
   "deviceName": "iPhone",
   "data": {
@@ -12,9 +12,9 @@
       "lotte": {
         "monthly_2026-05-31_2026-06-29": {
           "label": "2026.06.01 ~ 2026.06.30",
-          "spent": 293900,
+          "spent": 323300,
           "target": 300000,
-          "savedAt": "2026. 6. 18. 오전 6:32:21"
+          "savedAt": "2026. 6. 21. 오후 11:45:39"
         }
       },
       "red": {
@@ -32,9 +32,17 @@
           "target": 1000000,
           "savedAt": "2026. 6. 21. 오후 11:45:03"
         }
+      },
+      "ssg": {
+        "monthly_2026-05-31_2026-06-29": {
+          "label": "2026.06.01 ~ 2026.06.30",
+          "spent": 304237,
+          "target": 400000,
+          "savedAt": "2026. 6. 21. 오후 11:46:28"
+        }
       }
     },
-    "lastBackupAt": 1781731945888,
+    "lastBackupAt": 1782053108315,
     "groups": [
       "현대",
       "생활",
@@ -83,7 +91,7 @@
         "group": "엘지 할인용",
         "color": "#a855f7",
         "target": 300000,
-        "spent": 293900,
+        "spent": 323300,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -115,12 +123,12 @@
         "group": "생활",
         "color": "#f97316",
         "target": 400000,
-        "spent": 223945,
+        "spent": 304237,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -156,10 +164,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1782053107182,
+      "updatedAt": 1782053191898,
       "deviceId": "dev_1782053103875_82e1768653e2c8",
       "deviceName": "iPhone",
-      "savedAt": 1782053107182
+      "savedAt": 1782053191898
     }
   }
 }
