@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
-  "version": "6.4.4",
-  "savedAt": "2026-06-27T08:37:15.905Z",
-  "savedAtMs": 1782549435905,
+  "version": "6.6.0",
+  "savedAt": "2026-06-27T11:29:52.393Z",
+  "savedAtMs": 1782559792393,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -94,13 +94,13 @@
       "ssg": {
         "monthly_2026-05-31_2026-06-29": {
           "label": "2026.06.01 ~ 2026.06.30",
-          "spent": 375137,
+          "spent": 404637,
           "target": 400000,
-          "savedAt": "2026. 6. 27. 오후 4:53:46"
+          "savedAt": "2026. 6. 27. 오후 8:29:49"
         }
       }
     },
-    "lastBackupAt": 1782549369585,
+    "lastBackupAt": 1782549436720,
     "groups": [
       "현대",
       "생활",
@@ -140,7 +140,9 @@
         "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
-        "mPoint": 0
+        "mPoint": 0,
+        "mPointEarned": 0,
+        "mPointUsed": 0
       },
       {
         "id": "lotte",
@@ -181,12 +183,12 @@
         "group": "생활",
         "color": "#f97316",
         "target": 400000,
-        "spent": 375137,
+        "spent": 404637,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -222,10 +224,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1782549435905,
+      "updatedAt": 1782559792393,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1782549435905
+      "savedAt": 1782559792393
     }
   }
 }
