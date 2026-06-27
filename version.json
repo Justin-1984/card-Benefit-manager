@@ -1,16 +1,16 @@
 {
-  "version": "6.5.0",
-  "build": 650,
+  "version": "6.6.0",
+  "build": 660,
   "releaseDate": "2026-06-27",
   "dataVersion": "1.0",
   "minimumDataVersion": "1.0",
   "required": false,
-  "message": "v6.5 Beta: version.json 기반 업데이트 확인, 자동 안전백업 10개, RED 연간 실적 강화, M BOOST 통계 강화",
+  "message": "v6.6 Beta: 홈 대시보드, 스마트 요약 칩, iPhone 스타일 카드 UI 개선",
   "releaseNotes": [
-    "앱 정보 패널에 버전, 빌드, Data Version, 업데이트 날짜 표시",
-    "업데이트·리셋·복원 전 자동 안전백업 생성",
-    "최근 자동백업 10개 보관 및 원클릭 복원",
-    "RED 연간 목표 달성률, 남은 금액, 월평균 필요금액 표시 유지/강화",
-    "M BOOST 이번달 적립, 사용, 순증감, 남은 적립 가능금액 표시"
+    "홈 상단 오늘의 카드 현황 대시보드 추가",
+    "달성 카드, 총 부족액, RED 연간 진행률, M BOOST 현황을 한눈에 표시",
+    "실적 부족·RED·M BOOST·마감 임박 스마트 요약 칩 추가",
+    "카드 그림자, 진행률 애니메이션, 모바일 터치감 개선",
+    "v6.5 Stable 데이터 구조와 GitHub 백업 호환 유지"
   ]
 }

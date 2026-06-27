@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.5.0 Beta</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.6.0 Beta</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -20,11 +20,17 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 .hidden-list{display:flex;flex-direction:column;gap:10px}
 .hidden-item{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:14px;padding:12px}
 .toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%);background:#111827;color:white;padding:11px 18px;border-radius:999px;font-size:13px;font-weight:900;opacity:0;transition:.25s;z-index:80}.toast.show{opacity:1}
+
+.hero{background:linear-gradient(135deg,#111827,#334155);color:white;border-radius:24px;padding:18px;margin-bottom:12px;box-shadow:0 14px 30px rgba(15,23,42,.18)}
+.hero-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.hero-title{font-size:18px;font-weight:900}.hero-sub{font-size:12px;opacity:.78;margin-top:4px;line-height:1.45}.hero-badge{font-size:11px;font-weight:900;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 9px;white-space:nowrap}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.hero-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:11px}.hero-l{font-size:10px;opacity:.72;font-weight:800}.hero-v{font-size:18px;font-weight:900;margin-top:3px}.hero-s{font-size:10px;opacity:.7;margin-top:2px}.smart-strip{display:flex;gap:8px;overflow:auto;margin-bottom:12px;padding-bottom:2px}.smart-chip{background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 12px;font-size:12px;font-weight:900;color:#334155;white-space:nowrap;box-shadow:0 4px 12px rgba(15,23,42,.04)}.card{box-shadow:0 8px 22px rgba(15,23,42,.05);transition:transform .18s ease,box-shadow .18s ease}.card:active{transform:scale(.995)}.bar{transition:width .35s ease}.tile{box-shadow:0 6px 16px rgba(15,23,42,.04)}
 @media(min-width:720px){.modal{align-items:center}.sheet{max-width:520px;margin:auto;border-radius:24px}}@media(min-width:900px){main{padding:18px 24px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.summary{grid-template-columns:repeat(4,1fr)}.summary .tile{grid-column:span 2}}@media(min-width:1280px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:1600px){.cards{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
-<div class="notice">v6.5 Beta: Stable 데이터 구조는 유지하고, 업데이트 확인·자동 안전백업·RED/M BOOST 통계를 강화했습니다.</div>
+<div class="notice">v6.6 Beta: v6.5 Stable 데이터 구조는 그대로 유지하고, 홈 대시보드와 iPhone 스타일 UI를 강화했습니다.</div>
+
+<div class="hero" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div class="hero-badge" id="heroBadge">v6.6 Beta</div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
+<div class="smart-strip" id="smartStrip"></div>
 <div class="alert-panel" id="dashboardAlert"></div><div class="alert-panel" id="deadlineAlert"></div>
 <div class="backup-warn" id="backupWarn"></div>
 <div class="sync-panel" id="syncPanel"></div>
@@ -41,7 +47,7 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js');}
 const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2';
 const GHCFG='benefit-manager-github-config-v6.2';
-const APP_VERSION='6.5.0', APP_BUILD=650, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.5', AUTO_BACKUPS='benefit-manager-auto-backups-v6.5';
+const APP_VERSION='6.6.0', APP_BUILD=660, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
 const defaultCards=[
@@ -156,18 +162,39 @@ function deadlineStatus(card, remainAmt){
 }
 
 function updateDashboard(){
- const el=document.getElementById('dashboardAlert'); if(!el) return;
- const active=(data.cards||[]).filter(c=>!c.hidden);
- let achieved=0, progress=0, shortage=0, shortageList=[];
+ const active=data.cards.filter(c=>!c.hidden);
+ let achieved=0,progress=0,shortage=0,shortageList=[];
  active.forEach(c=>{
-   const target=Number(c.target||0), spent=Number(c.spent||0);
-   const remain=Math.max(0,target-spent);
+   const target=Number(c.target||0), spent=Number(c.spent||0), remain=Math.max(0,target-spent);
    if(target>0 && remain<=0) achieved++;
    else if(target>0){progress++; shortage+=remain; shortageList.push([c.name,remain]);}
  });
  shortageList=shortageList.sort((a,b)=>b[1]-a[1]).slice(0,3);
+ const red=data.cards.find(c=>c.id==='red'||c.annualGoal);
+ const redPct=red?pct(Number(red.annualSpent||0),Number(red.annualGoal||12000000)):0;
+ const redRemain=red?Math.max(0,Number(red.annualGoal||12000000)-Number(red.annualSpent||0)):0;
+ const mb=data.cards.find(c=>c.kind==='mboost');
+ const mp=mb?Number(mb.mPoint||0):0;
+ const mRemainPoint=Math.max(0,10000-mp);
+ const mRemainWon=mRemainPoint/0.05;
+ const set=(id,v)=>{const e=document.getElementById(id); if(e)e.innerText=v};
+ set('heroAchieved', achieved+'개 / '+active.length+'개');
+ set('heroShortage', fmt(shortage));
+ set('heroRed', redPct.toFixed(1)+'%');
+ set('heroRedSub', fmt(redRemain)+' 남음');
+ set('heroMboost', num(mp)+' M');
+ set('heroMboostSub', '추가 가능 '+fmt(mRemainWon));
+ const chips=[];
+ if(shortageList[0]) chips.push('🔥 '+shortageList[0][0]+' '+fmt(shortageList[0][1])+' 부족');
+ if(redRemain>0) chips.push('❤️ RED '+fmt(redRemain)+' 남음'); else if(red) chips.push('❤️ RED 연간 목표 달성');
+ if(mRemainPoint>0) chips.push('⭐ M BOOST '+num(mRemainPoint)+' M 추가 가능');
+ const danger=active.filter(c=>{const remain=Math.max(0,Number(c.target||0)-Number(c.spent||0));return remain>0&&getPeriod(c.periodType||'monthly').dleft<=7}).length;
+ if(danger) chips.push('⚠️ 마감 임박 '+danger+'개');
+ const strip=document.getElementById('smartStrip');
+ if(strip) strip.innerHTML=(chips.length?chips:['✅ 현재 주요 경고 없음']).map(x=>`<div class="smart-chip">${x}</div>`).join('');
+ const el=document.getElementById('dashboardAlert');if(!el)return;
  el.classList.add('show');
- el.innerHTML=`<b>📊 전체 현황</b><br>카드 ${active.length}개 · 달성 ${achieved}개 · 진행중 ${progress}개<br>총 부족액 ${fmt(shortage)}`
+ el.innerHTML=`<b>📊 스마트 요약</b><br>카드 ${active.length}개 · 달성 ${achieved}개 · 진행중 ${progress}개<br>총 부족액 ${fmt(shortage)}`
  +(shortageList.length?`<div class="alert-list">${shortageList.map(x=>`<div class="alert-item"><b>${x[0]}</b><br>${fmt(x[1])} 부족</div>`).join('')}</div>`:'');
 }
 
