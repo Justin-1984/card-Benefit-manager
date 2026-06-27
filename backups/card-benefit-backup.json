@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-27T06:07:49.388Z",
-  "savedAtMs": 1782540469388,
+  "savedAt": "2026-06-27T06:21:21.089Z",
+  "savedAtMs": 1782541281089,
   "deviceId": "dev_1782053103875_82e1768653e2c8",
   "deviceName": "iPhone",
   "data": {
@@ -230,10 +230,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1782540469388,
+      "updatedAt": 1782541281088,
       "deviceId": "dev_1782053103875_82e1768653e2c8",
       "deviceName": "iPhone",
-      "savedAt": 1782540469388
+      "savedAt": 1782541281089
     }
   }
 }
