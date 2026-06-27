@@ -1,13 +1,79 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-21T14:46:31.898Z",
-  "savedAtMs": 1782053191898,
+  "savedAt": "2026-06-27T06:07:49.388Z",
+  "savedAtMs": 1782540469388,
   "deviceId": "dev_1782053103875_82e1768653e2c8",
   "deviceName": "iPhone",
   "data": {
     "pinMboost": false,
-    "history": [],
+    "history": [
+      {
+        "time": "2026. 6. 27. 오후 3:07:46",
+        "reason": "자동 초기화 전 저장",
+        "hyundai": "2026.06.24 ~ 2026.07.23",
+        "monthly": "2026.06.01 ~ 2026.06.30",
+        "total": 4308213,
+        "cards": [
+          {
+            "name": "SC제일은행-the Red",
+            "spent": 1048382,
+            "target": 1000000,
+            "mPoint": 0,
+            "annualSpent": 1048382,
+            "annualGoal": 12000000
+          },
+          {
+            "name": "SC 현대카드 M BOOST",
+            "spent": 2268130,
+            "target": 1000000,
+            "mPoint": 10000,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "스페셜 롯데카드(LG전자)",
+            "spent": 323300,
+            "target": 300000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "LG전자 우리카드",
+            "spent": 315364,
+            "target": 300000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "SSG닷컴 삼성카드",
+            "spent": 304237,
+            "target": 400000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "카카오페이신용카드 삼성",
+            "spent": 48800,
+            "target": 300000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "카드의정석2 후불하이패스+",
+            "spent": 0,
+            "target": 100000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          }
+        ]
+      }
+    ],
     "monthlyRecords": {
       "lotte": {
         "monthly_2026-05-31_2026-06-29": {
@@ -42,7 +108,7 @@
         }
       }
     },
-    "lastBackupAt": 1782053108315,
+    "lastBackupAt": 1782053192791,
     "groups": [
       "현대",
       "생활",
@@ -58,7 +124,7 @@
         "group": "현대",
         "color": "#e11d48",
         "target": 1000000,
-        "spent": 1048382,
+        "spent": 0,
         "hidden": false,
         "kind": "normal",
         "periodType": "hyundai",
@@ -74,15 +140,15 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 2268130,
+        "spent": 0,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
-        "mPoint": 10000
+        "mPoint": 0
       },
       {
         "id": "lotte",
@@ -91,12 +157,12 @@
         "group": "엘지 할인용",
         "color": "#a855f7",
         "target": 300000,
-        "spent": 323300,
+        "spent": 0,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -107,7 +173,7 @@
         "group": "엘지 할인용",
         "color": "#e11d48",
         "target": 300000,
-        "spent": 315364,
+        "spent": 0,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -123,12 +189,12 @@
         "group": "생활",
         "color": "#f97316",
         "target": 400000,
-        "spent": 304237,
+        "spent": 0,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -139,7 +205,7 @@
         "group": "생활",
         "color": "#22c55e",
         "target": 300000,
-        "spent": 48800,
+        "spent": 0,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -164,10 +230,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1782053191898,
+      "updatedAt": 1782540469388,
       "deviceId": "dev_1782053103875_82e1768653e2c8",
       "deviceName": "iPhone",
-      "savedAt": 1782053191898
+      "savedAt": 1782540469388
     }
   }
 }
