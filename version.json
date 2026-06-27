@@ -1,7 +1,16 @@
 {
-  "version": "6.4.4",
-  "build": 644,
-  "date": "2026-06-27",
+  "version": "6.5.0",
+  "build": 650,
+  "releaseDate": "2026-06-27",
+  "dataVersion": "1.0",
+  "minimumDataVersion": "1.0",
   "required": false,
-  "message": "앱 내 업데이트 확인, 캐시 갱신, 업데이트 전 로컬 안전백업 추가"
+  "message": "v6.5 Beta: version.json 기반 업데이트 확인, 자동 안전백업 10개, RED 연간 실적 강화, M BOOST 통계 강화",
+  "releaseNotes": [
+    "앱 정보 패널에 버전, 빌드, Data Version, 업데이트 날짜 표시",
+    "업데이트·리셋·복원 전 자동 안전백업 생성",
+    "최근 자동백업 10개 보관 및 원클릭 복원",
+    "RED 연간 목표 달성률, 남은 금액, 월평균 필요금액 표시 유지/강화",
+    "M BOOST 이번달 적립, 사용, 순증감, 남은 적립 가능금액 표시"
+  ]
 }
