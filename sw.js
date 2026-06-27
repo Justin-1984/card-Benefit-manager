@@ -1,4 +1,4 @@
-const CACHE='benefit-manager-v6-6-beta-1';
+const CACHE='benefit-manager-v6-6-2';
 const ASSETS=['./','./index.html','./manifest.json','./version.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
