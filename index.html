@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.4.1</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.4.3</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -24,7 +24,7 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
-<div class="notice">v6.4.1 안정화: 기존 RED 연간 실적/M BOOST 간편결제 기능은 유지하고, 현대카드 24일 리셋과 기타카드 1일 리셋을 완전히 분리했습니다. 현대카드 현재기간 전환 버튼으로 현대카드만 안전하게 초기화할 수 있습니다.</div>
+<div class="notice">v6.4.3 안전 리셋: RED 연간 실적/M BOOST 간편결제 기능은 유지하고, 기간 전환 시 리셋 전 카드별 금액을 월별 히스토리에 먼저 저장한 뒤 해당 카드만 초기화합니다.</div>
 <div class="alert-panel" id="dashboardAlert"></div><div class="alert-panel" id="deadlineAlert"></div>
 <div class="backup-warn" id="backupWarn"></div>
 <div class="sync-panel" id="syncPanel"></div>
@@ -111,17 +111,15 @@ function backupWarning(){
 function saveSnapshot(reason){let hy=getPeriod('hyundai'),mo=getPeriod('monthly');data.history=data.history||[];data.history.unshift({time:new Date().toLocaleString('ko-KR'),reason,hyundai:hy.label,monthly:mo.label,total:data.cards.filter(c=>!c.hidden).reduce((s,c)=>s+Number(c.spent||0),0),cards:data.cards.map(c=>({name:c.name,spent:c.spent,target:c.target,mPoint:c.mPoint||0,annualSpent:c.annualSpent||0,annualGoal:c.annualGoal||0}))});data.history=data.history.slice(0,12)}
 function periodKeyOf(type){return getPeriod(type||'monthly').key}
 function resetCardsForType(type,reason){
-  let changed=[];
-  data.cards.forEach(c=>{
-    const pt=c.periodType==='hyundai'?'hyundai':'monthly';
-    if(pt===type){
-      changed.push(c.name);
-      c.spent=0;
-      if(c.kind==='mboost')c.mPoint=0;
-    }
+  const targets=data.cards.filter(c=>(c.periodType==='hyundai'?'hyundai':'monthly')===type);
+  if(!targets.length)return [];
+  targets.forEach(c=>updateMonthlyRecord(c));
+  saveSnapshot(reason+' · '+targets.map(c=>c.name+' '+fmt(c.spent||0)).join(', '));
+  targets.forEach(c=>{
+    c.spent=0;
+    if(c.kind==='mboost')c.mPoint=0;
   });
-  if(changed.length)saveSnapshot(reason+' · '+changed.join(', '));
-  return changed;
+  return targets.map(c=>c.name);
 }
 function setPeriodMarker(type,key){
   let hy=getPeriod('hyundai'),mo=getPeriod('monthly');
@@ -269,7 +267,7 @@ function b64DecodeUnicode(str){return decodeURIComponent(escape(atob(str.replace
 function getDeviceId(){let id=localStorage.getItem('benefit-manager-device-id');if(!id){id='dev_'+Date.now()+'_'+Math.random().toString(16).slice(2);localStorage.setItem('benefit-manager-device-id',id)}return id}
 function getDeviceName(){let n=localStorage.getItem('benefit-manager-device-name');if(!n){n=(/iPad/i.test(navigator.userAgent)?'iPad':/iPhone/i.test(navigator.userAgent)?'iPhone':'Device');localStorage.setItem('benefit-manager-device-name',n)}return n}
 function markLocalChanged(){data.meta=data.meta||{};data.meta.updatedAt=Date.now();data.meta.deviceId=getDeviceId();data.meta.deviceName=getDeviceName();save()}
-function exportDataForGithub(){data.meta=data.meta||{};data.meta.savedAt=Date.now();data.meta.deviceId=getDeviceId();data.meta.deviceName=getDeviceName();return JSON.stringify({app:'card-benefit-manager',version:'6.0',savedAt:new Date().toISOString(),savedAtMs:Date.now(),deviceId:getDeviceId(),deviceName:getDeviceName(),data:data},null,2)}
+function exportDataForGithub(){data.meta=data.meta||{};data.meta.savedAt=Date.now();data.meta.deviceId=getDeviceId();data.meta.deviceName=getDeviceName();return JSON.stringify({app:'card-benefit-manager',version:'6.4.3',savedAt:new Date().toISOString(),savedAtMs:Date.now(),deviceId:getDeviceId(),deviceName:getDeviceName(),data:data},null,2)}
 
 let remoteInfoCache=null;
 async function getGithubBackupPayload(cfg){
@@ -337,15 +335,27 @@ let autoBackupTimer=null;function scheduleGithubAutoBackup(){const cfg=getGithub
 function openModal(){modal.style.display='flex'}function closeModal(){modal.style.display='none'}
 function resetPeriodCards(type,manual){
   const label=type==='hyundai'?'현대카드':'기타카드';
-  if(manual&&!confirm(label+'만 현재 산정기간으로 전환할까요? 다른 카드는 절대 변경하지 않습니다.'))return;
+  const p=getPeriod(type);
+  const targets=data.cards.filter(c=>(c.periodType==='hyundai'?'hyundai':'monthly')===type);
+  if(manual){
+    if(!targets.length){alert(label+' 대상 카드가 없습니다.');return;}
+    const list=targets.map(c=>'• '+c.name+' : '+fmt(c.spent||0)).join('\n');
+    const msg=label+'만 현재 산정기간으로 전환합니다.\n\n저장될 기간: '+p.label+'\n\n리셋 전 월별 히스토리에 저장될 금액:\n'+list+'\n\n다른 카드는 변경하지 않습니다.\n계속할까요?';
+    if(!confirm(msg))return;
+  }
   const changed=resetCardsForType(type,label+' 수동 기간 전환 전 저장');
-  setPeriodMarker(type,getPeriod(type).key);
+  setPeriodMarker(type,p.key);
   markLocalChanged();
   render();
   scheduleGithubAutoBackup();
   toast(changed.length?label+'만 전환했습니다':'전환할 카드가 없습니다');
 }
-function resetMonth(all){if(!confirm(all?'전체 데이터를 기본값으로 초기화할까요?':'모든 카드의 현재 사용금액/M포인트를 초기화할까요? 현대/기타가 모두 초기화됩니다.'))return;if(all){data={pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}else{saveSnapshot('전체 수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;if(c.kind==='mboost')c.mPoint=0})}markLocalChanged();localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key);render();scheduleGithubAutoBackup()}
+function resetMonth(all){
+  if(!confirm(all?'전체 데이터를 기본값으로 초기화할까요?':'모든 카드의 현재 사용금액/M포인트를 초기화할까요? 현대/기타가 모두 초기화됩니다.'))return;
+  if(all){data={pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}
+  else{data.cards.forEach(c=>updateMonthlyRecord(c));saveSnapshot('전체 수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;if(c.kind==='mboost')c.mPoint=0})}
+  markLocalChanged();localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key);render();scheduleGithubAutoBackup()
+}
 function backup(){data.lastBackupAt=Date.now();save();let b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='card-benefit-backup.json';a.click();render();updateGithubPanel();toast('백업 파일을 만들었습니다')}
 function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);save();render();toast('복원했습니다')}catch(err){alert('복원 실패')}};r.readAsText(f)}
 function toast(msg){let t=document.getElementById('toast');t.innerText=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
