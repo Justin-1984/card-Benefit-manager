@@ -1,15 +1,13 @@
 {
-  "version": "6.7.2-beta",
-  "build": 671,
+  "version": "6.7.3",
+  "build": 673,
   "releaseDate": "2026-06-27",
-  "dataVersion": "1.0",
   "minimumDataVersion": "1.0",
-  "required": false,
-  "message": "데이터 구조와 저장 로직은 유지하고, 파스텔톤을 제거한 깔끔한 고대비 UI로 정리했습니다.",
+  "message": "Apple Wallet 스타일 카드 UI 적용",
   "releaseNotes": [
-    "다크모드 가독성 개선",
-    "오늘 먼저 볼 카드 글자 대비 개선",
-    "파스텔톤 제거 유지",
-    "데이터 로직 변경 없음"
+    "카드별 지갑형 디자인 적용",
+    "카드별 색상 기반 고대비 UI",
+    "다크모드 가독성 강화",
+    "데이터 저장/백업 로직 변경 없음"
   ]
 }
