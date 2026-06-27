@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.4.1</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.4</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -24,7 +24,7 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
-<div class="notice">v6.4.1 안정화: 기존 RED 연간 실적/M BOOST 간편결제 기능은 유지하고, 현대카드 24일 리셋과 기타카드 1일 리셋을 완전히 분리했습니다. 현대카드 현재기간 전환 버튼으로 현대카드만 안전하게 초기화할 수 있습니다.</div>
+<div class="notice">v6.2: 숨김 카드 보기/복구, 그룹, 검색, 히스토리 저장을 포함했습니다. 아이폰 Safari 호환성을 위해 순서 변경은 ⬆️/⬇️ 버튼을 기본 방식으로 사용합니다. 그룹은 직접 추가/삭제/이름 변경할 수 있습니다. 현대카드는 24~23, 기타 카드는 1일~말일 기준입니다.</div>
 <div class="alert-panel" id="dashboardAlert"></div><div class="alert-panel" id="deadlineAlert"></div>
 <div class="backup-warn" id="backupWarn"></div>
 <div class="sync-panel" id="syncPanel"></div>
@@ -33,12 +33,13 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 <input class="search" id="search" placeholder="카드 검색..." oninput="render()">
 <div class="row" style="padding:0 0 12px"><button class="btn primary" onclick="openCard()">+ 카드 추가</button><button class="btn blue" onclick="openGroupManager()">그룹 관리</button><button class="btn orange" onclick="togglePin()">M BOOST 상단 고정: <span id="pinState">ON</span></button><button class="btn blue" onclick="openHiddenManager()">숨김 카드 관리</button><button class="btn blue" onclick="toggleHiddenView()">숨김 카드 보기: <span id="hiddenState">OFF</span></button></div>
 <div id="cards"></div>
-<div class="tools"><h3>관리</h3><div class="row"><button class="btn orange" onclick="resetPeriodCards('hyundai',true)">현대카드 현재기간 전환</button><button class="btn" onclick="resetPeriodCards('monthly',true)">기타카드 월초 전환</button><button class="btn" onclick="resetMonth(false)">전체 사용금액 초기화</button><button class="btn red" onclick="resetMonth(true)">전체 초기화</button><button class="btn blue" onclick="backup()">백업</button><button class="btn" onclick="restoreBtn.click()">복원</button><button class="btn orange" onclick="showHistory()">히스토리 보기</button><button class="btn blue" onclick="openGithubSettings()">GitHub 설정</button><button class="btn blue" onclick="githubBackup()">GitHub 백업</button><button class="btn orange" onclick="githubRestore()">GitHub 복원</button><button class="btn blue" onclick="checkGithubLatest(false)">최신 확인</button><input id="restoreBtn" type="file" accept="application/json" style="display:none" onchange="restore(event)"></div></div>
+<div class="tools"><h3>관리</h3><div class="row"><button class="btn orange" onclick="shiftHyundaiPeriod()">현대카드 현재기간 전환</button><button class="btn blue" onclick="shiftMonthlyPeriod()">기타카드 월초 전환</button><button class="btn" onclick="resetMonth(false)">전체 사용금액 초기화</button><button class="btn red" onclick="resetMonth(true)">전체 초기화</button><button class="btn blue" onclick="backup()">백업</button><button class="btn" onclick="restoreBtn.click()">복원</button><button class="btn orange" onclick="showHistory()">히스토리 보기</button><button class="btn blue" onclick="openGithubSettings()">GitHub 설정</button><button class="btn blue" onclick="githubBackup()">GitHub 백업</button><button class="btn orange" onclick="githubRestore()">GitHub 복원</button><button class="btn blue" onclick="checkGithubLatest(false)">최신 확인</button><input id="restoreBtn" type="file" accept="application/json" style="display:none" onchange="restore(event)"></div></div>
 </main>
 <div class="modal" id="modal" onclick="closeModal()"><div class="sheet" onclick="event.stopPropagation()"><div class="handle"></div><div class="mh"><b id="mt">수정</b><button class="x" onclick="closeModal()">×</button></div><div id="mb"></div></div></div><div class="toast" id="toast"></div>
 <script>
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js');}
-const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2';
+const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2', RESET_STATE='benefit-manager-reset-state-v6.4.2';
+const APP_VERSION='v6.4.2-stable-recovery';
 const GHCFG='benefit-manager-github-config-v6.2';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
@@ -109,42 +110,36 @@ function backupWarning(){
 }
 
 function saveSnapshot(reason){let hy=getPeriod('hyundai'),mo=getPeriod('monthly');data.history=data.history||[];data.history.unshift({time:new Date().toLocaleString('ko-KR'),reason,hyundai:hy.label,monthly:mo.label,total:data.cards.filter(c=>!c.hidden).reduce((s,c)=>s+Number(c.spent||0),0),cards:data.cards.map(c=>({name:c.name,spent:c.spent,target:c.target,mPoint:c.mPoint||0,annualSpent:c.annualSpent||0,annualGoal:c.annualGoal||0}))});data.history=data.history.slice(0,12)}
-function periodKeyOf(type){return getPeriod(type||'monthly').key}
-function resetCardsForType(type,reason){
-  let changed=[];
-  data.cards.forEach(c=>{
-    const pt=c.periodType==='hyundai'?'hyundai':'monthly';
-    if(pt===type){
-      changed.push(c.name);
-      c.spent=0;
-      if(c.kind==='mboost')c.mPoint=0;
-    }
-  });
-  if(changed.length)saveSnapshot(reason+' · '+changed.join(', '));
-  return changed;
+function getResetState(){
+  try{let v=JSON.parse(localStorage.getItem(RESET_STATE)||'{}');if(v&&typeof v==='object')return v}catch(e){}
+  const legacy=localStorage.getItem(MONTH);
+  if(legacy&&legacy.includes('|')){const [h,m]=legacy.split('|');return{hyundai:h,monthly:m}}
+  return{};
 }
-function setPeriodMarker(type,key){
-  let hy=getPeriod('hyundai'),mo=getPeriod('monthly');
-  let saved=parsePeriodMarker();
-  saved.hyundai= type==='hyundai'?key:(saved.hyundai||hy.key);
-  saved.monthly= type==='monthly'?key:(saved.monthly||mo.key);
-  localStorage.setItem(MONTH, saved.hyundai+'|'+saved.monthly);
+function setResetState(st){localStorage.setItem(RESET_STATE,JSON.stringify(st||{}));localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key)}
+function cardsByPeriod(type){return data.cards.filter(c=>(c.periodType==='hyundai'?'hyundai':'monthly')===type)}
+function resetCardsForPeriod(type,reason,manual){
+  const list=cardsByPeriod(type);
+  if(!list.length)return 0;
+  if(manual&&!confirm((type==='hyundai'?'현대카드만':'기타카드만')+' 현재 사용금액을 새 기간 기준으로 0원 전환할까요?
+기존 금액은 월별 히스토리/스냅샷에 보존됩니다.'))return 0;
+  saveSnapshot(reason);
+  list.forEach(c=>{updateMonthlyRecord(c);c.spent=0;if(c.kind==='mboost')c.mPoint=0});
+  updateRedAnnualFromRecords();
+  const st=getResetState();st[type]=getPeriod(type).key;setResetState(st);
+  markLocalChanged();save();render();scheduleGithubAutoBackup();
+  toast((type==='hyundai'?'현대카드':'기타카드')+' '+list.length+'장을 현재 기간으로 전환했습니다');
+  return list.length;
 }
-function parsePeriodMarker(){
-  let hy=getPeriod('hyundai'),mo=getPeriod('monthly'),last=localStorage.getItem(MONTH)||'';
-  let parts=last.split('|');
-  return {hyundai:parts[0]||hy.key, monthly:parts[1]||mo.key};
-}
+function shiftHyundaiPeriod(){resetCardsForPeriod('hyundai','현대카드 현재기간 전환 전 저장',true)}
+function shiftMonthlyPeriod(){resetCardsForPeriod('monthly','기타카드 월초 전환 전 저장',true)}
 function autoReset(){
-  let hy=getPeriod('hyundai'),mo=getPeriod('monthly');
-  let lastRaw=localStorage.getItem(MONTH);
-  if(!lastRaw){localStorage.setItem(MONTH,hy.key+'|'+mo.key);return}
-  let saved=parsePeriodMarker();
-  let changed=[];
-  if(saved.hyundai!==hy.key){changed=changed.concat(resetCardsForType('hyundai','현대카드 자동 기간 전환 전 저장'));saved.hyundai=hy.key;}
-  if(saved.monthly!==mo.key){changed=changed.concat(resetCardsForType('monthly','기타카드 자동 월초 전환 전 저장'));saved.monthly=mo.key;}
-  localStorage.setItem(MONTH,saved.hyundai+'|'+saved.monthly);
-  if(changed.length){save();toast(changed.length+'개 카드의 새 산정기간을 적용했습니다');scheduleGithubAutoBackup()}
+  const st=getResetState(), hy=getPeriod('hyundai'), mo=getPeriod('monthly');
+  if(!st.hyundai&&!st.monthly){setResetState({hyundai:hy.key,monthly:mo.key});return}
+  let changed=false, msgs=[];
+  if(st.hyundai&&st.hyundai!==hy.key){saveSnapshot('현대카드 자동 전환 전 저장');cardsByPeriod('hyundai').forEach(c=>{updateMonthlyRecord(c);c.spent=0;if(c.kind==='mboost')c.mPoint=0});st.hyundai=hy.key;changed=true;msgs.push('현대카드')}
+  if(st.monthly&&st.monthly!==mo.key){saveSnapshot('기타카드 자동 전환 전 저장');cardsByPeriod('monthly').forEach(c=>{updateMonthlyRecord(c);c.spent=0;if(c.kind==='mboost')c.mPoint=0});st.monthly=mo.key;changed=true;msgs.push('기타카드')}
+  if(changed){updateRedAnnualFromRecords();save();setResetState(st);toast(msgs.join(', ')+'만 새 산정기간으로 자동 전환했습니다');scheduleGithubAutoBackup()}
 }
 function pct(a,b){return b?Math.min(100,(Number(a||0)/Number(b))*100):0}
 function deadlineStatus(card, remainAmt){
@@ -335,19 +330,9 @@ async function githubTest(){const cfg={owner:ghOwner.value.trim(),repo:ghRepo.va
 let autoBackupTimer=null;function scheduleGithubAutoBackup(){const cfg=getGithubConfig();if(!cfg.autoBackup||!cfg.owner||!cfg.repo||!cfg.token)return;clearTimeout(autoBackupTimer);autoBackupTimer=setTimeout(()=>githubBackup(true),2500)}
 
 function openModal(){modal.style.display='flex'}function closeModal(){modal.style.display='none'}
-function resetPeriodCards(type,manual){
-  const label=type==='hyundai'?'현대카드':'기타카드';
-  if(manual&&!confirm(label+'만 현재 산정기간으로 전환할까요? 다른 카드는 절대 변경하지 않습니다.'))return;
-  const changed=resetCardsForType(type,label+' 수동 기간 전환 전 저장');
-  setPeriodMarker(type,getPeriod(type).key);
-  markLocalChanged();
-  render();
-  scheduleGithubAutoBackup();
-  toast(changed.length?label+'만 전환했습니다':'전환할 카드가 없습니다');
-}
-function resetMonth(all){if(!confirm(all?'전체 데이터를 기본값으로 초기화할까요?':'모든 카드의 현재 사용금액/M포인트를 초기화할까요? 현대/기타가 모두 초기화됩니다.'))return;if(all){data={pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}else{saveSnapshot('전체 수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;if(c.kind==='mboost')c.mPoint=0})}markLocalChanged();localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key);render();scheduleGithubAutoBackup()}
+function resetMonth(all){if(!confirm(all?'전체 데이터를 기본값으로 초기화할까요?':'모든 카드의 현재 사용금액/M포인트를 초기화할까요? 현대/기타를 구분하려면 위의 전환 버튼을 사용하세요.'))return;if(all){data={pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}else{saveSnapshot('수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;if(c.kind==='mboost')c.mPoint=0})}markLocalChanged();localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key);render();scheduleGithubAutoBackup()}
 function backup(){data.lastBackupAt=Date.now();save();let b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='card-benefit-backup.json';a.click();render();updateGithubPanel();toast('백업 파일을 만들었습니다')}
-function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);save();render();toast('복원했습니다')}catch(err){alert('복원 실패')}};r.readAsText(f)}
+function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);save();setResetState({hyundai:getPeriod('hyundai').key,monthly:getPeriod('monthly').key});render();toast('복원했습니다. 현대카드 전환이 필요하면 관리에서 현대카드 현재기간 전환을 누르세요')}catch(err){alert('복원 실패')}};r.readAsText(f)}
 function toast(msg){let t=document.getElementById('toast');t.innerText=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
 autoReset();render();setTimeout(()=>checkGithubLatest(true),1200);
 </script></body></html>
