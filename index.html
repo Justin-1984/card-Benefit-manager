@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.4.3</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.4.4</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -24,22 +24,24 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
-<div class="notice">v6.4.3 안전 리셋: RED 연간 실적/M BOOST 간편결제 기능은 유지하고, 기간 전환 시 리셋 전 카드별 금액을 월별 히스토리에 먼저 저장한 뒤 해당 카드만 초기화합니다.</div>
+<div class="notice">v6.4.4 업데이트 시스템: 기존 안전 리셋은 유지하고, 앱 안에서 version.json 기반 업데이트 확인/캐시 갱신을 지원합니다.</div>
 <div class="alert-panel" id="dashboardAlert"></div><div class="alert-panel" id="deadlineAlert"></div>
 <div class="backup-warn" id="backupWarn"></div>
 <div class="sync-panel" id="syncPanel"></div>
 <div class="github-panel" id="githubPanel"></div>
+<div class="github-panel" id="updatePanel"><b>앱 정보</b><br>현재 버전 v6.4.4<br>업데이트 확인 전입니다.</div>
 <div class="summary"><div class="tile"><div class="tl">총 월 사용금액</div><div class="tv" id="sumSpent">0원</div><div class="ts">숨김 카드 제외</div></div><div class="tile"><div class="tl">M BOOST 추가 사용 가능</div><div class="tv" id="sumEasyRemain">0원</div><div class="ts">입력 M포인트 기준</div></div></div>
 <input class="search" id="search" placeholder="카드 검색..." oninput="render()">
 <div class="row" style="padding:0 0 12px"><button class="btn primary" onclick="openCard()">+ 카드 추가</button><button class="btn blue" onclick="openGroupManager()">그룹 관리</button><button class="btn orange" onclick="togglePin()">M BOOST 상단 고정: <span id="pinState">ON</span></button><button class="btn blue" onclick="openHiddenManager()">숨김 카드 관리</button><button class="btn blue" onclick="toggleHiddenView()">숨김 카드 보기: <span id="hiddenState">OFF</span></button></div>
 <div id="cards"></div>
-<div class="tools"><h3>관리</h3><div class="row"><button class="btn orange" onclick="resetPeriodCards('hyundai',true)">현대카드 현재기간 전환</button><button class="btn" onclick="resetPeriodCards('monthly',true)">기타카드 월초 전환</button><button class="btn" onclick="resetMonth(false)">전체 사용금액 초기화</button><button class="btn red" onclick="resetMonth(true)">전체 초기화</button><button class="btn blue" onclick="backup()">백업</button><button class="btn" onclick="restoreBtn.click()">복원</button><button class="btn orange" onclick="showHistory()">히스토리 보기</button><button class="btn blue" onclick="openGithubSettings()">GitHub 설정</button><button class="btn blue" onclick="githubBackup()">GitHub 백업</button><button class="btn orange" onclick="githubRestore()">GitHub 복원</button><button class="btn blue" onclick="checkGithubLatest(false)">최신 확인</button><input id="restoreBtn" type="file" accept="application/json" style="display:none" onchange="restore(event)"></div></div>
+<div class="tools"><h3>관리</h3><div class="row"><button class="btn orange" onclick="resetPeriodCards('hyundai',true)">현대카드 현재기간 전환</button><button class="btn" onclick="resetPeriodCards('monthly',true)">기타카드 월초 전환</button><button class="btn" onclick="resetMonth(false)">전체 사용금액 초기화</button><button class="btn red" onclick="resetMonth(true)">전체 초기화</button><button class="btn blue" onclick="backup()">백업</button><button class="btn" onclick="restoreBtn.click()">복원</button><button class="btn orange" onclick="showHistory()">히스토리 보기</button><button class="btn orange" onclick="restorePreUpdateBackup()">업데이트 전 백업 복원</button><button class="btn blue" onclick="openGithubSettings()">GitHub 설정</button><button class="btn blue" onclick="githubBackup()">GitHub 백업</button><button class="btn orange" onclick="githubRestore()">GitHub 복원</button><button class="btn blue" onclick="checkGithubLatest(false)">최신 확인</button><button class="btn blue" onclick="checkAppUpdate(true)">앱 업데이트 확인</button><button class="btn orange" onclick="applyAppUpdate()">업데이트 적용</button><input id="restoreBtn" type="file" accept="application/json" style="display:none" onchange="restore(event)"></div></div>
 </main>
 <div class="modal" id="modal" onclick="closeModal()"><div class="sheet" onclick="event.stopPropagation()"><div class="handle"></div><div class="mh"><b id="mt">수정</b><button class="x" onclick="closeModal()">×</button></div><div id="mb"></div></div></div><div class="toast" id="toast"></div>
 <script>
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js');}
 const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2';
 const GHCFG='benefit-manager-github-config-v6.2';
+const APP_VERSION='6.4.4', APP_BUILD=644, PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.4.4';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
 const defaultCards=[
@@ -267,7 +269,7 @@ function b64DecodeUnicode(str){return decodeURIComponent(escape(atob(str.replace
 function getDeviceId(){let id=localStorage.getItem('benefit-manager-device-id');if(!id){id='dev_'+Date.now()+'_'+Math.random().toString(16).slice(2);localStorage.setItem('benefit-manager-device-id',id)}return id}
 function getDeviceName(){let n=localStorage.getItem('benefit-manager-device-name');if(!n){n=(/iPad/i.test(navigator.userAgent)?'iPad':/iPhone/i.test(navigator.userAgent)?'iPhone':'Device');localStorage.setItem('benefit-manager-device-name',n)}return n}
 function markLocalChanged(){data.meta=data.meta||{};data.meta.updatedAt=Date.now();data.meta.deviceId=getDeviceId();data.meta.deviceName=getDeviceName();save()}
-function exportDataForGithub(){data.meta=data.meta||{};data.meta.savedAt=Date.now();data.meta.deviceId=getDeviceId();data.meta.deviceName=getDeviceName();return JSON.stringify({app:'card-benefit-manager',version:'6.4.3',savedAt:new Date().toISOString(),savedAtMs:Date.now(),deviceId:getDeviceId(),deviceName:getDeviceName(),data:data},null,2)}
+function exportDataForGithub(){data.meta=data.meta||{};data.meta.savedAt=Date.now();data.meta.deviceId=getDeviceId();data.meta.deviceName=getDeviceName();return JSON.stringify({app:'card-benefit-manager',version:'6.4.4',savedAt:new Date().toISOString(),savedAtMs:Date.now(),deviceId:getDeviceId(),deviceName:getDeviceName(),data:data},null,2)}
 
 let remoteInfoCache=null;
 async function getGithubBackupPayload(cfg){
@@ -332,6 +334,67 @@ async function githubRestore(){const cfg=getGithubConfig();if(!cfg.owner||!cfg.r
 async function githubTest(){const cfg={owner:ghOwner.value.trim(),repo:ghRepo.value.trim(),branch:ghBranch.value.trim()||'main',path:ghPath.value.trim()||'backups/card-benefit-backup.json',token:ghToken.value.trim(),autoBackup:ghAuto.value==='true'};try{const url=`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}`;const r=await fetch(url,{headers:githubHeaders(cfg.token)});if(!r.ok)throw new Error('연결 실패: '+r.status);toast('GitHub 연결 성공')}catch(e){alert(e.message)}}
 let autoBackupTimer=null;function scheduleGithubAutoBackup(){const cfg=getGithubConfig();if(!cfg.autoBackup||!cfg.owner||!cfg.repo||!cfg.token)return;clearTimeout(autoBackupTimer);autoBackupTimer=setTimeout(()=>githubBackup(true),2500)}
 
+
+let latestAppInfo=null;
+function updateAppPanel(message,extra){
+  const el=document.getElementById('updatePanel'); if(!el)return;
+  const now=new Date().toLocaleString('ko-KR');
+  el.innerHTML='<b>앱 정보</b><br>현재 버전 v'+APP_VERSION+'<br>'+(message||'업데이트 확인 전입니다.')+(extra?'<div class="sync-actions">'+extra+'</div>':'')+'<br><span style="font-size:11px;color:#6b7280">마지막 확인: '+now+'</span>';
+}
+function compareBuild(info){
+  const b=Number(info&&info.build||String(info&&info.version||'').replace(/\D/g,'')||0);
+  return b-APP_BUILD;
+}
+async function checkAppUpdate(manual){
+  try{
+    const r=await fetch('./version.json?ts='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw new Error('version.json 확인 실패: '+r.status);
+    const info=await r.json(); latestAppInfo=info;
+    const diff=compareBuild(info);
+    if(diff>0){
+      updateAppPanel('새 버전 v'+(info.version||'')+' 발견<br>'+((info.message||'').replace(/\n/g,'<br>')),'<button onclick="applyAppUpdate()">업데이트 적용</button>');
+      if(manual)toast('새 업데이트가 있습니다');
+    }else{
+      updateAppPanel('현재 최신 버전입니다.<br>서버 버전 v'+(info.version||APP_VERSION));
+      if(manual)toast('현재 최신 버전입니다');
+    }
+  }catch(e){
+    updateAppPanel('업데이트 확인 실패<br>'+e.message);
+    if(manual)alert(e.message);
+  }
+}
+function savePreUpdateBackup(){
+  try{
+    const payload={time:new Date().toISOString(),version:APP_VERSION,data:data};
+    localStorage.setItem(PRE_UPDATE_BACKUP,JSON.stringify(payload));
+    return true;
+  }catch(e){return false;}
+}
+async function applyAppUpdate(){
+  if(!confirm('업데이트 적용 전에 현재 데이터를 로컬 안전백업으로 저장하고 캐시를 새로고침합니다. 계속할까요?'))return;
+  savePreUpdateBackup();
+  try{
+    if('serviceWorker' in navigator){
+      const regs=await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map(r=>r.update().catch(()=>{})));
+    }
+    if(window.caches){
+      const keys=await caches.keys();
+      await Promise.all(keys.filter(k=>/benefit-manager/i.test(k)).map(k=>caches.delete(k)));
+    }
+  }catch(e){}
+  const next=(latestAppInfo&&latestAppInfo.build)?latestAppInfo.build:Date.now();
+  location.href=location.pathname+'?v='+next;
+}
+function restorePreUpdateBackup(){
+  try{
+    const raw=localStorage.getItem(PRE_UPDATE_BACKUP); if(!raw){alert('업데이트 전 백업이 없습니다.');return;}
+    const payload=JSON.parse(raw); if(!payload.data){alert('백업 데이터 형식이 올바르지 않습니다.');return;}
+    if(!confirm('업데이트 전 로컬 백업으로 복원할까요? 현재 화면 데이터는 덮어써집니다.'))return;
+    data=payload.data; save(); render(); toast('업데이트 전 백업으로 복원했습니다');
+  }catch(e){alert('복원 실패: '+e.message)}
+}
+
 function openModal(){modal.style.display='flex'}function closeModal(){modal.style.display='none'}
 function resetPeriodCards(type,manual){
   const label=type==='hyundai'?'현대카드':'기타카드';
@@ -359,5 +422,5 @@ function resetMonth(all){
 function backup(){data.lastBackupAt=Date.now();save();let b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='card-benefit-backup.json';a.click();render();updateGithubPanel();toast('백업 파일을 만들었습니다')}
 function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);save();render();toast('복원했습니다')}catch(err){alert('복원 실패')}};r.readAsText(f)}
 function toast(msg){let t=document.getElementById('toast');t.innerText=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
-autoReset();render();setTimeout(()=>checkGithubLatest(true),1200);
+autoReset();render();updateAppPanel();setTimeout(()=>checkGithubLatest(true),1200);setTimeout(()=>checkAppUpdate(false),1800);
 </script></body></html>

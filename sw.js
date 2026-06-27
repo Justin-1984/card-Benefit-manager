@@ -1,5 +1,8 @@
-const CACHE='benefit-manager-v6.4.3-safe-reset';
-const ASSETS=['./','./index.html','./manifest.json'];
+const CACHE='benefit-manager-v6.4.4-update-system';
+const ASSETS=['./','./index.html','./manifest.json','./version.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
-self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));});
+self.addEventListener('fetch',e=>{
+  if(e.request.url.includes('version.json')){e.respondWith(fetch(e.request,{cache:'no-store'}).catch(()=>caches.match(e.request)));return;}
+  e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));
+});
