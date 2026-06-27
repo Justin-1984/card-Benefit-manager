@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "6.0",
-  "savedAt": "2026-06-27T07:22:16.042Z",
-  "savedAtMs": 1782544936042,
+  "savedAt": "2026-06-27T07:28:45.793Z",
+  "savedAtMs": 1782545325793,
   "deviceId": "dev_1782544933281_717e4172b5d6a8",
   "deviceName": "Device",
   "data": {
@@ -90,7 +90,7 @@
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
+        "collapsed": false,
         "memo": "",
         "group": "기타"
       },
@@ -101,10 +101,10 @@
         "color": "#0ea5e9",
         "target": 100000,
         "spent": 0,
-        "hidden": false,
+        "hidden": true,
         "kind": "normal",
         "periodType": "monthly",
-        "collapsed": true,
+        "collapsed": false,
         "memo": "",
         "group": "기타"
       }
@@ -187,10 +187,10 @@
     ],
     "lastBackupAt": 1781444547238,
     "meta": {
-      "updatedAt": 1782544936042,
+      "updatedAt": 1782545325793,
       "deviceId": "dev_1782544933281_717e4172b5d6a8",
       "deviceName": "Device",
-      "savedAt": 1782544936042
+      "savedAt": 1782545325793
     }
   }
 }
