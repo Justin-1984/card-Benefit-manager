@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.7.1 Beta</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v6.7.2 Beta</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -51,7 +51,7 @@ main{max-width:760px;margin:0 auto}.tabbar{background:rgba(255,255,255,.56);bord
 
 
 
-/* v6.7.1 Beta clean-readable UI override. Data logic unchanged. */
+/* v6.7.2 Beta clean-readable UI override. Data logic unchanged. */
 :root{--ink:#111827;--muted:#64748b;--line:#e5e7eb;--panel:#ffffff;--bg:#f6f7f9;--primary:#111827;--blue:#1d4ed8;--red:#be123c;--green:#047857;--amber:#b45309}
 body{background:var(--bg)!important;color:var(--ink)!important;font-size:14px!important;letter-spacing:-.1px!important}
 body:before,body:after,.hero:before,.tile:after,.icon:after{content:none!important;display:none!important}
@@ -66,13 +66,37 @@ main{max-width:780px!important}.tabbar{background:#e5e7eb!important;border:1px s
 .hero,.smart-chip,.action-panel,.card,.tile{animation:none!important}
 @media (prefers-color-scheme:dark){body{background:#0f172a!important;color:#e5e7eb!important}header,.card,.tile,.tools,.settings-hero,.action-panel,.search{background:#111827!important;border-color:#334155!important;color:#e5e7eb!important}.ttl,.name{color:#f8fafc!important}.sub,.meta,.period,.tl,.ts,.action-meta,.hint{color:#94a3b8!important}.tabbar{background:#1e293b!important;border-color:#334155!important}.tabbtn.active{background:#0f172a!important;color:#f8fafc!important}.btn{background:#1e293b!important;color:#e5e7eb!important}.btn.primary{background:#f8fafc!important;color:#111827!important}.memo{background:#0f172a!important;border-color:#334155!important;color:#cbd5e1!important}.sheet{background:#111827!important}.fg input,.fg select,.fg textarea{background:#0f172a!important;color:#e5e7eb!important;border-color:#334155!important}.smart-chip{background:#111827!important;color:#e5e7eb!important;border-color:#334155!important}}
 
+
+/* v6.7.2 readability hotfix: dark mode contrast */
+@media (prefers-color-scheme:dark){
+  .action-panel{background:#111827!important;border-color:#334155!important;color:#f8fafc!important;box-shadow:none!important}
+  .action-title{color:#f8fafc!important}
+  .action-grid .action-item,
+  .hidden-item{background:#0f172a!important;border:1px solid #334155!important;color:#f8fafc!important}
+  .action-grid .action-item b{color:#f8fafc!important}
+  .action-grid .action-item div{color:#cbd5e1!important}
+  .action-grid .action-meta{color:#94a3b8!important}
+  .action-grid .action-warn{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
+  .action-grid .action-warn b{color:#fef3c7!important}
+  .action-grid .action-warn div{color:#fde68a!important}
+  .action-grid .action-danger{background:#2a1111!important;border-color:#991b1b!important;color:#fecaca!important}
+  .action-grid .action-danger b{color:#fee2e2!important}
+  .action-grid .action-danger div{color:#fecaca!important}
+  .action-grid .action-good{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
+  .action-grid .action-good b{color:#dcfce7!important}
+  .action-grid .action-good div{color:#bbf7d0!important}
+  .smart-chip{background:#111827!important;color:#f8fafc!important;border-color:#334155!important}
+  .sync-panel.show{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
+  .notice,.alert-panel.show{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
+}
+
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
 <div class="tabbar"><button id="tabDashboard" class="tabbtn active" onclick="switchTab('dashboard')">🏠 대시보드</button><button id="tabSettings" class="tabbtn" onclick="switchTab('settings')">⚙️ 설정</button></div>
-<div id="appNotice" class="notice settings-section">v6.7.1 Beta: 데이터 로직은 유지하고, 파스텔톤을 제거한 깔끔한 고대비 UI로 정리했습니다.</div>
+<div id="appNotice" class="notice settings-section">v6.7.2 Beta: 데이터 로직은 유지하고, 파스텔톤을 제거한 깔끔한 고대비 UI로 정리했습니다.</div>
 
-<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div class="hero-badge" id="heroBadge">v6.7.1 Beta</div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
+<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div class="hero-badge" id="heroBadge">v6.7.2 Beta</div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
 
 <div class="mpoint-dashboard dashboard-section" id="mPointDashboard">
   <div class="mpoint-top"><div><div class="mpoint-title">⭐ M포인트 대시보드</div><div class="mpoint-sub">M BOOST 적립/사용/순증감을 카드 실적과 분리해서 관리합니다.</div></div><button class="mpoint-edit" onclick="openMPoint()">M포인트 입력</button></div>
@@ -111,7 +135,7 @@ function switchTab(tab){
 
 const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2';
 const GHCFG='benefit-manager-github-config-v6.2';
-const APP_VERSION='6.7.1', APP_BUILD=671, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
+const APP_VERSION='6.7.2', APP_BUILD=671, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
 const defaultCards=[
