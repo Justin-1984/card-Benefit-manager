@@ -1,6 +1,6 @@
 {
-  "version": "6.4.2-stable-recovery",
+  "version": "6.4.1",
   "date": "2026-06-27",
-  "mandatory": false,
-  "message": "v6.4 기준 안정화: 현대카드/기타카드 리셋 분리, 실제 현대카드 현재기간 전환 버튼 추가"
+  "channel": "stable",
+  "message": "현대카드 24일 전환과 기타카드 1일 전환을 분리한 안정화 패치"
 }
