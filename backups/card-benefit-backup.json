@@ -1,13 +1,78 @@
 {
   "app": "card-benefit-manager",
-  "version": "6.6.0",
-  "savedAt": "2026-06-27T11:29:52.393Z",
-  "savedAtMs": 1782559792393,
+  "version": "6.7.3",
+  "savedAt": "2026-07-01T06:07:17.644Z",
+  "savedAtMs": 1782886037644,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
     "pinMboost": false,
     "history": [
+      {
+        "time": "2026. 7. 1. 오후 3:07:15",
+        "reason": "기타카드 자동 월초 전환 전 저장 · 스페셜 롯데카드(LG전자) 323,300원, LG전자 우리카드 315,364원, SSG닷컴 삼성카드 404,637원, 카카오페이신용카드 삼성 48,800원, 카드의정석2 후불하이패스+ 0원",
+        "hyundai": "2026.06.24 ~ 2026.07.23",
+        "monthly": "2026.07.01 ~ 2026.07.31",
+        "total": 1043301,
+        "cards": [
+          {
+            "name": "SC제일은행-the Red",
+            "spent": 0,
+            "target": 1000000,
+            "mPoint": 0,
+            "annualSpent": 1048382,
+            "annualGoal": 12000000
+          },
+          {
+            "name": "SC 현대카드 M BOOST",
+            "spent": 0,
+            "target": 1000000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "스페셜 롯데카드(LG전자)",
+            "spent": 323300,
+            "target": 300000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "LG전자 우리카드",
+            "spent": 315364,
+            "target": 300000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "SSG닷컴 삼성카드",
+            "spent": 404637,
+            "target": 400000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "카카오페이신용카드 삼성",
+            "spent": 48800,
+            "target": 300000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "카드의정석2 후불하이패스+",
+            "spent": 0,
+            "target": 100000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          }
+        ]
+      },
       {
         "time": "2026. 6. 27. 오후 4:52:01",
         "reason": "현대카드 수동 기간 전환 전 저장 · SC제일은행-the Red, SC 현대카드 M BOOST",
@@ -81,6 +146,12 @@
           "spent": 323300,
           "target": 300000,
           "savedAt": "2026. 6. 27. 오후 4:54:23"
+        },
+        "monthly_2026-06-30_2026-07-30": {
+          "label": "2026.07.01 ~ 2026.07.31",
+          "spent": 323300,
+          "target": 300000,
+          "savedAt": "2026. 7. 1. 오후 3:07:15"
         }
       },
       "red": {
@@ -97,10 +168,40 @@
           "spent": 404637,
           "target": 400000,
           "savedAt": "2026. 6. 27. 오후 8:29:49"
+        },
+        "monthly_2026-06-30_2026-07-30": {
+          "label": "2026.07.01 ~ 2026.07.31",
+          "spent": 404637,
+          "target": 400000,
+          "savedAt": "2026. 7. 1. 오후 3:07:15"
+        }
+      },
+      "woori": {
+        "monthly_2026-06-30_2026-07-30": {
+          "label": "2026.07.01 ~ 2026.07.31",
+          "spent": 315364,
+          "target": 300000,
+          "savedAt": "2026. 7. 1. 오후 3:07:15"
+        }
+      },
+      "kakao": {
+        "monthly_2026-06-30_2026-07-30": {
+          "label": "2026.07.01 ~ 2026.07.31",
+          "spent": 48800,
+          "target": 300000,
+          "savedAt": "2026. 7. 1. 오후 3:07:15"
+        }
+      },
+      "hipass": {
+        "monthly_2026-06-30_2026-07-30": {
+          "label": "2026.07.01 ~ 2026.07.31",
+          "spent": 0,
+          "target": 100000,
+          "savedAt": "2026. 7. 1. 오후 3:07:15"
         }
       }
     },
-    "lastBackupAt": 1782549436720,
+    "lastBackupAt": 1782559810673,
     "groups": [
       "현대",
       "생활",
@@ -151,7 +252,7 @@
         "group": "엘지 할인용",
         "color": "#a855f7",
         "target": 300000,
-        "spent": 323300,
+        "spent": 0,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -167,7 +268,7 @@
         "group": "엘지 할인용",
         "color": "#e11d48",
         "target": 300000,
-        "spent": 315364,
+        "spent": 0,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -183,12 +284,12 @@
         "group": "생활",
         "color": "#f97316",
         "target": 400000,
-        "spent": 404637,
+        "spent": 0,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -199,7 +300,7 @@
         "group": "생활",
         "color": "#22c55e",
         "target": 300000,
-        "spent": 48800,
+        "spent": 0,
         "hidden": true,
         "kind": "normal",
         "periodType": "monthly",
@@ -224,10 +325,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1782559792393,
+      "updatedAt": 1782886037643,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1782559792393
+      "savedAt": 1782886037644
     }
   }
 }
