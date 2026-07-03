@@ -1,19 +1,13 @@
-# BenefitManager PWA v7.2.2 Subscriptions Beta
+# BenefitManager PWA
 
-v7.1.6 정상 UI 기준과 v7.2.0 UX Beta를 기반으로 구독 결제 매니저를 추가한 베타 버전입니다.
+현재 버전: v7.3.0 Subscription Engine Beta
 
-## 핵심 변경
+## 핵심
+- 카드 실적 관리
+- 구독 결제 관리
+- 구독 캘린더
+- 카드별 구독 예상 실적 표시
+- GitHub Backup / Restore
 
-- 구독 결제 전용 탭 추가
-- 구독명, 금액, 통화, 환율, 결제일, 연결 카드, 카테고리 관리
-- 월 구독 총액, 7일 내 결제, 연간 환산, 실적 미반영 요약
-- 구독 금액을 연결 카드 실적에 중복 없이 반영
-- KRW/USD/HKD/AUD 입력 지원
-- 구독 데이터는 별도 LocalStorage 키에 저장
-- 수동 백업/GitHub 백업 payload에 구독 데이터 포함
-
-## 유지 원칙
-
-- 기존 카드 데이터 저장 키 유지
-- 기존 카드/History/GitHub 로직 최대한 유지
-- UI와 신규 구독 데이터만 확장
+## 데이터 원칙
+기존 카드 데이터 구조는 유지합니다. 구독 데이터는 별도 LocalStorage 키에 저장하며 백업/GitHub 내보내기에 포함됩니다.
