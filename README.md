@@ -5,7 +5,7 @@
 ## 현재 버전
 
 - 안정 운영 기준: `v6.5 Stable`
-- 최신 UI 테스트: `v7.1.5 UI Beta`
+- 최신 UI 테스트: `v7.1.6 UI Beta`
 - 기준 파일: `BenefitManager_PWA_v7_1_0_ui_beta(2).zip`
 - Data Version: `1.0`
 
@@ -22,7 +22,7 @@
 - 설정 탭 분리
 - Mobile / iPad / PC 반응형 UI
 
-## v7.1.5 UI Beta 핵심
+## v7.1.6 UI Beta 핵심
 
 - v7.1.0 정상 모바일 기준에서 재시작
 - 모바일 UI 보존용 CSS Guard 적용

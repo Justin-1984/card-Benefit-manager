@@ -1,6 +1,19 @@
 # CHANGELOG
 
-## v7.1.5 UI Beta - 2026-07-03
+## v7.1.6 UI Beta - 2026-07-03
+
+### Fixed
+- PC 설정 탭에서 카드 리스트/카드 그룹이 노출되는 문제 수정
+- PC 대시보드 총 부족액 요약 타일이 좁은 좌측 패널에서 깨지는 문제 수정
+- PC 카드 이미지/카드 그리드 개선 상태 유지
+
+### Safety
+- 모바일 CSS 규칙은 유지
+- 데이터 구조, 저장 키, 백업, GitHub, History 로직 변경 없음
+
+# CHANGELOG
+
+## v7.1.6 UI Beta - 2026-07-03
 
 ### Fixed
 - PC 화면에서 모바일/태블릿 규칙이 덮어쓰던 문제를 PC 전용 Hard Lock CSS로 분리했습니다.
@@ -16,7 +29,7 @@
 
 # CHANGELOG
 
-## v7.1.5 UI Beta
+## v7.1.6 UI Beta
 
 - `BenefitManager_PWA_v7_1_0_ui_beta(2).zip`를 새 기준점으로 재시작
 - v7.1.2 / v7.1.3의 충돌 가능 CSS를 기준으로 삼지 않음

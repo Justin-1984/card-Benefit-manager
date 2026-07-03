@@ -1,6 +1,15 @@
 # UPDATE STATUS
 
-Current: **v7.1.5 UI Beta**
+Current: v7.1.6 UI Beta
+
+- Baseline: v7.1.0 UI Beta (2)
+- Data Layer: unchanged
+- Mobile: preserved
+- PC: settings/card visibility and shortage summary layout fixed
+
+# UPDATE STATUS
+
+Current: **v7.1.6 UI Beta**
 
 Status: PC desktop layout hotfix.
 
@@ -16,7 +25,7 @@ Status: PC desktop layout hotfix.
 ## 현재 상태
 
 - Stable 기준: `v6.5 Stable`
-- 최신 테스트: `v7.1.5 UI Beta`
+- 최신 테스트: `v7.1.6 UI Beta`
 - 기준 파일: `BenefitManager_PWA_v7_1_0_ui_beta(2).zip`
 - Data Version: `1.0`
 
@@ -33,7 +42,7 @@ Status: PC desktop layout hotfix.
 - GitHub Backup 구조
 - 자동 백업 구조
 
-## v7.1.5 확인 포인트
+## v7.1.6 확인 포인트
 
 - 모바일 대시보드 정상
 - 모바일 설정 화면에서 카드 리스트 노출 없음
@@ -45,6 +54,6 @@ Status: PC desktop layout hotfix.
 
 ## 다음 작업
 
-- v7.1.5: PC 카드 디테일 디자인 세부 조정
+- v7.1.6: PC 카드 디테일 디자인 세부 조정
 - v7.2: 월별 그래프 추가
 - v7.3: 히스토리 통계 화면 개선

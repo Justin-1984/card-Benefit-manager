@@ -1,16 +1,16 @@
 {
-  "version": "7.1.5",
-  "build": 715,
+  "version": "7.1.6",
+  "build": 716,
   "releaseDate": "2026-07-03",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.1.5 UI Beta",
-  "message": "PC 데스크톱 레이아웃을 사이드바/카드 그리드 구조로 강제 분리했습니다.",
+  "title": "BenefitManager PWA v7.1.6 UI Beta",
+  "message": "PC 설정 탭 카드 노출과 총 부족액 요약 카드 레이아웃을 수정했습니다.",
   "releaseNotes": [
-    "v7.1.4 기준 PC 전용 CSS Hard Lock 추가",
-    "PC 사이드바 고정 구조 복구",
-    "PC 카드 그리드 2~3열 구조 적용",
-    "모바일/iPad 규칙은 별도 media query로 보존",
+    "PC 설정 탭에서 카드 그룹이 보이는 문제 수정",
+    "PC 대시보드 총 부족액 영역 2x2 요약 그리드로 안정화",
+    "PC 카드 이미지/그리드 수정은 유지",
+    "모바일 정상 상태 보존",
     "데이터/백업/GitHub/History 로직 변경 없음"
   ]
 }
