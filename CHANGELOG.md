@@ -1,6 +1,22 @@
 # CHANGELOG
 
-## v7.1.4 UI Beta
+## v7.1.5 UI Beta - 2026-07-03
+
+### Fixed
+- PC 화면에서 모바일/태블릿 규칙이 덮어쓰던 문제를 PC 전용 Hard Lock CSS로 분리했습니다.
+- PC 사이드바 고정 구조를 복구했습니다.
+- PC 카드 영역을 2열/대형 화면 3열 그리드로 재정렬했습니다.
+
+### Preserved
+- 모바일 정상 레이아웃 유지
+- iPad 분리 규칙 유지
+- 데이터/백업/GitHub/History 로직 변경 없음
+
+---
+
+# CHANGELOG
+
+## v7.1.5 UI Beta
 
 - `BenefitManager_PWA_v7_1_0_ui_beta(2).zip`를 새 기준점으로 재시작
 - v7.1.2 / v7.1.3의 충돌 가능 CSS를 기준으로 삼지 않음

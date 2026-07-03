@@ -1,9 +1,22 @@
+# UPDATE STATUS
+
+Current: **v7.1.5 UI Beta**
+
+Status: PC desktop layout hotfix.
+
+- Data Layer: unchanged
+- Mobile Layout: preserved
+- iPad Layout: preserved
+- Desktop Layout: hard-locked sidebar/card grid
+
+---
+
 # 업데이트 현황
 
 ## 현재 상태
 
 - Stable 기준: `v6.5 Stable`
-- 최신 테스트: `v7.1.4 UI Beta`
+- 최신 테스트: `v7.1.5 UI Beta`
 - 기준 파일: `BenefitManager_PWA_v7_1_0_ui_beta(2).zip`
 - Data Version: `1.0`
 
@@ -20,7 +33,7 @@
 - GitHub Backup 구조
 - 자동 백업 구조
 
-## v7.1.4 확인 포인트
+## v7.1.5 확인 포인트
 
 - 모바일 대시보드 정상
 - 모바일 설정 화면에서 카드 리스트 노출 없음
