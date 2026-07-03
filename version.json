@@ -1,11 +1,16 @@
 {
-  "version": "7.0.1",
-  "build": 701,
+  "version": "7.1.0",
+  "build": 710,
   "releaseDate": "2026-07-03",
-  "minimumDataVersion": "1.0",
+  "dataVersion": "1.0",
+  "channel": "beta",
+  "title": "BenefitManager PWA v7.1.0 UI Beta",
+  "message": "UI 완성 프로젝트 1차 및 GitHub 문서 패키지를 추가했습니다.",
   "releaseNotes": [
-    "Dashboard number auto-fit hotfix",
-    "PC summary card readability improved",
-    "Data and backup logic unchanged"
+    "v7.1 UI 완성 프로젝트 1차",
+    "PC/iPad/Mobile 반응형 UI 기준 정리",
+    "대시보드 숫자 가독성 유지",
+    "README, CHANGELOG, ROADMAP, INSTALL, UPDATE_STATUS, DeveloperNotes 포함",
+    "데이터/백업 로직 변경 없음"
   ]
 }
