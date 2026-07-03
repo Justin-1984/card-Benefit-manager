@@ -1,11 +1,11 @@
-# Developer Notes - v7.2.1
+# Developer Notes - v7.2.2
 
 ## Data Policy
 
 기존 카드 데이터 키는 유지한다.
 
 - STORE: benefit-manager-v6.2
-- SUB_STORE: benefit-manager-subscriptions-v7.2.1
+- SUB_STORE: benefit-manager-subscriptions-v7.2.2
 
 구독 데이터는 별도 LocalStorage에 저장하며, 카드 데이터 구조를 직접 변경하지 않는다.
 

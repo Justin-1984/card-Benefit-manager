@@ -2,7 +2,7 @@
 
 ## Current
 
-- v7.2.1: Subscription Manager Beta
+- v7.2.2: Subscription Manager Beta
 
 ## Next
 

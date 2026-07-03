@@ -1,8 +1,14 @@
+# UPDATE STATUS
+
+현재 버전: v7.2.2 Subscriptions UX Fix
+
+상태: 구독 탭 PC 표시 오류 수정 완료. 모바일 정상 상태 유지.
+
 # UPDATE_STATUS
 
 ## Current Version
 
-v7.2.1 Subscriptions Beta
+v7.2.2 Subscriptions Beta
 
 ## Status
 

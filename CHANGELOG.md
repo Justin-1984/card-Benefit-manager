@@ -1,6 +1,14 @@
 # CHANGELOG
 
-## v7.2.1 Subscriptions Beta - 2026-07-04
+## v7.2.2 Subscriptions UX Fix
+- 구독 탭에서 카드 리스트가 표시되는 PC 전용 탭 격리 오류 수정
+- Desktop display!important 규칙보다 강한 탭별 표시 규칙 추가
+- 구독 데이터 저장키는 v7.2.1과 동일하게 유지하여 기존 구독 데이터 보존
+- 카드/백업/GitHub/History 데이터 구조 변경 없음
+
+# CHANGELOG
+
+## v7.2.2 Subscriptions Beta - 2026-07-04
 
 ### Added
 

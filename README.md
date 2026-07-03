@@ -1,4 +1,4 @@
-# BenefitManager PWA v7.2.1 Subscriptions Beta
+# BenefitManager PWA v7.2.2 Subscriptions Beta
 
 v7.1.6 정상 UI 기준과 v7.2.0 UX Beta를 기반으로 구독 결제 매니저를 추가한 베타 버전입니다.
 
