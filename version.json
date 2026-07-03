@@ -1,19 +1,16 @@
 {
-  "version": "7.1.1",
-  "build": 711,
+  "version": "7.1.2",
+  "build": 712,
   "releaseDate": "2026-07-03",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.1.1 UI Beta",
-  "message": "디자인 시스템 기반을 구축하고 PC/iPad/Mobile 전용 UI를 강화했습니다. 데이터/백업 로직은 변경하지 않았습니다.",
+  "title": "BenefitManager PWA v7.1.2 UI Beta",
+  "message": "모바일 설정 화면에서 카드 목록이 함께 노출되던 탭 분리 오류를 수정했습니다. 데이터/백업 로직은 변경하지 않았습니다.",
   "releaseNotes": [
-    "v7.1.1 디자인 시스템 토큰 추가",
-    "버튼, 카드, 입력창, 패널 스타일 통일",
-    "Progress Ring 시각 통일 및 카드별 적용 유지",
-    "PC 전용 Sidebar 레이아웃 강화",
-    "iPad 2열 대시보드/카드 레이아웃 강화",
-    "Mobile Wallet 카드 스택 감각 개선",
-    "글자 크기, 여백, 그림자, Glass 효과, 애니메이션 통일",
+    "모바일 설정 탭에서 카드 리스트가 보이는 문제 수정",
+    "대시보드/설정 섹션 표시 규칙 강화",
+    "초기 진입 및 새로고침 시 활성 탭 상태 고정",
+    "PC/iPad/Mobile UI 구조 유지",
     "데이터 저장 구조, GitHub Backup, History, Settings 로직 변경 없음"
   ]
 }

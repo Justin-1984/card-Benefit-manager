@@ -1,3 +1,10 @@
+## v7.1.2 개발 메모
+
+- 설정 탭과 대시보드 탭을 CSS/JS 양쪽에서 명확히 분리했습니다.
+- `.responsive-shell`에서 `dashboard-section` 클래스를 제거해 설정 패널이 모바일에서 정상 노출되도록 했습니다.
+- `#cards`, `.wallet-card`, `.responsive-right`는 설정 탭에서 강제 숨김 처리했습니다.
+- 데이터 레이어, 저장 키, 백업 함수는 수정하지 않았습니다.
+
 # Developer Notes
 
 ## 절대 우선 원칙
