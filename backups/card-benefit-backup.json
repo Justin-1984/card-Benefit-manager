@@ -1,10 +1,10 @@
 {
   "app": "card-benefit-manager",
-  "version": "7.0.0",
-  "savedAt": "2026-07-03T12:19:41.790Z",
-  "savedAtMs": 1783081181790,
-  "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
-  "deviceName": "iPhone",
+  "version": "7.1.0",
+  "savedAt": "2026-07-03T13:43:35.776Z",
+  "savedAtMs": 1783086215776,
+  "deviceId": "dev_1782544933281_717e4172b5d6a8",
+  "deviceName": "Device",
   "data": {
     "pinMboost": false,
     "history": [
@@ -201,7 +201,7 @@
         }
       }
     },
-    "lastBackupAt": 1782886039353,
+    "lastBackupAt": 1782559810673,
     "groups": [
       "현대",
       "생활",
@@ -232,7 +232,7 @@
         "short": "M",
         "group": "현대",
         "color": "#0ea5e9",
-        "target": 500000,
+        "target": 499999,
         "spent": 0,
         "hidden": false,
         "kind": "mboost",
@@ -325,10 +325,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783081181789,
-      "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
-      "deviceName": "iPhone",
-      "savedAt": 1783081181790
+      "updatedAt": 1783086215776,
+      "deviceId": "dev_1782544933281_717e4172b5d6a8",
+      "deviceName": "Device",
+      "savedAt": 1783086215776
     }
   }
 }
