@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
-  "version": "7.1.0",
-  "savedAt": "2026-07-03T13:43:35.776Z",
-  "savedAtMs": 1783086215776,
+  "version": "7.2.0",
+  "savedAt": "2026-07-03T15:13:21.440Z",
+  "savedAtMs": 1783091601440,
   "deviceId": "dev_1782544933281_717e4172b5d6a8",
   "deviceName": "Device",
   "data": {
@@ -201,7 +201,7 @@
         }
       }
     },
-    "lastBackupAt": 1782559810673,
+    "lastBackupAt": 1783086216766,
     "groups": [
       "현대",
       "생활",
@@ -232,7 +232,7 @@
         "short": "M",
         "group": "현대",
         "color": "#0ea5e9",
-        "target": 499999,
+        "target": 499996,
         "spent": 0,
         "hidden": false,
         "kind": "mboost",
@@ -325,10 +325,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783086215776,
+      "updatedAt": 1783091601440,
       "deviceId": "dev_1782544933281_717e4172b5d6a8",
       "deviceName": "Device",
-      "savedAt": 1783086215776
+      "savedAt": 1783091601440
     }
   }
 }
