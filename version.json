@@ -1,16 +1,16 @@
 {
-  "version": "7.1.6",
-  "build": 716,
+  "version": "7.2.0",
+  "build": 720,
   "releaseDate": "2026-07-03",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.1.6 UI Beta",
-  "message": "PC 설정 탭 카드 노출과 총 부족액 요약 카드 레이아웃을 수정했습니다.",
+  "title": "BenefitManager PWA v7.2.0 UX Beta",
+  "message": "v7.1.6 정상 레이아웃을 기준으로 대시보드 요약과 카드 펼침 정보를 강화했습니다.",
   "releaseNotes": [
-    "PC 설정 탭에서 카드 그룹이 보이는 문제 수정",
-    "PC 대시보드 총 부족액 영역 2x2 요약 그리드로 안정화",
-    "PC 카드 이미지/그리드 수정은 유지",
-    "모바일 정상 상태 보존",
-    "데이터/백업/GitHub/History 로직 변경 없음"
+    "v7.1.6 PC/Mobile 정상 레이아웃 기준으로 제작",
+    "대시보드 요약 카드 4종으로 확장",
+    "카드 펼침 화면에 진행률/남은 금액/마감/최근 월별 기록 추가",
+    "오늘 먼저 볼 카드 UX 유지 및 스마트 칩 강화",
+    "데이터/백업/GitHub/History 저장 구조 변경 없음"
   ]
 }

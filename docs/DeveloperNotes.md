@@ -1,3 +1,7 @@
+# Developer Notes - v7.2.0 UX Beta
+
+This build is based on v7.1.6 and only changes UI/UX presentation. Storage keys and backup structures are preserved.
+
 # Developer Notes
 
 ## 절대 우선 원칙
