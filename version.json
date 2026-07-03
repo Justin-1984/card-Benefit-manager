@@ -1,11 +1,11 @@
 {
-  "version": "7.0.0",
-  "build": 700,
+  "version": "7.0.1",
+  "build": 701,
   "releaseDate": "2026-07-03",
   "minimumDataVersion": "1.0",
   "releaseNotes": [
-    "UI Edition: PC/iPad/mobile layout redesign",
-    "PC horizontal card layout",
+    "Dashboard number auto-fit hotfix",
+    "PC summary card readability improved",
     "Data and backup logic unchanged"
   ]
 }

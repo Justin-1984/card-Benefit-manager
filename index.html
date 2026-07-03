@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.0.0 UI Beta</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.0.1 UI Beta</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -162,7 +162,7 @@ body[data-layout="mobile"] header{position:relative!important;left:auto!importan
 
 
 
-/* v7.0.0 UI Edition - responsive layout reset. Data logic unchanged. */
+/* v7.0.1 UI Edition - responsive layout reset. Data logic unchanged. */
 :root{--v7-bg:#060b16;--v7-panel:#0d1626;--v7-panel2:#111c2f;--v7-line:#26364d;--v7-text:#f8fafc;--v7-muted:#9aa8bf;--v7-blue:#2f7bff;--v7-green:#22c55e;--v7-red:#ef4444;--v7-yellow:#f5c542;--v7-radius:22px}
 html,body{min-height:100%;overflow-x:hidden!important}body{background:radial-gradient(circle at 70% -20%,rgba(47,123,255,.22),transparent 35%),linear-gradient(180deg,#040814 0%,#081224 48%,#050914 100%)!important;color:var(--v7-text)!important}
 header{position:sticky!important;top:0!important;left:auto!important;right:auto!important;bottom:auto!important;width:auto!important;height:auto!important;min-height:0!important;border-radius:0!important;background:rgba(5,9,20,.82)!important;border:0!important;border-bottom:1px solid rgba(148,163,184,.14)!important;box-shadow:0 12px 36px rgba(0,0,0,.22)!important;backdrop-filter:blur(18px)!important;padding:18px max(16px,env(safe-area-inset-left)) 14px max(16px,env(safe-area-inset-left))!important;display:block!important}
@@ -177,14 +177,38 @@ body[data-layout="desktop"] main{max-width:1280px!important;margin:0 auto!import
 @media(min-width:760px) and (max-width:979px){main{max-width:860px!important}.responsive-shell{display:block!important}.responsive-left{position:static!important}.hero-grid,.summary{grid-template-columns:repeat(4,minmax(0,1fr))!important}.cards{gap:14px!important}.wallet-card.premium{margin:0!important;min-height:170px!important}.wallet-click{grid-template-columns:minmax(0,1fr) 94px minmax(200px,.9fr)!important}.ring{width:92px!important;height:92px!important}.premium-title{font-size:26px!important}.premium-spent b,.premium-remain b{font-size:22px!important}.settings-stack{grid-template-columns:1fr 1fr!important}}
 @media(max-width:759px){header{position:sticky!important;top:0!important;padding:16px!important}.ttl{font-size:24px!important}.pill{font-size:22px!important}main{max-width:560px!important;padding:10px 14px 110px!important}.tabbar{position:fixed!important;left:12px!important;right:12px!important;bottom:12px!important;top:auto!important;display:grid!important;grid-template-columns:1fr 1fr!important;margin:0!important}.responsive-shell,.responsive-left,.responsive-right{display:block!important;position:static!important}.hero-grid,.summary{grid-template-columns:repeat(2,minmax(0,1fr))!important}.wallet-card.premium{min-height:154px!important;margin-bottom:-10px!important;border-radius:26px!important}.wallet-card.premium:not(.collapsed){margin-bottom:12px!important}.wallet-click{grid-template-columns:minmax(0,1fr) 76px!important;grid-template-areas:"left mid" "right right"!important;gap:8px!important;min-height:132px!important;padding:20px 18px 16px!important}.premium-left{grid-area:left!important}.premium-mid{grid-area:mid!important}.premium-right{grid-area:right!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important;padding-right:0!important}.premium-title{font-size:22px!important}.premium-cardname{font-size:12px!important}.ring{width:74px!important;height:74px!important}.ring span{font-size:20px!important}.premium-spent b,.premium-remain b{font-size:17px!important}.chev{right:0!important;top:-74px!important}.settings-stack{display:block!important}.action-grid{grid-template-columns:1fr!important}}
 
+
+/* v7.0.1 readability hotfix - dashboard numbers auto fit. Data logic unchanged. */
+.hero-stat,.tile,.mpoint-tile,.action-item{min-width:0!important;overflow:hidden!important}
+.hero-v,.tv,.mpoint-v{min-width:0!important;max-width:100%!important;line-height:1.08!important;letter-spacing:-.035em!important;white-space:normal!important;overflow-wrap:normal!important;word-break:keep-all!important;font-variant-numeric:tabular-nums!important}
+.hero-s,.tl,.ts,.mpoint-s{min-width:0!important;overflow:hidden!important;text-overflow:ellipsis!important}
+#heroShortage,#sumSpent,#sumEasyRemain{font-size:clamp(18px,1.45vw,26px)!important}
+#heroAchieved,#heroRed,#heroMboost{font-size:clamp(18px,1.35vw,24px)!important}
+@media(min-width:1180px){
+  .responsive-shell{grid-template-columns:minmax(390px,440px) minmax(0,1fr)!important}
+  .responsive-left .hero-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .responsive-left .summary{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .responsive-left .hero-stat{padding:15px!important;min-height:112px!important}
+  .responsive-left .hero-v{font-size:clamp(21px,1.45vw,27px)!important}
+  .responsive-left #heroShortage{font-size:clamp(22px,1.45vw,28px)!important}
+}
+@media(min-width:980px) and (max-width:1179px){
+  .responsive-left .hero-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .hero-v{font-size:clamp(18px,2vw,24px)!important}
+}
+@media(max-width:759px){
+  .hero-v,.tv,.mpoint-v{font-size:clamp(18px,5vw,24px)!important}
+  #heroShortage,#sumSpent,#sumEasyRemain{font-size:clamp(18px,5vw,23px)!important}
+}
+
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
 <div class="tabbar"><button id="tabDashboard" class="tabbtn active" onclick="switchTab('dashboard')">🏠 대시보드</button><button id="tabSettings" class="tabbtn" onclick="switchTab('settings')">⚙️ 설정</button></div>
-<div id="appNotice" class="notice settings-section">v7.0.0 UI Beta: 데이터/백업 로직은 유지하고, PC·iPad·모바일 UI를 새로 정리했습니다.</div>
+<div id="appNotice" class="notice settings-section">v7.0.1 UI Beta: 대시보드 숫자칸 자동 크기 조절과 PC 가독성을 개선했습니다.</div>
 
 <div class="responsive-shell dashboard-section"><div class="responsive-left">
-<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v6.7.6 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
+<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.0.1 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
 
 <div class="mpoint-dashboard dashboard-section" id="mPointDashboard">
   <div class="mpoint-top"><div><div class="mpoint-title">⭐ M포인트 대시보드</div><div class="mpoint-sub">M BOOST 적립/사용/순증감을 카드 실적과 분리해서 관리합니다.</div></div><button class="mpoint-edit" onclick="openMPoint()">M포인트 입력</button></div>
