@@ -1,11 +1,11 @@
 {
-  "version": "6.7.6-beta",
-  "build": 676,
+  "version": "7.0.0",
+  "build": 700,
   "releaseDate": "2026-07-03",
   "minimumDataVersion": "1.0",
   "releaseNotes": [
-    "모바일에서 탭바가 화면 전체를 덮는 문제 수정",
-    "iPhone 레이아웃을 1열 모바일 전용으로 강제",
-    "데이터/백업 로직 변경 없음"
+    "UI Edition: PC/iPad/mobile layout redesign",
+    "PC horizontal card layout",
+    "Data and backup logic unchanged"
   ]
 }
