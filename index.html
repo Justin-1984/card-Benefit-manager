@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.1.2 UI Beta</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.1.4 UI Beta</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -203,64 +203,105 @@ body[data-layout="desktop"] main{max-width:1280px!important;margin:0 auto!import
 
 
 
-/* v7.1.2 Design System Foundation - UI only. Data/storage logic unchanged. */
+/* === v7.1.4 Design System Refactor Guard ===
+   기준: v7.1.0 정상 모바일 보존. 데이터/백업/History/GitHub 로직 변경 없음.
+   목적: Dashboard/Settings 탭과 Mobile/iPad/Desktop CSS 영향권 분리. */
 :root{
-  --bm-bg:#070b13;
-  --bm-bg-soft:#0b1220;
-  --bm-surface:rgba(15,23,42,.78);
-  --bm-surface-strong:rgba(17,24,39,.94);
-  --bm-glass:rgba(255,255,255,.085);
-  --bm-glass-strong:rgba(255,255,255,.14);
-  --bm-line:rgba(148,163,184,.24);
-  --bm-line-strong:rgba(255,255,255,.22);
-  --bm-text:#f8fafc;
-  --bm-muted:#a8b3c6;
-  --bm-muted-2:#64748b;
-  --bm-blue:#60a5fa;
-  --bm-blue-deep:#2563eb;
-  --bm-red:#fb7185;
-  --bm-green:#34d399;
-  --bm-orange:#fbbf24;
-  --bm-purple:#a78bfa;
-  --bm-radius-sm:12px;
-  --bm-radius:18px;
-  --bm-radius-lg:26px;
-  --bm-radius-xl:34px;
-  --bm-shadow:0 18px 50px rgba(0,0,0,.34);
-  --bm-shadow-soft:0 12px 34px rgba(0,0,0,.22);
-  --bm-pad:16px;
-  --bm-gap:14px;
-  --bm-ease:cubic-bezier(.2,.8,.2,1);
+  --ds-bg:#07101f;--ds-surface:rgba(17,28,47,.94);--ds-surface-2:rgba(255,255,255,.065);
+  --ds-border:rgba(148,163,184,.22);--ds-text:#f8fafc;--ds-muted:#9aa7bb;
+  --ds-blue:#2f7bff;--ds-radius:24px;--ds-radius-card:28px;--ds-shadow:0 18px 44px rgba(0,0,0,.24);
 }
-html{background:var(--bm-bg)!important}body{background:radial-gradient(circle at top left,rgba(37,99,235,.22),transparent 32%),radial-gradient(circle at top right,rgba(251,113,133,.18),transparent 30%),linear-gradient(180deg,#050914 0%,#0b1220 100%)!important;color:var(--bm-text)!important;font-size:15px!important;letter-spacing:-.01em!important}.btn,.tabbtn,.mpoint-edit,.sync-actions button{min-height:44px!important;border-radius:16px!important;border:1px solid var(--bm-line)!important;background:rgba(255,255,255,.08)!important;color:var(--bm-text)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.07)!important;transition:transform .18s var(--bm-ease),background .18s var(--bm-ease),border-color .18s var(--bm-ease),box-shadow .18s var(--bm-ease)!important}.btn:active,.tabbtn:active,.mpoint-edit:active,.sync-actions button:active{transform:scale(.975)!important}.btn.primary,.tabbtn.active{background:linear-gradient(180deg,#3b82f6,#1d4ed8)!important;border-color:rgba(147,197,253,.42)!important;color:white!important;box-shadow:0 12px 28px rgba(37,99,235,.34)!important}.btn.blue{background:rgba(37,99,235,.18)!important;color:#dbeafe!important;border-color:rgba(96,165,250,.32)!important}.btn.orange{background:rgba(251,191,36,.14)!important;color:#fde68a!important;border-color:rgba(251,191,36,.28)!important}.btn.red{background:rgba(251,113,133,.16)!important;color:#fecdd3!important;border-color:rgba(251,113,133,.32)!important}.search,.fg input,.fg select,.fg textarea{min-height:48px!important;border-radius:18px!important;background:rgba(255,255,255,.08)!important;border:1px solid var(--bm-line)!important;color:var(--bm-text)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)!important}.search::placeholder{color:rgba(203,213,225,.55)!important}.hero,.mpoint-dashboard,.action-panel,.tools,.settings-hero,.github-panel,.sync-panel,.alert-panel,.backup-warn,.notice,.tile,.hero-stat{border-radius:var(--bm-radius-lg)!important;border:1px solid var(--bm-line)!important;background:linear-gradient(145deg,rgba(17,24,39,.82),rgba(8,13,24,.78))!important;box-shadow:var(--bm-shadow-soft)!important;backdrop-filter:blur(18px)!important}.hero{padding:18px!important}.hero-title,.mpoint-title,.action-title,.settings-hero b,.tools h3{font-size:clamp(18px,2vw,24px)!important;font-weight:950!important;letter-spacing:-.03em!important}.hero-sub,.mpoint-sub,.settings-hero p,.hint{color:var(--bm-muted)!important}.hero-grid,.summary,.mpoint-grid{gap:var(--bm-gap)!important}.hero-stat,.tile,.mpoint-tile,.action-item{border-radius:20px!important;padding:15px!important;background:rgba(255,255,255,.075)!important;border:1px solid rgba(255,255,255,.12)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)!important}.hero-l,.tl,.mpoint-l{font-size:11px!important;color:var(--bm-muted)!important;font-weight:950!important;text-transform:none!important}.hero-v,.tv,.mpoint-v{font-weight:950!important;color:white!important;letter-spacing:-.045em!important}.wallet-card.premium{isolation:isolate!important;will-change:transform!important;transition:transform .22s var(--bm-ease),margin .22s var(--bm-ease),box-shadow .22s var(--bm-ease),filter .22s var(--bm-ease)!important}.wallet-card.premium:hover{transform:translateY(-3px)!important;box-shadow:0 24px 58px rgba(0,0,0,.44)!important}.wallet-card.premium.collapsed:hover{transform:translateY(-6px)!important}.ring{position:relative!important;background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.19) 0)!important}.ring:after{content:"";position:absolute;inset:12px;border-radius:50%;background:rgba(0,0,0,.24);box-shadow:inset 0 1px 6px rgba(0,0,0,.18);z-index:-1}.progress-ring-label{font-variant-numeric:tabular-nums}.bar,.mpoint-bar{background:linear-gradient(90deg,#93c5fd,#ffffff)!important}.smart-chip{border:1px solid rgba(255,255,255,.14)!important;background:rgba(255,255,255,.08)!important}.gt{display:flex!important;align-items:center!important;justify-content:space-between!important;color:var(--bm-text)!important}.gt span{background:rgba(255,255,255,.1)!important;color:var(--bm-muted)!important;border:1px solid rgba(255,255,255,.11)!important;border-radius:999px!important;padding:4px 9px!important}.modal{backdrop-filter:blur(10px)!important}.sheet{border-radius:30px 30px 0 0!important;box-shadow:0 -24px 60px rgba(0,0,0,.46)!important}.toast{bottom:calc(24px + env(safe-area-inset-bottom))!important;background:rgba(15,23,42,.92)!important;border:1px solid rgba(255,255,255,.16)!important;backdrop-filter:blur(18px)!important}
-@media(min-width:760px){main{max-width:1180px!important;padding-left:22px!important;padding-right:22px!important}.responsive-shell{gap:18px!important}.hero-grid,.summary{grid-template-columns:repeat(2,minmax(0,1fr))!important}.mpoint-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}.wallet-click{min-height:144px!important}.settings-stack{display:grid!important;grid-template-columns:1fr 1fr!important;gap:14px!important}}
-@media(min-width:760px) and (max-width:1179px){header{padding:18px 22px 14px!important}.responsive-shell{display:grid!important;grid-template-columns:minmax(300px,.92fr) minmax(360px,1.08fr)!important;align-items:start!important}.responsive-left{position:sticky!important;top:86px!important}.wallet-card.premium{margin-bottom:12px!important}.cards{gap:14px!important}.tabbar{left:22px!important;right:22px!important;bottom:18px!important}.hero-grid{grid-template-columns:1fr 1fr!important}.mpoint-grid{grid-template-columns:1fr 1fr!important}.row.dashboard-section{display:grid!important;grid-template-columns:1fr 1fr!important}}
-@media(min-width:1180px){body{padding-bottom:0!important}header{position:fixed!important;left:0!important;top:0!important;bottom:0!important;width:260px!important;padding:28px 20px!important;border-right:1px solid var(--bm-line)!important;background:rgba(5,9,20,.72)!important;backdrop-filter:blur(22px)!important}.h{height:100%!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important}.ttl{font-size:25px!important;line-height:1.08!important}.sub{margin-top:10px!important}.pill{margin-top:18px!important;align-self:flex-start!important;font-size:20px!important;padding:9px 12px!important;background:rgba(255,255,255,.08)!important;border:1px solid var(--bm-line)!important;border-radius:999px!important}.tabbar{position:fixed!important;left:20px!important;top:168px!important;right:auto!important;bottom:auto!important;width:220px!important;display:flex!important;flex-direction:column!important;gap:10px!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}.tabbtn{justify-content:flex-start!important;text-align:left!important;width:100%!important;padding:13px 16px!important}.tabbtn.active{box-shadow:0 12px 30px rgba(37,99,235,.28)!important}main{margin-left:260px!important;max-width:none!important;padding:28px 30px 34px!important}.responsive-shell{display:grid!important;grid-template-columns:minmax(370px,430px) minmax(680px,1fr)!important;gap:22px!important;align-items:start!important}.responsive-left{position:sticky!important;top:28px!important}.responsive-right{min-width:0!important}.hero-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.summary{grid-template-columns:repeat(2,minmax(0,1fr))!important}.cards{display:grid!important;grid-template-columns:repeat(2,minmax(360px,1fr))!important;gap:18px!important}.wallet-card.premium{margin-bottom:0!important;min-height:178px!important}.wallet-card.premium.collapsed{min-height:166px!important}.wallet-click{grid-template-columns:minmax(0,1fr) 92px!important;grid-template-areas:"left mid" "right right"!important;padding:22px!important}.premium-left{grid-area:left!important}.premium-mid{grid-area:mid!important}.premium-right{grid-area:right!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px!important;padding-right:0!important}.chev{top:-80px!important}.row.dashboard-section{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:10px!important}.search{margin-bottom:14px!important}.tools.settings-section{margin-left:260px!important}.sheet{max-width:720px!important;margin:0 auto!important;border-radius:30px!important;margin-bottom:28px!important}.modal{align-items:center!important}}
-@media(max-width:759px){main{padding-left:14px!important;padding-right:14px!important}.hero{padding:16px!important}.hero-grid,.summary,.mpoint-grid{grid-template-columns:1fr 1fr!important;gap:10px!important}.hero-stat,.tile,.mpoint-tile{padding:12px!important}.mpoint-top{align-items:flex-start!important;gap:10px!important}.mpoint-edit{width:100%!important}.row.dashboard-section{display:grid!important;grid-template-columns:1fr 1fr!important}.row.dashboard-section .btn.primary{grid-column:1/-1!important}.wallet-card.premium{margin-bottom:-9px!important}.wallet-card.premium:not(.collapsed){margin-bottom:12px!important}.premium-title{font-size:20px!important}.premium-spent b,.premium-remain b{font-size:16px!important}.ring{width:70px!important;height:70px!important}.ring span{font-size:18px!important}.toast{bottom:96px!important}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+html body[data-tab="dashboard"] .settings-section{display:none!important;visibility:hidden!important;pointer-events:none!important}
+html body[data-tab="settings"] .dashboard-section{display:none!important;visibility:hidden!important;pointer-events:none!important}
+html body[data-tab="settings"] #cards{display:none!important;visibility:hidden!important;pointer-events:none!important}
+html body[data-tab="dashboard"] #cards{visibility:visible!important;pointer-events:auto!important}
+.btn,.tabbtn,.action-item,.smart-chip{transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease}
+.btn:active,.tabbtn:active,.action-item:active,.smart-chip:active{transform:scale(.985)}
+.wallet-card.premium{transition:transform .18s ease,box-shadow .18s ease,margin .18s ease}
+.wallet-card.premium:active{transform:scale(.992)}
 
+@media (max-width:759px){
+  html body[data-layout="mobile"] main{max-width:560px!important;margin:0 auto!important;padding-left:14px!important;padding-right:14px!important}
+  html body[data-layout="mobile"] .responsive-shell,
+  html body[data-layout="mobile"] .responsive-left,
+  html body[data-layout="mobile"] .responsive-right{display:block!important;position:static!important;width:100%!important}
+  html body[data-layout="mobile"] .settings-stack{display:block!important}
+  html body[data-layout="mobile"][data-tab="settings"] .dashboard-section,
+  html body[data-layout="mobile"][data-tab="settings"] #cards,
+  html body[data-layout="mobile"][data-tab="settings"] .group,
+  html body[data-layout="mobile"][data-tab="settings"] .cards,
+  html body[data-layout="mobile"][data-tab="settings"] .wallet-card{display:none!important}
+  html body[data-layout="mobile"][data-tab="settings"] .settings-section{display:block!important;visibility:visible!important;pointer-events:auto!important}
+  html body[data-layout="mobile"] .tabbar{position:fixed!important;left:12px!important;right:12px!important;bottom:12px!important;top:auto!important;z-index:40!important}
+}
 
+@media (min-width:760px) and (max-width:1179px){
+  html body[data-layout="tablet"] main{max-width:1060px!important;margin:0 auto!important;padding:14px 18px 108px!important}
+  html body[data-layout="tablet"] .responsive-shell{display:grid!important;grid-template-columns:minmax(0,380px) minmax(0,1fr)!important;gap:18px!important;align-items:start!important}
+  html body[data-layout="tablet"] .responsive-left{position:sticky!important;top:148px!important}
+  html body[data-layout="tablet"] .hero-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  html body[data-layout="tablet"] .settings-stack{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+  html body[data-layout="tablet"] .wallet-click{grid-template-columns:minmax(0,1fr) 94px!important;grid-template-areas:"left mid" "right right"!important;gap:12px!important}
+  html body[data-layout="tablet"] .premium-left{grid-area:left!important} html body[data-layout="tablet"] .premium-mid{grid-area:mid!important} html body[data-layout="tablet"] .premium-right{grid-area:right!important}
+}
 
-/* v7.1.2 mobile tab isolation fix: keep Settings free of card/dashboard views. Data logic unchanged. */
-body[data-tab="dashboard"] .settings-section{display:none!important}
-body[data-tab="settings"] .dashboard-section{display:none!important}
-body[data-tab="settings"] #cards,
-body[data-tab="settings"] .cards,
-body[data-tab="settings"] .group,
-body[data-tab="settings"] .wallet-card,
-body[data-tab="settings"] .responsive-right{display:none!important}
-body[data-tab="settings"] .responsive-shell{display:block!important}
-body[data-tab="settings"] .responsive-left{display:block!important;position:static!important}
-body[data-tab="settings"] main{padding-bottom:110px!important}
-body[data-tab="dashboard"] .responsive-right{display:block!important}
+@media (min-width:1180px){
+  html body[data-layout="desktop"]{background:radial-gradient(circle at 16% 0,rgba(47,123,255,.16),transparent 30%),linear-gradient(180deg,#070b14,#0b1220)!important;color:var(--ds-text)!important}
+  html body[data-layout="desktop"] header{position:sticky!important;top:0!important;width:auto!important;height:auto!important;background:rgba(5,9,20,.84)!important;border-bottom:1px solid rgba(148,163,184,.14)!important;backdrop-filter:blur(18px)!important}
+  html body[data-layout="desktop"] main{max-width:1320px!important;margin:0 auto!important;padding:18px 20px 110px!important}
+  html body[data-layout="desktop"] .tabbar{position:sticky!important;top:82px!important;display:flex!important;grid-template-columns:none!important;margin-bottom:18px!important;background:rgba(10,18,32,.78)!important;border:1px solid var(--ds-border)!important;border-radius:22px!important;padding:8px!important;box-shadow:var(--ds-shadow)!important}
+  html body[data-layout="desktop"] .tabbtn{height:46px!important;display:flex!important;align-items:center!important;justify-content:center!important;flex:1!important;border-radius:16px!important;color:var(--ds-muted)!important}
+  html body[data-layout="desktop"] .tabbtn.active{background:linear-gradient(180deg,var(--ds-blue),#155ee8)!important;color:#fff!important;box-shadow:0 10px 24px rgba(47,123,255,.32)!important}
+  html body[data-layout="desktop"] .responsive-shell{display:grid!important;grid-template-columns:minmax(380px,440px) minmax(0,1fr)!important;gap:20px!important;align-items:start!important;max-width:1320px!important;margin:0 auto!important}
+  html body[data-layout="desktop"] .responsive-left{position:sticky!important;top:158px!important;min-width:0!important}
+  html body[data-layout="desktop"] .responsive-right{min-width:0!important;display:block!important}
+  html body[data-layout="desktop"] .hero,
+  html body[data-layout="desktop"] .action-panel,
+  html body[data-layout="desktop"] .mpoint-dashboard,
+  html body[data-layout="desktop"] .tools,
+  html body[data-layout="desktop"] .settings-hero,
+  html body[data-layout="desktop"] .github-panel,
+  html body[data-layout="desktop"] .sync-panel,
+  html body[data-layout="desktop"] .backup-warn,
+  html body[data-layout="desktop"] .alert-panel,
+  html body[data-layout="desktop"] .tile,
+  html body[data-layout="desktop"] .search{background:var(--ds-surface)!important;border:1px solid var(--ds-border)!important;color:var(--ds-text)!important;border-radius:var(--ds-radius)!important;box-shadow:var(--ds-shadow)!important}
+  html body[data-layout="desktop"] .hero-grid,
+  html body[data-layout="desktop"] .summary{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+  html body[data-layout="desktop"] .hero-stat,
+  html body[data-layout="desktop"] .tile,
+  html body[data-layout="desktop"] .mpoint-tile,
+  html body[data-layout="desktop"] .action-item{background:var(--ds-surface-2)!important;border:1px solid rgba(255,255,255,.10)!important;color:var(--ds-text)!important;border-radius:18px!important}
+  html body[data-layout="desktop"] .hero-l,
+  html body[data-layout="desktop"] .hero-s,
+  html body[data-layout="desktop"] .tl,
+  html body[data-layout="desktop"] .ts,
+  html body[data-layout="desktop"] .mpoint-l,
+  html body[data-layout="desktop"] .mpoint-s,
+  html body[data-layout="desktop"] .action-meta,
+  html body[data-layout="desktop"] .sub,
+  html body[data-layout="desktop"] .hint{color:var(--ds-muted)!important}
+  html body[data-layout="desktop"] #cards{display:block!important;visibility:visible!important;pointer-events:auto!important}
+  html body[data-layout="desktop"] .cards{display:flex!important;flex-direction:column!important;gap:16px!important}
+  html body[data-layout="desktop"] .wallet-card.premium{width:100%!important;min-height:190px!important;margin:0!important;border-radius:var(--ds-radius-card)!important;overflow:hidden!important;box-shadow:0 20px 52px rgba(0,0,0,.34)!important}
+  html body[data-layout="desktop"] .wallet-click{display:grid!important;grid-template-columns:minmax(220px,1.1fr) 112px minmax(260px,.95fr)!important;grid-template-areas:none!important;gap:24px!important;align-items:center!important;min-height:148px!important;padding:26px 28px 16px!important}
+  html body[data-layout="desktop"] .premium-left,
+  html body[data-layout="desktop"] .premium-mid,
+  html body[data-layout="desktop"] .premium-right{grid-area:auto!important}
+  html body[data-layout="desktop"] .premium-right{display:grid!important;grid-template-columns:1fr 1fr!important;gap:18px!important;text-align:left!important;padding-right:28px!important}
+  html body[data-layout="desktop"] .premium-title{font-size:30px!important}.premium-cardname{font-size:14px!important}
+  html body[data-layout="desktop"] .ring{width:108px!important;height:108px!important}.ring span{font-size:28px!important}
+  html body[data-layout="desktop"] .settings-stack{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}
+}
+
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
 <div class="tabbar"><button id="tabDashboard" class="tabbtn active" onclick="switchTab('dashboard')">🏠 대시보드</button><button id="tabSettings" class="tabbtn" onclick="switchTab('settings')">⚙️ 설정</button></div>
-<div id="appNotice" class="notice settings-section">v7.1.2 UI Beta: 디자인 시스템, 통합 버튼/카드/여백/애니메이션, PC·iPad 전용 레이아웃을 강화했습니다.</div>
+<div id="appNotice" class="notice settings-section">v7.1.4 UI Beta: v7.1.0 정상 모바일 기준에서 PC/iPad/Mobile UI 분리 구조를 강화했습니다.</div>
 
-<div class="responsive-shell"><div class="responsive-left">
-<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.1.2 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
+<div class="responsive-shell dashboard-section"><div class="responsive-left">
+<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.1.4 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
 
 <div class="mpoint-dashboard dashboard-section" id="mPointDashboard">
   <div class="mpoint-top"><div><div class="mpoint-title">⭐ M포인트 대시보드</div><div class="mpoint-sub">M BOOST 적립/사용/순증감을 카드 실적과 분리해서 관리합니다.</div></div><button class="mpoint-edit" onclick="openMPoint()">M포인트 입력</button></div>
@@ -279,7 +320,7 @@ body[data-tab="dashboard"] .responsive-right{display:block!important}
 <div class="backup-warn settings-section" id="backupWarn"></div>
 <div class="sync-panel settings-section" id="syncPanel"></div>
 <div class="github-panel settings-section" id="githubPanel"></div>
-<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v7.1.2 Beta<br>업데이트 확인 전입니다.</div>
+<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v6.5.0 Beta<br>업데이트 확인 전입니다.</div>
 <div class="summary dashboard-section"><div class="tile"><div class="tl">총 월 사용금액</div><div class="tv" id="sumSpent">0원</div><div class="ts">숨김 카드 제외</div></div><div class="tile"><div class="tl">M BOOST 추가 사용 가능</div><div class="tv" id="sumEasyRemain">0원</div><div class="ts">입력 M포인트 기준</div></div></div>
 </div><div class="responsive-right">
 <input class="search dashboard-section" id="search" placeholder="카드 검색..." oninput="render()">
@@ -293,19 +334,15 @@ body[data-tab="dashboard"] .responsive-right{display:block!important}
 if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js');}
 
 function switchTab(tab){
-  tab = tab === 'settings' ? 'settings' : 'dashboard';
   document.body.setAttribute('data-tab',tab);
   const d=document.getElementById('tabDashboard'), st=document.getElementById('tabSettings');
   if(d&&st){d.classList.toggle('active',tab==='dashboard');st.classList.toggle('active',tab==='settings');}
   localStorage.setItem('benefit-manager-active-tab',tab);
 }
 
-// v7.1.2: 초기 진입/새로고침 시에도 탭 상태를 명확히 고정합니다.
-switchTab(localStorage.getItem('benefit-manager-active-tab') || 'dashboard');
-
 const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2';
 const GHCFG='benefit-manager-github-config-v6.2';
-const APP_VERSION='7.1.2', APP_BUILD=712, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
+const APP_VERSION='7.1.4', APP_BUILD=714, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
 const defaultCards=[

@@ -1,16 +1,17 @@
 {
-  "version": "7.1.2",
-  "build": 712,
+  "version": "7.1.4",
+  "build": 714,
   "releaseDate": "2026-07-03",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.1.2 UI Beta",
-  "message": "모바일 설정 화면에서 카드 목록이 함께 노출되던 탭 분리 오류를 수정했습니다. 데이터/백업 로직은 변경하지 않았습니다.",
+  "title": "BenefitManager PWA v7.1.4 UI Beta",
+  "message": "v7.1.0 정상 모바일 기준에서 PC/iPad/Mobile UI 분리 구조를 강화했습니다.",
   "releaseNotes": [
-    "모바일 설정 탭에서 카드 리스트가 보이는 문제 수정",
-    "대시보드/설정 섹션 표시 규칙 강화",
-    "초기 진입 및 새로고침 시 활성 탭 상태 고정",
-    "PC/iPad/Mobile UI 구조 유지",
-    "데이터 저장 구조, GitHub Backup, History, Settings 로직 변경 없음"
+    "v7.1.0_ui_beta(2)를 새 기준으로 재시작",
+    "모바일 정상 레이아웃 보존용 CSS Guard 추가",
+    "Settings 탭에서 카드 노출 방지 강화",
+    "iPad 2열 레이아웃 분리",
+    "Desktop 전용 카드/대시보드 레이아웃 분리",
+    "데이터/백업/GitHub/History 로직 변경 없음"
   ]
 }

@@ -1,10 +1,3 @@
-## v7.1.2 개발 메모
-
-- 설정 탭과 대시보드 탭을 CSS/JS 양쪽에서 명확히 분리했습니다.
-- `.responsive-shell`에서 `dashboard-section` 클래스를 제거해 설정 패널이 모바일에서 정상 노출되도록 했습니다.
-- `#cards`, `.wallet-card`, `.responsive-right`는 설정 탭에서 강제 숨김 처리했습니다.
-- 데이터 레이어, 저장 키, 백업 함수는 수정하지 않았습니다.
-
 # Developer Notes
 
 ## 절대 우선 원칙
@@ -69,28 +62,13 @@
 - `message`
 - `releaseNotes`
 
+## v7.1.4 UI Guard
 
-## v7.1.1 개발 메모
+v7.1.4는 `v7.1.0_ui_beta(2)`를 기준으로 재시작한 UI Beta입니다.
 
-이번 버전은 UI Foundation 패치입니다. 데이터 레이어는 수정하지 않았습니다.
+원칙:
 
-유지한 항목:
-
-- 기존 `STORE` 키
-- 기존 `MONTH` 키
-- GitHub 설정/백업 함수
-- History 및 monthlyRecords 구조
-- RED/M BOOST 계산 로직
-
-변경한 항목:
-
-- APP_VERSION / APP_BUILD 표기
-- version.json
-- Service Worker cache name
-- manifest theme/background color
-- CSS 디자인 토큰 및 반응형 레이아웃 override
-
-주의:
-
-- 다음 버전에서 데이터 구조를 바꿔야 할 경우 반드시 migration 함수를 별도로 만들 것.
-- Stable 승격 전에는 v6.5 백업 파일로 복원 테스트를 반드시 할 것.
+- 모바일 정상 레이아웃을 먼저 보존한다.
+- `dashboard-section`과 `settings-section`은 탭 상태에 따라 완전히 분리한다.
+- Desktop/iPad/Mobile CSS는 media query와 `data-layout`을 함께 사용한다.
+- 데이터 저장 키, GitHub 백업 구조, 월별 히스토리 구조는 수정하지 않는다.

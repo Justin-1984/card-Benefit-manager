@@ -1,10 +1,3 @@
-# BenefitManager PWA
-
-- Stable 기준: v6.5 Stable
-- 최신 UI 테스트: v7.1.2 UI Beta
-- 이번 패치: 모바일 설정 화면 탭 분리 오류 수정
-- 데이터/백업 로직은 변경하지 않음
-
 # 카드 혜택매니저 PWA
 
 카드 혜택매니저는 신용카드 실적, 현대카드 기간, RED 연간 실적, M BOOST/M포인트, 월별 기록과 백업을 관리하는 개인용 PWA입니다.
@@ -12,7 +5,8 @@
 ## 현재 버전
 
 - 안정 운영 기준: `v6.5 Stable`
-- 최신 UI 테스트: `v7.1.1 UI Beta`
+- 최신 UI 테스트: `v7.1.4 UI Beta`
+- 기준 파일: `BenefitManager_PWA_v7_1_0_ui_beta(2).zip`
 - Data Version: `1.0`
 
 ## 주요 기능
@@ -28,15 +22,14 @@
 - 설정 탭 분리
 - Mobile / iPad / PC 반응형 UI
 
-## v7.1.1 UI Beta 핵심
+## v7.1.4 UI Beta 핵심
 
-- 디자인 시스템 토큰 구축
-- 버튼, 카드, 입력창, 패널 스타일 통일
-- PC 전용 Sidebar 레이아웃 강화
-- iPad 2열 레이아웃 강화
-- Mobile Wallet 카드 스택 감각 개선
-- Progress Ring 시각 통일
-- Glass, Shadow, Radius, Spacing, Animation 기준 정리
+- v7.1.0 정상 모바일 기준에서 재시작
+- 모바일 UI 보존용 CSS Guard 적용
+- Settings 탭에서 카드 리스트 노출 방지 강화
+- iPad 2열 레이아웃 분리
+- Desktop 전용 대시보드/카드 레이아웃 분리
+- 버튼/카드/탭/표면 색상 디자인 시스템 정리
 - 데이터 및 백업 로직 변경 없음
 
 ## 설치
@@ -46,17 +39,3 @@
 ## 업데이트 내역
 
 버전별 변경사항은 [CHANGELOG.md](./CHANGELOG.md)를 확인하세요.
-
-## 개발 계획
-
-향후 계획은 [ROADMAP.md](./ROADMAP.md)를 확인하세요.
-
-## 중요 원칙
-
-이 앱에서 가장 중요한 것은 데이터 안정성입니다.
-
-- Stable은 직접 수정하지 않음
-- 새 기능은 Beta에서 먼저 테스트
-- 정상 확인 후 Stable 승격
-- 데이터 구조 변경 최소화
-- GitHub Backup 호환성 유지

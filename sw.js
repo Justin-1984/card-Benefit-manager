@@ -1,4 +1,4 @@
-const CACHE='benefit-manager-v7.1.2-ui-beta';
+const CACHE='benefit-manager-v7.1.4-ui-beta';
 const ASSETS=['./','./index.html','./manifest.json','./version.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});

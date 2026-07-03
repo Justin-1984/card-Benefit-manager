@@ -1,29 +1,15 @@
 # CHANGELOG
 
-## v7.1.2 UI Beta
+## v7.1.4 UI Beta
 
-- 모바일 설정 화면에서 카드 목록이 같이 노출되던 문제 수정
-- 대시보드/설정 탭 표시 규칙 강화
-- 새로고침/초기 진입 시 활성 탭 상태 고정
-- `version.json` Build 712 반영
-- Service Worker cache `benefit-manager-v7.1.2-ui-beta`로 갱신
-- 데이터 저장 구조, GitHub Backup, History 로직 변경 없음
-
-# CHANGELOG
-
-## v7.1.1 UI Beta
-
-- 디자인 시스템 토큰 추가
-- 모든 버튼/카드/입력창/패널 스타일 기준 통일
-- PC 전용 Sidebar UI 강화
-- iPad 2열 Dashboard/Cards 레이아웃 강화
-- Mobile Wallet 카드 스택 감각 개선
-- Progress Ring 시각 기준 통일
-- Glass, Shadow, Radius, Spacing, Animation 기준 정리
-- `version.json` Build 711 반영
-- Service Worker cache `benefit-manager-v7.1.1-ui-beta`로 갱신
-- 데이터 저장 구조, GitHub Backup, History, Settings 로직 변경 없음
-
+- `BenefitManager_PWA_v7_1_0_ui_beta(2).zip`를 새 기준점으로 재시작
+- v7.1.2 / v7.1.3의 충돌 가능 CSS를 기준으로 삼지 않음
+- Mobile 정상 레이아웃 보존용 CSS Guard 추가
+- Settings 탭에서 카드 리스트가 노출되지 않도록 탭 분리 강화
+- iPad 전용 2열 레이아웃 분리
+- Desktop 전용 대시보드/카드 레이아웃 분리
+- 버튼, 카드, 탭, 표면 색상 토큰을 디자인 시스템 방향으로 정리
+- 데이터/백업/GitHub/History 로직 변경 없음
 
 ## v7.1.0 UI Beta
 
@@ -64,14 +50,6 @@
 
 ## v6.5 Stable
 
-- version.json 기반 업데이트 시스템
-- 자동 백업 시스템
-- RED 연간 실적 강화
-- M BOOST 통계 기반 추가
-- 기존 데이터/백업 호환 유지
-
-## v6.4.4 Stable
-
-- 현대카드 리셋 시 일반카드가 같이 리셋되던 문제 해결
-- 월별 히스토리 저장 정상화
-- GitHub Backup / Restore 정상 확인
+- 데이터 구조 안정 기준
+- GitHub Backup / Restore 정상화
+- 월별 히스토리 기준 확정
