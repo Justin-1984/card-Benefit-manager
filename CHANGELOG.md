@@ -1,100 +1,25 @@
-# BenefitManager PWA v7.2.0 UX Beta
-
-- 기준: v7.1.6 UI Beta 정상본
-- 목표: Dashboard UX Upgrade
-- 데이터 구조: 변경 없음
-- 저장/백업/GitHub/History 로직: 변경 없음
-
-## v7.2.0 변경 사항
-
-- 대시보드 요약 카드 확장: 총 월 사용금액, 총 부족액, 부족 카드, M BOOST 추가 사용 가능
-- 카드 펼침 UX 강화: 진행률, 남은 금액, 마감, 최근 월별 기록 표시
-- 기존 PC 설정 화면/카드 레이아웃 정상 상태 유지
-- 모바일 정상 상태 보존
-
----
-
 # CHANGELOG
 
-## v7.1.6 UI Beta - 2026-07-03
+## v7.2.1 Subscriptions Beta - 2026-07-04
 
-### Fixed
-- PC 설정 탭에서 카드 리스트/카드 그룹이 노출되는 문제 수정
-- PC 대시보드 총 부족액 요약 타일이 좁은 좌측 패널에서 깨지는 문제 수정
-- PC 카드 이미지/카드 그리드 개선 상태 유지
+### Added
 
-### Safety
-- 모바일 CSS 규칙은 유지
-- 데이터 구조, 저장 키, 백업, GitHub, History 로직 변경 없음
+- Subscriptions 탭 추가
+- 구독 결제 등록/수정/삭제/ON-OFF 기능 추가
+- 매월 결제일 기준 D-Day 표시
+- 월 구독 총액/이번주 결제/연간 환산/실적 미반영 요약 추가
+- 연결 카드 선택 기능 추가
+- 구독 실적 반영 기능 추가
+- 이번달 중복 반영 방지 기능 추가
+- KRW/USD/HKD/AUD 통화 및 환율 입력 지원
 
-# CHANGELOG
+### Changed
 
-## v7.1.6 UI Beta - 2026-07-03
-
-### Fixed
-- PC 화면에서 모바일/태블릿 규칙이 덮어쓰던 문제를 PC 전용 Hard Lock CSS로 분리했습니다.
-- PC 사이드바 고정 구조를 복구했습니다.
-- PC 카드 영역을 2열/대형 화면 3열 그리드로 재정렬했습니다.
+- 대시보드에 구독 결제 요약 카드 추가
+- 백업/GitHub 내보내기 payload에 subscriptions 포함
 
 ### Preserved
-- 모바일 정상 레이아웃 유지
-- iPad 분리 규칙 유지
-- 데이터/백업/GitHub/History 로직 변경 없음
 
----
-
-# CHANGELOG
-
-## v7.1.6 UI Beta
-
-- `BenefitManager_PWA_v7_1_0_ui_beta(2).zip`를 새 기준점으로 재시작
-- v7.1.2 / v7.1.3의 충돌 가능 CSS를 기준으로 삼지 않음
-- Mobile 정상 레이아웃 보존용 CSS Guard 추가
-- Settings 탭에서 카드 리스트가 노출되지 않도록 탭 분리 강화
-- iPad 전용 2열 레이아웃 분리
-- Desktop 전용 대시보드/카드 레이아웃 분리
-- 버튼, 카드, 탭, 표면 색상 토큰을 디자인 시스템 방향으로 정리
-- 데이터/백업/GitHub/History 로직 변경 없음
-
-## v7.1.0 UI Beta
-
-- UI 완성 프로젝트 1차 시작
-- PC/iPad/Mobile 반응형 UI 기준 정리
-- 대시보드 숫자 가독성 유지
-- GitHub 확인용 README 문서 패키지 추가
-- `README.md`, `CHANGELOG.md`, `ROADMAP.md`, `INSTALL.md`, `UPDATE_STATUS.md`, `docs/DeveloperNotes.md` 포함
-- 데이터/백업 로직 변경 없음
-
-## v7.0.1 UI Beta
-
-- 총 부족액 숫자칸 깨짐 수정
-- 숫자 크기 자동 조절 적용
-- PC 대시보드 4칸에서 2칸 구조로 개선
-- 긴 금액 줄바꿈/깨짐 최소화
-
-## v7.0.0 UI Beta
-
-- UI 전면 재설계 시작
-- PC 가로형 카드 레이아웃 적용
-- iPad/Mobile 자동 분리
-- 모바일 하단 탭 유지
-
-## v6.7.x Beta
-
-- Apple Wallet 스타일 카드 UI 도입
-- 모바일/iPad/PC 반응형 테스트
-- 다크모드 가독성 개선
-- 모바일 탭바 오류 수정
-
-## v6.6.x Beta
-
-- 대시보드 개선
-- 오늘 먼저 볼 카드 패널 추가
-- M포인트 전용 대시보드 추가
-- 설정 탭 분리
-
-## v6.5 Stable
-
-- 데이터 구조 안정 기준
-- GitHub Backup / Restore 정상화
-- 월별 히스토리 기준 확정
+- 기존 카드 데이터 저장 키 유지
+- 기존 카드/히스토리/GitHub 설정 구조 유지
+- 모바일/PC 레이아웃 기준 유지
