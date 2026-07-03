@@ -1,13 +1,13 @@
 {
-  "version": "6.7.3",
-  "build": 673,
+  "version": "6.7.4",
+  "build": 674,
   "releaseDate": "2026-06-27",
   "minimumDataVersion": "1.0",
   "message": "Apple Wallet 스타일 카드 UI 적용",
   "releaseNotes": [
-    "카드별 지갑형 디자인 적용",
-    "카드별 색상 기반 고대비 UI",
-    "다크모드 가독성 강화",
-    "데이터 저장/백업 로직 변경 없음"
+    "Apple Wallet 스타일 카드 UI 고도화",
+    "카드별 고대비 컬러 디자인",
+    "원형 진행률 게이지 추가",
+    "데이터/백업 로직 변경 없음"
   ]
 }
