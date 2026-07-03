@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v7.1.1 UI Beta
+
+- 디자인 시스템 토큰 추가
+- 모든 버튼/카드/입력창/패널 스타일 기준 통일
+- PC 전용 Sidebar UI 강화
+- iPad 2열 Dashboard/Cards 레이아웃 강화
+- Mobile Wallet 카드 스택 감각 개선
+- Progress Ring 시각 기준 통일
+- Glass, Shadow, Radius, Spacing, Animation 기준 정리
+- `version.json` Build 711 반영
+- Service Worker cache `benefit-manager-v7.1.1-ui-beta`로 갱신
+- 데이터 저장 구조, GitHub Backup, History, Settings 로직 변경 없음
+
+
 ## v7.1.0 UI Beta
 
 - UI 완성 프로젝트 1차 시작

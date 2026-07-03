@@ -1,16 +1,19 @@
 {
-  "version": "7.1.0",
-  "build": 710,
+  "version": "7.1.1",
+  "build": 711,
   "releaseDate": "2026-07-03",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.1.0 UI Beta",
-  "message": "UI 완성 프로젝트 1차 및 GitHub 문서 패키지를 추가했습니다.",
+  "title": "BenefitManager PWA v7.1.1 UI Beta",
+  "message": "디자인 시스템 기반을 구축하고 PC/iPad/Mobile 전용 UI를 강화했습니다. 데이터/백업 로직은 변경하지 않았습니다.",
   "releaseNotes": [
-    "v7.1 UI 완성 프로젝트 1차",
-    "PC/iPad/Mobile 반응형 UI 기준 정리",
-    "대시보드 숫자 가독성 유지",
-    "README, CHANGELOG, ROADMAP, INSTALL, UPDATE_STATUS, DeveloperNotes 포함",
-    "데이터/백업 로직 변경 없음"
+    "v7.1.1 디자인 시스템 토큰 추가",
+    "버튼, 카드, 입력창, 패널 스타일 통일",
+    "Progress Ring 시각 통일 및 카드별 적용 유지",
+    "PC 전용 Sidebar 레이아웃 강화",
+    "iPad 2열 대시보드/카드 레이아웃 강화",
+    "Mobile Wallet 카드 스택 감각 개선",
+    "글자 크기, 여백, 그림자, Glass 효과, 애니메이션 통일",
+    "데이터 저장 구조, GitHub Backup, History, Settings 로직 변경 없음"
   ]
 }

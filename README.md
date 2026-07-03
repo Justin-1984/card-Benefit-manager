@@ -5,7 +5,7 @@
 ## 현재 버전
 
 - 안정 운영 기준: `v6.5 Stable`
-- 최신 UI 테스트: `v7.1.0 UI Beta`
+- 최신 UI 테스트: `v7.1.1 UI Beta`
 - Data Version: `1.0`
 
 ## 주요 기능
@@ -21,13 +21,15 @@
 - 설정 탭 분리
 - Mobile / iPad / PC 반응형 UI
 
-## v7.1.0 UI Beta 핵심
+## v7.1.1 UI Beta 핵심
 
-- UI 완성 프로젝트 1차
-- PC/iPad/Mobile 레이아웃 기준 정리
-- 대시보드 숫자 가독성 개선 유지
-- Apple Wallet 스타일 카드 방향 유지
-- README/CHANGELOG/ROADMAP/INSTALL/UPDATE_STATUS 문서 포함
+- 디자인 시스템 토큰 구축
+- 버튼, 카드, 입력창, 패널 스타일 통일
+- PC 전용 Sidebar 레이아웃 강화
+- iPad 2열 레이아웃 강화
+- Mobile Wallet 카드 스택 감각 개선
+- Progress Ring 시각 통일
+- Glass, Shadow, Radius, Spacing, Animation 기준 정리
 - 데이터 및 백업 로직 변경 없음
 
 ## 설치

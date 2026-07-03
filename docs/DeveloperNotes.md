@@ -61,3 +61,29 @@
 - `channel`
 - `message`
 - `releaseNotes`
+
+
+## v7.1.1 개발 메모
+
+이번 버전은 UI Foundation 패치입니다. 데이터 레이어는 수정하지 않았습니다.
+
+유지한 항목:
+
+- 기존 `STORE` 키
+- 기존 `MONTH` 키
+- GitHub 설정/백업 함수
+- History 및 monthlyRecords 구조
+- RED/M BOOST 계산 로직
+
+변경한 항목:
+
+- APP_VERSION / APP_BUILD 표기
+- version.json
+- Service Worker cache name
+- manifest theme/background color
+- CSS 디자인 토큰 및 반응형 레이아웃 override
+
+주의:
+
+- 다음 버전에서 데이터 구조를 바꿔야 할 경우 반드시 migration 함수를 별도로 만들 것.
+- Stable 승격 전에는 v6.5 백업 파일로 복원 테스트를 반드시 할 것.
