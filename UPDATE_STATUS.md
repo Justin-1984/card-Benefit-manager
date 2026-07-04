@@ -1,16 +1,8 @@
-# UPDATE_STATUS
-
-## v7.3.1
-상태: Beta / Safety Fix
-
-기준: v7.3.0 Subscription Engine Beta
-
-변경:
-- 구독 결제 확인 시 카드 사용금액 직접 변경 제거
-- 구독 포함 예상 실적은 Projection으로만 표시
-- 구독 저장소 v7.3 분리 및 v7.2.1/v7.2.2 자동 마이그레이션
-- 카드 데이터 구조 변경 없음
-
-확인 필요:
-- 모바일/PC에서 구독 추가, 결제 확인, 카드 상세 예상 실적 표시 확인
-- 기존 구독 데이터가 v7.3 저장소로 정상 마이그레이션되는지 확인
+const CACHE='benefit-manager-7.3.2-ui-consistency-fix';
+const ASSETS=['./','./index.html','./manifest.json','./version.json'];
+self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
+self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
+self.addEventListener('fetch',e=>{
+  if(e.request.url.includes('version.json')){e.respondWith(fetch(e.request,{cache:'no-store'}).catch(()=>caches.match(e.request)));return;}
+  e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));
+});
