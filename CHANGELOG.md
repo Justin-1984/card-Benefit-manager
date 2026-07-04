@@ -1,31 +1,26 @@
-# Developer Notes - v7.3.2
+# CHANGELOG
 
-## UI Theme Architecture (읽어보세요)
+## v7.3.2 UI Consistency Fix
+- (원인) v6.7.0~v7.3.1을 거치며 CSS 테마가 파스텔 → 화이트 → 다크 네이비로 9차례 넘게 덮어씌워짐. 그 중 일부 컴포넌트가 `prefers-color-scheme:dark`(OS 다크모드 여부)에만 의존해 다크 테마로 전환되도록 되어 있어, OS가 라이트 모드인 기기에서는 앱이 강제로 렌더링하는 다크 네이비 배경 위에 구세대 라이트 스타일이 그대로 노출됨
+- 구독 탭의 `.subscription-card`/`.subscription-empty`: 흰 배경에 글자색 미지정 → 본문 기본 글자색(흰색)과 겹쳐 **구독명/금액이 흰 배경 위에 흰 글씨로 보이지 않던 문제** 수정 (다크 네이비 배경 + 밝은 텍스트로 통일)
+- 카드 상세보기(`.ux-tile`, `.ux-recent`, 최근 월별 기록): 라이트 회색 박스가 다크 카드 안에 떠 보이던 문제 수정 (다크 네이비 톤으로 통일, OS 설정과 무관하게 항상 적용)
+- 대시보드 "오늘 먼저 볼 카드" 우선순위 배지(`action-good`/`action-warn`/`action-danger`)가 OS 라이트 모드에서는 색 구분 없이 전부 같은 색으로 보이던 문제 수정 (양호=초록/주의=주황/위험=빨강 배지가 OS 설정과 무관하게 항상 적용)
+- 카드/실적/구독/백업 등 데이터 로직, 저장 구조, GitHub 백업 포맷 변경 없음 (스타일(CSS)만 수정)
 
-`index.html`의 `<style>` 블록은 v6.7.0부터 v7.3.1까지 총 9차례 이상 테마 전체를 `!important`로 덮어쓰는 방식으로 누적되어 있습니다 (파스텔 → 화이트/다크 클린 → 남색 지갑형 × 3세대 → v7.0~7.3 반응형 레이어). 최종적으로 화면에 보이는 색은 **가장 마지막에 선언된 `!important` 규칙**이 우선하며, 이 문서 작성 시점 기준 실질적으로 적용되는 테마는 v7.0.1 "UI Edition"(다크 네이비)입니다.
+## v7.3.1 Subscription Engine Safety Fix
+- 구독 결제 확인 시 카드 `spent` 값을 직접 수정하지 않도록 변경
+- 구독 포함 실적은 Projection UI에서만 예상치로 표시
+- `SUB_STORE`를 `benefit-manager-subscriptions-v7.3`으로 분리
+- v7.2.1/v7.2.2 구독 데이터 자동 마이그레이션 추가
+- 구독 화면 문구를 `실적 반영`에서 `결제 확인 / 예상 실적` 기준으로 정리
+- 카드/History/GitHub 데이터 구조 변경 없음
 
-문제는 일부 컴포넌트(`ux-tile`, `subscription-card` 등)가 이 마지막 레이어에서 갱신되지 않고 훨씬 이전(v7.2.0 이전) 라이트 테마 값을 그대로 유지하고 있었다는 점입니다. v7.3.2에서 확인·수정한 항목은 CHANGELOG 참고.
+## v7.3.0 Subscription Engine Beta
+- 구독 캘린더 추가
+- 카드별 구독 예상 실적 표시 추가
+- 실제 실적 반영 전 예상 달성률/남은 금액 확인 가능
+- 구독 탭 전용 UX 유지
+- 데이터/백업/GitHub 구조 변경 없음
 
-**향후 작업 시 주의사항**: 새 UI 변경을 "이전 레이어 위에 새 `!important` 레이어 추가"하는 방식으로 계속하면 동일한 문제가 반복됩니다. 색상을 바꿀 때는 반드시 해당 클래스의 기존 선언을 전부 검색(`grep -n ".클래스명"`)해서 어떤 규칙이 최종적으로 이기는지 확인한 뒤, 새 레이어를 추가하기보다 기존 규칙을 직접 수정하는 것을 권장합니다.
-
-## Developer Notes - v7.3.1
-
-## Data Policy
-
-기존 카드 데이터 키는 유지한다.
-
-- STORE: benefit-manager-v6.2
-- SUB_STORE: benefit-manager-subscriptions-v7.3
-- Legacy migration: benefit-manager-subscriptions-v7.2.2, benefit-manager-subscriptions-v7.2.1
-
-구독 데이터는 별도 LocalStorage에 저장하며, 카드 데이터 구조를 직접 변경하지 않는다.
-
-## Subscription Projection Policy
-
-구독 결제는 카드 화면의 `구독 포함 예상` 값으로만 합산한다.
-결제 확인은 `appliedMonths[YYYY-MM]`로 구독 데이터에만 저장한다.
-카드의 `spent`, `annualSpent`, `monthlyRecords`, `history`는 구독 확인 동작으로 수정하지 않는다.
-
-## Backup Policy
-
-수동 백업과 GitHub export payload에는 `subscriptions`를 top-level로 포함한다.
+## v7.2.2 Subscriptions UX Fix
+- 구독 탭에서 카드 리스트 노출 문제 수정

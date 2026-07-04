@@ -1,12 +1,8 @@
-# ROADMAP
-
-## v7.3
-- 구독 캘린더
-- 구독 예상 실적 엔진
-- 카드별 예상 달성률
-
-## v7.4
-- 월별 히스토리/통계 강화
-
-## v7.5
-- 알림 UX 및 PWA 완성도 개선
+const CACHE='benefit-manager-7.3.2-ui-consistency-fix';
+const ASSETS=['./','./index.html','./manifest.json','./version.json'];
+self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
+self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
+self.addEventListener('fetch',e=>{
+  if(e.request.url.includes('version.json')){e.respondWith(fetch(e.request,{cache:'no-store'}).catch(()=>caches.match(e.request)));return;}
+  e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));
+});
