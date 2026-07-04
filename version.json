@@ -1,17 +1,17 @@
 {
-  "version": "7.3.0",
-  "build": 730,
+  "version": "7.3.1",
+  "build": 731,
   "releaseDate": "2026-07-04",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.3.0 Subscription Engine Beta",
-  "message": "구독 캘린더와 카드별 구독 예상 실적 엔진을 추가했습니다.",
+  "title": "BenefitManager PWA v7.3.1 Subscription Engine Safety Fix",
+  "message": "구독 예상 실적이 카드 사용금액을 직접 변경하지 않도록 수정했습니다.",
   "releaseNotes": [
-    "구독 캘린더 추가",
-    "카드별 구독 예상 실적 표시 추가",
-    "실제 실적 반영 전에도 구독 포함 예상 달성률 확인 가능",
-    "구독 데이터는 기존 별도 LocalStorage 키 유지",
-    "카드/History/GitHub 데이터 구조 변경 없음"
+    "구독 결제 확인 시 카드 spent 값을 직접 수정하지 않도록 변경",
+    "구독 포함 예상 실적은 기존 Projection UI에서만 계산",
+    "구독 데이터 저장 키를 v7.3으로 분리하고 v7.2.1/v7.2.2 키 자동 마이그레이션 추가",
+    "카드/History/GitHub 데이터 구조 변경 없음",
+    "구독 화면 문구를 실적 반영에서 결제 확인/예상 실적 기준으로 정리"
   ],
-  "name": "BenefitManager PWA v7.3.0 Subscription Engine Beta"
+  "name": "BenefitManager PWA v7.3.1 Subscription Engine Safety Fix"
 }
