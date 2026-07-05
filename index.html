@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.4.0 Subscription Planner Beta</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.4.1 UI & History Stats Fix</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -67,28 +67,27 @@ main{max-width:780px!important}.tabbar{background:#e5e7eb!important;border:1px s
 @media (prefers-color-scheme:dark){body{background:#0f172a!important;color:#e5e7eb!important}header,.card,.tile,.tools,.settings-hero,.action-panel,.search{background:#111827!important;border-color:#334155!important;color:#e5e7eb!important}.ttl,.name{color:#f8fafc!important}.sub,.meta,.period,.tl,.ts,.action-meta,.hint{color:#94a3b8!important}.tabbar{background:#1e293b!important;border-color:#334155!important}.tabbtn.active{background:#0f172a!important;color:#f8fafc!important}.btn{background:#1e293b!important;color:#e5e7eb!important}.btn.primary{background:#f8fafc!important;color:#111827!important}.memo{background:#0f172a!important;border-color:#334155!important;color:#cbd5e1!important}.sheet{background:#111827!important}.fg input,.fg select,.fg textarea{background:#0f172a!important;color:#e5e7eb!important;border-color:#334155!important}.smart-chip{background:#111827!important;color:#e5e7eb!important;border-color:#334155!important}}
 
 
-/* v6.7.2 readability hotfix: dark mode contrast */
-@media (prefers-color-scheme:dark){
-  .action-panel{background:#111827!important;border-color:#334155!important;color:#f8fafc!important;box-shadow:none!important}
-  .action-title{color:#f8fafc!important}
-  .action-grid .action-item,
-  .hidden-item{background:#0f172a!important;border:1px solid #334155!important;color:#f8fafc!important}
-  .action-grid .action-item b{color:#f8fafc!important}
-  .action-grid .action-item div{color:#cbd5e1!important}
-  .action-grid .action-meta{color:#94a3b8!important}
-  .action-grid .action-warn{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
-  .action-grid .action-warn b{color:#fef3c7!important}
-  .action-grid .action-warn div{color:#fde68a!important}
-  .action-grid .action-danger{background:#2a1111!important;border-color:#991b1b!important;color:#fecaca!important}
-  .action-grid .action-danger b{color:#fee2e2!important}
-  .action-grid .action-danger div{color:#fecaca!important}
-  .action-grid .action-good{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
-  .action-grid .action-good b{color:#dcfce7!important}
-  .action-grid .action-good div{color:#bbf7d0!important}
-  .smart-chip{background:#111827!important;color:#f8fafc!important;border-color:#334155!important}
-  .sync-panel.show{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
-  .notice,.alert-panel.show{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
-}
+/* v7.4.1 dark theme contrast fix: 앱은 OS 설정과 무관하게 항상 다크 테마로 렌더링되므로,
+   prefers-color-scheme:dark 조건을 제거해 action-item 색상 구분(양호/주의/위험)이 항상 적용되도록 수정 */
+.action-panel{background:#111827!important;border-color:#334155!important;color:#f8fafc!important;box-shadow:none!important}
+.action-title{color:#f8fafc!important}
+.action-grid .action-item,
+.hidden-item{background:#0f172a!important;border:1px solid #334155!important;color:#f8fafc!important}
+.action-grid .action-item b{color:#f8fafc!important}
+.action-grid .action-item div{color:#cbd5e1!important}
+.action-grid .action-meta{color:#94a3b8!important}
+.action-grid .action-warn{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
+.action-grid .action-warn b{color:#fef3c7!important}
+.action-grid .action-warn div{color:#fde68a!important}
+.action-grid .action-danger{background:#2a1111!important;border-color:#991b1b!important;color:#fecaca!important}
+.action-grid .action-danger b{color:#fee2e2!important}
+.action-grid .action-danger div{color:#fecaca!important}
+.action-grid .action-good{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
+.action-grid .action-good b{color:#dcfce7!important}
+.action-grid .action-good div{color:#bbf7d0!important}
+.smart-chip{background:#111827!important;color:#f8fafc!important;border-color:#334155!important}
+.sync-panel.show{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
+.notice,.alert-panel.show{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
 
 
 /* v6.7.3 wallet style UI override. Data logic unchanged. */
@@ -535,13 +534,13 @@ html body[data-tab="dashboard"] #cards{visibility:visible!important;pointer-even
 }
 
 /* v7.2.0 UX Upgrade - dashboard summary and expandable card detail. Data logic unchanged. */
-.ux-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 15px 14px}.ux-tile{background:rgba(248,250,252,.86);border:1px solid rgba(226,232,240,.86);border-radius:15px;padding:11px;min-width:0}.ux-l{font-size:10px;font-weight:900;color:#64748b}.ux-v{font-size:16px;font-weight:900;margin-top:3px;color:#111827;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ux-s{font-size:10px;color:#64748b;margin-top:2px;line-height:1.35}.ux-recent{margin:0 15px 15px;background:rgba(248,250,252,.78);border:1px solid rgba(226,232,240,.76);border-radius:16px;padding:12px}.ux-recent-title{font-size:12px;font-weight:900;color:#334155;margin-bottom:8px}.ux-empty{font-size:11px;color:#64748b}.quick-actions{margin:0 15px 15px}.quick-actions .btn{min-height:40px!important}.card.collapsed .ux-grid,.card.collapsed .ux-recent,.card.collapsed .quick-actions{display:none!important}
+.ux-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 15px 14px}.ux-tile{background:rgba(255,255,255,.06);border:1px solid rgba(148,163,184,.20);border-radius:15px;padding:11px;min-width:0}.ux-l{font-size:10px;font-weight:900;color:#9aa7bd}.ux-v{font-size:16px;font-weight:900;margin-top:3px;color:#f8fafc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ux-s{font-size:10px;color:#9aa7bd;margin-top:2px;line-height:1.35}.ux-recent{margin:0 15px 15px;background:rgba(255,255,255,.05);border:1px solid rgba(148,163,184,.18);border-radius:16px;padding:12px}.ux-recent-title{font-size:12px;font-weight:900;color:#e2e8f0;margin-bottom:8px}.ux-empty{font-size:11px;color:#9aa7bd}.quick-actions{margin:0 15px 15px}.quick-actions .btn{min-height:40px!important}.card.collapsed .ux-grid,.card.collapsed .ux-recent,.card.collapsed .quick-actions{display:none!important}
 @media (prefers-color-scheme:dark){.ux-tile,.ux-recent{background:rgba(15,23,42,.55);border-color:rgba(148,163,184,.18)}.ux-l,.ux-s,.ux-empty,.ux-recent-title{color:#94a3b8}.ux-v{color:#f8fafc}}
 @media (min-width:1200px){html body[data-layout="desktop"] .ux-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;margin:0 22px 14px!important}html body[data-layout="desktop"] .ux-recent,html body[data-layout="desktop"] .quick-actions{margin-left:22px!important;margin-right:22px!important}html body[data-layout="desktop"] .summary{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 
 /* v7.2.1 Subscription Manager */
 .subscription-panel{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:white;border-radius:24px;padding:16px;margin-bottom:12px;box-shadow:0 14px 30px rgba(15,23,42,.16)}
-.subscription-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.subscription-title{font-size:17px;font-weight:900}.subscription-sub{font-size:12px;opacity:.76;margin-top:4px;line-height:1.45}.subscription-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}.subscription-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:11px}.subscription-l{font-size:10px;opacity:.72;font-weight:800}.subscription-v{font-size:18px;font-weight:900;margin-top:3px}.subscription-s{font-size:10px;opacity:.72;margin-top:2px}.subscription-list{display:grid;grid-template-columns:1fr;gap:10px}.subscription-card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:14px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.subscription-name{font-size:15px;font-weight:900}.subscription-meta{font-size:11px;color:#64748b;margin-top:4px;line-height:1.45}.subscription-amount{text-align:right;font-size:17px;font-weight:900;white-space:nowrap}.subscription-dday{display:inline-block;margin-top:5px;border-radius:999px;padding:5px 8px;font-size:11px;font-weight:900}.subscription-dday.soon{background:#fff7ed;color:#c2410c}.subscription-dday.today{background:#fef2f2;color:#b91c1c}.subscription-dday.safe{background:#ecfdf5;color:#047857}.subscription-actions{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}.subscription-empty{background:white;border:1px dashed #cbd5e1;border-radius:18px;padding:18px;text-align:center;color:#64748b;font-size:13px;line-height:1.6}.subscription-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.currency-chip{display:inline-block;background:#f1f5f9;color:#334155;border-radius:999px;padding:4px 7px;font-size:10px;font-weight:900;margin-left:4px}
+.subscription-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.subscription-title{font-size:17px;font-weight:900}.subscription-sub{font-size:12px;opacity:.76;margin-top:4px;line-height:1.45}.subscription-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}.subscription-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:11px}.subscription-l{font-size:10px;opacity:.72;font-weight:800}.subscription-v{font-size:18px;font-weight:900;margin-top:3px}.subscription-s{font-size:10px;opacity:.72;margin-top:2px}.subscription-list{display:grid;grid-template-columns:1fr;gap:10px}.subscription-card{background:rgba(17,28,47,.94);border:1px solid rgba(148,163,184,.20);border-radius:18px;padding:14px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;color:#f8fafc}.subscription-name{font-size:15px;font-weight:900;color:#f8fafc}.subscription-meta{font-size:11px;color:#9aa7bd;margin-top:4px;line-height:1.45}.subscription-amount{text-align:right;font-size:17px;font-weight:900;white-space:nowrap;color:#f8fafc}.subscription-dday{display:inline-block;margin-top:5px;border-radius:999px;padding:5px 8px;font-size:11px;font-weight:900}.subscription-dday.soon{background:#fff7ed;color:#c2410c}.subscription-dday.today{background:#fef2f2;color:#b91c1c}.subscription-dday.safe{background:#ecfdf5;color:#047857}.subscription-actions{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}.subscription-empty{background:rgba(17,28,47,.94);border:1px dashed rgba(148,163,184,.30);border-radius:18px;padding:18px;text-align:center;color:#9aa7bd;font-size:13px;line-height:1.6}.subscription-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.currency-chip{display:inline-block;background:#f1f5f9;color:#334155;border-radius:999px;padding:4px 7px;font-size:10px;font-weight:900;margin-left:4px}
 body[data-tab="dashboard"] .subscriptions-section,body[data-tab="dashboard"] .settings-section{display:none!important}
 body[data-tab="subscriptions"] .dashboard-section,body[data-tab="subscriptions"] .settings-section{display:none!important}
 body[data-tab="settings"] .dashboard-section,body[data-tab="settings"] .subscriptions-section{display:none!important}
@@ -578,15 +577,23 @@ html body[data-tab="subscriptions"] .subscriptions-wrap{display:block!important;
 
 html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid!important;}
 @media(max-width:759px){html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:block!important;}}
-
+/* v7.4.1 월별 히스토리 통계 강화: 카드별 월평균, 전월 대비 증감, 스파크라인, 필터 */
+.hist-filter-wrap{margin-bottom:12px}
+.hist-summary{font-size:12px;color:#cbd5e1;margin:6px 0 10px;line-height:1.6}
+.hist-up{color:#fca5a5;font-weight:900}
+.hist-down{color:#86efac;font-weight:900}
+.hist-flat{color:#94a3b8;font-weight:900}
+.spark-row{display:flex;align-items:flex-end;gap:4px;height:34px;margin-bottom:10px}
+.spark-bar{flex:1;background:linear-gradient(180deg,#3b82f6,#1d4ed8);border-radius:3px 3px 0 0;min-height:4px}
+.history-card-block{transition:none}
 </style></head><body>
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
 <div class="tabbar three"><button id="tabDashboard" class="tabbtn active" onclick="switchTab('dashboard')">🏠 대시보드</button><button id="tabSubscriptions" class="tabbtn" onclick="switchTab('subscriptions')">🔄 구독</button><button id="tabSettings" class="tabbtn" onclick="switchTab('settings')">⚙️ 설정</button></div>
-<div id="appNotice" class="notice settings-section">v7.4.0 Subscription Planner Beta: 구독 캘린더, 카드 추천, 구독 분석을 추가했습니다.</div>
+<div id="appNotice" class="notice settings-section">v7.4.1: 다크 테마 배색 충돌(구독 카드/카드 상세/우선순위 배지) 수정 + 월별 히스토리에 평균·전월대비·스파크라인·필터 추가했습니다.</div>
 
 <div class="responsive-shell dashboard-section"><div class="responsive-left">
-<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.4.0 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
+<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.4.1 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
 
 <div class="mpoint-dashboard dashboard-section" id="mPointDashboard">
   <div class="mpoint-top"><div><div class="mpoint-title">⭐ M포인트 대시보드</div><div class="mpoint-sub">M BOOST 적립/사용/순증감을 카드 실적과 분리해서 관리합니다.</div></div><button class="mpoint-edit" onclick="openMPoint()">M포인트 입력</button></div>
@@ -605,7 +612,7 @@ html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid
 <div class="backup-warn settings-section" id="backupWarn"></div>
 <div class="sync-panel settings-section" id="syncPanel"></div>
 <div class="github-panel settings-section" id="githubPanel"></div>
-<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v7.4.0 Subscription Planner Beta<br>업데이트 확인 전입니다.</div>
+<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v7.4.1 UI & History Stats Fix<br>업데이트 확인 전입니다.</div>
 <div class="summary dashboard-section"><div class="tile"><div class="tl">총 월 사용금액</div><div class="tv" id="sumSpent">0원</div><div class="ts">숨김 카드 제외</div></div><div class="tile"><div class="tl">총 부족액</div><div class="tv" id="sumShortage">0원</div><div class="ts">실적 목표 기준</div></div><div class="tile"><div class="tl">부족 카드</div><div class="tv" id="sumNeedCards">0개</div><div class="ts">우선 관리 대상</div></div><div class="tile"><div class="tl">M BOOST 추가 사용 가능</div><div class="tv" id="sumEasyRemain">0원</div><div class="ts">입력 M포인트 기준</div></div></div>
 </div><div class="responsive-right">
 <input class="search dashboard-section" id="search" placeholder="카드 검색..." oninput="render()">
@@ -641,7 +648,7 @@ function switchTab(tab){
 
 const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2';
 const GHCFG='benefit-manager-github-config-v6.2';
-const APP_VERSION='7.4.0', APP_BUILD=740, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
+const APP_VERSION='7.4.1', APP_BUILD=741, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
 
@@ -1049,7 +1056,31 @@ function openHiddenManager(){
   openModal();
 }
 
-function showHistory(){ensureMonthly();mt.innerText='월별 히스토리';let parts=[];data.cards.forEach(c=>{let rec=data.monthlyRecords[c.id]||{};let rows=Object.entries(rec).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,12);if(rows.length){parts.push(`<div class="notice"><b>${c.name}</b>${rows.map(([k,v])=>`<div class="month-row light"><span>${v.label}</span><b>${fmt(v.spent)}</b></div>`).join('')}</div>`)}});let slog=Array.isArray(data.subscriptionApplyLog)?data.subscriptionApplyLog.slice(0,20):[];if(slog.length){parts.push(`<div class="notice"><b>구독 실적 반영 로그</b>${slog.map(x=>`<div class="month-row light"><span>${x.month} · ${x.subscriptionName}<br>${x.cardName} · ${new Date(x.appliedAt).toLocaleString('ko-KR')}</span><b>${fmt(x.amount)}</b></div>`).join('')}</div>`)}let h=data.history||[];if(h.length){parts.push(`<div class="notice"><b>초기화 스냅샷</b>${h.map(x=>`<div class="month-row light"><span>${x.time}<br>${x.reason}</span><b>${fmt(x.total)}</b></div>`).join('')}</div>`)}mb.innerHTML=parts.length?parts.join(''):'<div class="hint">저장된 히스토리가 없습니다. 실적 입력 후 저장하면 카드별 월별 기록이 표시됩니다.</div>';openModal()}
+function historyTrendHtml(rows){
+  // rows: [[key,{label,spent}], ...] sorted latest-first (already sliced to 12)
+  const vals=rows.map(([k,v])=>Number(v.spent||0));
+  const avg=vals.reduce((a,b)=>a+b,0)/vals.length;
+  let diffHtml='';
+  if(vals.length>1){
+    const diff=vals[0]-vals[1];
+    const diffPct=vals[1]?Math.round(Math.abs(diff)/vals[1]*100):null;
+    if(diff>0)diffHtml=`<span class="hist-up">▲ ${fmt(Math.abs(diff))}${diffPct!==null?` (${diffPct}%)`:''}</span>`;
+    else if(diff<0)diffHtml=`<span class="hist-down">▼ ${fmt(Math.abs(diff))}${diffPct!==null?` (${diffPct}%)`:''}</span>`;
+    else diffHtml=`<span class="hist-flat">변동 없음</span>`;
+  }
+  const summaryHtml=`<div class="hist-summary">최근 ${vals.length}개월 평균 <b>${fmt(Math.round(avg))}</b>${diffHtml?' · 전월 대비 '+diffHtml:''}</div>`;
+  const sparkVals=rows.slice(0,6).map(([k,v])=>Number(v.spent||0)).reverse();
+  const maxV=Math.max(1,...sparkVals);
+  const sparkHtml=sparkVals.length>1?`<div class="spark-row">${sparkVals.map(v=>`<div class="spark-bar" style="height:${Math.max(6,Math.round(v/maxV*100))}%" title="${fmt(v)}"></div>`).join('')}</div>`:'';
+  return summaryHtml+sparkHtml;
+}
+function filterHistoryCards(){
+  const q=(document.getElementById('historyFilter')?.value||'').trim().toLowerCase();
+  document.querySelectorAll('.history-card-block').forEach(el=>{
+    el.style.display=(!q||(el.dataset.cardName||'').includes(q))?'':'none';
+  });
+}
+function showHistory(){ensureMonthly();mt.innerText='월별 히스토리';let parts=[];const hasCards=data.cards.some(c=>{const rec=data.monthlyRecords[c.id]||{};return Object.keys(rec).length>0});if(hasCards)parts.push(`<div class="hist-filter-wrap fg"><input id="historyFilter" placeholder="카드명 검색" oninput="filterHistoryCards()"></div>`);data.cards.forEach(c=>{let rec=data.monthlyRecords[c.id]||{};let rows=Object.entries(rec).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,12);if(rows.length){parts.push(`<div class="notice history-card-block" data-card-name="${(c.name||'').toLowerCase()}"><b>${c.name}</b>${historyTrendHtml(rows)}${rows.map(([k,v])=>`<div class="month-row light"><span>${v.label}</span><b>${fmt(v.spent)}</b></div>`).join('')}</div>`)}});let slog=Array.isArray(data.subscriptionApplyLog)?data.subscriptionApplyLog.slice(0,20):[];if(slog.length){parts.push(`<div class="notice"><b>구독 실적 반영 로그</b>${slog.map(x=>`<div class="month-row light"><span>${x.month} · ${x.subscriptionName}<br>${x.cardName} · ${new Date(x.appliedAt).toLocaleString('ko-KR')}</span><b>${fmt(x.amount)}</b></div>`).join('')}</div>`)}let h=data.history||[];if(h.length){parts.push(`<div class="notice"><b>초기화 스냅샷</b>${h.map(x=>`<div class="month-row light"><span>${x.time}<br>${x.reason}</span><b>${fmt(x.total)}</b></div>`).join('')}</div>`)}mb.innerHTML=parts.length?parts.join(''):'<div class="hint">저장된 히스토리가 없습니다. 실적 입력 후 저장하면 카드별 월별 기록이 표시됩니다.</div>';openModal()}
 
 function getGithubConfig(){try{return JSON.parse(localStorage.getItem(GHCFG)||'{}')}catch(e){return {}}}
 function saveGithubConfig(cfg){localStorage.setItem(GHCFG,JSON.stringify(cfg))}
