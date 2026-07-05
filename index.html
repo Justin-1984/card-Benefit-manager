@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.3.2 UI Consistency Fix</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.4.0 Subscription Planner Beta</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -67,27 +67,28 @@ main{max-width:780px!important}.tabbar{background:#e5e7eb!important;border:1px s
 @media (prefers-color-scheme:dark){body{background:#0f172a!important;color:#e5e7eb!important}header,.card,.tile,.tools,.settings-hero,.action-panel,.search{background:#111827!important;border-color:#334155!important;color:#e5e7eb!important}.ttl,.name{color:#f8fafc!important}.sub,.meta,.period,.tl,.ts,.action-meta,.hint{color:#94a3b8!important}.tabbar{background:#1e293b!important;border-color:#334155!important}.tabbtn.active{background:#0f172a!important;color:#f8fafc!important}.btn{background:#1e293b!important;color:#e5e7eb!important}.btn.primary{background:#f8fafc!important;color:#111827!important}.memo{background:#0f172a!important;border-color:#334155!important;color:#cbd5e1!important}.sheet{background:#111827!important}.fg input,.fg select,.fg textarea{background:#0f172a!important;color:#e5e7eb!important;border-color:#334155!important}.smart-chip{background:#111827!important;color:#e5e7eb!important;border-color:#334155!important}}
 
 
-/* v7.3.2 dark theme contrast fix: 앱은 OS 설정과 무관하게 항상 다크 테마로 렌더링되므로,
-   prefers-color-scheme:dark 조건을 제거해 action-item 색상 구분(양호/주의/위험)이 항상 적용되도록 수정 */
-.action-panel{background:#111827!important;border-color:#334155!important;color:#f8fafc!important;box-shadow:none!important}
-.action-title{color:#f8fafc!important}
-.action-grid .action-item,
-.hidden-item{background:#0f172a!important;border:1px solid #334155!important;color:#f8fafc!important}
-.action-grid .action-item b{color:#f8fafc!important}
-.action-grid .action-item div{color:#cbd5e1!important}
-.action-grid .action-meta{color:#94a3b8!important}
-.action-grid .action-warn{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
-.action-grid .action-warn b{color:#fef3c7!important}
-.action-grid .action-warn div{color:#fde68a!important}
-.action-grid .action-danger{background:#2a1111!important;border-color:#991b1b!important;color:#fecaca!important}
-.action-grid .action-danger b{color:#fee2e2!important}
-.action-grid .action-danger div{color:#fecaca!important}
-.action-grid .action-good{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
-.action-grid .action-good b{color:#dcfce7!important}
-.action-grid .action-good div{color:#bbf7d0!important}
-.smart-chip{background:#111827!important;color:#f8fafc!important;border-color:#334155!important}
-.sync-panel.show{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
-.notice,.alert-panel.show{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
+/* v6.7.2 readability hotfix: dark mode contrast */
+@media (prefers-color-scheme:dark){
+  .action-panel{background:#111827!important;border-color:#334155!important;color:#f8fafc!important;box-shadow:none!important}
+  .action-title{color:#f8fafc!important}
+  .action-grid .action-item,
+  .hidden-item{background:#0f172a!important;border:1px solid #334155!important;color:#f8fafc!important}
+  .action-grid .action-item b{color:#f8fafc!important}
+  .action-grid .action-item div{color:#cbd5e1!important}
+  .action-grid .action-meta{color:#94a3b8!important}
+  .action-grid .action-warn{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
+  .action-grid .action-warn b{color:#fef3c7!important}
+  .action-grid .action-warn div{color:#fde68a!important}
+  .action-grid .action-danger{background:#2a1111!important;border-color:#991b1b!important;color:#fecaca!important}
+  .action-grid .action-danger b{color:#fee2e2!important}
+  .action-grid .action-danger div{color:#fecaca!important}
+  .action-grid .action-good{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
+  .action-grid .action-good b{color:#dcfce7!important}
+  .action-grid .action-good div{color:#bbf7d0!important}
+  .smart-chip{background:#111827!important;color:#f8fafc!important;border-color:#334155!important}
+  .sync-panel.show{background:#06281c!important;border-color:#047857!important;color:#bbf7d0!important}
+  .notice,.alert-panel.show{background:#2b1d0b!important;border-color:#92400e!important;color:#fde68a!important}
+}
 
 
 /* v6.7.3 wallet style UI override. Data logic unchanged. */
@@ -534,12 +535,13 @@ html body[data-tab="dashboard"] #cards{visibility:visible!important;pointer-even
 }
 
 /* v7.2.0 UX Upgrade - dashboard summary and expandable card detail. Data logic unchanged. */
-.ux-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 15px 14px}.ux-tile{background:rgba(255,255,255,.06);border:1px solid rgba(148,163,184,.20);border-radius:15px;padding:11px;min-width:0}.ux-l{font-size:10px;font-weight:900;color:#9aa7bd}.ux-v{font-size:16px;font-weight:900;margin-top:3px;color:#f8fafc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ux-s{font-size:10px;color:#9aa7bd;margin-top:2px;line-height:1.35}.ux-recent{margin:0 15px 15px;background:rgba(255,255,255,.05);border:1px solid rgba(148,163,184,.18);border-radius:16px;padding:12px}.ux-recent-title{font-size:12px;font-weight:900;color:#e2e8f0;margin-bottom:8px}.ux-empty{font-size:11px;color:#9aa7bd}.quick-actions{margin:0 15px 15px}.quick-actions .btn{min-height:40px!important}.card.collapsed .ux-grid,.card.collapsed .ux-recent,.card.collapsed .quick-actions{display:none!important}
+.ux-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 15px 14px}.ux-tile{background:rgba(248,250,252,.86);border:1px solid rgba(226,232,240,.86);border-radius:15px;padding:11px;min-width:0}.ux-l{font-size:10px;font-weight:900;color:#64748b}.ux-v{font-size:16px;font-weight:900;margin-top:3px;color:#111827;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ux-s{font-size:10px;color:#64748b;margin-top:2px;line-height:1.35}.ux-recent{margin:0 15px 15px;background:rgba(248,250,252,.78);border:1px solid rgba(226,232,240,.76);border-radius:16px;padding:12px}.ux-recent-title{font-size:12px;font-weight:900;color:#334155;margin-bottom:8px}.ux-empty{font-size:11px;color:#64748b}.quick-actions{margin:0 15px 15px}.quick-actions .btn{min-height:40px!important}.card.collapsed .ux-grid,.card.collapsed .ux-recent,.card.collapsed .quick-actions{display:none!important}
+@media (prefers-color-scheme:dark){.ux-tile,.ux-recent{background:rgba(15,23,42,.55);border-color:rgba(148,163,184,.18)}.ux-l,.ux-s,.ux-empty,.ux-recent-title{color:#94a3b8}.ux-v{color:#f8fafc}}
 @media (min-width:1200px){html body[data-layout="desktop"] .ux-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;margin:0 22px 14px!important}html body[data-layout="desktop"] .ux-recent,html body[data-layout="desktop"] .quick-actions{margin-left:22px!important;margin-right:22px!important}html body[data-layout="desktop"] .summary{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 
 /* v7.2.1 Subscription Manager */
 .subscription-panel{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:white;border-radius:24px;padding:16px;margin-bottom:12px;box-shadow:0 14px 30px rgba(15,23,42,.16)}
-.subscription-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.subscription-title{font-size:17px;font-weight:900}.subscription-sub{font-size:12px;opacity:.76;margin-top:4px;line-height:1.45}.subscription-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}.subscription-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:11px}.subscription-l{font-size:10px;opacity:.72;font-weight:800}.subscription-v{font-size:18px;font-weight:900;margin-top:3px}.subscription-s{font-size:10px;opacity:.72;margin-top:2px}.subscription-list{display:grid;grid-template-columns:1fr;gap:10px}.subscription-card{background:rgba(17,28,47,.94);border:1px solid rgba(148,163,184,.20);border-radius:18px;padding:14px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;color:#f8fafc}.subscription-name{font-size:15px;font-weight:900;color:#f8fafc}.subscription-meta{font-size:11px;color:#9aa7bd;margin-top:4px;line-height:1.45}.subscription-amount{text-align:right;font-size:17px;font-weight:900;white-space:nowrap;color:#f8fafc}.subscription-dday{display:inline-block;margin-top:5px;border-radius:999px;padding:5px 8px;font-size:11px;font-weight:900}.subscription-dday.soon{background:#fff7ed;color:#c2410c}.subscription-dday.today{background:#fef2f2;color:#b91c1c}.subscription-dday.safe{background:#ecfdf5;color:#047857}.subscription-actions{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}.subscription-empty{background:rgba(17,28,47,.94);border:1px dashed rgba(148,163,184,.30);border-radius:18px;padding:18px;text-align:center;color:#9aa7bd;font-size:13px;line-height:1.6}.subscription-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.currency-chip{display:inline-block;background:#f1f5f9;color:#334155;border-radius:999px;padding:4px 7px;font-size:10px;font-weight:900;margin-left:4px}
+.subscription-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.subscription-title{font-size:17px;font-weight:900}.subscription-sub{font-size:12px;opacity:.76;margin-top:4px;line-height:1.45}.subscription-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}.subscription-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:11px}.subscription-l{font-size:10px;opacity:.72;font-weight:800}.subscription-v{font-size:18px;font-weight:900;margin-top:3px}.subscription-s{font-size:10px;opacity:.72;margin-top:2px}.subscription-list{display:grid;grid-template-columns:1fr;gap:10px}.subscription-card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:14px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.subscription-name{font-size:15px;font-weight:900}.subscription-meta{font-size:11px;color:#64748b;margin-top:4px;line-height:1.45}.subscription-amount{text-align:right;font-size:17px;font-weight:900;white-space:nowrap}.subscription-dday{display:inline-block;margin-top:5px;border-radius:999px;padding:5px 8px;font-size:11px;font-weight:900}.subscription-dday.soon{background:#fff7ed;color:#c2410c}.subscription-dday.today{background:#fef2f2;color:#b91c1c}.subscription-dday.safe{background:#ecfdf5;color:#047857}.subscription-actions{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}.subscription-empty{background:white;border:1px dashed #cbd5e1;border-radius:18px;padding:18px;text-align:center;color:#64748b;font-size:13px;line-height:1.6}.subscription-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.currency-chip{display:inline-block;background:#f1f5f9;color:#334155;border-radius:999px;padding:4px 7px;font-size:10px;font-weight:900;margin-left:4px}
 body[data-tab="dashboard"] .subscriptions-section,body[data-tab="dashboard"] .settings-section{display:none!important}
 body[data-tab="subscriptions"] .dashboard-section,body[data-tab="subscriptions"] .settings-section{display:none!important}
 body[data-tab="settings"] .dashboard-section,body[data-tab="settings"] .subscriptions-section{display:none!important}
@@ -561,12 +563,19 @@ html body[data-tab="settings"] .group{display:none!important;}
 html body[data-tab="subscriptions"] .subscriptions-section{display:block!important;}
 html body[data-tab="subscriptions"] .subscriptions-wrap{display:block!important;width:100%;}
 
-/* v7.3.0 Subscription Engine */
+/* v7.4.0 Subscription Planner */
 .subscription-calendar-panel{margin-top:18px}
 .subscription-calendar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .calendar-item{border:1px solid rgba(255,255,255,.13);border-radius:18px;background:rgba(15,23,42,.55);padding:14px;display:flex;justify-content:space-between;gap:12px;align-items:center}
 .calendar-date{font-size:24px;font-weight:950;line-height:1}.calendar-date span{font-size:12px;font-weight:800;color:var(--muted);display:block;margin-top:3px}.calendar-name{font-weight:950}.calendar-meta{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.35}.calendar-amount{font-weight:950;text-align:right;white-space:nowrap}.projected-chip{display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:5px 8px;border-radius:999px;background:rgba(52,211,153,.16);border:1px solid rgba(52,211,153,.28);font-size:11px;font-weight:900;color:#bbf7d0}
 @media(max-width:767px){.subscription-calendar{grid-template-columns:1fr}.calendar-item{border-radius:16px}}
+.subscription-planner-panel{margin:14px 0;background:rgba(15,23,42,.72);border:1px solid rgba(148,163,184,.18);border-radius:22px;padding:16px;box-shadow:0 12px 28px rgba(2,6,23,.18)}
+.subscription-planner-title{font-size:16px;font-weight:950;margin-bottom:4px;color:#fff}.subscription-planner-sub{font-size:12px;color:#94a3b8;margin-bottom:12px;line-height:1.45}
+.rec-list,.analysis-list{display:grid;grid-template-columns:1fr;gap:10px}.rec-item,.analysis-item{border:1px solid rgba(148,163,184,.16);background:rgba(30,41,59,.72);border-radius:16px;padding:13px;color:#e5e7eb}
+.rec-top,.analysis-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.rec-name,.analysis-name{font-weight:950}.rec-meta,.analysis-meta{font-size:12px;color:#94a3b8;margin-top:4px;line-height:1.4}.rec-badge{display:inline-flex;border-radius:999px;padding:5px 8px;background:rgba(59,130,246,.16);border:1px solid rgba(59,130,246,.28);font-size:11px;font-weight:900;color:#bfdbfe;white-space:nowrap}.rec-badge.warn{background:rgba(245,158,11,.16);border-color:rgba(245,158,11,.3);color:#fed7aa}.rec-badge.good{background:rgba(16,185,129,.16);border-color:rgba(16,185,129,.3);color:#bbf7d0}
+.analysis-bar{height:8px;border-radius:999px;background:rgba(148,163,184,.18);overflow:hidden;margin-top:9px}.analysis-fill{height:100%;background:linear-gradient(90deg,#38bdf8,#34d399);border-radius:999px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.analysis-money{font-weight:950;text-align:right;white-space:nowrap}
+@media(min-width:900px){.rec-list,.analysis-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid!important;}
 @media(max-width:759px){html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:block!important;}}
 
@@ -574,10 +583,10 @@ html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="pill" id="dDay">현대 D-</div></div></header>
 <main>
 <div class="tabbar three"><button id="tabDashboard" class="tabbtn active" onclick="switchTab('dashboard')">🏠 대시보드</button><button id="tabSubscriptions" class="tabbtn" onclick="switchTab('subscriptions')">🔄 구독</button><button id="tabSettings" class="tabbtn" onclick="switchTab('settings')">⚙️ 설정</button></div>
-<div id="appNotice" class="notice settings-section">v7.3.2 UI Consistency Fix: 다크 테마 배색이 어긋나 보이던 구독 카드/카드 상세/우선순위 배지를 다크 테마로 통일했습니다. 데이터 로직은 변경되지 않았습니다.</div>
+<div id="appNotice" class="notice settings-section">v7.4.0 Subscription Planner Beta: 구독 캘린더, 카드 추천, 구독 분석을 추가했습니다.</div>
 
 <div class="responsive-shell dashboard-section"><div class="responsive-left">
-<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.3.2 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
+<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.4.0 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">달성 카드</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">총 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">실적 목표 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
 
 <div class="mpoint-dashboard dashboard-section" id="mPointDashboard">
   <div class="mpoint-top"><div><div class="mpoint-title">⭐ M포인트 대시보드</div><div class="mpoint-sub">M BOOST 적립/사용/순증감을 카드 실적과 분리해서 관리합니다.</div></div><button class="mpoint-edit" onclick="openMPoint()">M포인트 입력</button></div>
@@ -590,13 +599,13 @@ html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid
   <div class="mpoint-barw"><div class="mpoint-bar" id="mpDashBar" style="width:0%"></div></div>
   <div class="mpoint-note"><span id="mpDashRate">달성률 0%</span><span id="mpDashExpected">예상 최종 0 M</span></div>
 </div>
-<div class="smart-strip dashboard-section" id="smartStrip"></div><div class="subscription-panel dashboard-section" id="subscriptionDash"><div class="subscription-top"><div><div class="subscription-title">🔄 구독 결제</div><div class="subscription-sub">이번 달 반복 결제와 곧 결제될 항목을 확인합니다.</div></div><button class="mpoint-edit" onclick="switchTab('subscriptions')">관리</button></div><div class="subscription-grid"><div class="subscription-stat"><div class="subscription-l">이번달 구독</div><div class="subscription-v" id="subDashTotal">0원</div><div class="subscription-s" id="subDashCount">0건</div></div><div class="subscription-stat"><div class="subscription-l">7일 내 결제</div><div class="subscription-v" id="subDashSoon">0건</div><div class="subscription-s" id="subDashSoonAmt">0원 예정</div></div><div class="subscription-stat"><div class="subscription-l">예상 실적 연결</div><div class="subscription-v" id="subDashAuto">0건</div><div class="subscription-s">카드 데이터 미변경</div></div><div class="subscription-stat"><div class="subscription-l">다음 결제</div><div class="subscription-v" id="subDashNext">없음</div><div class="subscription-s" id="subDashNextSub">구독을 추가하세요</div></div></div></div><div class="action-panel dashboard-section" id="actionPanel"></div>
+<div class="smart-strip dashboard-section" id="smartStrip"></div><div class="subscription-panel dashboard-section" id="subscriptionDash"><div class="subscription-top"><div><div class="subscription-title">🔄 구독 결제</div><div class="subscription-sub">이번 달 반복 결제와 곧 결제될 항목을 확인합니다.</div></div><button class="mpoint-edit" onclick="switchTab('subscriptions')">관리</button></div><div class="subscription-grid"><div class="subscription-stat"><div class="subscription-l">이번달 구독</div><div class="subscription-v" id="subDashTotal">0원</div><div class="subscription-s" id="subDashCount">0건</div></div><div class="subscription-stat"><div class="subscription-l">7일 내 결제</div><div class="subscription-v" id="subDashSoon">0건</div><div class="subscription-s" id="subDashSoonAmt">0원 예정</div></div><div class="subscription-stat"><div class="subscription-l">자동 실적 반영</div><div class="subscription-v" id="subDashAuto">0건</div><div class="subscription-s">카드 연결 기준</div></div><div class="subscription-stat"><div class="subscription-l">다음 결제</div><div class="subscription-v" id="subDashNext">없음</div><div class="subscription-s" id="subDashNextSub">구독을 추가하세요</div></div></div></div><div class="action-panel dashboard-section" id="actionPanel"></div>
 <div class="alert-panel dashboard-section" id="dashboardAlert"></div><div class="alert-panel dashboard-section" id="deadlineAlert"></div>
 <div class="settings-hero settings-section"><b>설정</b><p>업데이트 확인, 앱 정보, GitHub 백업/복원, 자동백업 복원, 리셋 같은 관리 기능을 이곳에서 모아 관리합니다.</p></div>
 <div class="backup-warn settings-section" id="backupWarn"></div>
 <div class="sync-panel settings-section" id="syncPanel"></div>
 <div class="github-panel settings-section" id="githubPanel"></div>
-<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v7.3.2 UI Consistency Fix<br>업데이트 확인 전입니다.</div>
+<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v7.4.0 Subscription Planner Beta<br>업데이트 확인 전입니다.</div>
 <div class="summary dashboard-section"><div class="tile"><div class="tl">총 월 사용금액</div><div class="tv" id="sumSpent">0원</div><div class="ts">숨김 카드 제외</div></div><div class="tile"><div class="tl">총 부족액</div><div class="tv" id="sumShortage">0원</div><div class="ts">실적 목표 기준</div></div><div class="tile"><div class="tl">부족 카드</div><div class="tv" id="sumNeedCards">0개</div><div class="ts">우선 관리 대상</div></div><div class="tile"><div class="tl">M BOOST 추가 사용 가능</div><div class="tv" id="sumEasyRemain">0원</div><div class="ts">입력 M포인트 기준</div></div></div>
 </div><div class="responsive-right">
 <input class="search dashboard-section" id="search" placeholder="카드 검색..." oninput="render()">
@@ -605,10 +614,13 @@ html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid
 </div></div>
 <div class="subscriptions-section subscriptions-wrap">
   <div class="subscription-panel">
-    <div class="subscription-top"><div><div class="subscription-title">🔄 구독 결제 매니저</div><div class="subscription-sub">Netflix, YouTube, ChatGPT 같은 반복 결제를 카드별 예상 실적에 반영합니다.</div></div><button class="mpoint-edit" onclick="openSubscription()">+ 구독 추가</button></div>
-    <div class="subscription-grid"><div class="subscription-stat"><div class="subscription-l">월 구독 총액</div><div class="subscription-v" id="subPageTotal">0원</div><div class="subscription-s" id="subPageCount">0건</div></div><div class="subscription-stat"><div class="subscription-l">이번주 결제</div><div class="subscription-v" id="subPageWeek">0건</div><div class="subscription-s" id="subPageWeekAmt">0원</div></div><div class="subscription-stat"><div class="subscription-l">연간 환산</div><div class="subscription-v" id="subPageYearly">0원</div><div class="subscription-s">월 구독 총액 × 12</div></div><div class="subscription-stat"><div class="subscription-l">결제 미확인</div><div class="subscription-v" id="subPageUnapplied">0건</div><div class="subscription-s">이번달 기준</div></div></div>
+    <div class="subscription-top"><div><div class="subscription-title">🔄 구독 결제 매니저</div><div class="subscription-sub">Netflix, YouTube, ChatGPT 같은 반복 결제를 카드별로 관리하고 필요할 때 실적에 반영합니다.</div></div><button class="mpoint-edit" onclick="openSubscription()">+ 구독 추가</button></div>
+    <div class="subscription-grid"><div class="subscription-stat"><div class="subscription-l">월 구독 총액</div><div class="subscription-v" id="subPageTotal">0원</div><div class="subscription-s" id="subPageCount">0건</div></div><div class="subscription-stat"><div class="subscription-l">이번주 결제</div><div class="subscription-v" id="subPageWeek">0건</div><div class="subscription-s" id="subPageWeekAmt">0원</div></div><div class="subscription-stat"><div class="subscription-l">연간 환산</div><div class="subscription-v" id="subPageYearly">0원</div><div class="subscription-s">월 구독 총액 × 12</div></div><div class="subscription-stat"><div class="subscription-l">실적 미반영</div><div class="subscription-v" id="subPageUnapplied">0건</div><div class="subscription-s">이번달 기준</div></div></div>
   </div>
-  <div class="subscription-toolbar"><button class="btn primary" onclick="openSubscription()">+ 구독 추가</button><button class="btn blue" onclick="applyDueSubscriptions()">이번달 구독 결제 확인</button><button class="btn orange" onclick="renderSubscriptions();toast('구독 목록을 새로고침했습니다')">새로고침</button></div>
+  <div class="subscription-toolbar"><button class="btn primary" onclick="openSubscription()">+ 구독 추가</button><button class="btn blue" onclick="applyDueSubscriptions()">이번달 구독 실적 반영</button><button class="btn orange" onclick="renderSubscriptions();toast('구독 목록을 새로고침했습니다')">새로고침</button></div>
+  <div class="subscription-planner-panel subscription-calendar-panel"><div class="subscription-planner-title">📅 구독 캘린더</div><div class="subscription-planner-sub">이번 달 결제 예정일을 날짜순으로 확인합니다.</div><div id="subscriptionCalendar" class="subscription-calendar"></div></div>
+  <div class="subscription-planner-panel"><div class="subscription-planner-title">💳 카드 추천</div><div class="subscription-planner-sub">실적 부족액과 구독 금액을 기준으로 어느 카드에 연결하면 좋은지 제안합니다. 자동 반영은 하지 않습니다.</div><div id="subscriptionRecommendations" class="rec-list"></div></div>
+  <div class="subscription-planner-panel"><div class="subscription-planner-title">📊 구독 분석</div><div class="subscription-planner-sub">카테고리별 비중과 카드별 구독 부담액을 확인합니다.</div><div id="subscriptionAnalysis" class="analysis-list"></div></div>
   <div id="subscriptionList" class="subscription-list"></div>
 </div>
 <div class="tools settings-section"><h3>관리</h3><div class="row"><button class="btn orange" onclick="resetPeriodCards('hyundai',true)">현대카드 현재기간 전환</button><button class="btn" onclick="resetPeriodCards('monthly',true)">기타카드 월초 전환</button><button class="btn" onclick="resetMonth(false)">전체 사용금액 초기화</button><button class="btn red" onclick="resetMonth(true)">전체 초기화</button><button class="btn blue" onclick="backup()">백업</button><button class="btn" onclick="restoreBtn.click()">복원</button><button class="btn orange" onclick="showHistory()">히스토리 보기</button><button class="btn orange" onclick="openAutoBackups()">자동백업 보기/복원</button><button class="btn orange" onclick="restorePreUpdateBackup()">업데이트 전 백업 복원</button><button class="btn blue" onclick="openGithubSettings()">GitHub 설정</button><button class="btn blue" onclick="githubBackup()">GitHub 백업</button><button class="btn orange" onclick="githubRestore()">GitHub 복원</button><button class="btn blue" onclick="checkGithubLatest(false)">최신 확인</button><button class="btn blue" onclick="checkAppUpdate(true)">앱 업데이트 확인</button><button class="btn orange" onclick="applyAppUpdate()">업데이트 적용</button><input id="restoreBtn" type="file" accept="application/json" style="display:none" onchange="restore(event)"></div></div>
@@ -629,32 +641,102 @@ function switchTab(tab){
 
 const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2';
 const GHCFG='benefit-manager-github-config-v6.2';
-const APP_VERSION='7.3.2', APP_BUILD=732, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
+const APP_VERSION='7.4.0', APP_BUILD=740, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
 
-const SUB_STORE='benefit-manager-subscriptions-v7.3';
-const SUB_STORE_LEGACY=['benefit-manager-subscriptions-v7.2.2','benefit-manager-subscriptions-v7.2.1'];
-function loadSubscriptions(){try{for(const key of [SUB_STORE,...SUB_STORE_LEGACY]){const r=localStorage.getItem(key);if(r){const arr=JSON.parse(r);if(Array.isArray(arr)){if(key!==SUB_STORE&&!localStorage.getItem(SUB_STORE))localStorage.setItem(SUB_STORE,JSON.stringify(arr));return arr}}}}catch(e){}return[]}
+const SUB_STORE='benefit-manager-subscriptions-v7.2.1';
+function loadSubscriptions(){try{const r=localStorage.getItem(SUB_STORE);if(r){const arr=JSON.parse(r);return Array.isArray(arr)?arr:[]}}catch(e){}return[]}
 function saveSubscriptions(list){localStorage.setItem(SUB_STORE,JSON.stringify(list||[]))}
-function getSubscriptions(){return loadSubscriptions().map(s=>({active:true,currency:'KRW',cycle:'monthly',autoApply:false,appliedMonths:{},category:'구독',...s}))}
+function normalizeSubscription(s){
+  const base={active:true,currency:'KRW',cycle:'monthly',autoApply:false,appliedMonths:{},category:'구독',applyLog:[]};
+  const out={...base,...(s||{})};
+  out.appliedMonths=out.appliedMonths&&typeof out.appliedMonths==='object'?out.appliedMonths:{};
+  out.applyLog=Array.isArray(out.applyLog)?out.applyLog:[];
+  Object.keys(out.appliedMonths).forEach(k=>{
+    if(typeof out.appliedMonths[k]!=='object')out.appliedMonths[k]={appliedAt:out.appliedMonths[k],legacy:true};
+  });
+  return out;
+}
+function getSubscriptions(){return loadSubscriptions().map(normalizeSubscription)}
 function subMonthKey(){const n=new Date();return n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')}
+function subscriptionApplied(s,key){const ap=(s.appliedMonths||{})[key];return !!ap}
+function addSubscriptionApplyLog(s,entry){s.applyLog=Array.isArray(s.applyLog)?s.applyLog:[];s.applyLog.unshift(entry);s.applyLog=s.applyLog.slice(0,36)}
 function subAmountWon(s){let a=Number(s.amount||0);let cur=s.currency||'KRW';if(cur==='USD')a*=Number(s.rate||1380);if(cur==='HKD')a*=Number(s.rate||195);if(cur==='AUD')a*=Number(s.rate||1080);return Math.round(a)}
 function nextSubDate(s){const now=new Date(), day=Math.min(28,Math.max(1,Number(s.day||1)));let d=new Date(now.getFullYear(),now.getMonth(),day);if(d<new Date(now.getFullYear(),now.getMonth(),now.getDate()))d=new Date(now.getFullYear(),now.getMonth()+1,day);return d}
 function subDday(s){const today=new Date();const base=new Date(today.getFullYear(),today.getMonth(),today.getDate());return Math.ceil((nextSubDate(s)-base)/86400000)}
 function subCardName(id){const c=(data.cards||[]).find(x=>x.id===id);return c?c.name:'카드 미지정'}
 function subCurrencyLabel(s){return (s.currency||'KRW')==='KRW'?fmt(s.amount):`${Number(s.amount||0).toLocaleString()} ${s.currency}<span class="currency-chip">≈ ${fmt(subAmountWon(s))}</span>`}
-function subscriptionStats(){const list=getSubscriptions().filter(s=>s.active!==false);let total=list.reduce((a,s)=>a+subAmountWon(s),0);let soon=list.filter(s=>subDday(s)<=7);let soonAmt=soon.reduce((a,s)=>a+subAmountWon(s),0);let auto=list.filter(s=>s.autoApply&&s.cardId);let next=[...list].sort((a,b)=>subDday(a)-subDday(b))[0];let key=subMonthKey();let unapplied=list.filter(s=>s.autoApply&&s.cardId&&!(s.appliedMonths||{})[key]);return{list,total,soon,soonAmt,auto,next,unapplied}}
+function subscriptionStats(){const list=getSubscriptions().filter(s=>s.active!==false);let total=list.reduce((a,s)=>a+subAmountWon(s),0);let soon=list.filter(s=>subDday(s)<=7);let soonAmt=soon.reduce((a,s)=>a+subAmountWon(s),0);let auto=list.filter(s=>s.autoApply&&s.cardId);let next=[...list].sort((a,b)=>subDday(a)-subDday(b))[0];let key=subMonthKey();let unapplied=list.filter(s=>s.autoApply&&s.cardId&&!subscriptionApplied(s,key));return{list,total,soon,soonAmt,auto,next,unapplied}}
 function cardSubscriptionProjection(cardId){return getSubscriptions().filter(s=>s.active!==false&&s.autoApply&&s.cardId===cardId).reduce((a,s)=>a+subAmountWon(s),0)}
+function cardRemainForRecommendation(c){return Math.max(0,Number(c.target||0)-Number(c.spent||0)-cardSubscriptionProjection(c.id))}
+function recommendCardForSubscription(s){
+  const amt=subAmountWon(s);
+  const cards=(data.cards||[]).filter(c=>!c.hidden&&Number(c.target||0)>0);
+  if(!cards.length)return null;
+  const ranked=cards.map(c=>{const remain=cardRemainForRecommendation(c);const after=Math.max(0,remain-amt);let score=0;
+    if(remain===0)score=10;
+    else if(amt>=remain)score=100000-remain;
+    else score=50000-after;
+    if(c.id===s.cardId)score+=1200;
+    if(/정기|자동|구독/i.test((c.group||'')+' '+(c.memo||'')))score+=500;
+    return{card:c,remain,after,score};
+  }).sort((a,b)=>b.score-a.score);
+  return ranked[0]||null;
+}
+function renderSubscriptionRecommendations(){
+  const box=document.getElementById('subscriptionRecommendations');if(!box)return;
+  const list=getSubscriptions().filter(s=>s.active!==false).sort((a,b)=>subDday(a)-subDday(b));
+  if(!list.length){box.innerHTML='<div class="subscription-empty">구독을 추가하면 카드 추천이 표시됩니다.</div>';return}
+  box.innerHTML=list.map(s=>{const rec=recommendCardForSubscription(s),amt=subAmountWon(s);if(!rec)return `<div class="rec-item"><div class="rec-name">${s.name||'구독'}</div><div class="rec-meta">추천 가능한 카드가 없습니다.</div></div>`;
+    const current=s.cardId===rec.card.id; const willComplete=rec.remain>0&&amt>=rec.remain; const badge=willComplete?'good':(rec.remain===0?'warn':'');
+    const status=willComplete?'이 구독으로 실적 달성':(rec.remain===0?'이미 실적 달성':'실적 부족액 최소화');
+    return `<div class="rec-item"><div class="rec-top"><div><div class="rec-name">${s.name||'구독'} · ${fmt(amt)}</div><div class="rec-meta">추천 카드: <b>${rec.card.name}</b>${current?' · 현재 연결됨':''}<br>반영 전 남은 실적 ${fmt(rec.remain)} → 반영 후 ${rec.after>0?fmt(rec.after):'달성'}</div></div><span class="rec-badge ${badge}">${status}</span></div></div>`
+  }).join('');
+}
+function renderSubscriptionAnalysis(){
+  const box=document.getElementById('subscriptionAnalysis');if(!box)return;
+  const list=getSubscriptions().filter(s=>s.active!==false);if(!list.length){box.innerHTML='<div class="subscription-empty">분석할 구독 데이터가 없습니다.</div>';return}
+  const total=list.reduce((a,s)=>a+subAmountWon(s),0)||1;
+  const cat={}, card={}; list.forEach(s=>{const amt=subAmountWon(s);cat[s.category||'구독']=(cat[s.category||'구독']||0)+amt;card[subCardName(s.cardId)]=(card[subCardName(s.cardId)]||0)+amt;});
+  const makeRows=(obj,label)=>Object.entries(obj).sort((a,b)=>b[1]-a[1]).map(([k,v])=>{const pct=Math.round(v/total*1000)/10;return `<div class="analysis-item"><div class="analysis-top"><div><div class="analysis-name">${label} · ${k}</div><div class="analysis-meta">월 ${fmt(v)} · 연 ${fmt(v*12)} · ${pct}%</div></div><div class="analysis-money">${fmt(v)}</div></div><div class="analysis-bar"><div class="analysis-fill" style="width:${Math.max(3,pct)}%"></div></div></div>`}).join('');
+  box.innerHTML=`<div class="analysis-grid">${makeRows(cat,'카테고리')}${makeRows(card,'카드')}</div>`;
+}
+
 function renderSubscriptionCalendar(){const box=document.getElementById('subscriptionCalendar');if(!box)return;const list=getSubscriptions().filter(s=>s.active!==false).sort((a,b)=>Number(a.day||1)-Number(b.day||1));if(!list.length){box.innerHTML='<div class="subscription-empty">등록된 구독 결제가 없습니다.</div>';return}box.innerHTML=list.map(s=>`<div class="calendar-item"><div style="display:flex;gap:12px;align-items:center"><div class="calendar-date">${Number(s.day||1)}<span>일</span></div><div><div class="calendar-name">${s.name||'구독'}</div><div class="calendar-meta">${subCardName(s.cardId)} · ${s.category||'구독'} · D-${subDday(s)}</div></div></div><div class="calendar-amount">${subCurrencyLabel(s)}</div></div>`).join('')}
 function updateSubscriptionDashboard(){const st=subscriptionStats();const set=(id,v)=>{let el=document.getElementById(id);if(el)el.innerHTML=v};set('subDashTotal',fmt(st.total));set('subDashCount',st.list.length+'건');set('subDashSoon',st.soon.length+'건');set('subDashSoonAmt',fmt(st.soonAmt)+' 예정');set('subDashAuto',st.auto.length+'건');set('subDashNext',st.next?(st.next.name||'구독'):'없음');set('subDashNextSub',st.next?`D-${subDday(st.next)} · ${fmt(subAmountWon(st.next))}`:'구독을 추가하세요');set('subPageTotal',fmt(st.total));set('subPageCount',st.list.length+'건');set('subPageWeek',st.soon.length+'건');set('subPageWeekAmt',fmt(st.soonAmt));set('subPageYearly',fmt(st.total*12));set('subPageUnapplied',st.unapplied.length+'건')}
-function renderSubscriptions(){updateSubscriptionDashboard();renderSubscriptionCalendar();const box=document.getElementById('subscriptionList');if(!box)return;const list=getSubscriptions().sort((a,b)=>subDday(a)-subDday(b));if(!list.length){box.innerHTML='<div class="subscription-empty">아직 등록된 구독 결제가 없습니다.<br><b>+ 구독 추가</b>를 눌러 Netflix, YouTube, ChatGPT 같은 반복 결제를 등록하세요.</div>';return}const key=subMonthKey();box.innerHTML=list.map(s=>{const d=subDday(s),cls=d===0?'today':(d<=7?'soon':'safe'),ap=(s.appliedMonths||{})[key];return `<div class="subscription-card"><div><div class="subscription-name">${s.name||'구독'} ${s.active===false?'<span class="currency-chip">OFF</span>':''}</div><div class="subscription-meta">매월 ${Number(s.day||1)}일 · ${subCardName(s.cardId)} · ${s.category||'구독'}<br>${s.autoApply?'예상 실적 포함':'예상 실적 제외'} ${ap?'· 이번달 결제 확인':''}</div><span class="subscription-dday ${cls}">${d===0?'오늘 결제':`D-${d}`}</span></div><div class="subscription-amount">${subCurrencyLabel(s)}</div><div class="subscription-actions"><button class="btn blue" onclick="openSubscription('${s.id}')">수정</button><button class="btn primary" onclick="applySubscription('${s.id}')" ${ap?'disabled':''}>결제 확인</button><button class="btn ${s.active===false?'blue':'orange'}" onclick="toggleSubscription('${s.id}')">${s.active===false?'켜기':'끄기'}</button><button class="btn red" onclick="deleteSubscription('${s.id}')">삭제</button></div></div>`}).join('')}
-function openSubscription(id){const list=getSubscriptions();const s=id?list.find(x=>x.id===id):{id:'sub_'+Date.now(),name:'',amount:0,currency:'KRW',rate:1380,day:1,cardId:(data.cards&&data.cards[0]&&data.cards[0].id)||'',category:'구독',autoApply:true,active:true,appliedMonths:{}};mt.innerText=id?'구독 수정':'구독 추가';const cardOptions=(data.cards||[]).map(c=>`<option value="${c.id}" ${s.cardId===c.id?'selected':''}>${c.name}</option>`).join('');mb.innerHTML=`<div class="fg"><label>구독명</label><input id="subName" value="${s.name||''}" placeholder="예: ChatGPT Plus"></div><div class="fg"><label>금액</label><input id="subAmount" type="number" value="${Number(s.amount||0)}"></div><div class="fg"><label>통화</label><select id="subCurrency"><option value="KRW" ${s.currency==='KRW'?'selected':''}>KRW 원화</option><option value="USD" ${s.currency==='USD'?'selected':''}>USD 달러</option><option value="HKD" ${s.currency==='HKD'?'selected':''}>HKD 홍콩달러</option><option value="AUD" ${s.currency==='AUD'?'selected':''}>AUD 호주달러</option></select><div class="hint">외화는 아래 환율로 원화 환산합니다.</div></div><div class="fg"><label>환율</label><input id="subRate" type="number" value="${Number(s.rate||1380)}"></div><div class="fg"><label>매월 결제일</label><input id="subDay" type="number" min="1" max="28" value="${Number(s.day||1)}"></div><div class="fg"><label>연결 카드</label><select id="subCard">${cardOptions}</select></div><div class="fg"><label>카테고리</label><input id="subCategory" value="${s.category||'구독'}" placeholder="예: AI, 영상, 클라우드"></div><div class="fg"><label>예상 실적 포함</label><select id="subAuto"><option value="true" ${s.autoApply?'selected':''}>예상 실적 포함</option><option value="false" ${!s.autoApply?'selected':''}>예상 실적 제외</option></select><div class="hint">카드 사용금액은 직접 변경하지 않고, 카드 화면의 '구독 포함 예상' 계산에만 반영합니다. 결제 확인은 구독 데이터에만 저장합니다.</div></div><button class="btn primary" style="width:100%;margin-bottom:8px" onclick="saveSubscription('${s.id}')">저장</button>${id?`<button class="btn red" style="width:100%" onclick="deleteSubscription('${s.id}')">삭제</button>`:''}`;openModal()}
+function renderSubscriptions(){updateSubscriptionDashboard();renderSubscriptionCalendar();renderSubscriptionRecommendations();renderSubscriptionAnalysis();const box=document.getElementById('subscriptionList');if(!box)return;const list=getSubscriptions().sort((a,b)=>subDday(a)-subDday(b));if(!list.length){box.innerHTML='<div class="subscription-empty">아직 등록된 구독 결제가 없습니다.<br><b>+ 구독 추가</b>를 눌러 Netflix, YouTube, ChatGPT 같은 반복 결제를 등록하세요.</div>';return}const key=subMonthKey();box.innerHTML=list.map(s=>{const d=subDday(s),cls=d===0?'today':(d<=7?'soon':'safe'),ap=(s.appliedMonths||{})[key];const apText=ap&&typeof ap==='object'&&ap.amount?` · 이번달 반영 완료 ${fmt(ap.amount)}`:(ap?' · 이번달 반영 완료':'');return `<div class="subscription-card"><div><div class="subscription-name">${s.name||'구독'} ${s.active===false?'<span class="currency-chip">OFF</span>':''}</div><div class="subscription-meta">매월 ${Number(s.day||1)}일 · ${subCardName(s.cardId)} · ${s.category||'구독'}<br>${s.autoApply?'실적 반영 대상':'실적 반영 안 함'} ${apText}</div><span class="subscription-dday ${cls}">${d===0?'오늘 결제':`D-${d}`}</span></div><div class="subscription-amount">${subCurrencyLabel(s)}</div><div class="subscription-actions"><button class="btn blue" onclick="openSubscription('${s.id}')">수정</button><button class="btn primary" onclick="applySubscription('${s.id}')" ${ap?'disabled':''}>실적 반영</button><button class="btn ${s.active===false?'blue':'orange'}" onclick="toggleSubscription('${s.id}')">${s.active===false?'켜기':'끄기'}</button><button class="btn red" onclick="deleteSubscription('${s.id}')">삭제</button></div></div>`}).join('')}
+function openSubscription(id){const list=getSubscriptions();const s=id?list.find(x=>x.id===id):{id:'sub_'+Date.now(),name:'',amount:0,currency:'KRW',rate:1380,day:1,cardId:(data.cards&&data.cards[0]&&data.cards[0].id)||'',category:'구독',autoApply:true,active:true,appliedMonths:{}};mt.innerText=id?'구독 수정':'구독 추가';const cardOptions=(data.cards||[]).map(c=>`<option value="${c.id}" ${s.cardId===c.id?'selected':''}>${c.name}</option>`).join('');mb.innerHTML=`<div class="fg"><label>구독명</label><input id="subName" value="${s.name||''}" placeholder="예: ChatGPT Plus"></div><div class="fg"><label>금액</label><input id="subAmount" type="number" value="${Number(s.amount||0)}"></div><div class="fg"><label>통화</label><select id="subCurrency"><option value="KRW" ${s.currency==='KRW'?'selected':''}>KRW 원화</option><option value="USD" ${s.currency==='USD'?'selected':''}>USD 달러</option><option value="HKD" ${s.currency==='HKD'?'selected':''}>HKD 홍콩달러</option><option value="AUD" ${s.currency==='AUD'?'selected':''}>AUD 호주달러</option></select><div class="hint">외화는 아래 환율로 원화 환산합니다.</div></div><div class="fg"><label>환율</label><input id="subRate" type="number" value="${Number(s.rate||1380)}"></div><div class="fg"><label>매월 결제일</label><input id="subDay" type="number" min="1" max="28" value="${Number(s.day||1)}"></div><div class="fg"><label>연결 카드</label><select id="subCard">${cardOptions}</select></div><div class="fg"><label>카테고리</label><input id="subCategory" value="${s.category||'구독'}" placeholder="예: AI, 영상, 클라우드"></div><div class="fg"><label>카드 실적 반영</label><select id="subAuto"><option value="true" ${s.autoApply?'selected':''}>반영 대상</option><option value="false" ${!s.autoApply?'selected':''}>반영 안 함</option></select><div class="hint">자동으로 즉시 더하지는 않고, 구독 화면에서 '이번달 구독 실적 반영'을 눌렀을 때 중복 없이 반영합니다.</div></div><button class="btn primary" style="width:100%;margin-bottom:8px" onclick="saveSubscription('${s.id}')">저장</button>${id?`<button class="btn red" style="width:100%" onclick="deleteSubscription('${s.id}')">삭제</button>`:''}`;openModal()}
 function saveSubscription(id){let list=getSubscriptions();let s=list.find(x=>x.id===id)||{id:id||'sub_'+Date.now(),appliedMonths:{}};s.name=(subName.value||'').trim()||'이름 없는 구독';s.amount=Number(subAmount.value||0);s.currency=subCurrency.value;s.rate=Number(subRate.value||1380);s.day=Math.min(28,Math.max(1,Number(subDay.value||1)));s.cardId=subCard.value;s.category=(subCategory.value||'구독').trim();s.autoApply=subAuto.value==='true';s.active=true;if(!list.find(x=>x.id===s.id))list.push(s);saveSubscriptions(list);closeModal();renderSubscriptions();render();toast('구독을 저장했습니다')}
 function deleteSubscription(id){if(!confirm('이 구독을 삭제할까요?'))return;saveSubscriptions(getSubscriptions().filter(s=>s.id!==id));closeModal();renderSubscriptions();render();toast('구독을 삭제했습니다')}
 function toggleSubscription(id){let list=getSubscriptions();let s=list.find(x=>x.id===id);if(!s)return;s.active=!(s.active!==false);saveSubscriptions(list);renderSubscriptions();render();toast(s.active?'구독을 켰습니다':'구독을 껐습니다')}
-function applySubscription(id){let list=getSubscriptions();let s=list.find(x=>x.id===id);if(!s||s.active===false||!s.cardId)return;const key=subMonthKey();s.appliedMonths=s.appliedMonths||{};if(s.appliedMonths[key]){toast('이번달 이미 결제 확인했습니다');return}let c=data.cards.find(x=>x.id===s.cardId);if(!c){toast('연결 카드를 찾을 수 없습니다');return}const amt=subAmountWon(s);s.appliedMonths[key]=Date.now();saveSubscriptions(list);render();renderSubscriptions();scheduleGithubAutoBackup();toast(`${s.name} ${fmt(amt)} 결제 확인 완료`)}
-function applyDueSubscriptions(){const st=subscriptionStats();const targets=st.unapplied.filter(s=>s.active!==false);if(!targets.length){toast('확인할 구독이 없습니다');return}if(!confirm(`이번달 미확인 구독 ${targets.length}건을 결제 확인 처리할까요? 카드 사용금액은 변경하지 않습니다.`))return;targets.forEach(s=>applySubscription(s.id));}
+function applySubscription(id,opts){
+  opts=opts||{};
+  let list=getSubscriptions();let s=list.find(x=>x.id===id);if(!s||s.active===false||!s.cardId)return false;
+  const key=subMonthKey();s.appliedMonths=s.appliedMonths||{};
+  if(subscriptionApplied(s,key)){if(!opts.silent)toast('이번달 이미 반영했습니다');return false}
+  let c=data.cards.find(x=>x.id===s.cardId);if(!c){if(!opts.silent)toast('연결 카드를 찾을 수 없습니다');return false}
+  const amt=subAmountWon(s), before=Number(c.spent||0), appliedAt=Date.now();
+  c.spent=before+amt;
+  s.appliedMonths[key]={appliedAt,amount:amt,cardId:c.id,cardName:c.name,subscriptionName:s.name||'구독',before,after:c.spent,currency:s.currency||'KRW',rawAmount:Number(s.amount||0),rate:Number(s.rate||0)};
+  addSubscriptionApplyLog(s,{month:key,appliedAt,amount:amt,cardId:c.id,cardName:c.name,subscriptionName:s.name||'구독',before,after:c.spent});
+  data.subscriptionApplyLog=Array.isArray(data.subscriptionApplyLog)?data.subscriptionApplyLog:[];
+  data.subscriptionApplyLog.unshift({month:key,appliedAt,amount:amt,cardId:c.id,cardName:c.name,subscriptionId:s.id,subscriptionName:s.name||'구독',before,after:c.spent});
+  data.subscriptionApplyLog=data.subscriptionApplyLog.slice(0,100);
+  updateMonthlyRecord(c);if(c.annualGoal)updateRedAnnualFromRecords();
+  saveSubscriptions(list);markLocalChanged();
+  if(!opts.deferRender){render();renderSubscriptions();scheduleGithubAutoBackup();}
+  if(!opts.silent)toast(`${s.name} ${fmt(amt)} 실적 반영 완료`);
+  return true;
+}
+function applyDueSubscriptions(){
+  const st=subscriptionStats();const targets=st.unapplied.filter(s=>s.active!==false);
+  if(!targets.length){toast('반영할 구독이 없습니다');return}
+  const total=targets.reduce((a,s)=>a+subAmountWon(s),0);
+  if(!confirm(`이번달 미반영 구독 ${targets.length}건, 총 ${fmt(total)}을 연결 카드 실적에 더할까요?`))return;
+  let applied=0;targets.forEach(s=>{if(applySubscription(s.id,{silent:true,deferRender:true}))applied++});
+  render();renderSubscriptions();scheduleGithubAutoBackup();toast(`구독 ${applied}건 실적 반영 완료`);
+}
 
 const defaultCards=[
 {id:'red',name:'SC제일은행-the Red',short:'RED',color:'#e11d48',target:300000,spent:1048382,hidden:false,kind:'normal',periodType:'hyundai',collapsed:true,memo:'연 1,200만원 실적 목표',group:'현대',annualGoal:12000000,annualSpent:1048382},
@@ -967,7 +1049,7 @@ function openHiddenManager(){
   openModal();
 }
 
-function showHistory(){ensureMonthly();mt.innerText='월별 히스토리';let parts=[];data.cards.forEach(c=>{let rec=data.monthlyRecords[c.id]||{};let rows=Object.entries(rec).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,12);if(rows.length){parts.push(`<div class="notice"><b>${c.name}</b>${rows.map(([k,v])=>`<div class="month-row light"><span>${v.label}</span><b>${fmt(v.spent)}</b></div>`).join('')}</div>`)}});let h=data.history||[];if(h.length){parts.push(`<div class="notice"><b>초기화 스냅샷</b>${h.map(x=>`<div class="month-row light"><span>${x.time}<br>${x.reason}</span><b>${fmt(x.total)}</b></div>`).join('')}</div>`)}mb.innerHTML=parts.length?parts.join(''):'<div class="hint">저장된 히스토리가 없습니다. 실적 입력 후 저장하면 카드별 월별 기록이 표시됩니다.</div>';openModal()}
+function showHistory(){ensureMonthly();mt.innerText='월별 히스토리';let parts=[];data.cards.forEach(c=>{let rec=data.monthlyRecords[c.id]||{};let rows=Object.entries(rec).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,12);if(rows.length){parts.push(`<div class="notice"><b>${c.name}</b>${rows.map(([k,v])=>`<div class="month-row light"><span>${v.label}</span><b>${fmt(v.spent)}</b></div>`).join('')}</div>`)}});let slog=Array.isArray(data.subscriptionApplyLog)?data.subscriptionApplyLog.slice(0,20):[];if(slog.length){parts.push(`<div class="notice"><b>구독 실적 반영 로그</b>${slog.map(x=>`<div class="month-row light"><span>${x.month} · ${x.subscriptionName}<br>${x.cardName} · ${new Date(x.appliedAt).toLocaleString('ko-KR')}</span><b>${fmt(x.amount)}</b></div>`).join('')}</div>`)}let h=data.history||[];if(h.length){parts.push(`<div class="notice"><b>초기화 스냅샷</b>${h.map(x=>`<div class="month-row light"><span>${x.time}<br>${x.reason}</span><b>${fmt(x.total)}</b></div>`).join('')}</div>`)}mb.innerHTML=parts.length?parts.join(''):'<div class="hint">저장된 히스토리가 없습니다. 실적 입력 후 저장하면 카드별 월별 기록이 표시됩니다.</div>';openModal()}
 
 function getGithubConfig(){try{return JSON.parse(localStorage.getItem(GHCFG)||'{}')}catch(e){return {}}}
 function saveGithubConfig(cfg){localStorage.setItem(GHCFG,JSON.stringify(cfg))}
