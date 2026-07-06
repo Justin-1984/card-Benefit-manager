@@ -1,13 +1,7 @@
 # UPDATE STATUS
 
-현재 버전: v7.4.1 UI & History Stats Fix
-
-상태: 다크 테마 배색 충돌 3건(구독 카드/카드 상세/우선순위 배지) 수정 완료. 월별 히스토리 통계(평균/전월대비/스파크라인/필터) 추가 완료. CSS 문법(중괄호 짝) 및 JS 문법 자체 검증 완료.
-
-확인 필요:
-- 실제 기기(특히 OS 라이트 모드)에서 구독 탭 텍스트, 카드 상세보기, 우선순위 배지 색상이 정상인지 확인
-- 월별 히스토리 모달에서 평균/증감/스파크라인/필터가 카드별로 정상 표시되는지 확인 (기록이 1개월뿐인 카드는 증감 표시 안 됨 - 정상 동작)
-
-## v7.4.0 Subscription Planner Beta
-
-상태: 구독 캘린더/카드 추천/구독 분석 추가 완료. ZIP 생성 전 자체 점검 완료.
+- Current: v7.4.2 Card Recommendation Apply
+- Base: v7.4.1 UI / History / Stats Fix
+- Status: Beta, card-manager scope only
+- Auto performance application: Not enabled
+- Manual subscription performance application: Maintained

@@ -1,6 +1,6 @@
 {
-  "version": "7.4.1",
-  "build": 741,
+  "version": "7.4.2",
+  "build": 742,
   "releaseDate": "2026-07-05",
   "dataVersion": "1.0",
   "channel": "beta",
@@ -14,5 +14,13 @@
     "월별 히스토리에 카드명 검색 필터 추가",
     "데이터/백업/GitHub/구독 저장 구조 변경 없음"
   ],
-  "name": "BenefitManager PWA v7.4.1 UI & History Stats Fix"
+  "name": "Card Recommendation Apply",
+  "base": "v7.4.1 UI / History / Stats Fix",
+  "updated": "2026-07-06",
+  "notes": [
+    "카드매니저 전용 범위 유지",
+    "구독 추천 카드 즉시 변경 버튼 추가",
+    "자동 반영 표현을 수동 반영 기준으로 정리",
+    "이번 달 반영 완료 구독의 카드 변경 경고 추가"
+  ]
 }
