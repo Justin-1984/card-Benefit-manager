@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.3",
-  "savedAt": "2026-07-12T15:10:12.142Z",
-  "savedAtMs": 1783869012142,
+  "savedAt": "2026-07-12T15:12:06.011Z",
+  "savedAtMs": 1783869126011,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -149,9 +149,9 @@
         },
         "monthly_2026-06-30_2026-07-30": {
           "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 323300,
+          "spent": 222060,
           "target": 300000,
-          "savedAt": "2026. 7. 1. 오후 3:07:15"
+          "savedAt": "2026. 7. 13. 오전 12:10:44"
         }
       },
       "red": {
@@ -160,6 +160,12 @@
           "spent": 1048382,
           "target": 1000000,
           "savedAt": "2026. 6. 18. 오전 6:34:24"
+        },
+        "monthly_2026-06-30_2026-07-30": {
+          "label": "2026.07.01 ~ 2026.07.31",
+          "spent": 1341161,
+          "target": 500000,
+          "savedAt": "2026. 7. 13. 오전 12:12:02"
         }
       },
       "ssg": {
@@ -201,7 +207,7 @@
         }
       }
     },
-    "lastBackupAt": 1783868938715,
+    "lastBackupAt": 1783869013263,
     "groups": [
       "현대",
       "생활",
@@ -217,14 +223,14 @@
         "group": "현대",
         "color": "#e11d48",
         "target": 500000,
-        "spent": 0,
+        "spent": 1341161,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 12000000,
-        "annualSpent": 1048382
+        "annualSpent": 2389543
       },
       {
         "id": "mboost",
@@ -252,7 +258,7 @@
         "group": "엘지 할인용",
         "color": "#a855f7",
         "target": 300000,
-        "spent": 0,
+        "spent": 222060,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -325,10 +331,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783869012142,
+      "updatedAt": 1783869126011,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783869012142
+      "savedAt": 1783869126011
     }
   },
   "subscriptions": []
