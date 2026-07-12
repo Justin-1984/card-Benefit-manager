@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.3",
-  "savedAt": "2026-07-12T15:08:57.233Z",
-  "savedAtMs": 1783868937233,
+  "savedAt": "2026-07-12T15:10:12.142Z",
+  "savedAtMs": 1783869012142,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -179,9 +179,9 @@
       "woori": {
         "monthly_2026-06-30_2026-07-30": {
           "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 315364,
+          "spent": 170000,
           "target": 300000,
-          "savedAt": "2026. 7. 1. 오후 3:07:15"
+          "savedAt": "2026. 7. 13. 오전 12:10:07"
         }
       },
       "kakao": {
@@ -201,7 +201,7 @@
         }
       }
     },
-    "lastBackupAt": 1783394019106,
+    "lastBackupAt": 1783868938715,
     "groups": [
       "현대",
       "생활",
@@ -268,7 +268,7 @@
         "group": "엘지 할인용",
         "color": "#e11d48",
         "target": 300000,
-        "spent": 0,
+        "spent": 170000,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -289,7 +289,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0
       },
@@ -325,10 +325,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783868937232,
+      "updatedAt": 1783869012142,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783868937233
+      "savedAt": 1783869012142
     }
   },
   "subscriptions": []
