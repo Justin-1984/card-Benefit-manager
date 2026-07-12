@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.3",
-  "savedAt": "2026-07-12T15:12:06.011Z",
-  "savedAtMs": 1783869126011,
+  "savedAt": "2026-07-12T15:14:39.086Z",
+  "savedAtMs": 1783869279086,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -205,9 +205,17 @@
           "target": 100000,
           "savedAt": "2026. 7. 1. 오후 3:07:15"
         }
+      },
+      "mboost": {
+        "hyundai_2026-06-23_2026-07-22": {
+          "label": "2026.06.24 ~ 2026.07.23",
+          "spent": 623163,
+          "target": 500000,
+          "savedAt": "2026. 7. 13. 오전 12:12:38"
+        }
       }
     },
-    "lastBackupAt": 1783869013263,
+    "lastBackupAt": 1783869127237,
     "groups": [
       "현대",
       "생활",
@@ -228,7 +236,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 2389543
       },
@@ -239,7 +247,7 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 500000,
-        "spent": 0,
+        "spent": 623163,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
@@ -247,7 +255,7 @@
         "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
-        "mPoint": 0,
+        "mPoint": 186002,
         "mPointEarned": 0,
         "mPointUsed": 0
       },
@@ -331,10 +339,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783869126011,
+      "updatedAt": 1783869279085,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783869126011
+      "savedAt": 1783869279086
     }
   },
   "subscriptions": []
