@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.3",
-  "savedAt": "2026-07-12T15:14:39.086Z",
-  "savedAtMs": 1783869279086,
+  "savedAt": "2026-07-12T15:26:04.550Z",
+  "savedAtMs": 1783869964550,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -215,7 +215,7 @@
         }
       }
     },
-    "lastBackupAt": 1783869127237,
+    "lastBackupAt": 1783869280224,
     "groups": [
       "현대",
       "생활",
@@ -246,13 +246,13 @@
         "short": "M",
         "group": "현대",
         "color": "#0ea5e9",
-        "target": 500000,
+        "target": 1000000,
         "spent": 623163,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 186002,
@@ -339,11 +339,57 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783869279085,
+      "updatedAt": 1783869964550,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783869279086
+      "savedAt": 1783869964550
     }
   },
-  "subscriptions": []
+  "subscriptions": [
+    {
+      "active": true,
+      "currency": "USD",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783869294115",
+      "name": "ChatGPT",
+      "amount": 20,
+      "rate": 1500,
+      "day": 14,
+      "cardId": "woori"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783869492357",
+      "name": "넷플릭스",
+      "amount": 17000,
+      "rate": 1380,
+      "day": 13,
+      "cardId": "red"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783869633986",
+      "name": "디즈니+",
+      "amount": 9900,
+      "rate": 1380,
+      "day": 14,
+      "cardId": "mboost"
+    }
+  ]
 }
