@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
-  "version": "7.4.5",
-  "savedAt": "2026-07-14T02:18:35.408Z",
-  "savedAtMs": 1783995515408,
+  "version": "7.4.6",
+  "savedAt": "2026-07-14T02:32:20.366Z",
+  "savedAtMs": 1783996340366,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -215,7 +215,7 @@
         }
       }
     },
-    "lastBackupAt": 1783869280224,
+    "lastBackupAt": 1783995516631,
     "groups": [
       "현대",
       "생활",
@@ -237,7 +237,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 2389543
       },
@@ -258,7 +258,8 @@
         "annualSpent": 0,
         "mPoint": 186002,
         "mPointEarned": 0,
-        "mPointUsed": 0
+        "mPointUsed": 0,
+        "spentAsOfDate": "2026-07-14"
       },
       {
         "id": "lotte",
@@ -274,7 +275,8 @@
         "memo": "연회비: 15,000",
         "collapsed": true,
         "annualGoal": 0,
-        "annualSpent": 0
+        "annualSpent": 0,
+        "spentAsOfDate": "2026-07-14"
       },
       {
         "id": "woori",
@@ -290,7 +292,8 @@
         "memo": "30만원 정기결제용 연회비: 15,000",
         "collapsed": true,
         "annualGoal": 0,
-        "annualSpent": 0
+        "annualSpent": 0,
+        "spentAsOfDate": "2026-07-14"
       },
       {
         "id": "ssg",
@@ -306,7 +309,8 @@
         "memo": "연회비: 15,000",
         "collapsed": true,
         "annualGoal": 0,
-        "annualSpent": 0
+        "annualSpent": 0,
+        "spentAsOfDate": "2026-07-14"
       },
       {
         "id": "kakao",
@@ -322,7 +326,8 @@
         "memo": "연회비: 10,000",
         "collapsed": false,
         "annualGoal": 0,
-        "annualSpent": 0
+        "annualSpent": 0,
+        "spentAsOfDate": "2026-07-14"
       },
       {
         "id": "hipass",
@@ -336,14 +341,15 @@
         "periodType": "monthly",
         "collapsed": false,
         "memo": "",
-        "group": "교통"
+        "group": "교통",
+        "spentAsOfDate": "2026-07-14"
       }
     ],
     "meta": {
-      "updatedAt": 1783995515408,
+      "updatedAt": 1783996340365,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783995515408
+      "savedAt": 1783996340366
     }
   },
   "subscriptions": [
