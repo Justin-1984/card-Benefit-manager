@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.6",
-  "savedAt": "2026-07-14T02:43:06.826Z",
-  "savedAtMs": 1783996986826,
+  "savedAt": "2026-07-14T02:44:41.323Z",
+  "savedAtMs": 1783997081323,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -215,7 +215,7 @@
         }
       }
     },
-    "lastBackupAt": 1783996916785,
+    "lastBackupAt": 1783996987948,
     "groups": [
       "현대",
       "생활",
@@ -346,10 +346,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783996986826,
+      "updatedAt": 1783997081323,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783996986826
+      "savedAt": 1783997081323
     }
   },
   "subscriptions": [
@@ -411,6 +411,36 @@
       "amount": 36300,
       "rate": 1380,
       "day": 23,
+      "cardId": "red"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783997013937",
+      "name": "APT 관리비",
+      "amount": 260000,
+      "rate": 1380,
+      "day": 25,
+      "cardId": "red"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783997049966",
+      "name": "가스비",
+      "amount": 14000,
+      "rate": 1380,
+      "day": 7,
       "cardId": "red"
     }
   ]
