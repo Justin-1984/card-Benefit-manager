@@ -1,4 +1,11 @@
-# 카드 혜택매니저 v7.4.3 Settings Nav Restore
+# 카드 혜택매니저 v7.4.4 Subscription Calendar & UI Refine
+
+
+## v7.4.4 Subscription Calendar & UI Refine
+- 구독 캘린더를 월간 캘린더형으로 개선
+- 카드 추천은 실제 변경이 필요한 구독만 표시
+- 구독 분석을 요약형으로 정리
+- 구독 리스트를 접기/펼치기 가능하게 변경
 
 기준 베이스: v7.4.2 Card Recommendation Apply
 
