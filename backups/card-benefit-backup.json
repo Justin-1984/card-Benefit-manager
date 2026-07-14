@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.6",
-  "savedAt": "2026-07-14T02:41:55.557Z",
-  "savedAtMs": 1783996915557,
+  "savedAt": "2026-07-14T02:43:06.826Z",
+  "savedAtMs": 1783996986826,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -215,7 +215,7 @@
         }
       }
     },
-    "lastBackupAt": 1783996341180,
+    "lastBackupAt": 1783996916785,
     "groups": [
       "현대",
       "생활",
@@ -346,10 +346,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783996915556,
+      "updatedAt": 1783996986826,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783996915557
+      "savedAt": 1783996986826
     }
   },
   "subscriptions": [
@@ -397,6 +397,21 @@
       "rate": 1380,
       "day": 14,
       "cardId": "mboost"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783996926949",
+      "name": "SK 인터넷",
+      "amount": 36300,
+      "rate": 1380,
+      "day": 23,
+      "cardId": "red"
     }
   ]
 }
