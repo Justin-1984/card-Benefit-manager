@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.6",
-  "savedAt": "2026-07-14T02:47:26.211Z",
-  "savedAtMs": 1783997246211,
+  "savedAt": "2026-07-14T02:48:30.620Z",
+  "savedAtMs": 1783997310620,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -215,7 +215,7 @@
         }
       }
     },
-    "lastBackupAt": 1783997165718,
+    "lastBackupAt": 1783997247331,
     "groups": [
       "현대",
       "생활",
@@ -346,10 +346,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783997246211,
+      "updatedAt": 1783997310620,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783997246211
+      "savedAt": 1783997310620
     }
   },
   "subscriptions": [
@@ -502,6 +502,36 @@
       "rate": 1380,
       "day": 14,
       "cardId": "red"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783997250636",
+      "name": "iCloud",
+      "amount": 11000,
+      "rate": 1380,
+      "day": 14,
+      "cardId": "red"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783997281013",
+      "name": "8343 Mobile",
+      "amount": 17500,
+      "rate": 1380,
+      "day": 10,
+      "cardId": "mboost"
     }
   ]
 }
