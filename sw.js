@@ -1,4 +1,4 @@
-const CACHE='benefit-manager-7.4.4-subscription-calendar-ui-refine';
+const CACHE='benefit-manager-7.4.5-actual-projected-performance';
 const ASSETS=['./','./index.html','./manifest.json','./version.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});

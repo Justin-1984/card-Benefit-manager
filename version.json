@@ -1,24 +1,25 @@
 {
-  "version": "7.4.4",
-  "build": 744,
-  "releaseDate": "2026-07-05",
+  "version": "7.4.5",
+  "build": 745,
+  "releaseDate": "2026-07-14",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.4.4 Subscription Calendar & UI Refine",
-  "message": "구독 화면을 월간 캘린더형으로 개선하고, 카드 추천/구독 분석/구독 리스트 UI를 더 깔끔하게 정리했습니다.",
+  "title": "BenefitManager PWA v7.4.5 Actual & Projected Performance",
+  "message": "카드사 현재 사용금액과 예정 구독을 분리해 중복 반영 없이 예상 실적과 추가 사용 필요액을 계산합니다.",
   "releaseNotes": [
-    "구독 캘린더를 월간 캘린더형으로 재구성하고 날짜별 예정 금액/건수를 표시",
-    "카드 추천은 실제로 추천 카드 변경이 필요한 구독만 표시하도록 정리",
-    "구독 분석을 요약형 레이아웃으로 정리하고 카드/카테고리 부담액을 간결하게 표시",
-    "구독 리스트를 접기/펼치기 가능하도록 변경"
+    "현재 사용금액 입력 시 금액 확인 기준일 저장",
+    "기준일 이후·현재 실적기간 내 예정 구독만 예상 실적에 포함",
+    "구독 금액을 현재 사용금액에 직접 더하던 기능 제거",
+    "카드별 현재 사용금액/예정 구독/예상 실적/추가 사용 필요액 분리 표시",
+    "구독 버튼을 현재 사용금액 포함 확인 방식으로 변경"
   ],
-  "name": "Subscription Calendar & UI Refine",
-  "base": "v7.4.3 Settings Nav Restore",
+  "name": "Actual & Projected Performance",
+  "base": "v7.4.4 Subscription Calendar & UI Refine",
   "updated": "2026-07-14",
   "notes": [
     "카드매니저 전용 범위 유지",
-    "자동 반영은 추가하지 않고 수동 반영 구조 유지",
-    "기존 cards/subscriptions 저장 구조 유지",
-    "다음 업데이트의 UI 베이스로 사용 가능"
+    "cards/subscriptions 저장 구조 유지하며 카드에 spentAsOfDate만 추가",
+    "기존 데이터는 자동 호환",
+    "현재 사용금액 원본은 사용자가 입력한 값 그대로 유지"
   ]
 }
