@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.6",
-  "savedAt": "2026-07-14T02:51:18.911Z",
-  "savedAtMs": 1783997478911,
+  "savedAt": "2026-07-14T02:55:18.282Z",
+  "savedAtMs": 1783997718282,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -215,7 +215,7 @@
         }
       }
     },
-    "lastBackupAt": 1783997371953,
+    "lastBackupAt": 1783997480192,
     "groups": [
       "현대",
       "생활",
@@ -346,10 +346,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783997478911,
+      "updatedAt": 1783997718282,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783997478911
+      "savedAt": 1783997718282
     }
   },
   "subscriptions": [
@@ -396,7 +396,7 @@
       "amount": 9900,
       "rate": 1380,
       "day": 14,
-      "cardId": "mboost"
+      "cardId": "red"
     },
     {
       "active": true,
@@ -576,6 +576,21 @@
       "amount": 170000,
       "rate": 1380,
       "day": 3,
+      "cardId": "woori"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783997487268",
+      "name": "밀크티",
+      "amount": 119000,
+      "rate": 1380,
+      "day": 11,
       "cardId": "woori"
     }
   ]
