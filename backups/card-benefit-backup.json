@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.6",
-  "savedAt": "2026-07-14T02:49:30.933Z",
-  "savedAtMs": 1783997370933,
+  "savedAt": "2026-07-14T02:51:18.911Z",
+  "savedAtMs": 1783997478911,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -215,7 +215,7 @@
         }
       }
     },
-    "lastBackupAt": 1783997311639,
+    "lastBackupAt": 1783997371953,
     "groups": [
       "현대",
       "생활",
@@ -346,10 +346,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1783997370933,
+      "updatedAt": 1783997478911,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783997370933
+      "savedAt": 1783997478911
     }
   },
   "subscriptions": [
@@ -557,11 +557,26 @@
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783997350239",
-      "name": "이름 없는 구독",
+      "name": "피아노",
       "amount": 150000,
       "rate": 1380,
       "day": 3,
       "cardId": "lotte"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1783997374315",
+      "name": "태권도",
+      "amount": 170000,
+      "rate": 1380,
+      "day": 3,
+      "cardId": "woori"
     }
   ]
 }
