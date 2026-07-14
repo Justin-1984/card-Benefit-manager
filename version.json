@@ -1,25 +1,24 @@
 {
-  "version": "7.4.5",
-  "build": 745,
+  "version": "7.4.6",
+  "build": 746,
   "releaseDate": "2026-07-14",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.4.5 Actual & Projected Performance",
-  "message": "카드사 현재 사용금액과 예정 구독을 분리해 중복 반영 없이 예상 실적과 추가 사용 필요액을 계산합니다.",
+  "title": "BenefitManager PWA v7.4.6 Full Subscription Burden",
+  "message": "카드별 현재 실적기간의 전체 구독 부담액을 먼저 예약하고, 현재 사용금액에 이미 포함된 구독은 중복 계산하지 않도록 개선했습니다.",
   "releaseNotes": [
-    "현재 사용금액 입력 시 금액 확인 기준일 저장",
-    "기준일 이후·현재 실적기간 내 예정 구독만 예상 실적에 포함",
-    "구독 금액을 현재 사용금액에 직접 더하던 기능 제거",
-    "카드별 현재 사용금액/예정 구독/예상 실적/추가 사용 필요액 분리 표시",
-    "구독 버튼을 현재 사용금액 포함 확인 방식으로 변경"
+    "기준일 이후 구독만이 아니라 현재 실적기간의 전체 구독 부담액을 반영",
+    "현재 사용금액에 포함된 것으로 추정되는 구독은 중복 계산 방지",
+    "카드 상세에 전체 구독 부담액·포함 추정액·향후 결제액 표시",
+    "추가 사용 필요액을 전체 구독 예약 기준으로 계산"
   ],
-  "name": "Actual & Projected Performance",
-  "base": "v7.4.4 Subscription Calendar & UI Refine",
+  "name": "Full Subscription Burden",
+  "base": "v7.4.5 Actual & Projected Performance",
   "updated": "2026-07-14",
   "notes": [
     "카드매니저 전용 범위 유지",
-    "cards/subscriptions 저장 구조 유지하며 카드에 spentAsOfDate만 추가",
-    "기존 데이터는 자동 호환",
-    "현재 사용금액 원본은 사용자가 입력한 값 그대로 유지"
+    "cards/subscriptions 저장 구조 변경 없음",
+    "기존 데이터 자동 호환",
+    "다음 업데이트 베이스로 사용 가능"
   ]
 }

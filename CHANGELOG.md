@@ -2,7 +2,7 @@
 
 
 
-## v7.4.5 Actual & Projected Performance
+## v7.4.6 Full Subscription Burden
 - 카드사 현재 사용금액과 예정 구독을 분리
 - 실적 입력 시 금액 확인 기준일 저장
 - 기준일 이후 결제 예정 구독만 예상 실적에 포함

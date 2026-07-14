@@ -1,4 +1,11 @@
-# 카드 혜택매니저 v7.4.5 Actual & Projected Performance
+# 카드 혜택매니저 v7.4.6 Full Subscription Burden
+
+
+## v7.4.6 Full Subscription Burden
+- 카드별 현재 실적기간의 전체 구독 부담액을 반영
+- 현재 사용금액에 이미 포함된 구독은 중복 계산하지 않도록 보정
+- 전체 구독 부담액 / 현재 포함 추정 / 향후 결제액 표시
+- 추가 사용 필요액을 전체 구독 예약 기준으로 계산
 
 기준 베이스: **v7.4.4 Subscription Calendar & UI Refine**
 
