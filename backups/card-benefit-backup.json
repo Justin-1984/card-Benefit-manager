@@ -1,143 +1,13 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.5",
-  "savedAt": "2026-07-14T02:16:14.498Z",
-  "savedAtMs": 1783995374498,
+  "savedAt": "2026-07-14T02:18:35.408Z",
+  "savedAtMs": 1783995515408,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
     "pinMboost": false,
     "history": [
-      {
-        "time": "2026. 7. 14. 오전 11:16:11",
-        "reason": "기타카드 자동 월초 전환 전 저장 · SC제일은행-the Red 1,341,161원, 스페셜 롯데카드(LG전자) 222,060원, LG전자 우리카드 170,000원, SSG닷컴 삼성카드 430,009원, 카카오페이신용카드 삼성 0원, 카드의정석2 후불하이패스+ 0원",
-        "hyundai": "2026.06.24 ~ 2026.07.23",
-        "monthly": "2026.07.01 ~ 2026.07.31",
-        "total": 2163230,
-        "cards": [
-          {
-            "name": "SC제일은행-the Red",
-            "spent": 1341161,
-            "target": 1000000,
-            "mPoint": 0,
-            "annualSpent": 2389543,
-            "annualGoal": 12000000
-          },
-          {
-            "name": "SC 현대카드 M BOOST",
-            "spent": 0,
-            "target": 1000000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "스페셜 롯데카드(LG전자)",
-            "spent": 222060,
-            "target": 300000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "LG전자 우리카드",
-            "spent": 170000,
-            "target": 300000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "SSG닷컴 삼성카드",
-            "spent": 430009,
-            "target": 400000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "카카오페이신용카드 삼성",
-            "spent": 0,
-            "target": 300000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "카드의정석2 후불하이패스+",
-            "spent": 0,
-            "target": 100000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          }
-        ]
-      },
-      {
-        "time": "2026. 7. 14. 오전 11:16:11",
-        "reason": "현대카드 자동 기간 전환 전 저장 · SC 현대카드 M BOOST 623,163원",
-        "hyundai": "2026.06.24 ~ 2026.07.23",
-        "monthly": "2026.07.01 ~ 2026.07.31",
-        "total": 2786393,
-        "cards": [
-          {
-            "name": "SC제일은행-the Red",
-            "spent": 1341161,
-            "target": 1000000,
-            "mPoint": 0,
-            "annualSpent": 2389543,
-            "annualGoal": 12000000
-          },
-          {
-            "name": "SC 현대카드 M BOOST",
-            "spent": 623163,
-            "target": 1000000,
-            "mPoint": 186002,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "스페셜 롯데카드(LG전자)",
-            "spent": 222060,
-            "target": 300000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "LG전자 우리카드",
-            "spent": 170000,
-            "target": 300000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "SSG닷컴 삼성카드",
-            "spent": 430009,
-            "target": 400000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "카카오페이신용카드 삼성",
-            "spent": 0,
-            "target": 300000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          },
-          {
-            "name": "카드의정석2 후불하이패스+",
-            "spent": 0,
-            "target": 100000,
-            "mPoint": 0,
-            "annualSpent": 0,
-            "annualGoal": 0
-          }
-        ]
-      },
       {
         "time": "2026. 7. 1. 오후 3:07:15",
         "reason": "기타카드 자동 월초 전환 전 저장 · 스페셜 롯데카드(LG전자) 323,300원, LG전자 우리카드 315,364원, SSG닷컴 삼성카드 404,637원, 카카오페이신용카드 삼성 48,800원, 카드의정석2 후불하이패스+ 0원",
@@ -282,12 +152,6 @@
           "spent": 222060,
           "target": 300000,
           "savedAt": "2026. 7. 13. 오전 12:10:44"
-        },
-        "monthly_2026-07-01_2026-07-31": {
-          "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 222060,
-          "target": 300000,
-          "savedAt": "2026. 7. 14. 오전 11:16:11"
         }
       },
       "red": {
@@ -302,12 +166,6 @@
           "spent": 1341161,
           "target": 500000,
           "savedAt": "2026. 7. 13. 오전 12:12:02"
-        },
-        "monthly_2026-07-01_2026-07-31": {
-          "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 1341161,
-          "target": 1000000,
-          "savedAt": "2026. 7. 14. 오전 11:16:11"
         }
       },
       "ssg": {
@@ -322,12 +180,6 @@
           "spent": 430009,
           "target": 400000,
           "savedAt": "2026. 7. 13. 오전 12:08:54"
-        },
-        "monthly_2026-07-01_2026-07-31": {
-          "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 430009,
-          "target": 400000,
-          "savedAt": "2026. 7. 14. 오전 11:16:11"
         }
       },
       "woori": {
@@ -336,12 +188,6 @@
           "spent": 170000,
           "target": 300000,
           "savedAt": "2026. 7. 13. 오전 12:10:07"
-        },
-        "monthly_2026-07-01_2026-07-31": {
-          "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 170000,
-          "target": 300000,
-          "savedAt": "2026. 7. 14. 오전 11:16:11"
         }
       },
       "kakao": {
@@ -350,12 +196,6 @@
           "spent": 48800,
           "target": 300000,
           "savedAt": "2026. 7. 1. 오후 3:07:15"
-        },
-        "monthly_2026-07-01_2026-07-31": {
-          "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 0,
-          "target": 300000,
-          "savedAt": "2026. 7. 14. 오전 11:16:11"
         }
       },
       "hipass": {
@@ -364,12 +204,6 @@
           "spent": 0,
           "target": 100000,
           "savedAt": "2026. 7. 1. 오후 3:07:15"
-        },
-        "monthly_2026-07-01_2026-07-31": {
-          "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 0,
-          "target": 100000,
-          "savedAt": "2026. 7. 14. 오전 11:16:11"
         }
       },
       "mboost": {
@@ -378,16 +212,10 @@
           "spent": 623163,
           "target": 500000,
           "savedAt": "2026. 7. 13. 오전 12:12:38"
-        },
-        "hyundai_2026-06-24_2026-07-23": {
-          "label": "2026.06.24 ~ 2026.07.23",
-          "spent": 623163,
-          "target": 1000000,
-          "savedAt": "2026. 7. 14. 오전 11:16:11"
         }
       }
     },
-    "lastBackupAt": 1783869965881,
+    "lastBackupAt": 1783869280224,
     "groups": [
       "현대",
       "생활",
@@ -403,15 +231,15 @@
         "group": "현대",
         "color": "#e11d48",
         "target": 1000000,
-        "spent": 0,
+        "spent": 1341161,
+        "spentAsOfDate": "2026-07-14",
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 12000000,
-        "annualSpent": 3730704,
-        "spentAsOfDate": "2026-06-30"
+        "annualSpent": 2389543
       },
       {
         "id": "mboost",
@@ -420,7 +248,7 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 0,
+        "spent": 623163,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
@@ -428,10 +256,9 @@
         "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
-        "mPoint": 0,
+        "mPoint": 186002,
         "mPointEarned": 0,
-        "mPointUsed": 0,
-        "spentAsOfDate": "2026-06-23"
+        "mPointUsed": 0
       },
       {
         "id": "lotte",
@@ -440,15 +267,14 @@
         "group": "엘지 할인용",
         "color": "#a855f7",
         "target": 300000,
-        "spent": 0,
+        "spent": 222060,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
         "collapsed": true,
         "annualGoal": 0,
-        "annualSpent": 0,
-        "spentAsOfDate": "2026-06-30"
+        "annualSpent": 0
       },
       {
         "id": "woori",
@@ -457,15 +283,14 @@
         "group": "엘지 할인용",
         "color": "#e11d48",
         "target": 300000,
-        "spent": 0,
+        "spent": 170000,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
         "collapsed": true,
         "annualGoal": 0,
-        "annualSpent": 0,
-        "spentAsOfDate": "2026-06-30"
+        "annualSpent": 0
       },
       {
         "id": "ssg",
@@ -474,15 +299,14 @@
         "group": "생활",
         "color": "#f97316",
         "target": 400000,
-        "spent": 0,
+        "spent": 430009,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
         "collapsed": true,
         "annualGoal": 0,
-        "annualSpent": 0,
-        "spentAsOfDate": "2026-06-30"
+        "annualSpent": 0
       },
       {
         "id": "kakao",
@@ -498,8 +322,7 @@
         "memo": "연회비: 10,000",
         "collapsed": false,
         "annualGoal": 0,
-        "annualSpent": 0,
-        "spentAsOfDate": "2026-06-30"
+        "annualSpent": 0
       },
       {
         "id": "hipass",
@@ -513,15 +336,14 @@
         "periodType": "monthly",
         "collapsed": false,
         "memo": "",
-        "group": "교통",
-        "spentAsOfDate": "2026-06-30"
+        "group": "교통"
       }
     ],
     "meta": {
-      "updatedAt": 1783995374498,
+      "updatedAt": 1783995515408,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1783995374498
+      "savedAt": 1783995515408
     }
   },
   "subscriptions": [
@@ -552,7 +374,7 @@
       "name": "넷플릭스",
       "amount": 17000,
       "rate": 1380,
-      "day": 12,
+      "day": 13,
       "cardId": "red"
     },
     {
@@ -569,201 +391,6 @@
       "rate": 1380,
       "day": 14,
       "cardId": "mboost"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783990115276",
-      "name": "SK 인터넷",
-      "amount": 36300,
-      "rate": 1380,
-      "day": 23,
-      "cardId": "red"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783990169899",
-      "name": "APT 관리비",
-      "amount": 260000,
-      "rate": 1380,
-      "day": 25,
-      "cardId": "red"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783990391915",
-      "name": "가스비",
-      "amount": 20000,
-      "rate": 1380,
-      "day": 7,
-      "cardId": "red"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783990413505",
-      "name": "국민연금",
-      "amount": 132007,
-      "rate": 1380,
-      "day": 10,
-      "cardId": "red"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783990501209",
-      "name": "건보료",
-      "amount": 22891,
-      "rate": 1380,
-      "day": 10,
-      "cardId": "red"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783990818970",
-      "name": "애연 Mobile",
-      "amount": 67760,
-      "rate": 1380,
-      "day": 12,
-      "cardId": "red"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783990895337",
-      "name": "내 Mobile",
-      "amount": 49020,
-      "rate": 1380,
-      "day": 14,
-      "cardId": "red"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783990927191",
-      "name": "icloud",
-      "amount": 11000,
-      "rate": 1380,
-      "day": 14,
-      "cardId": "red"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783990970182",
-      "name": "현영 Mobile",
-      "amount": 17500,
-      "rate": 1380,
-      "day": 1,
-      "cardId": "mboost"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783991076801",
-      "name": "APT 디지털 키",
-      "amount": 1000,
-      "rate": 1380,
-      "day": 13,
-      "cardId": "lotte"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783991103166",
-      "name": "현영 피아노",
-      "amount": 150000,
-      "rate": 1380,
-      "day": 3,
-      "cardId": "lotte"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783991176071",
-      "name": "현영 태권도",
-      "amount": 170000,
-      "rate": 1380,
-      "day": 3,
-      "cardId": "woori"
-    },
-    {
-      "active": true,
-      "currency": "KRW",
-      "cycle": "monthly",
-      "autoApply": true,
-      "appliedMonths": {},
-      "category": "구독",
-      "applyLog": [],
-      "id": "sub_1783991464338",
-      "name": "Milk T",
-      "amount": 119000,
-      "rate": 1380,
-      "day": 1,
-      "cardId": "woori"
     }
   ]
 }
