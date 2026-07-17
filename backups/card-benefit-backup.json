@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.6",
-  "savedAt": "2026-07-15T08:28:42.373Z",
-  "savedAtMs": 1784104122373,
+  "savedAt": "2026-07-17T11:42:44.049Z",
+  "savedAtMs": 1784288564049,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -215,7 +215,7 @@
         }
       }
     },
-    "lastBackupAt": 1783997795286,
+    "lastBackupAt": 1784104124032,
     "groups": [
       "현대",
       "생활",
@@ -346,10 +346,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1784104122372,
+      "updatedAt": 1784288564049,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1784104122373
+      "savedAt": 1784288564049
     }
   },
   "subscriptions": [
