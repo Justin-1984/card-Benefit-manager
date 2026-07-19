@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.6",
-  "savedAt": "2026-07-19T06:21:03.524Z",
-  "savedAtMs": 1784442063524,
+  "savedAt": "2026-07-19T06:22:31.695Z",
+  "savedAtMs": 1784442151695,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -172,6 +172,12 @@
           "spent": 1341161,
           "target": 500000,
           "savedAt": "2026. 7. 13. 오전 12:12:02"
+        },
+        "monthly_2026-07-01_2026-07-31": {
+          "label": "2026.07.01 ~ 2026.07.31",
+          "spent": 1474891,
+          "target": 1000000,
+          "savedAt": "2026. 7. 19. 오후 3:21:59"
         }
       },
       "ssg": {
@@ -224,10 +230,16 @@
           "spent": 623163,
           "target": 500000,
           "savedAt": "2026. 7. 13. 오전 12:12:38"
+        },
+        "hyundai_2026-06-24_2026-07-23": {
+          "label": "2026.06.24 ~ 2026.07.23",
+          "spent": 735099,
+          "target": 1000000,
+          "savedAt": "2026. 7. 19. 오후 3:22:28"
         }
       }
     },
-    "lastBackupAt": 1784441769105,
+    "lastBackupAt": 1784442064637,
     "groups": [
       "현대",
       "생활",
@@ -243,7 +255,7 @@
         "group": "현대",
         "color": "#e11d48",
         "target": 1000000,
-        "spent": 1341161,
+        "spent": 1474891,
         "spentAsOfDate": "2026-07-14",
         "hidden": false,
         "kind": "normal",
@@ -251,7 +263,7 @@
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
         "collapsed": true,
         "annualGoal": 12000000,
-        "annualSpent": 2389543
+        "annualSpent": 3864434
       },
       {
         "id": "mboost",
@@ -260,7 +272,7 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 623163,
+        "spent": 735099,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
@@ -302,7 +314,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-14"
@@ -358,10 +370,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1784442063523,
+      "updatedAt": 1784442151694,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1784442063524
+      "savedAt": 1784442151695
     }
   },
   "subscriptions": [
