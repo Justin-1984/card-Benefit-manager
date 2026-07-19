@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.6",
-  "savedAt": "2026-07-19T06:23:49.004Z",
-  "savedAtMs": 1784442229004,
+  "savedAt": "2026-07-19T06:25:43.082Z",
+  "savedAtMs": 1784442343082,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -239,7 +239,7 @@
         }
       }
     },
-    "lastBackupAt": 1784442152919,
+    "lastBackupAt": 1784442230219,
     "groups": [
       "현대",
       "생활",
@@ -370,10 +370,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1784442229004,
+      "updatedAt": 1784442343082,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1784442229004
+      "savedAt": 1784442343082
     }
   },
   "subscriptions": [
@@ -552,10 +552,10 @@
       "applyLog": [],
       "id": "sub_1783997281013",
       "name": "8343 Mobile",
-      "amount": 17500,
+      "amount": 115000,
       "rate": 1380,
-      "day": 10,
-      "cardId": "mboost"
+      "day": 1,
+      "cardId": "red"
     },
     {
       "active": true,
