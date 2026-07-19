@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.6",
-  "savedAt": "2026-07-19T06:16:07.821Z",
-  "savedAtMs": 1784441767822,
+  "savedAt": "2026-07-19T06:21:03.524Z",
+  "savedAtMs": 1784442063524,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -194,6 +194,12 @@
           "spent": 170000,
           "target": 300000,
           "savedAt": "2026. 7. 13. 오전 12:10:07"
+        },
+        "monthly_2026-07-01_2026-07-31": {
+          "label": "2026.07.01 ~ 2026.07.31",
+          "spent": 315364,
+          "target": 300000,
+          "savedAt": "2026. 7. 19. 오후 3:21:00"
         }
       },
       "kakao": {
@@ -221,7 +227,7 @@
         }
       }
     },
-    "lastBackupAt": 1784288565648,
+    "lastBackupAt": 1784441769105,
     "groups": [
       "현대",
       "생활",
@@ -279,7 +285,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-14"
@@ -291,12 +297,12 @@
         "group": "엘지 할인용",
         "color": "#e11d48",
         "target": 300000,
-        "spent": 170000,
+        "spent": 315364,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-14"
@@ -352,10 +358,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1784441767821,
+      "updatedAt": 1784442063523,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1784441767821
+      "savedAt": 1784442063524
     }
   },
   "subscriptions": [
