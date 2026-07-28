@@ -1,4 +1,4 @@
-const CACHE='benefit-manager-7.4.9-record-delete-period-fix';
+const CACHE='benefit-manager-7.4.10-record-edit-delete-period-fix';
 const ASSETS=['./','./index.html','./manifest.json','./version.json'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});

@@ -1,3 +1,15 @@
+# v7.4.10 Developer Notes
+
+- `monthlyRecordLog` 입력 기록은 삭제뿐 아니라 직접 수정할 수 있습니다.
+- 수정 가능 필드: `spent`, `target`, `key`/`label`(실적기간), `savedAt`/`savedAtMs`(기록 일시).
+- 원본 `id`는 유지하고 `editedAt`, `editedAtMs`를 추가해 수정 여부를 보존합니다.
+- 기간 변경 시 `rebuildFinalRecordFromLog()`를 이전 key와 새 key에 각각 실행합니다.
+- 최종 반영은 같은 카드·같은 기간의 가장 큰 `savedAtMs` 기록을 사용합니다.
+- 수정 후 `updateRedAnnualFromRecords(true)`로 RED 연간 누적을 즉시 재계산합니다.
+- 기간 정책과 카드/구독 저장소 분리는 v7.4.9와 동일합니다.
+
+---
+
 # v7.4.9 Developer Notes
 
 - `monthlyRecordLog`: 사용자의 모든 실적 입력 이력

@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.4.9 Record Delete & Period Fix</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.4.10 Record Edit, Delete & Period Fix</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -17,7 +17,7 @@ main{padding:14px;width:100%}.notice{background:#fff7ed;border:1px solid #fed7aa
 .month-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .month-row{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;font-size:12px}
 .month-row.light{background:#f8fafc;color:#334155}
-.record-row{gap:10px}.record-row>span{min-width:0;flex:1}.record-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex:0 0 auto}.record-delete{border:1px solid rgba(248,113,113,.45);background:rgba(127,29,29,.28);color:#fecaca;border-radius:8px;padding:6px 8px;font-size:11px;font-weight:900;cursor:pointer;white-space:nowrap}.record-delete:hover{background:rgba(185,28,28,.45)}.record-manage{border:0;background:rgba(59,130,246,.18);color:#bfdbfe;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900;cursor:pointer}.ux-recent-title{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.record-row{gap:10px}.record-row>span{min-width:0;flex:1}.record-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex:0 0 auto}.record-edit{border:1px solid rgba(96,165,250,.45);background:rgba(30,64,175,.28);color:#bfdbfe;border-radius:8px;padding:6px 8px;font-size:11px;font-weight:900;cursor:pointer;white-space:nowrap}.record-edit:hover{background:rgba(37,99,235,.45)}.record-delete{border:1px solid rgba(248,113,113,.45);background:rgba(127,29,29,.28);color:#fecaca;border-radius:8px;padding:6px 8px;font-size:11px;font-weight:900;cursor:pointer;white-space:nowrap}.record-delete:hover{background:rgba(185,28,28,.45)}.record-manage{border:0;background:rgba(59,130,246,.18);color:#bfdbfe;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900;cursor:pointer}.ux-recent-title{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .hidden-list{display:flex;flex-direction:column;gap:10px}
 .hidden-item{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:14px;padding:12px}
 
@@ -679,10 +679,10 @@ html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="header-actions"><button class="header-settings-btn" onclick="switchTab('settings')">⚙️ 설정</button><div class="pill" id="dDay">현대 D-</div></div></div></header>
 <main>
 <div class="tabbar three"><button id="tabDashboard" class="tabbtn active" onclick="switchTab('dashboard')">🏠 대시보드</button><button id="tabSubscriptions" class="tabbtn" onclick="switchTab('subscriptions')">🔄 구독</button><button id="tabSettings" class="tabbtn" onclick="switchTab('settings')">⚙️ 설정</button></div>
-<div id="appNotice" class="notice settings-section">v7.4.9: 잘못된 실적 기록을 직접 삭제할 수 있으며, M BOOST만 24일~23일이고 나머지 카드는 1일~말일로 계산합니다.</div>
+<div id="appNotice" class="notice settings-section">v7.4.10: 실적 입력 기록의 금액·기간·기록 시각을 직접 수정하거나 삭제할 수 있으며, 최종 반영과 RED 연간 누적은 자동 재계산됩니다.</div>
 
 <div class="responsive-shell dashboard-section"><div class="responsive-left">
-<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.4.9 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">현재 / 예상 달성</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">구독 반영 후 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">전체 구독 부담액 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
+<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.4.10 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">현재 / 예상 달성</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">구독 반영 후 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">전체 구독 부담액 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
 
 <div class="mpoint-dashboard dashboard-section" id="mPointDashboard">
   <div class="mpoint-top"><div><div class="mpoint-title">⭐ M포인트 대시보드</div><div class="mpoint-sub">M BOOST 적립/사용/순증감을 카드 실적과 분리해서 관리합니다.</div></div><button class="mpoint-edit" onclick="openMPoint()">M포인트 입력</button></div>
@@ -701,7 +701,7 @@ html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid
 <div class="backup-warn settings-section" id="backupWarn"></div>
 <div class="sync-panel settings-section" id="syncPanel"></div>
 <div class="github-panel settings-section" id="githubPanel"></div>
-<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v7.4.9 Record Delete & Period Fix<br>업데이트 확인 전입니다.</div>
+<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v7.4.10 Record Edit, Delete & Period Fix<br>업데이트 확인 전입니다.</div>
 <div class="summary dashboard-section"><div class="tile"><div class="tl">총 월 사용금액</div><div class="tv" id="sumSpent">0원</div><div class="ts">숨김 카드 제외</div></div><div class="tile"><div class="tl">구독 반영 후 부족액</div><div class="tv" id="sumShortage">0원</div><div class="ts">전체 구독 부담액 기준</div></div><div class="tile"><div class="tl">추가 사용 필요 카드</div><div class="tv" id="sumNeedCards">0개</div><div class="ts">우선 관리 대상</div></div><div class="tile"><div class="tl">M BOOST 추가 사용 가능</div><div class="tv" id="sumEasyRemain">0원</div><div class="ts">입력 M포인트 기준</div></div></div>
 </div><div class="responsive-right">
 <input class="search dashboard-section" id="search" placeholder="카드 검색..." oninput="render()">
@@ -740,7 +740,7 @@ function switchTab(tab){
 
 const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2';
 const GHCFG='benefit-manager-github-config-v6.2';
-const APP_VERSION='7.4.9', APP_BUILD=749, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
+const APP_VERSION='7.4.10', APP_BUILD=7410, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
 
@@ -1086,7 +1086,47 @@ function monthlyRecordLogRows(cardId,limit){
   ensureMonthly();
   return data.monthlyRecordLog.filter(x=>x&&x.cardId===cardId).sort((a,b)=>Number(b.savedAtMs||0)-Number(a.savedAtMs||0)).slice(0,limit||20);
 }
-function decodeRecordArg(value){try{return decodeURIComponent(String(value||''))}catch(e){return String(value||'')}}
+function decodeRecordArg(value){try{return decodeURIComponent(String(value||''))}catch(e){return String(value||'')}
+}
+function recordDateTimeLocal(ms){
+  const d=new Date(Number(ms||Date.now())),pad=n=>String(n).padStart(2,'0');
+  return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'T'+pad(d.getHours())+':'+pad(d.getMinutes());
+}
+function recordPeriodDates(item,card){
+  const period=monthlyRecordPeriod(item&&item.key,item,card),key=String(period&&period.key||item&&item.key||'');
+  const m=key.match(/(?:hyundai|monthly)_(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})$/);
+  if(m)return{start:m[1],end:m[2]};
+  const current=getPeriod(card&&card.periodType||'monthly');
+  return{start:ymdLocal(current.start),end:ymdLocal(current.end)};
+}
+function openEditInputMonthlyRecord(recordIdArg){
+  const recordId=decodeRecordArg(recordIdArg),item=data.monthlyRecordLog.find(x=>x&&x.id===recordId);
+  if(!item){toast('수정할 기록을 찾을 수 없습니다');return;}
+  const card=data.cards.find(c=>c.id===item.cardId),dates=recordPeriodDates(item,card),savedMs=monthlyRecordSavedAtMs(item)||Date.now();
+  mt.innerText='실적 입력 기록 수정';
+  mb.innerHTML=`<div class="notice"><b>${card?card.name:(item.cardName||'카드')}</b><br>이 입력 기록을 수정하면 같은 카드·같은 실적기간의 최신 기록을 기준으로 월별 최종 반영과 RED 연간 누적이 다시 계산됩니다.</div>
+  <div class="fg"><label>실적 금액</label><input id="editRecordSpent" type="number" min="0" step="1" inputmode="numeric" value="${Number(item.spent||0)}"></div>
+  <div class="fg"><label>당시 목표 금액</label><input id="editRecordTarget" type="number" min="0" step="1" inputmode="numeric" value="${Number(item.target||0)}"></div>
+  <div class="row"><div class="fg" style="flex:1"><label>실적기간 시작일</label><input id="editRecordStart" type="date" value="${dates.start}"></div><div class="fg" style="flex:1"><label>실적기간 종료일</label><input id="editRecordEnd" type="date" value="${dates.end}"></div></div>
+  <div class="fg"><label>기록 일시</label><input id="editRecordSavedAt" type="datetime-local" value="${recordDateTimeLocal(savedMs)}"><div class="hint">같은 기간에 입력 기록이 여러 개면 기록 일시가 가장 최근인 값이 최종 반영됩니다.</div></div>
+  <div class="row"><button class="btn" onclick="showHistory()">취소</button><button class="btn primary" onclick="saveEditedInputMonthlyRecord('${encodeURIComponent(recordId)}')">수정 저장</button></div>`;
+  openModal();
+}
+function saveEditedInputMonthlyRecord(recordIdArg){
+  const recordId=decodeRecordArg(recordIdArg),item=data.monthlyRecordLog.find(x=>x&&x.id===recordId);
+  if(!item){toast('수정할 기록을 찾을 수 없습니다');return;}
+  const card=data.cards.find(c=>c.id===item.cardId),spent=Number(document.getElementById('editRecordSpent')?.value),target=Number(document.getElementById('editRecordTarget')?.value||0),start=document.getElementById('editRecordStart')?.value||'',end=document.getElementById('editRecordEnd')?.value||'',savedValue=document.getElementById('editRecordSavedAt')?.value||'';
+  if(!Number.isFinite(spent)||spent<0){toast('실적 금액을 확인하세요');return;}
+  if(!Number.isFinite(target)||target<0){toast('목표 금액을 확인하세요');return;}
+  const startMs=new Date(start+'T00:00:00').getTime(),endMs=new Date(end+'T23:59:59').getTime(),savedAtMs=new Date(savedValue).getTime();
+  if(!start||!end||!Number.isFinite(startMs)||!Number.isFinite(endMs)||startMs>endMs){toast('실적기간을 확인하세요');return;}
+  if(!savedValue||!Number.isFinite(savedAtMs)){toast('기록 일시를 확인하세요');return;}
+  const oldKey=item.key,type=(card&&(card.id==='mboost'||card.kind==='mboost'))?'hyundai':'monthly',newKey=type+'_'+start+'_'+end,label=start.replace(/-/g,'.')+' ~ '+end.replace(/-/g,'.');
+  item.key=newKey;item.rawKey=newKey;item.label=label;item.spent=Math.round(spent);item.target=Math.round(target);item.savedAtMs=savedAtMs;item.savedAt=new Date(savedAtMs).toLocaleString('ko-KR');item.editedAtMs=Date.now();item.editedAt=new Date(item.editedAtMs).toLocaleString('ko-KR');
+  rebuildFinalRecordFromLog(item.cardId,oldKey);
+  if(newKey!==oldKey)rebuildFinalRecordFromLog(item.cardId,newKey);
+  updateRedAnnualFromRecords(true);markLocalChanged();render();scheduleGithubAutoBackup();showHistory();toast('입력 기록을 수정했습니다');
+}
 function rebuildFinalRecordFromLog(cardId,key){
   ensureMonthly();
   const rows=data.monthlyRecordLog.filter(x=>x&&x.cardId===cardId&&x.key===key).sort((a,b)=>Number(b.savedAtMs||0)-Number(a.savedAtMs||0));
@@ -1239,7 +1279,7 @@ function cardHtml(c){
   const inputRows=monthlyRecordLogRows(c.id,3);
   const finalRows=Object.entries((data.monthlyRecords&&data.monthlyRecords[c.id])||{}).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,3);
   const recentRows=inputRows.length?inputRows:finalRows.map(([k,v])=>({id:'',label:v.label,spent:v.spent,savedAt:v.savedAt||''}));
-  const uxDetail=`<div class="ux-grid"><div class="ux-tile"><div class="ux-l">현재 사용금액</div><div class="ux-v compact">${fmt(actualSpent)}</div><div class="ux-s">기준일 ${cardSpentAsOfLabel(c)}</div></div><div class="ux-tile"><div class="ux-l">전체 구독 부담액</div><div class="ux-v compact">${fmt(subTotal)}</div><div class="ux-s">현재 포함 추정 ${fmt(subIncluded)} · 향후 ${fmt(subRemaining)}</div></div><div class="ux-tile"><div class="ux-l">예상 실적</div><div class="ux-v compact">${fmt(projectedSpent)}</div><div class="ux-s">${projectedPct.toFixed(1)}% 예상</div></div><div class="ux-tile"><div class="ux-l">추가 사용 필요</div><div class="ux-v compact">${projectedRemain>0?fmt(projectedRemain):'달성'}</div><div class="ux-s">마감 D-${cp.dleft}${projectedRemain>0?' · 하루 '+fmt(daily):''}</div></div></div><div class="projection-explain">예상 실적은 현재 사용금액에서 이미 포함된 것으로 추정되는 구독을 한 번 빼고, 현재 실적기간의 전체 구독 부담액을 다시 더해 계산합니다. 따라서 모든 구독을 반영하면서 중복 계산은 막습니다.</div><div class="ux-recent"><div class="ux-recent-title"><span>최근 입력 기록</span><button class="record-manage" onclick="event.stopPropagation();showHistory()">기록 관리</button></div>${recentRows.length?recentRows.map(v=>`<div class="month-row light record-row"><span>${v.label}${v.savedAt?`<br><small>${v.savedAt}</small>`:''}</span><div class="record-actions"><b>${fmt(v.spent)}</b>${v.id?`<button class="record-delete" onclick="event.stopPropagation();deleteInputMonthlyRecord('${encodeURIComponent(v.id)}',false)">삭제</button>`:''}</div></div>`).join(''):'<div class="ux-empty">실적 입력 후 저장 기록이 표시됩니다.</div>'}</div>`
+  const uxDetail=`<div class="ux-grid"><div class="ux-tile"><div class="ux-l">현재 사용금액</div><div class="ux-v compact">${fmt(actualSpent)}</div><div class="ux-s">기준일 ${cardSpentAsOfLabel(c)}</div></div><div class="ux-tile"><div class="ux-l">전체 구독 부담액</div><div class="ux-v compact">${fmt(subTotal)}</div><div class="ux-s">현재 포함 추정 ${fmt(subIncluded)} · 향후 ${fmt(subRemaining)}</div></div><div class="ux-tile"><div class="ux-l">예상 실적</div><div class="ux-v compact">${fmt(projectedSpent)}</div><div class="ux-s">${projectedPct.toFixed(1)}% 예상</div></div><div class="ux-tile"><div class="ux-l">추가 사용 필요</div><div class="ux-v compact">${projectedRemain>0?fmt(projectedRemain):'달성'}</div><div class="ux-s">마감 D-${cp.dleft}${projectedRemain>0?' · 하루 '+fmt(daily):''}</div></div></div><div class="projection-explain">예상 실적은 현재 사용금액에서 이미 포함된 것으로 추정되는 구독을 한 번 빼고, 현재 실적기간의 전체 구독 부담액을 다시 더해 계산합니다. 따라서 모든 구독을 반영하면서 중복 계산은 막습니다.</div><div class="ux-recent"><div class="ux-recent-title"><span>최근 입력 기록</span><button class="record-manage" onclick="event.stopPropagation();showHistory()">기록 관리</button></div>${recentRows.length?recentRows.map(v=>`<div class="month-row light record-row"><span>${v.label}${v.savedAt?`<br><small>${v.savedAt}${v.editedAt?' · 수정됨':''}</small>`:''}</span><div class="record-actions"><b>${fmt(v.spent)}</b>${v.id?`<button class="record-edit" onclick="event.stopPropagation();openEditInputMonthlyRecord('${encodeURIComponent(v.id)}')">수정</button><button class="record-delete" onclick="event.stopPropagation();deleteInputMonthlyRecord('${encodeURIComponent(v.id)}',false)">삭제</button>`:''}</div></div>`).join(''):'<div class="ux-empty">실적 입력 후 저장 기록이 표시됩니다.</div>'}</div>`
   if(c.annualGoal){let as=Number(c.annualSpent||0),ag=Number(c.annualGoal||12000000),ap=pct(as,ag),ar=Math.max(0,ag-as);let arw=annualFromRecords(c).rows.slice(0,6).map(r=>`<div class="month-row"><span>${r.label}</span><b>${fmt(r.spent)}</b></div>`).join('');annual=`<div class="annual"><div class="bt"><span>연간 실적 목표</span><span>${ap.toFixed(1)}%</span></div><div class="annual-grid"><div class="annual-tile"><div class="annual-l">누적 실적</div><div class="annual-v">${fmt(as)}</div><div class="annual-s">목표 ${fmt(ag)}</div></div><div class="annual-tile"><div class="annual-l">남은 금액</div><div class="annual-v">${fmt(ar)}</div><div class="annual-s">월 평균 필요 ${fmt(ar/Math.max(1,12-new Date().getMonth()))}</div></div></div><div class="barw"><div class="bar" style="width:${ap}%"></div></div><div class="annual-note"><span>RED 연 1,200만원 목표</span><span>${ap>=100?'달성 완료':'진행 중'}</span></div>${arw?`<div class="month-list">${arw}</div>`:`<div class="month-row">월별 기록은 실적 저장 후 표시됩니다.</div>`}</div>`}
   if(c.kind==='mboost'){let mp=Math.min(10000,Number(c.mPoint||0)),earned=Number(c.mPointEarned||0),usedM=Number(c.mPointUsed||0),net=earned-usedM,remainP=Math.max(0,10000-mp),spentForPoint=mp/0.05,remain=remainP/0.05,expected=Math.round(Math.min(10000,mp+remainP)),ep=pct(mp,10000);boost=`<div class="boost"><div class="bt"><span>M BOOST M포인트</span><span>${ep.toFixed(1)}%</span></div><div class="bg"><div class="bi"><div class="bl">현재 보유/적립</div><div class="bv">${num(mp)} M</div><div class="bs">월 한도 10,000 M</div></div><div class="bi"><div class="bl">남은 적립 가능</div><div class="bv">${fmt(remain)}</div><div class="bs">잔여 ${num(remainP)} M</div></div><div class="bi"><div class="bl">이번달 적립</div><div class="bv">${num(earned)} M</div><div class="bs">예상 최종 ${num(expected)} M</div></div><div class="bi"><div class="bl">이번달 사용 / 순증감</div><div class="bv">${num(usedM)} M</div><div class="bs">순증감 ${num(net)} M</div></div></div><div class="barw"><div class="bar" style="width:${ep}%"></div></div><div class="bn"><span>5% 기준 추정 사용액 ${fmt(spentForPoint)}</span><span>예상 추가적립 ${num(remainP)} M</span></div></div>`}
   return `<div class="card wallet-card premium ${tone.cls} ${st} ${c.collapsed?'collapsed':''} ${c.hidden?'hidden-card':''}" draggable="false" data-id="${c.id}" style="--card-color:${c.color}"><div class="wallet-face premium-face"><div class="drag" draggable="true" data-id="${c.id}">☰</div><div class="wallet-click" onclick="toggleCollapse('${c.id}')"><div class="premium-left"><div class="sim-chip"></div><div class="brand-line">${tone.brand}</div><div class="premium-title">${tone.title}</div><div class="premium-cardname">${c.name}</div><div class="premium-meta">${cp.labelName} · D-${cp.dleft}</div>${subTotal>0?`<div class="projected-chip">전체 구독 ${fmt(subTotal)}</div>`:''}<div class="asof-line">현재 금액 기준 ${cardSpentAsOfLabel(c)}</div></div><div class="premium-mid"><div class="ring" style="--p:${Math.min(100,pr).toFixed(0)}"><span>${pr.toFixed(0)}%</span></div></div><div class="premium-right"><div class="premium-spent"><small>현재 사용금액</small><b>${fmt(actualSpent)}</b><span>/ ${fmt(target)}</span></div><div class="premium-remain"><small>${projectedRemain>0?'추가 사용 필요':'예상 상태'}</small><b>${projectedRemain>0?fmt(projectedRemain):'예상 달성'}</b></div><button class="chev" type="button" onclick="event.stopPropagation();toggleCollapse('${c.id}')">›</button></div></div></div><div class="premium-bar"><div class="projected-layer" style="width:${Math.min(100,projectedPct)}%"></div><div class="actual-layer" style="width:${Math.min(100,pr)}%"></div></div><div class="premium-note"><span>${remainText}</span>${projectedRemain>0?`<b>하루 평균 ${fmt(daily)}</b>`:'<b>예상 완료</b>'}</div><div class="wallet-note"><div class="deadline ${dl.cls}">${dl.text}</div>${c.memo?`<div class="memo">${c.memo}</div>`:''}</div><div class="detail">${uxDetail}${annual}${boost}<div class="row quick-actions"><button class="btn primary" onclick="openSpend('${c.id}')">실적 입력</button>${c.kind==='mboost'?`<button class="btn blue" onclick="openMPoint()">M포인트 입력</button>`:''}<button class="btn" onclick="openCard('${c.id}')">카드 수정</button><button class="btn ${c.hidden?'blue':'orange'}" onclick="toggleHidden('${c.id}')">${c.hidden?'다시 표시':'숨김'}</button><button class="btn small" onclick="moveCard('${c.id}',-1)">⬆️</button><button class="btn small" onclick="moveCard('${c.id}',1)">⬇️</button></div></div></div>`
@@ -1340,12 +1380,12 @@ function filterHistoryCards(){
 function showHistory(){
   ensureMonthly();initializeMonthlyRecordHistory(data);mt.innerText='실적 히스토리';let parts=[];
   const hasCards=data.cards.some(c=>Object.keys(data.monthlyRecords[c.id]||{}).length||monthlyRecordLogRows(c.id,1).length);
-  if(hasCards)parts.push(`<div class="hist-filter-wrap fg"><input id="historyFilter" placeholder="카드명 검색" oninput="filterHistoryCards()"></div><div class="hint" style="margin-bottom:12px">잘못된 입력 기록과 최종 반영 기록을 각각 삭제할 수 있습니다. 입력 기록을 삭제하면 같은 기간의 남은 최신 입력값으로 최종 반영이 다시 계산됩니다.</div>`);
+  if(hasCards)parts.push(`<div class="hist-filter-wrap fg"><input id="historyFilter" placeholder="카드명 검색" oninput="filterHistoryCards()"></div><div class="hint" style="margin-bottom:12px">입력 기록은 금액·실적기간·기록 일시를 직접 수정하거나 삭제할 수 있습니다. 수정·삭제 후 같은 기간의 남은 최신 입력값으로 최종 반영과 RED 연간 누적이 다시 계산됩니다.</div>`);
   data.cards.forEach(c=>{
     const rec=data.monthlyRecords[c.id]||{},finalRows=Object.entries(rec).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,12),inputRows=monthlyRecordLogRows(c.id,30);
     if(finalRows.length||inputRows.length){
       const finalHtml=finalRows.length?`<div class="hint" style="margin:12px 0 6px"><b>월별 최종 반영</b> · 기간별 최신값 1건</div>${historyTrendHtml(finalRows)}${finalRows.map(([k,v])=>`<div class="month-row light record-row"><span>${v.label}${v.savedAt?`<br><small>최종 저장 ${v.savedAt}</small>`:''}</span><div class="record-actions"><b>${fmt(v.spent)}</b><button class="record-delete" onclick="deleteFinalMonthlyRecord('${encodeURIComponent(c.id)}','${encodeURIComponent(k)}')">최종 삭제</button></div></div>`).join('')}`:'';
-      const inputHtml=inputRows.length?`<div class="hint" style="margin:14px 0 6px"><b>실적 입력 기록</b> · 저장할 때마다 추가</div>${inputRows.map(v=>`<div class="month-row light record-row"><span>${v.label}${v.savedAt?`<br><small>${v.savedAt}</small>`:''}</span><div class="record-actions"><b>${fmt(v.spent)}</b><button class="record-delete" onclick="deleteInputMonthlyRecord('${encodeURIComponent(v.id)}',true)">삭제</button></div></div>`).join('')}`:'';
+      const inputHtml=inputRows.length?`<div class="hint" style="margin:14px 0 6px"><b>실적 입력 기록</b> · 저장할 때마다 추가</div>${inputRows.map(v=>`<div class="month-row light record-row"><span>${v.label}${v.savedAt?`<br><small>${v.savedAt}${v.editedAt?' · 수정됨':''}</small>`:''}</span><div class="record-actions"><b>${fmt(v.spent)}</b><button class="record-edit" onclick="openEditInputMonthlyRecord('${encodeURIComponent(v.id)}')">수정</button><button class="record-delete" onclick="deleteInputMonthlyRecord('${encodeURIComponent(v.id)}',true)">삭제</button></div></div>`).join('')}`:'';
       parts.push(`<div class="notice history-card-block" data-card-name="${(c.name||'').toLowerCase()}"><b>${c.name}</b>${finalHtml}${inputHtml}</div>`);
     }
   });
