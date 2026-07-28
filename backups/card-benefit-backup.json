@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.10",
-  "savedAt": "2026-07-28T09:21:20.812Z",
-  "savedAtMs": 1785230480812,
+  "savedAt": "2026-07-28T09:22:32.382Z",
+  "savedAtMs": 1785230552382,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -240,17 +240,21 @@
         }
       },
       "ssg": {
-        "monthly_2026-05-31_2026-06-29": {
-          "label": "2026.05.31 ~ 2026.06.29",
+        "monthly_2026-06-01_2026-06-30": {
+          "label": "2026.06.01 ~ 2026.06.30",
           "spent": 404637,
           "target": 400000,
-          "savedAt": "2026. 6. 27. 오후 8:29:49"
+          "savedAt": "2026. 6. 27. 오후 8:29:00",
+          "savedAtMs": 1782559740000,
+          "source": "migration"
         },
-        "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.06.30 ~ 2026.07.30",
+        "monthly_2026-07-01_2026-07-31": {
+          "label": "2026.07.01 ~ 2026.07.31",
           "spent": 430009,
           "target": 400000,
-          "savedAt": "2026. 7. 13. 오전 12:08:54"
+          "savedAt": "2026. 7. 13. 오전 12:08:00",
+          "savedAtMs": 1783868880000,
+          "source": "migration"
         }
       },
       "woori": {
@@ -304,7 +308,7 @@
         }
       }
     },
-    "lastBackupAt": 1785230406618,
+    "lastBackupAt": 1785230482453,
     "groups": [
       "현대",
       "생활",
@@ -435,10 +439,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1785230480812,
+      "updatedAt": 1785230552382,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1785230480812
+      "savedAt": 1785230552382
     },
     "monthlyRecordLog": [
       {
@@ -538,14 +542,16 @@
         "id": "migrated_ssg_monthly_2026-06-30_2026-07-30_1",
         "cardId": "ssg",
         "cardName": "SSG닷컴 삼성카드",
-        "key": "monthly_2026-06-30_2026-07-30",
-        "rawKey": "monthly_2026-06-30_2026-07-30",
-        "label": "2026.06.30 ~ 2026.07.30",
+        "key": "monthly_2026-07-01_2026-07-31",
+        "rawKey": "monthly_2026-07-01_2026-07-31",
+        "label": "2026.07.01 ~ 2026.07.31",
         "spent": 430009,
         "target": 400000,
-        "savedAt": "2026. 7. 13. 오전 12:08:54",
-        "savedAtMs": 1783868934000,
-        "source": "migration"
+        "savedAt": "2026. 7. 13. 오전 12:08:00",
+        "savedAtMs": 1783868880000,
+        "source": "migration",
+        "editedAtMs": 1785230549466,
+        "editedAt": "2026. 7. 28. 오후 6:22:29"
       },
       {
         "id": "migrated_kakao_monthly_2026-06-30_2026-07-30_0",
@@ -577,14 +583,16 @@
         "id": "migrated_ssg_monthly_2026-05-31_2026-06-29_0",
         "cardId": "ssg",
         "cardName": "SSG닷컴 삼성카드",
-        "key": "monthly_2026-05-31_2026-06-29",
-        "rawKey": "monthly_2026-05-31_2026-06-29",
-        "label": "2026.05.31 ~ 2026.06.29",
+        "key": "monthly_2026-06-01_2026-06-30",
+        "rawKey": "monthly_2026-06-01_2026-06-30",
+        "label": "2026.06.01 ~ 2026.06.30",
         "spent": 404637,
         "target": 400000,
-        "savedAt": "2026. 6. 27. 오후 8:29:49",
-        "savedAtMs": 1782559789000,
-        "source": "migration"
+        "savedAt": "2026. 6. 27. 오후 8:29:00",
+        "savedAtMs": 1782559740000,
+        "source": "migration",
+        "editedAtMs": 1785230527024,
+        "editedAt": "2026. 7. 28. 오후 6:22:07"
       },
       {
         "id": "migrated_lotte_monthly_2026-05-31_2026-06-29_0",
