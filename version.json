@@ -1,24 +1,24 @@
 {
-  "version": "7.4.8",
-  "build": 748,
+  "version": "7.4.9",
+  "build": 749,
   "releaseDate": "2026-07-28",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.4.8 Input History & Latest Reflection",
-  "message": "실적 입력 기록은 매 저장마다 보존하고, 월별 및 RED 연간 실적에는 같은 실적기간의 최신 저장값만 반영합니다.",
+  "title": "BenefitManager PWA v7.4.9 Record Delete & Period Fix",
+  "message": "잘못된 실적 입력/최종 반영 기록을 직접 삭제할 수 있고, M BOOST만 24일~23일, 나머지 카드는 1일~말일로 계산합니다.",
   "releaseNotes": [
-    "같은 실적기간에서도 실적 입력 기록을 매번 추가 저장",
-    "월별 최종 반영값은 같은 기간의 가장 최근 저장값으로 갱신",
-    "RED 연간 누적 실적은 기간별 최종값만 합산하여 중복 방지",
-    "기존 중복 월별 기록은 입력 로그로 보존하고 최종 반영 데이터만 자동 정리"
+    "실적 히스토리에서 입력 기록 개별 삭제 지원",
+    "월별 최종 반영 기록 개별 삭제 지원",
+    "입력 기록 삭제 시 같은 기간의 남은 최신값으로 최종 반영 자동 재계산",
+    "M BOOST만 24일~23일, RED 및 나머지 카드는 1일~말일로 기간 규칙 수정"
   ],
-  "name": "Input History & Latest Reflection",
-  "base": "v7.4.6 Full Subscription Burden",
+  "name": "Record Delete & Period Fix",
+  "base": "v7.4.8 Input History & Latest Reflection",
   "updated": "2026-07-28",
   "notes": [
-    "사용자 확인 기준 v7.4.6에서 직접 수정",
+    "기존 잘못된 기간 기록은 자동 삭제하지 않고 사용자가 직접 확인 후 삭제",
+    "삭제 후 RED 연간 누적 실적 즉시 재계산",
     "카드/구독 저장 구조 및 전체 구독 부담액 계산 유지",
-    "monthlyRecords는 기간별 최종값, monthlyRecordLog는 입력 이력으로 분리",
     "기존 데이터 자동 호환"
   ]
 }

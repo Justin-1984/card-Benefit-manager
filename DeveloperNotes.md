@@ -1,3 +1,14 @@
+# v7.4.9 Developer Notes
+
+- `monthlyRecordLog`: 사용자의 모든 실적 입력 이력
+- `monthlyRecords`: 월별·연간 계산에 사용하는 기간별 최종 반영값
+- 입력 이력 삭제 시 `rebuildFinalRecordFromLog()`가 같은 카드/기간의 최신 잔여 이력으로 최종값을 다시 구성합니다.
+- 최종 반영 삭제는 입력 이력을 건드리지 않습니다.
+- 기간 정책: `kind === 'mboost'`만 `hyundai`; 나머지는 모두 `monthly`.
+- 기존 잘못된 히스토리는 자동 삭제하지 않습니다.
+
+---
+
 # v7.4.8 Developer Notes
 
 - Confirmed baseline: v7.4.6.
