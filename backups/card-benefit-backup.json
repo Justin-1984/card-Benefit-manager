@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.10",
-  "savedAt": "2026-07-28T09:22:32.382Z",
-  "savedAtMs": 1785230552382,
+  "savedAt": "2026-07-28T09:24:13.067Z",
+  "savedAtMs": 1785230653067,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -258,17 +258,19 @@
         }
       },
       "woori": {
-        "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.06.30 ~ 2026.07.30",
-          "spent": 170000,
-          "target": 300000,
-          "savedAt": "2026. 7. 13. 오전 12:10:07"
-        },
         "monthly_2026-07-01_2026-07-31": {
           "label": "2026.07.01 ~ 2026.07.31",
           "spent": 315364,
           "target": 300000,
           "savedAt": "2026. 7. 19. 오후 3:21:00"
+        },
+        "monthly_2026-06-01_2026-06-30": {
+          "label": "2026.06.01 ~ 2026.06.30",
+          "spent": 170000,
+          "target": 300000,
+          "savedAt": "2026. 7. 13. 오전 12:10:00",
+          "savedAtMs": 1783869000000,
+          "source": "migration"
         }
       },
       "kakao": {
@@ -288,12 +290,6 @@
         }
       },
       "mboost": {
-        "hyundai_2026-06-23_2026-07-22": {
-          "label": "2026.06.23 ~ 2026.07.22",
-          "spent": 623163,
-          "target": 500000,
-          "savedAt": "2026. 7. 13. 오전 12:12:38"
-        },
         "hyundai_2026-06-24_2026-07-23": {
           "label": "2026.06.24 ~ 2026.07.23",
           "spent": 735099,
@@ -305,10 +301,18 @@
           "spent": 137300,
           "target": 1000000,
           "savedAt": "2026. 7. 25. 오후 11:27:05"
+        },
+        "hyundai_2026-05-24_2026-06-23": {
+          "label": "2026.05.24 ~ 2026.06.23",
+          "spent": 623163,
+          "target": 500000,
+          "savedAt": "2026. 7. 13. 오전 12:12:00",
+          "savedAtMs": 1783869120000,
+          "source": "migration"
         }
       }
     },
-    "lastBackupAt": 1785230482453,
+    "lastBackupAt": 1785230553808,
     "groups": [
       "현대",
       "생활",
@@ -439,10 +443,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1785230552382,
+      "updatedAt": 1785230653067,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1785230552382
+      "savedAt": 1785230653067
     },
     "monthlyRecordLog": [
       {
@@ -516,27 +520,31 @@
         "id": "migrated_mboost_hyundai_2026-06-23_2026-07-22_0",
         "cardId": "mboost",
         "cardName": "SC 현대카드 M BOOST",
-        "key": "hyundai_2026-06-23_2026-07-22",
-        "rawKey": "hyundai_2026-06-23_2026-07-22",
-        "label": "2026.06.23 ~ 2026.07.22",
+        "key": "hyundai_2026-05-24_2026-06-23",
+        "rawKey": "hyundai_2026-05-24_2026-06-23",
+        "label": "2026.05.24 ~ 2026.06.23",
         "spent": 623163,
         "target": 500000,
-        "savedAt": "2026. 7. 13. 오전 12:12:38",
-        "savedAtMs": 1783869158000,
-        "source": "migration"
+        "savedAt": "2026. 7. 13. 오전 12:12:00",
+        "savedAtMs": 1783869120000,
+        "source": "migration",
+        "editedAtMs": 1785230649983,
+        "editedAt": "2026. 7. 28. 오후 6:24:09"
       },
       {
         "id": "migrated_woori_monthly_2026-06-30_2026-07-30_0",
         "cardId": "woori",
         "cardName": "LG전자 우리카드",
-        "key": "monthly_2026-06-30_2026-07-30",
-        "rawKey": "monthly_2026-06-30_2026-07-30",
-        "label": "2026.06.30 ~ 2026.07.30",
+        "key": "monthly_2026-06-01_2026-06-30",
+        "rawKey": "monthly_2026-06-01_2026-06-30",
+        "label": "2026.06.01 ~ 2026.06.30",
         "spent": 170000,
         "target": 300000,
-        "savedAt": "2026. 7. 13. 오전 12:10:07",
-        "savedAtMs": 1783869007000,
-        "source": "migration"
+        "savedAt": "2026. 7. 13. 오전 12:10:00",
+        "savedAtMs": 1783869000000,
+        "source": "migration",
+        "editedAtMs": 1785230584269,
+        "editedAt": "2026. 7. 28. 오후 6:23:04"
       },
       {
         "id": "migrated_ssg_monthly_2026-06-30_2026-07-30_1",
