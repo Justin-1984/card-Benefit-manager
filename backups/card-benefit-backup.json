@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.10",
-  "savedAt": "2026-07-28T09:18:50.623Z",
-  "savedAtMs": 1785230330623,
+  "savedAt": "2026-07-28T09:20:02.301Z",
+  "savedAtMs": 1785230402301,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -226,17 +226,13 @@
         }
       },
       "red": {
-        "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.06.30 ~ 2026.07.30",
-          "spent": 1341161,
-          "target": 500000,
-          "savedAt": "2026. 7. 13. 오전 12:12:02"
-        },
         "monthly_2026-07-01_2026-07-31": {
           "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 1474891,
+          "spent": 1814961,
           "target": 1000000,
-          "savedAt": "2026. 7. 19. 오후 3:21:59"
+          "savedAt": "2026. 7. 19. 오후 3:21:00",
+          "savedAtMs": 1784442060000,
+          "source": "migration"
         },
         "monthly_2026-05-23_2026-06-30": {
           "label": "2026.05.23 ~ 2026.06.30",
@@ -312,7 +308,7 @@
         }
       }
     },
-    "lastBackupAt": 1784989908192,
+    "lastBackupAt": 1785230332042,
     "groups": [
       "현대",
       "생활",
@@ -336,7 +332,7 @@
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
         "collapsed": false,
         "annualGoal": 12000000,
-        "annualSpent": 4503393
+        "annualSpent": 3502302
       },
       {
         "id": "mboost",
@@ -443,10 +439,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1785230330622,
+      "updatedAt": 1785230402301,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1785230330623
+      "savedAt": 1785230402301
     },
     "monthlyRecordLog": [
       {
@@ -495,11 +491,13 @@
         "key": "monthly_2026-07-01_2026-07-31",
         "rawKey": "monthly_2026-07-01_2026-07-31",
         "label": "2026.07.01 ~ 2026.07.31",
-        "spent": 1474891,
+        "spent": 1814961,
         "target": 1000000,
-        "savedAt": "2026. 7. 19. 오후 3:21:59",
-        "savedAtMs": 1784442119000,
-        "source": "migration"
+        "savedAt": "2026. 7. 19. 오후 3:21:00",
+        "savedAtMs": 1784442060000,
+        "source": "migration",
+        "editedAtMs": 1785230399322,
+        "editedAt": "2026. 7. 28. 오후 6:19:59"
       },
       {
         "id": "migrated_woori_monthly_2026-07-01_2026-07-31_1",
@@ -525,19 +523,6 @@
         "target": 500000,
         "savedAt": "2026. 7. 13. 오전 12:12:38",
         "savedAtMs": 1783869158000,
-        "source": "migration"
-      },
-      {
-        "id": "migrated_red_monthly_2026-06-30_2026-07-30_1",
-        "cardId": "red",
-        "cardName": "SC제일은행-the Red",
-        "key": "monthly_2026-06-30_2026-07-30",
-        "rawKey": "monthly_2026-06-30_2026-07-30",
-        "label": "2026.06.30 ~ 2026.07.30",
-        "spent": 1341161,
-        "target": 500000,
-        "savedAt": "2026. 7. 13. 오전 12:12:02",
-        "savedAtMs": 1783869122000,
         "source": "migration"
       },
       {
