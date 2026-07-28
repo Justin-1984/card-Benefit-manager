@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="카드혜택">
-<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.4.6 Full Subscription Burden</title>
+<link rel="manifest" href="manifest.json"><title>카드 혜택매니저 v7.4.8 Input History & Latest Reflection</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#f3f4f6;color:#111827;font-size:14px;padding-bottom:90px}
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;padding:14px 16px}.h{display:flex;justify-content:space-between;gap:10px;align-items:center}.ttl{font-size:22px;font-weight:900}.sub{font-size:12px;color:#6b7280;margin-top:3px}.pill{font-size:12px;font-weight:900;color:#92400e;background:#fef3c7;border-radius:999px;padding:6px 10px;white-space:nowrap}
@@ -678,10 +678,10 @@ html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid
 <header><div class="h"><div><div class="ttl">카드 혜택매니저</div><div class="sub" id="periodText"></div></div><div class="header-actions"><button class="header-settings-btn" onclick="switchTab('settings')">⚙️ 설정</button><div class="pill" id="dDay">현대 D-</div></div></div></header>
 <main>
 <div class="tabbar three"><button id="tabDashboard" class="tabbtn active" onclick="switchTab('dashboard')">🏠 대시보드</button><button id="tabSubscriptions" class="tabbtn" onclick="switchTab('subscriptions')">🔄 구독</button><button id="tabSettings" class="tabbtn" onclick="switchTab('settings')">⚙️ 설정</button></div>
-<div id="appNotice" class="notice settings-section">v7.4.6: 카드별 실적기간 전체 구독 부담액을 먼저 예약하고 중복 없이 추가 사용 필요액을 계산합니다.</div>
+<div id="appNotice" class="notice settings-section">v7.4.8: 실적 입력 기록은 모두 보존하고, 월별·연간 최종 반영은 같은 실적기간의 최신 값만 사용합니다.</div>
 
 <div class="responsive-shell dashboard-section"><div class="responsive-left">
-<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.4.6 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">현재 / 예상 달성</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">구독 반영 후 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">전체 구독 부담액 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
+<div class="hero dashboard-section" id="homeHero"><div class="hero-top"><div><div class="hero-title">오늘의 카드 현황</div><div class="hero-sub">실적 부족 카드와 RED/M BOOST 진행률을 한 화면에서 확인합니다.</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div class="hero-badge" id="heroDevice">자동 인식</div><div class="hero-badge" id="heroBadge">v7.4.8 Beta</div></div></div><div class="hero-grid"><div class="hero-stat"><div class="hero-l">현재 / 예상 달성</div><div class="hero-v" id="heroAchieved">0개</div><div class="hero-s">숨김 제외</div></div><div class="hero-stat"><div class="hero-l">구독 반영 후 부족액</div><div class="hero-v" id="heroShortage">0원</div><div class="hero-s">전체 구독 부담액 기준</div></div><div class="hero-stat"><div class="hero-l">RED 연간</div><div class="hero-v" id="heroRed">0%</div><div class="hero-s" id="heroRedSub">0원 남음</div></div><div class="hero-stat"><div class="hero-l">M BOOST</div><div class="hero-v" id="heroMboost">0 M</div><div class="hero-s" id="heroMboostSub">추가 가능 0원</div></div></div></div>
 
 <div class="mpoint-dashboard dashboard-section" id="mPointDashboard">
   <div class="mpoint-top"><div><div class="mpoint-title">⭐ M포인트 대시보드</div><div class="mpoint-sub">M BOOST 적립/사용/순증감을 카드 실적과 분리해서 관리합니다.</div></div><button class="mpoint-edit" onclick="openMPoint()">M포인트 입력</button></div>
@@ -700,7 +700,7 @@ html body[data-tab="dashboard"] .responsive-shell.dashboard-section{display:grid
 <div class="backup-warn settings-section" id="backupWarn"></div>
 <div class="sync-panel settings-section" id="syncPanel"></div>
 <div class="github-panel settings-section" id="githubPanel"></div>
-<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v7.4.6 Full Subscription Burden<br>업데이트 확인 전입니다.</div>
+<div class="github-panel settings-section" id="updatePanel"><b>앱 정보</b><br>현재 버전 v7.4.8 Input History & Latest Reflection<br>업데이트 확인 전입니다.</div>
 <div class="summary dashboard-section"><div class="tile"><div class="tl">총 월 사용금액</div><div class="tv" id="sumSpent">0원</div><div class="ts">숨김 카드 제외</div></div><div class="tile"><div class="tl">구독 반영 후 부족액</div><div class="tv" id="sumShortage">0원</div><div class="ts">전체 구독 부담액 기준</div></div><div class="tile"><div class="tl">추가 사용 필요 카드</div><div class="tv" id="sumNeedCards">0개</div><div class="ts">우선 관리 대상</div></div><div class="tile"><div class="tl">M BOOST 추가 사용 가능</div><div class="tv" id="sumEasyRemain">0원</div><div class="ts">입력 M포인트 기준</div></div></div>
 </div><div class="responsive-right">
 <input class="search dashboard-section" id="search" placeholder="카드 검색..." oninput="render()">
@@ -739,7 +739,7 @@ function switchTab(tab){
 
 const STORE='benefit-manager-v6.2', MONTH='benefit-manager-period-key-v6.2';
 const GHCFG='benefit-manager-github-config-v6.2';
-const APP_VERSION='7.4.6', APP_BUILD=746, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
+const APP_VERSION='7.4.8', APP_BUILD=748, DATA_VERSION='1.0', PRE_UPDATE_BACKUP='benefit-manager-pre-update-backup-v6.6', AUTO_BACKUPS='benefit-manager-auto-backups-v6.6';
 const COLORS=['#e11d48','#0ea5e9','#a855f7','#f97316','#22c55e','#334155','#111827','#2563eb'];
 const defaultGroups=['현대','생활','자동결제','교통','기타'];
 
@@ -911,7 +911,7 @@ const defaultCards=[
 {id:'kakao',name:'카카오페이신용카드',short:'K',color:'#22c55e',target:200000,spent:48800,hidden:false,kind:'normal',periodType:'monthly',collapsed:true,memo:'',group:'생활'},
 {id:'hipass',name:'카드의정석2 후불하이패스+',short:'H',color:'#0ea5e9',target:100000,spent:0,hidden:false,kind:'normal',periodType:'monthly',collapsed:true,memo:'',group:'교통'}];
 let data=load(), editing=null, dragId=null, showHidden=false;
-function load(){try{let r=localStorage.getItem(STORE)||localStorage.getItem('benefit-manager-v4.2')||localStorage.getItem('benefit-manager-v3.3')||localStorage.getItem('benefit-manager-v2.3')||localStorage.getItem('benefit-manager-v2.1')||localStorage.getItem('benefit-manager-v2.0');if(r){let d=JSON.parse(r);if(d.pinMboost===undefined)d.pinMboost=true;if(!d.cards||!Array.isArray(d.cards)||d.cards.length===0)d.cards=JSON.parse(JSON.stringify(defaultCards));if(!d.history)d.history=[];if(!d.monthlyRecords)d.monthlyRecords={};if(!d.groups)d.groups=[...defaultGroups];if(d.lastBackupAt===undefined)d.lastBackupAt=null;d.cards.forEach(c=>{if(c.id==='mboost'||c.kind==='mboost'){if(c.mPoint===undefined)c.mPoint=0;if(c.mPointEarned===undefined)c.mPointEarned=0;if(c.mPointUsed===undefined)c.mPointUsed=0;}if(c.hidden===undefined)c.hidden=!!c.hide;if(!c.periodType)c.periodType=(c.id==='red'||c.id==='mboost'||/현대|Hyundai|M BOOST|Red/i.test(c.name))?'hyundai':'monthly';if(c.collapsed===undefined)c.collapsed=(c.kind==='mboost'?false:true);if(c.memo===undefined)c.memo='';if(!c.group)c.group=(c.periodType==='hyundai'?'현대':'기타');if(!c.spentAsOfDate)c.spentAsOfDate=todayYmd();if(c.id==='red'||/red|레드/i.test(c.name)){if(c.annualGoal===undefined)c.annualGoal=12000000;if(c.annualSpent===undefined)c.annualSpent=Number(c.spent||0)}});return d}}catch(e){}return{pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}
+function load(){try{let r=localStorage.getItem(STORE)||localStorage.getItem('benefit-manager-v4.2')||localStorage.getItem('benefit-manager-v3.3')||localStorage.getItem('benefit-manager-v2.3')||localStorage.getItem('benefit-manager-v2.1')||localStorage.getItem('benefit-manager-v2.0');if(r){let d=JSON.parse(r);if(d.pinMboost===undefined)d.pinMboost=true;if(!d.cards||!Array.isArray(d.cards)||d.cards.length===0)d.cards=JSON.parse(JSON.stringify(defaultCards));if(!d.history)d.history=[];if(!d.monthlyRecords)d.monthlyRecords={};if(!Array.isArray(d.monthlyRecordLog))d.monthlyRecordLog=[];if(!d.groups)d.groups=[...defaultGroups];if(d.lastBackupAt===undefined)d.lastBackupAt=null;d.cards.forEach(c=>{if(c.id==='mboost'||c.kind==='mboost'){if(c.mPoint===undefined)c.mPoint=0;if(c.mPointEarned===undefined)c.mPointEarned=0;if(c.mPointUsed===undefined)c.mPointUsed=0;}if(c.hidden===undefined)c.hidden=!!c.hide;if(!c.periodType)c.periodType=(c.id==='red'||c.id==='mboost'||/현대|Hyundai|M BOOST|Red/i.test(c.name))?'hyundai':'monthly';if(c.collapsed===undefined)c.collapsed=(c.kind==='mboost'?false:true);if(c.memo===undefined)c.memo='';if(!c.group)c.group=(c.periodType==='hyundai'?'현대':'기타');if(!c.spentAsOfDate)c.spentAsOfDate=todayYmd();if(c.id==='red'||/red|레드/i.test(c.name)){if(c.annualGoal===undefined)c.annualGoal=12000000;if(c.annualSpent===undefined)c.annualSpent=Number(c.spent||0)}});initializeMonthlyRecordHistory(d);return d}}catch(e){}return{pinMboost:true,history:[],monthlyRecords:{},monthlyRecordLog:[],monthlyRecordLogVersion:1,lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}
 function save(){localStorage.setItem(STORE,JSON.stringify(data))}
 function fmt(n){return Math.round(Number(n||0)).toLocaleString('ko-KR')+'원'}function num(n){return Math.round(Number(n||0)).toLocaleString('ko-KR')}
 function getPeriod(type){let now=new Date(),y=now.getFullYear(),m=now.getMonth(),start,end,labelName;if(type==='hyundai'){start=new Date(y,m-1,24);end=new Date(y,m,23);if(now.getDate()>23){start=new Date(y,m,24);end=new Date(y,m+1,23)}labelName='현대 24~23'}else{start=new Date(y,m,1);end=new Date(y,m+1,0);labelName='월 1일~말일'}let dleft=Math.max(0,Math.ceil((new Date(end.getFullYear(),end.getMonth(),end.getDate()+1)-new Date(y,m,now.getDate()))/86400000)-1);let key=type+'_'+ymdLocal(start)+'_'+ymdLocal(end);let label=`${start.getFullYear()}.${String(start.getMonth()+1).padStart(2,'0')}.${String(start.getDate()).padStart(2,'0')} ~ ${end.getFullYear()}.${String(end.getMonth()+1).padStart(2,'0')}.${String(end.getDate()).padStart(2,'0')}`;return{key,dleft,label,labelName,start,end}}
@@ -971,40 +971,129 @@ function cardMonthKey(card){
   return currentMonthKey(card.periodType||'monthly');
 }
 function ensureMonthly(){
-  if(!data.monthlyRecords)data.monthlyRecords={};
+  if(!data.monthlyRecords||typeof data.monthlyRecords!=='object'||Array.isArray(data.monthlyRecords))data.monthlyRecords={};
+  if(!Array.isArray(data.monthlyRecordLog))data.monthlyRecordLog=[];
 }
-function updateMonthlyRecord(card){
+function normalizedDatePart(y,m,d){
+  const yy=Number(y),mm=Number(m),dd=Number(d),dt=new Date(yy,mm-1,dd);
+  if(dt.getFullYear()!==yy||dt.getMonth()!==mm-1||dt.getDate()!==dd)return null;
+  return yy+'-'+String(mm).padStart(2,'0')+'-'+String(dd).padStart(2,'0');
+}
+function monthlyRecordSavedAtMs(rec){
+  const direct=Number(rec&&(rec.savedAtMs||rec.updatedAtMs||rec.savedAtEpoch));
+  if(Number.isFinite(direct)&&direct>0)return direct;
+  const raw=String(rec&&rec.savedAt||'').trim();
+  const ko=raw.match(/(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})\.?(?:\s*(오전|오후))?\s*(\d{1,2}):(\d{2})(?::(\d{2}))?/);
+  if(ko){let h=Number(ko[5]);if(ko[4]==='오후'&&h<12)h+=12;if(ko[4]==='오전'&&h===12)h=0;return new Date(Number(ko[1]),Number(ko[2])-1,Number(ko[3]),h,Number(ko[6]),Number(ko[7]||0)).getTime()}
+  const parsed=Date.parse(raw);
+  return Number.isFinite(parsed)?parsed:0;
+}
+function monthlyRecordPeriod(rawKey,rec,card){
+  const key=String(rawKey||'');
+  let type='',start='',end='';
+  let m=key.match(/^(hyundai|monthly)_(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})$/);
+  if(m){type=m[1];start=m[2];end=m[3]}
+  if(!start){
+    m=key.match(/(hyundai|monthly).*?(\d{4}-\d{2}-\d{2}).*?(\d{4}-\d{2}-\d{2})/);
+    if(m){type=m[1];start=m[2];end=m[3]}
+  }
+  if(!start){
+    const label=String(rec&&rec.label||'');
+    m=label.match(/(\d{4})[.\/-](\d{1,2})[.\/-](\d{1,2})\s*(?:~|–|—|to)\s*(\d{4})[.\/-](\d{1,2})[.\/-](\d{1,2})/i);
+    if(m){start=normalizedDatePart(m[1],m[2],m[3]);end=normalizedDatePart(m[4],m[5],m[6])}
+  }
+  if(!start||!end)return null;
+  const sd=Number(start.slice(-2)),ed=Number(end.slice(-2));
+  if(!type)type=(sd===24&&ed===23)?'hyundai':((card&&card.periodType)==='hyundai'?'hyundai':'monthly');
+  const label=start.replace(/-/g,'.')+' ~ '+end.replace(/-/g,'.');
+  return{key:type+'_'+start+'_'+end,label};
+}
+function monthlyRecordLogSignature(item){
+  return [item.cardId||'',item.rawKey||item.key||'',Number(item.savedAtMs||0),Number(item.spent||0),Number(item.target||0)].join('|');
+}
+function migrateMonthlyRecordsToLog(targetData){
+  if(!targetData)return false;
+  if(!Array.isArray(targetData.monthlyRecordLog))targetData.monthlyRecordLog=[];
+  if(Number(targetData.monthlyRecordLogVersion||0)>=1)return false;
+  const cardsById={};(Array.isArray(targetData.cards)?targetData.cards:[]).forEach(c=>{if(c&&c.id)cardsById[c.id]=c});
+  const seen=new Set(targetData.monthlyRecordLog.map(monthlyRecordLogSignature));
+  let changed=false;
+  const root=(targetData.monthlyRecords&&typeof targetData.monthlyRecords==='object')?targetData.monthlyRecords:{};
+  Object.keys(root).forEach(cardId=>{
+    const raw=root[cardId];
+    const entries=Array.isArray(raw)?raw.map((v,i)=>[v&&(v.key||v.periodKey)||String(i),v]):(raw&&typeof raw==='object'?Object.entries(raw):[]);
+    entries.forEach(([rawKey,value],index)=>{
+      if(!value||typeof value!=='object')return;
+      const period=monthlyRecordPeriod(rawKey,value,cardsById[cardId]);
+      const savedAtMs=monthlyRecordSavedAtMs(value);
+      const item={id:'migrated_'+cardId+'_'+String(rawKey).replace(/[^a-zA-Z0-9_-]/g,'_')+'_'+index,cardId,cardName:(cardsById[cardId]&&cardsById[cardId].name)||value.cardName||'',key:period?period.key:String(rawKey),rawKey:String(rawKey),label:period?period.label:(value.label||String(rawKey)),spent:Number(value.spent||0),target:Number(value.target||0),savedAt:value.savedAt||'',savedAtMs,source:value.source||'migration'};
+      const sig=monthlyRecordLogSignature(item);
+      if(!seen.has(sig)){targetData.monthlyRecordLog.push(item);seen.add(sig);changed=true}
+    });
+  });
+  targetData.monthlyRecordLog.sort((a,b)=>Number(b.savedAtMs||0)-Number(a.savedAtMs||0));
+  targetData.monthlyRecordLog=targetData.monthlyRecordLog.slice(0,500);
+  targetData.monthlyRecordLogVersion=1;
+  return changed;
+}
+function normalizeMonthlyRecords(targetData){
+  if(!targetData)return false;
+  if(!targetData.monthlyRecords||typeof targetData.monthlyRecords!=='object'||Array.isArray(targetData.monthlyRecords)){targetData.monthlyRecords={};return true}
+  const cardsById={};(Array.isArray(targetData.cards)?targetData.cards:[]).forEach(c=>{if(c&&c.id)cardsById[c.id]=c});
+  let changed=false;
+  Object.keys(targetData.monthlyRecords).forEach(cardId=>{
+    const raw=targetData.monthlyRecords[cardId];
+    const entries=Array.isArray(raw)?raw.map((v,i)=>[v&&(v.key||v.periodKey)||String(i),v]):(raw&&typeof raw==='object'?Object.entries(raw):[]);
+    const merged={};
+    entries.forEach(([rawKey,value])=>{
+      if(!value||typeof value!=='object')return;
+      const period=monthlyRecordPeriod(rawKey,value,cardsById[cardId]);
+      const key=period?period.key:String(rawKey);
+      const next={...value,label:period?period.label:(value.label||String(rawKey)),spent:Number(value.spent||0),target:Number(value.target||0)};
+      const prev=merged[key];
+      if(!prev||monthlyRecordSavedAtMs(next)>=monthlyRecordSavedAtMs(prev))merged[key]=next;
+      if(key!==String(rawKey)||(period&&value.label!==period.label))changed=true;
+    });
+    if(entries.length!==Object.keys(merged).length)changed=true;
+    targetData.monthlyRecords[cardId]=merged;
+  });
+  return changed;
+}
+function initializeMonthlyRecordHistory(targetData){
+  if(!targetData)return false;
+  if(!Array.isArray(targetData.monthlyRecordLog))targetData.monthlyRecordLog=[];
+  const migrated=migrateMonthlyRecordsToLog(targetData);
+  const normalized=normalizeMonthlyRecords(targetData);
+  return migrated||normalized;
+}
+function appendMonthlyRecordLog(card,record,source){
   ensureMonthly();
-  const key=cardMonthKey(card);
+  const now=Number(record.savedAtMs||Date.now());
+  data.monthlyRecordLog.unshift({id:'mr_'+now+'_'+Math.random().toString(36).slice(2,8),cardId:card.id,cardName:card.name||'',key:cardMonthKey(card),label:record.label,spent:Number(record.spent||0),target:Number(record.target||0),savedAt:record.savedAt,savedAtMs:now,source:source||'manual-save'});
+  data.monthlyRecordLog=data.monthlyRecordLog.slice(0,500);
+}
+function updateMonthlyRecord(card,options){
+  options=options||{};
+  ensureMonthly();normalizeMonthlyRecords(data);
+  const key=cardMonthKey(card),now=Date.now();
   if(!data.monthlyRecords[card.id])data.monthlyRecords[card.id]={};
-  data.monthlyRecords[card.id][key]={
-    label:getPeriod(card.periodType||'monthly').label,
-    spent:Number(card.spent||0),
-    target:Number(card.target||0),
-    savedAt:new Date().toLocaleString('ko-KR')
-  };
+  const record={label:getPeriod(card.periodType||'monthly').label,spent:Number(card.spent||0),target:Number(card.target||0),savedAt:new Date(now).toLocaleString('ko-KR'),savedAtMs:now,source:options.source||'manual-save'};
+  data.monthlyRecords[card.id][key]=record;
+  if(options.appendLog!==false)appendMonthlyRecordLog(card,record,options.source);
+}
+function monthlyRecordLogRows(cardId,limit){
+  ensureMonthly();
+  return data.monthlyRecordLog.filter(x=>x&&x.cardId===cardId).sort((a,b)=>Number(b.savedAtMs||0)-Number(a.savedAtMs||0)).slice(0,limit||20);
 }
 function annualFromRecords(card){
-  ensureMonthly();
-  const y=new Date().getFullYear();
-  const rec=data.monthlyRecords[card.id]||{};
-  let sum=0, rows=[];
-  Object.entries(rec).forEach(([k,v])=>{
-    if(String(k).includes(String(y))){
-      sum+=Number(v.spent||0);
-      rows.push({key:k,label:v.label,spent:Number(v.spent||0)});
-    }
-  });
-  rows.sort((a,b)=>b.key.localeCompare(a.key));
-  return {sum,rows};
+  ensureMonthly();normalizeMonthlyRecords(data);
+  const y=new Date().getFullYear(),rec=data.monthlyRecords[card.id]||{};
+  let sum=0,rows=[];
+  Object.entries(rec).forEach(([k,v])=>{if(String(k).includes(String(y))){sum+=Number(v.spent||0);rows.push({key:k,label:v.label,spent:Number(v.spent||0),savedAt:v.savedAt||'',savedAtMs:monthlyRecordSavedAtMs(v)})}});
+  rows.sort((a,b)=>b.key.localeCompare(a.key));return{sum,rows};
 }
 function updateRedAnnualFromRecords(){
-  data.cards.forEach(c=>{
-    if(c.annualGoal||c.id==='red'||/red|레드/i.test(c.name)){
-      const a=annualFromRecords(c);
-      if(a.sum>0)c.annualSpent=a.sum;
-    }
-  });
+  data.cards.forEach(c=>{if(c.annualGoal||c.id==='red'||/red|레드/i.test(c.name)){const a=annualFromRecords(c);if(a.sum>0)c.annualSpent=a.sum}});
 }
 function backupWarning(){
   const el=document.getElementById('backupWarn');
@@ -1020,7 +1109,7 @@ function periodKeyOf(type){return getPeriod(type||'monthly').key}
 function resetCardsForType(type,reason){
   const targets=data.cards.filter(c=>(c.periodType==='hyundai'?'hyundai':'monthly')===type);
   if(!targets.length)return [];
-  targets.forEach(c=>updateMonthlyRecord(c));
+  targets.forEach(c=>updateMonthlyRecord(c,{source:'period-close'}));
   saveSnapshot(reason+' · '+targets.map(c=>c.name+' '+fmt(c.spent||0)).join(', '));
   targets.forEach(c=>{
     c.spent=0;c.spentAsOfDate=defaultResetAsOf(c);
@@ -1096,7 +1185,7 @@ function updateDeadlineAlert(){
 function statusClass(p){if(p>=100)return'green';if(p>=80)return'orange';return'red'}
 function orderedCards(){let arr=[...data.cards];if(data.pinMboost){arr.sort((a,b)=>{if(a.kind==='mboost')return-1;if(b.kind==='mboost')return 1;return 0})}return arr}
 function filteredCards(){let q=(search.value||'').toLowerCase().trim();return orderedCards().filter(c=>(showHidden||!c.hidden)&&(!q||(`${c.name} ${c.short} ${c.memo} ${c.group}`).toLowerCase().includes(q)))}
-function render(){updateRedAnnualFromRecords();save();let hy=getPeriod('hyundai'),mo=getPeriod('monthly');periodText.innerText='현대 '+hy.label+' · 기타 '+mo.label;dDay.innerText='현대 D-'+hy.dleft;pinState.innerText=data.pinMboost?'ON':'OFF';hiddenState.innerText=showHidden?'ON':'OFF';sumSpent.innerText=fmt(data.cards.filter(c=>!c.hidden).reduce((s,c)=>s+Number(c.spent||0),0));let m=data.cards.find(c=>c.kind==='mboost'),rp=Math.max(0,10000-(m?Number(m.mPoint||0):0));sumEasyRemain.innerText=fmt(rp/0.05);cards.innerHTML='';let groups={};filteredCards().forEach(c=>(groups[c.group||'기타']=groups[c.group||'기타']||[]).push(c));Object.keys(groups).forEach(g=>{let sec=document.createElement('section');sec.className='group';sec.innerHTML=`<div class="gt">${g} <span>${groups[g].length}장</span></div><div class="cards"></div>`;let grid=sec.querySelector('.cards');groups[g].forEach(c=>grid.insertAdjacentHTML('beforeend',cardHtml(c)));cards.appendChild(sec)});attachDrag();backupWarning();updateGithubPanel();updateDeadlineAlert();updateDashboard();updateSubscriptionDashboard();renderSubscriptions()}
+function render(){initializeMonthlyRecordHistory(data);updateRedAnnualFromRecords();save();let hy=getPeriod('hyundai'),mo=getPeriod('monthly');periodText.innerText='현대 '+hy.label+' · 기타 '+mo.label;dDay.innerText='현대 D-'+hy.dleft;pinState.innerText=data.pinMboost?'ON':'OFF';hiddenState.innerText=showHidden?'ON':'OFF';sumSpent.innerText=fmt(data.cards.filter(c=>!c.hidden).reduce((s,c)=>s+Number(c.spent||0),0));let m=data.cards.find(c=>c.kind==='mboost'),rp=Math.max(0,10000-(m?Number(m.mPoint||0):0));sumEasyRemain.innerText=fmt(rp/0.05);cards.innerHTML='';let groups={};filteredCards().forEach(c=>(groups[c.group||'기타']=groups[c.group||'기타']||[]).push(c));Object.keys(groups).forEach(g=>{let sec=document.createElement('section');sec.className='group';sec.innerHTML=`<div class="gt">${g} <span>${groups[g].length}장</span></div><div class="cards"></div>`;let grid=sec.querySelector('.cards');groups[g].forEach(c=>grid.insertAdjacentHTML('beforeend',cardHtml(c)));cards.appendChild(sec)});attachDrag();backupWarning();updateGithubPanel();updateDeadlineAlert();updateDashboard();updateSubscriptionDashboard();renderSubscriptions()}
 function cardTone(c){
   const n=(c.name||'').toLowerCase(), id=c.id||'';
   if(id==='red'||/red|레드/.test(n)) return {brand:'SC제일은행',title:'THE RED',cls:'red'};
@@ -1110,8 +1199,10 @@ function cardTone(c){
 function cardHtml(c){
   const actualSpent=Number(c.spent||0),target=Number(c.target||0),subTotal=cardSubscriptionPeriodTotal(c.id),subIncluded=cardSubscriptionIncludedTotal(c.id),subRemaining=cardSubscriptionRemainingTotal(c.id),subProj=subTotal,projectedSpent=projectedCardSpent(c),pr=pct(actualSpent,target),projectedPct=pct(projectedSpent,target),st=statusClass(pr),cp=getPeriod(c.periodType||'monthly'),actualRemain=Math.max(0,target-actualSpent),projectedRemain=Math.max(0,target-projectedSpent),remainText=projectedRemain>0?`전체 구독 반영 후 ${fmt(projectedRemain)} 추가 사용 필요`:'전체 구독 반영 후 실적 목표 달성',dl=deadlineStatus(c,projectedRemain);let boost='',annual='';
   const tone=cardTone(c),daily=projectedRemain>0?Math.ceil(projectedRemain/Math.max(1,cp.dleft)):0;
-  const recRows=Object.entries((data.monthlyRecords&&data.monthlyRecords[c.id])||{}).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,3);
-  const uxDetail=`<div class="ux-grid"><div class="ux-tile"><div class="ux-l">현재 사용금액</div><div class="ux-v compact">${fmt(actualSpent)}</div><div class="ux-s">기준일 ${cardSpentAsOfLabel(c)}</div></div><div class="ux-tile"><div class="ux-l">전체 구독 부담액</div><div class="ux-v compact">${fmt(subTotal)}</div><div class="ux-s">현재 포함 추정 ${fmt(subIncluded)} · 향후 ${fmt(subRemaining)}</div></div><div class="ux-tile"><div class="ux-l">예상 실적</div><div class="ux-v compact">${fmt(projectedSpent)}</div><div class="ux-s">${projectedPct.toFixed(1)}% 예상</div></div><div class="ux-tile"><div class="ux-l">추가 사용 필요</div><div class="ux-v compact">${projectedRemain>0?fmt(projectedRemain):'달성'}</div><div class="ux-s">마감 D-${cp.dleft}${projectedRemain>0?' · 하루 '+fmt(daily):''}</div></div></div><div class="projection-explain">예상 실적은 현재 사용금액에서 이미 포함된 것으로 추정되는 구독을 한 번 빼고, 현재 실적기간의 전체 구독 부담액을 다시 더해 계산합니다. 따라서 모든 구독을 반영하면서 중복 계산은 막습니다.</div><div class="ux-recent"><div class="ux-recent-title">최근 월별 기록</div>${recRows.length?recRows.map(([k,v])=>`<div class="month-row light"><span>${v.label}</span><b>${fmt(v.spent)}</b></div>`).join(''):'<div class="ux-empty">실적 입력 후 월별 기록이 표시됩니다.</div>'}</div>`;
+  const inputRows=monthlyRecordLogRows(c.id,3);
+  const finalRows=Object.entries((data.monthlyRecords&&data.monthlyRecords[c.id])||{}).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,3);
+  const recentRows=inputRows.length?inputRows:finalRows.map(([k,v])=>({label:v.label,spent:v.spent,savedAt:v.savedAt||''}));
+  const uxDetail=`<div class="ux-grid"><div class="ux-tile"><div class="ux-l">현재 사용금액</div><div class="ux-v compact">${fmt(actualSpent)}</div><div class="ux-s">기준일 ${cardSpentAsOfLabel(c)}</div></div><div class="ux-tile"><div class="ux-l">전체 구독 부담액</div><div class="ux-v compact">${fmt(subTotal)}</div><div class="ux-s">현재 포함 추정 ${fmt(subIncluded)} · 향후 ${fmt(subRemaining)}</div></div><div class="ux-tile"><div class="ux-l">예상 실적</div><div class="ux-v compact">${fmt(projectedSpent)}</div><div class="ux-s">${projectedPct.toFixed(1)}% 예상</div></div><div class="ux-tile"><div class="ux-l">추가 사용 필요</div><div class="ux-v compact">${projectedRemain>0?fmt(projectedRemain):'달성'}</div><div class="ux-s">마감 D-${cp.dleft}${projectedRemain>0?' · 하루 '+fmt(daily):''}</div></div></div><div class="projection-explain">예상 실적은 현재 사용금액에서 이미 포함된 것으로 추정되는 구독을 한 번 빼고, 현재 실적기간의 전체 구독 부담액을 다시 더해 계산합니다. 따라서 모든 구독을 반영하면서 중복 계산은 막습니다.</div><div class="ux-recent"><div class="ux-recent-title">최근 입력 기록</div>${recentRows.length?recentRows.map(v=>`<div class="month-row light"><span>${v.label}${v.savedAt?`<br><small>${v.savedAt}</small>`:''}</span><b>${fmt(v.spent)}</b></div>`).join(''):'<div class="ux-empty">실적 입력 후 저장 기록이 표시됩니다.</div>'}</div>`
   if(c.annualGoal){let as=Number(c.annualSpent||0),ag=Number(c.annualGoal||12000000),ap=pct(as,ag),ar=Math.max(0,ag-as);let arw=annualFromRecords(c).rows.slice(0,6).map(r=>`<div class="month-row"><span>${r.label}</span><b>${fmt(r.spent)}</b></div>`).join('');annual=`<div class="annual"><div class="bt"><span>연간 실적 목표</span><span>${ap.toFixed(1)}%</span></div><div class="annual-grid"><div class="annual-tile"><div class="annual-l">누적 실적</div><div class="annual-v">${fmt(as)}</div><div class="annual-s">목표 ${fmt(ag)}</div></div><div class="annual-tile"><div class="annual-l">남은 금액</div><div class="annual-v">${fmt(ar)}</div><div class="annual-s">월 평균 필요 ${fmt(ar/Math.max(1,12-new Date().getMonth()))}</div></div></div><div class="barw"><div class="bar" style="width:${ap}%"></div></div><div class="annual-note"><span>RED 연 1,200만원 목표</span><span>${ap>=100?'달성 완료':'진행 중'}</span></div>${arw?`<div class="month-list">${arw}</div>`:`<div class="month-row">월별 기록은 실적 저장 후 표시됩니다.</div>`}</div>`}
   if(c.kind==='mboost'){let mp=Math.min(10000,Number(c.mPoint||0)),earned=Number(c.mPointEarned||0),usedM=Number(c.mPointUsed||0),net=earned-usedM,remainP=Math.max(0,10000-mp),spentForPoint=mp/0.05,remain=remainP/0.05,expected=Math.round(Math.min(10000,mp+remainP)),ep=pct(mp,10000);boost=`<div class="boost"><div class="bt"><span>M BOOST M포인트</span><span>${ep.toFixed(1)}%</span></div><div class="bg"><div class="bi"><div class="bl">현재 보유/적립</div><div class="bv">${num(mp)} M</div><div class="bs">월 한도 10,000 M</div></div><div class="bi"><div class="bl">남은 적립 가능</div><div class="bv">${fmt(remain)}</div><div class="bs">잔여 ${num(remainP)} M</div></div><div class="bi"><div class="bl">이번달 적립</div><div class="bv">${num(earned)} M</div><div class="bs">예상 최종 ${num(expected)} M</div></div><div class="bi"><div class="bl">이번달 사용 / 순증감</div><div class="bv">${num(usedM)} M</div><div class="bs">순증감 ${num(net)} M</div></div></div><div class="barw"><div class="bar" style="width:${ep}%"></div></div><div class="bn"><span>5% 기준 추정 사용액 ${fmt(spentForPoint)}</span><span>예상 추가적립 ${num(remainP)} M</span></div></div>`}
   return `<div class="card wallet-card premium ${tone.cls} ${st} ${c.collapsed?'collapsed':''} ${c.hidden?'hidden-card':''}" draggable="false" data-id="${c.id}" style="--card-color:${c.color}"><div class="wallet-face premium-face"><div class="drag" draggable="true" data-id="${c.id}">☰</div><div class="wallet-click" onclick="toggleCollapse('${c.id}')"><div class="premium-left"><div class="sim-chip"></div><div class="brand-line">${tone.brand}</div><div class="premium-title">${tone.title}</div><div class="premium-cardname">${c.name}</div><div class="premium-meta">${cp.labelName} · D-${cp.dleft}</div>${subTotal>0?`<div class="projected-chip">전체 구독 ${fmt(subTotal)}</div>`:''}<div class="asof-line">현재 금액 기준 ${cardSpentAsOfLabel(c)}</div></div><div class="premium-mid"><div class="ring" style="--p:${Math.min(100,pr).toFixed(0)}"><span>${pr.toFixed(0)}%</span></div></div><div class="premium-right"><div class="premium-spent"><small>현재 사용금액</small><b>${fmt(actualSpent)}</b><span>/ ${fmt(target)}</span></div><div class="premium-remain"><small>${projectedRemain>0?'추가 사용 필요':'예상 상태'}</small><b>${projectedRemain>0?fmt(projectedRemain):'예상 달성'}</b></div><button class="chev" type="button" onclick="event.stopPropagation();toggleCollapse('${c.id}')">›</button></div></div></div><div class="premium-bar"><div class="projected-layer" style="width:${Math.min(100,projectedPct)}%"></div><div class="actual-layer" style="width:${Math.min(100,pr)}%"></div></div><div class="premium-note"><span>${remainText}</span>${projectedRemain>0?`<b>하루 평균 ${fmt(daily)}</b>`:'<b>예상 완료</b>'}</div><div class="wallet-note"><div class="deadline ${dl.cls}">${dl.text}</div>${c.memo?`<div class="memo">${c.memo}</div>`:''}</div><div class="detail">${uxDetail}${annual}${boost}<div class="row quick-actions"><button class="btn primary" onclick="openSpend('${c.id}')">실적 입력</button>${c.kind==='mboost'?`<button class="btn blue" onclick="openMPoint()">M포인트 입력</button>`:''}<button class="btn" onclick="openCard('${c.id}')">카드 수정</button><button class="btn ${c.hidden?'blue':'orange'}" onclick="toggleHidden('${c.id}')">${c.hidden?'다시 표시':'숨김'}</button><button class="btn small" onclick="moveCard('${c.id}',-1)">⬆️</button><button class="btn small" onclick="moveCard('${c.id}',1)">⬇️</button></div></div></div>`
@@ -1167,7 +1258,7 @@ function deleteGroup(g){
 }
 
 function openSpend(id){let c=data.cards.find(x=>x.id===id);editing=id;mt.innerText=c.name+' 실적 입력';mb.innerHTML=`<div class="fg"><label>현재 사용금액</label><input id="spendInput" type="number" value="${c.spent||0}"></div><div class="fg"><label>금액 확인 기준일</label><input id="spendAsOfInput" type="date" value="${c.spentAsOfDate||todayYmd()}"><div class="hint">이 날짜까지 결제된 구독은 현재 사용금액에 포함된 것으로 추정합니다. 전체 구독 부담액은 모두 반영하되 중복만 제거합니다.</div></div><div class="fg"><label>실적 목표</label><input id="targetInput" type="number" value="${c.target||0}"></div>${c.annualGoal?`<div class="fg"><label>연간 누적 실적</label><input id="annualSpentInput" type="number" value="${c.annualSpent||0}"><div class="hint">RED 카드 연간 누적액도 함께 수정할 수 있습니다.</div></div>`:''}<div class="projection-explain">현재 사용금액 자체는 바꾸지 않습니다. 저장 후 현재 실적기간 전체 구독 부담액과 중복 제거된 예상 실적이 계산됩니다.</div><button class="btn primary" style="width:100%;margin-top:10px" onclick="saveSpend()">저장</button>`;openModal()}
-function saveSpend(){let c=data.cards.find(x=>x.id===editing);c.spent=Number(spendInput.value)||0;c.spentAsOfDate=spendAsOfInput.value||todayYmd();c.target=Number(targetInput.value)||0;if(c.annualGoal&&document.getElementById('annualSpentInput'))c.annualSpent=Number(annualSpentInput.value)||0;updateMonthlyRecord(c);updateRedAnnualFromRecords();closeModal();render();markLocalChanged();toast('현재 실적과 기준일을 저장했습니다');scheduleGithubAutoBackup()}
+function saveSpend(){let c=data.cards.find(x=>x.id===editing);c.spent=Number(spendInput.value)||0;c.spentAsOfDate=spendAsOfInput.value||todayYmd();c.target=Number(targetInput.value)||0;if(c.annualGoal&&document.getElementById('annualSpentInput'))c.annualSpent=Number(annualSpentInput.value)||0;updateMonthlyRecord(c,{source:'manual-save'});updateRedAnnualFromRecords();closeModal();render();markLocalChanged();toast('입력 기록을 추가하고 이번 실적기간 최종값을 갱신했습니다');scheduleGithubAutoBackup()}
 function openMPoint(){let c=data.cards.find(x=>x.kind==='mboost');mt.innerText='M BOOST M포인트 통계';mb.innerHTML=`<div class="fg"><label>현재 보유/적립 M포인트</label><input id="mpInput" type="number" value="${c.mPoint||0}"><div class="hint">예: 7,250 입력 → 추가 적립 가능 2,750 M / 추가 사용 가능 55,000원.</div></div><div class="fg"><label>이번달 적립 M포인트</label><input id="mpEarnedInput" type="number" value="${c.mPointEarned||0}"></div><div class="fg"><label>이번달 사용 M포인트</label><input id="mpUsedInput" type="number" value="${c.mPointUsed||0}"></div><button class="btn primary" style="width:100%" onclick="saveMPoint()">저장</button>`;openModal()}
 function saveMPoint(){let c=data.cards.find(x=>x.kind==='mboost');c.mPoint=Number(mpInput.value)||0;c.mPointEarned=Number(mpEarnedInput.value)||0;c.mPointUsed=Number(mpUsedInput.value)||0;markLocalChanged();closeModal();render();scheduleGithubAutoBackup()}
 function openCard(id){editing=id||null;let c=id?data.cards.find(x=>x.id===id):{name:'',short:'',color:COLORS[0],target:0,spent:0,hidden:false,kind:'normal',periodType:'monthly',memo:'',collapsed:true,group:'기타'};mt.innerText=id?'카드 수정':'카드 추가';mb.innerHTML=`<div class="fg"><label>카드명</label><input id="cardName" value="${c.name||''}"></div><div class="fg"><label>카드 약칭</label><input id="cardShort" value="${c.short||''}" maxlength="4"></div><div class="fg"><label>그룹</label><select id="cardGroup">${getGroups().map(g=>`<option ${g===(c.group||'기타')?'selected':''}>${g}</option>`).join('')}</select></div><div class="fg"><label>실적 목표</label><input id="cardTarget" type="number" value="${c.target||0}"></div><div class="fg"><label>현재 사용금액</label><input id="cardSpent" type="number" value="${c.spent||0}"></div><div class="fg"><label>금액 확인 기준일</label><input id="cardSpentAsOf" type="date" value="${c.spentAsOfDate||todayYmd()}"></div><div class="fg"><label>연간 목표금액 (RED 카드용, 없으면 0)</label><input id="annualGoal" type="number" value="${c.annualGoal||0}"><div class="hint">RED 카드 연 1,200만원 목표는 12000000 입력</div></div><div class="fg"><label>연간 누적 실적</label><input id="annualSpent" type="number" value="${c.annualSpent||0}"><div class="hint">월별 히스토리와 별개로 현재까지의 누적 실적을 직접 보정할 수 있습니다.</div></div><div class="fg"><label>메모</label><textarea id="cardMemo">${c.memo||''}</textarea></div><div class="fg"><label>산정기간</label><select id="cardPeriod"><option value="monthly" ${c.periodType!=='hyundai'?'selected':''}>해당월 1일~말일</option><option value="hyundai" ${c.periodType==='hyundai'?'selected':''}>현대카드 24일~23일</option></select></div><div class="fg"><label>색상</label><select id="cardColor">${COLORS.map(x=>`<option value="${x}" ${x===c.color?'selected':''}>${x}</option>`).join('')}</select></div><div class="fg"><label>카드 종류</label><select id="cardKind"><option value="normal" ${c.kind!=='mboost'?'selected':''}>일반 실적 카드</option><option value="mboost" ${c.kind==='mboost'?'selected':''}>M BOOST 간편결제 카드</option></select></div><div class="fg"><label>표시 상태</label><select id="cardHidden"><option value="false" ${!c.hidden?'selected':''}>표시</option><option value="true" ${c.hidden?'selected':''}>숨김</option></select></div><button class="btn primary" style="width:100%;margin-bottom:8px" onclick="saveCard()">저장</button>${id?`<button class="btn red" style="width:100%" onclick="deleteCard()">삭제</button>`:''}`;openModal()}
@@ -1209,7 +1300,24 @@ function filterHistoryCards(){
     el.style.display=(!q||(el.dataset.cardName||'').includes(q))?'':'none';
   });
 }
-function showHistory(){ensureMonthly();mt.innerText='월별 히스토리';let parts=[];const hasCards=data.cards.some(c=>{const rec=data.monthlyRecords[c.id]||{};return Object.keys(rec).length>0});if(hasCards)parts.push(`<div class="hist-filter-wrap fg"><input id="historyFilter" placeholder="카드명 검색" oninput="filterHistoryCards()"></div>`);data.cards.forEach(c=>{let rec=data.monthlyRecords[c.id]||{};let rows=Object.entries(rec).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,12);if(rows.length){parts.push(`<div class="notice history-card-block" data-card-name="${(c.name||'').toLowerCase()}"><b>${c.name}</b>${historyTrendHtml(rows)}${rows.map(([k,v])=>`<div class="month-row light"><span>${v.label}</span><b>${fmt(v.spent)}</b></div>`).join('')}</div>`)}});let slog=Array.isArray(data.subscriptionApplyLog)?data.subscriptionApplyLog.slice(0,20):[];if(slog.length){parts.push(`<div class="notice"><b>구독 처리 로그</b>${slog.map(x=>`<div class="month-row light"><span>${x.period||x.month||''} · ${x.subscriptionName}<br>${x.cardName} · ${new Date(x.confirmedAt||x.appliedAt).toLocaleString('ko-KR')}<br>${x.mode==='confirmed-only'?'현재 사용금액 포함 확인':'이전 버전 직접 반영 기록'}</span><b>${fmt(x.amount)}</b></div>`).join('')}</div>`)}let h=data.history||[];if(h.length){parts.push(`<div class="notice"><b>초기화 스냅샷</b>${h.map(x=>`<div class="month-row light"><span>${x.time}<br>${x.reason}</span><b>${fmt(x.total)}</b></div>`).join('')}</div>`)}mb.innerHTML=parts.length?parts.join(''):'<div class="hint">저장된 히스토리가 없습니다. 실적 입력 후 저장하면 카드별 월별 기록이 표시됩니다.</div>';openModal()}
+function showHistory(){
+  ensureMonthly();initializeMonthlyRecordHistory(data);mt.innerText='실적 히스토리';let parts=[];
+  const hasCards=data.cards.some(c=>Object.keys(data.monthlyRecords[c.id]||{}).length||monthlyRecordLogRows(c.id,1).length);
+  if(hasCards)parts.push(`<div class="hist-filter-wrap fg"><input id="historyFilter" placeholder="카드명 검색" oninput="filterHistoryCards()"></div><div class="hint" style="margin-bottom:12px">입력 기록은 저장할 때마다 남고, 월별·연간 최종 반영은 같은 실적기간의 가장 최근 값만 사용합니다.</div>`);
+  data.cards.forEach(c=>{
+    const rec=data.monthlyRecords[c.id]||{},finalRows=Object.entries(rec).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,12),inputRows=monthlyRecordLogRows(c.id,30);
+    if(finalRows.length||inputRows.length){
+      const finalHtml=finalRows.length?`<div class="hint" style="margin:12px 0 6px"><b>월별 최종 반영</b> · 기간별 최신값 1건</div>${historyTrendHtml(finalRows)}${finalRows.map(([k,v])=>`<div class="month-row light"><span>${v.label}${v.savedAt?`<br><small>최종 저장 ${v.savedAt}</small>`:''}</span><b>${fmt(v.spent)}</b></div>`).join('')}`:'';
+      const inputHtml=inputRows.length?`<div class="hint" style="margin:14px 0 6px"><b>실적 입력 기록</b> · 저장할 때마다 추가</div>${inputRows.map(v=>`<div class="month-row light"><span>${v.label}${v.savedAt?`<br><small>${v.savedAt}</small>`:''}</span><b>${fmt(v.spent)}</b></div>`).join('')}`:'';
+      parts.push(`<div class="notice history-card-block" data-card-name="${(c.name||'').toLowerCase()}"><b>${c.name}</b>${finalHtml}${inputHtml}</div>`);
+    }
+  });
+  let slog=Array.isArray(data.subscriptionApplyLog)?data.subscriptionApplyLog.slice(0,20):[];
+  if(slog.length)parts.push(`<div class="notice"><b>구독 처리 로그</b>${slog.map(x=>`<div class="month-row light"><span>${x.period||x.month||''} · ${x.subscriptionName}<br>${x.cardName} · ${new Date(x.confirmedAt||x.appliedAt).toLocaleString('ko-KR')}<br>${x.mode==='confirmed-only'?'현재 사용금액 포함 확인':'이전 버전 직접 반영 기록'}</span><b>${fmt(x.amount)}</b></div>`).join('')}</div>`);
+  let h=data.history||[];
+  if(h.length)parts.push(`<div class="notice"><b>초기화 스냅샷</b>${h.map(x=>`<div class="month-row light"><span>${x.time}<br>${x.reason}</span><b>${fmt(x.total)}</b></div>`).join('')}</div>`);
+  mb.innerHTML=parts.length?parts.join(''):'<div class="hint">저장된 히스토리가 없습니다. 실적 입력 후 저장하면 기록이 표시됩니다.</div>';openModal();
+}
 
 function getGithubConfig(){try{return JSON.parse(localStorage.getItem(GHCFG)||'{}')}catch(e){return {}}}
 function saveGithubConfig(cfg){localStorage.setItem(GHCFG,JSON.stringify(cfg))}
@@ -1397,8 +1505,8 @@ function resetPeriodCards(type,manual){
 function resetMonth(all){
   if(!confirm(all?'전체 데이터를 기본값으로 초기화할까요?':'모든 카드의 현재 사용금액/M포인트를 초기화할까요? 현대/기타가 모두 초기화됩니다.'))return;
   makeAutoBackup(all?'전체 초기화 전 저장':'사용금액 초기화 전 저장');
-  if(all){data={pinMboost:true,history:[],monthlyRecords:{},lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}
-  else{data.cards.forEach(c=>updateMonthlyRecord(c));saveSnapshot('전체 수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;c.spentAsOfDate=defaultResetAsOf(c);if(c.kind==='mboost'){c.mPoint=0;c.mPointEarned=0;c.mPointUsed=0}})}
+  if(all){data={pinMboost:true,history:[],monthlyRecords:{},monthlyRecordLog:[],monthlyRecordLogVersion:1,lastBackupAt:null,groups:[...defaultGroups],cards:JSON.parse(JSON.stringify(defaultCards))}}
+  else{data.cards.forEach(c=>updateMonthlyRecord(c,{source:'manual-reset'}));saveSnapshot('전체 수동 초기화 전 저장');data.cards.forEach(c=>{c.spent=0;c.spentAsOfDate=defaultResetAsOf(c);if(c.kind==='mboost'){c.mPoint=0;c.mPointEarned=0;c.mPointUsed=0}})}
   markLocalChanged();localStorage.setItem(MONTH,getPeriod('hyundai').key+'|'+getPeriod('monthly').key);render();scheduleGithubAutoBackup()
 }
 function backup(){data.lastBackupAt=Date.now();save();let payload={app:'card-benefit-manager',version:APP_VERSION,savedAt:new Date().toISOString(),data:data,subscriptions:getSubscriptions()};let b=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='card-benefit-backup.json';a.click();render();updateGithubPanel();toast('백업 파일을 만들었습니다')}

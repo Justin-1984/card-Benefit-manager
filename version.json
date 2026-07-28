@@ -1,24 +1,24 @@
 {
-  "version": "7.4.6",
-  "build": 746,
-  "releaseDate": "2026-07-14",
+  "version": "7.4.8",
+  "build": 748,
+  "releaseDate": "2026-07-28",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.4.6 Full Subscription Burden",
-  "message": "카드별 현재 실적기간의 전체 구독 부담액을 먼저 예약하고, 현재 사용금액에 이미 포함된 구독은 중복 계산하지 않도록 개선했습니다.",
+  "title": "BenefitManager PWA v7.4.8 Input History & Latest Reflection",
+  "message": "실적 입력 기록은 매 저장마다 보존하고, 월별 및 RED 연간 실적에는 같은 실적기간의 최신 저장값만 반영합니다.",
   "releaseNotes": [
-    "기준일 이후 구독만이 아니라 현재 실적기간의 전체 구독 부담액을 반영",
-    "현재 사용금액에 포함된 것으로 추정되는 구독은 중복 계산 방지",
-    "카드 상세에 전체 구독 부담액·포함 추정액·향후 결제액 표시",
-    "추가 사용 필요액을 전체 구독 예약 기준으로 계산"
+    "같은 실적기간에서도 실적 입력 기록을 매번 추가 저장",
+    "월별 최종 반영값은 같은 기간의 가장 최근 저장값으로 갱신",
+    "RED 연간 누적 실적은 기간별 최종값만 합산하여 중복 방지",
+    "기존 중복 월별 기록은 입력 로그로 보존하고 최종 반영 데이터만 자동 정리"
   ],
-  "name": "Full Subscription Burden",
-  "base": "v7.4.5 Actual & Projected Performance",
-  "updated": "2026-07-14",
+  "name": "Input History & Latest Reflection",
+  "base": "v7.4.6 Full Subscription Burden",
+  "updated": "2026-07-28",
   "notes": [
-    "카드매니저 전용 범위 유지",
-    "cards/subscriptions 저장 구조 변경 없음",
-    "기존 데이터 자동 호환",
-    "다음 업데이트 베이스로 사용 가능"
+    "사용자 확인 기준 v7.4.6에서 직접 수정",
+    "카드/구독 저장 구조 및 전체 구독 부담액 계산 유지",
+    "monthlyRecords는 기간별 최종값, monthlyRecordLog는 입력 이력으로 분리",
+    "기존 데이터 자동 호환"
   ]
 }

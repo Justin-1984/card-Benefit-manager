@@ -1,3 +1,13 @@
+# v7.4.8 Developer Notes
+
+- Confirmed baseline: v7.4.6.
+- `monthlyRecords` is the canonical latest value per card/period.
+- `monthlyRecordLog` is append-only (maximum 500 entries) and preserves every save.
+- Migration copies legacy entries into the log before canonical normalization.
+- Annual totals use only canonical `monthlyRecords`.
+
+---
+
 # Developer Notes - v7.4.5
 
 ## Baseline
