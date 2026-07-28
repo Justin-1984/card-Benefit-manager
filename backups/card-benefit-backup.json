@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.10",
-  "savedAt": "2026-07-28T09:20:02.301Z",
-  "savedAtMs": 1785230402301,
+  "savedAt": "2026-07-28T09:21:20.812Z",
+  "savedAtMs": 1785230480812,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -206,23 +206,19 @@
     ],
     "monthlyRecords": {
       "lotte": {
-        "monthly_2026-05-31_2026-06-29": {
-          "label": "2026.05.31 ~ 2026.06.29",
-          "spent": 323300,
-          "target": 300000,
-          "savedAt": "2026. 6. 27. 오후 4:54:23"
-        },
-        "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.06.30 ~ 2026.07.30",
-          "spent": 222060,
-          "target": 300000,
-          "savedAt": "2026. 7. 13. 오전 12:10:44"
-        },
         "monthly_2026-07-01_2026-07-31": {
           "label": "2026.07.01 ~ 2026.07.31",
           "spent": 322030,
           "target": 300000,
           "savedAt": "2026. 7. 24. 오후 10:03:17"
+        },
+        "monthly_2026-06-01_2026-06-30": {
+          "label": "2026.06.01 ~ 2026.06.30",
+          "spent": 323300,
+          "target": 300000,
+          "savedAt": "2026. 6. 27. 오후 4:54:00",
+          "savedAtMs": 1782546840000,
+          "source": "migration"
         }
       },
       "red": {
@@ -308,7 +304,7 @@
         }
       }
     },
-    "lastBackupAt": 1785230332042,
+    "lastBackupAt": 1785230406618,
     "groups": [
       "현대",
       "생활",
@@ -439,10 +435,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1785230402301,
+      "updatedAt": 1785230480812,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1785230402301
+      "savedAt": 1785230480812
     },
     "monthlyRecordLog": [
       {
@@ -526,19 +522,6 @@
         "source": "migration"
       },
       {
-        "id": "migrated_lotte_monthly_2026-06-30_2026-07-30_1",
-        "cardId": "lotte",
-        "cardName": "스페셜 롯데카드(LG전자)",
-        "key": "monthly_2026-06-30_2026-07-30",
-        "rawKey": "monthly_2026-06-30_2026-07-30",
-        "label": "2026.06.30 ~ 2026.07.30",
-        "spent": 222060,
-        "target": 300000,
-        "savedAt": "2026. 7. 13. 오전 12:10:44",
-        "savedAtMs": 1783869044000,
-        "source": "migration"
-      },
-      {
         "id": "migrated_woori_monthly_2026-06-30_2026-07-30_0",
         "cardId": "woori",
         "cardName": "LG전자 우리카드",
@@ -607,14 +590,16 @@
         "id": "migrated_lotte_monthly_2026-05-31_2026-06-29_0",
         "cardId": "lotte",
         "cardName": "스페셜 롯데카드(LG전자)",
-        "key": "monthly_2026-05-31_2026-06-29",
-        "rawKey": "monthly_2026-05-31_2026-06-29",
-        "label": "2026.05.31 ~ 2026.06.29",
+        "key": "monthly_2026-06-01_2026-06-30",
+        "rawKey": "monthly_2026-06-01_2026-06-30",
+        "label": "2026.06.01 ~ 2026.06.30",
         "spent": 323300,
         "target": 300000,
-        "savedAt": "2026. 6. 27. 오후 4:54:23",
-        "savedAtMs": 1782546863000,
-        "source": "migration"
+        "savedAt": "2026. 6. 27. 오후 4:54:00",
+        "savedAtMs": 1782546840000,
+        "source": "migration",
+        "editedAtMs": 1785230446412,
+        "editedAt": "2026. 7. 28. 오후 6:20:46"
       },
       {
         "id": "migrated_red_hyundai_2026-05-23_2026-06-22_0",
