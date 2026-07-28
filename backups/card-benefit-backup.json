@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.10",
-  "savedAt": "2026-07-28T09:39:01.140Z",
-  "savedAtMs": 1785231541140,
+  "savedAt": "2026-07-28T09:41:17.974Z",
+  "savedAtMs": 1785231677974,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -318,7 +318,7 @@
         }
       }
     },
-    "lastBackupAt": 1785231478787,
+    "lastBackupAt": 1785231542804,
     "groups": [
       "현대",
       "생활",
@@ -340,7 +340,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 3502302
       },
@@ -356,7 +356,7 @@
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
@@ -376,7 +376,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-14"
@@ -393,7 +393,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-14"
@@ -449,10 +449,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1785231541140,
+      "updatedAt": 1785231677973,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1785231541140
+      "savedAt": 1785231677974
     },
     "monthlyRecordLog": [
       {
@@ -838,7 +838,7 @@
       "applyLog": [],
       "id": "sub_1783997318930",
       "name": "APT 디지털 키",
-      "amount": 1000,
+      "amount": 1100,
       "rate": 1380,
       "day": 13,
       "cardId": "lotte"
