@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
-  "version": "7.4.6",
-  "savedAt": "2026-07-25T14:31:46.991Z",
-  "savedAtMs": 1784989906991,
+  "version": "7.4.10",
+  "savedAt": "2026-07-28T09:18:50.623Z",
+  "savedAtMs": 1785230330623,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -207,13 +207,13 @@
     "monthlyRecords": {
       "lotte": {
         "monthly_2026-05-31_2026-06-29": {
-          "label": "2026.06.01 ~ 2026.06.30",
+          "label": "2026.05.31 ~ 2026.06.29",
           "spent": 323300,
           "target": 300000,
           "savedAt": "2026. 6. 27. 오후 4:54:23"
         },
         "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.07.01 ~ 2026.07.31",
+          "label": "2026.06.30 ~ 2026.07.30",
           "spent": 222060,
           "target": 300000,
           "savedAt": "2026. 7. 13. 오전 12:10:44"
@@ -226,14 +226,8 @@
         }
       },
       "red": {
-        "hyundai_2026-05-23_2026-06-22": {
-          "label": "2026.05.24 ~ 2026.06.23",
-          "spent": 1048382,
-          "target": 1000000,
-          "savedAt": "2026. 6. 18. 오전 6:34:24"
-        },
         "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.07.01 ~ 2026.07.31",
+          "label": "2026.06.30 ~ 2026.07.30",
           "spent": 1341161,
           "target": 500000,
           "savedAt": "2026. 7. 13. 오전 12:12:02"
@@ -243,17 +237,25 @@
           "spent": 1474891,
           "target": 1000000,
           "savedAt": "2026. 7. 19. 오후 3:21:59"
+        },
+        "monthly_2026-05-23_2026-06-30": {
+          "label": "2026.05.23 ~ 2026.06.30",
+          "spent": 1687341,
+          "target": 1000000,
+          "savedAt": "2026. 6. 18. 오전 6:34:00",
+          "savedAtMs": 1781732040000,
+          "source": "migration"
         }
       },
       "ssg": {
         "monthly_2026-05-31_2026-06-29": {
-          "label": "2026.06.01 ~ 2026.06.30",
+          "label": "2026.05.31 ~ 2026.06.29",
           "spent": 404637,
           "target": 400000,
           "savedAt": "2026. 6. 27. 오후 8:29:49"
         },
         "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.07.01 ~ 2026.07.31",
+          "label": "2026.06.30 ~ 2026.07.30",
           "spent": 430009,
           "target": 400000,
           "savedAt": "2026. 7. 13. 오전 12:08:54"
@@ -261,7 +263,7 @@
       },
       "woori": {
         "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.07.01 ~ 2026.07.31",
+          "label": "2026.06.30 ~ 2026.07.30",
           "spent": 170000,
           "target": 300000,
           "savedAt": "2026. 7. 13. 오전 12:10:07"
@@ -275,7 +277,7 @@
       },
       "kakao": {
         "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.07.01 ~ 2026.07.31",
+          "label": "2026.06.30 ~ 2026.07.30",
           "spent": 48800,
           "target": 300000,
           "savedAt": "2026. 7. 1. 오후 3:07:15"
@@ -283,7 +285,7 @@
       },
       "hipass": {
         "monthly_2026-06-30_2026-07-30": {
-          "label": "2026.07.01 ~ 2026.07.31",
+          "label": "2026.06.30 ~ 2026.07.30",
           "spent": 0,
           "target": 100000,
           "savedAt": "2026. 7. 1. 오후 3:07:15"
@@ -291,7 +293,7 @@
       },
       "mboost": {
         "hyundai_2026-06-23_2026-07-22": {
-          "label": "2026.06.24 ~ 2026.07.23",
+          "label": "2026.06.23 ~ 2026.07.22",
           "spent": 623163,
           "target": 500000,
           "savedAt": "2026. 7. 13. 오전 12:12:38"
@@ -310,7 +312,7 @@
         }
       }
     },
-    "lastBackupAt": 1784989630484,
+    "lastBackupAt": 1784989908192,
     "groups": [
       "현대",
       "생활",
@@ -332,9 +334,9 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 12000000,
-        "annualSpent": 3864434
+        "annualSpent": 4503393
       },
       {
         "id": "mboost",
@@ -351,7 +353,7 @@
         "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
-        "mPoint": 2000,
+        "mPoint": 0,
         "mPointEarned": 0,
         "mPointUsed": 0,
         "spentAsOfDate": "2026-07-23"
@@ -368,7 +370,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-14"
@@ -385,7 +387,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-14"
@@ -441,11 +443,211 @@
       }
     ],
     "meta": {
-      "updatedAt": 1784989906990,
+      "updatedAt": 1785230330622,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1784989906991
-    }
+      "savedAt": 1785230330623
+    },
+    "monthlyRecordLog": [
+      {
+        "id": "migrated_mboost_hyundai_2026-07-24_2026-08-23_2",
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "key": "hyundai_2026-07-24_2026-08-23",
+        "rawKey": "hyundai_2026-07-24_2026-08-23",
+        "label": "2026.07.24 ~ 2026.08.23",
+        "spent": 137300,
+        "target": 1000000,
+        "savedAt": "2026. 7. 25. 오후 11:27:05",
+        "savedAtMs": 1784989625000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_lotte_monthly_2026-07-01_2026-07-31_2",
+        "cardId": "lotte",
+        "cardName": "스페셜 롯데카드(LG전자)",
+        "key": "monthly_2026-07-01_2026-07-31",
+        "rawKey": "monthly_2026-07-01_2026-07-31",
+        "label": "2026.07.01 ~ 2026.07.31",
+        "spent": 322030,
+        "target": 300000,
+        "savedAt": "2026. 7. 24. 오후 10:03:17",
+        "savedAtMs": 1784898197000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_mboost_hyundai_2026-06-24_2026-07-23_1",
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "key": "hyundai_2026-06-24_2026-07-23",
+        "rawKey": "hyundai_2026-06-24_2026-07-23",
+        "label": "2026.06.24 ~ 2026.07.23",
+        "spent": 735099,
+        "target": 1000000,
+        "savedAt": "2026. 7. 19. 오후 3:22:28",
+        "savedAtMs": 1784442148000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_red_monthly_2026-07-01_2026-07-31_2",
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "key": "monthly_2026-07-01_2026-07-31",
+        "rawKey": "monthly_2026-07-01_2026-07-31",
+        "label": "2026.07.01 ~ 2026.07.31",
+        "spent": 1474891,
+        "target": 1000000,
+        "savedAt": "2026. 7. 19. 오후 3:21:59",
+        "savedAtMs": 1784442119000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_woori_monthly_2026-07-01_2026-07-31_1",
+        "cardId": "woori",
+        "cardName": "LG전자 우리카드",
+        "key": "monthly_2026-07-01_2026-07-31",
+        "rawKey": "monthly_2026-07-01_2026-07-31",
+        "label": "2026.07.01 ~ 2026.07.31",
+        "spent": 315364,
+        "target": 300000,
+        "savedAt": "2026. 7. 19. 오후 3:21:00",
+        "savedAtMs": 1784442060000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_mboost_hyundai_2026-06-23_2026-07-22_0",
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "key": "hyundai_2026-06-23_2026-07-22",
+        "rawKey": "hyundai_2026-06-23_2026-07-22",
+        "label": "2026.06.23 ~ 2026.07.22",
+        "spent": 623163,
+        "target": 500000,
+        "savedAt": "2026. 7. 13. 오전 12:12:38",
+        "savedAtMs": 1783869158000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_red_monthly_2026-06-30_2026-07-30_1",
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "key": "monthly_2026-06-30_2026-07-30",
+        "rawKey": "monthly_2026-06-30_2026-07-30",
+        "label": "2026.06.30 ~ 2026.07.30",
+        "spent": 1341161,
+        "target": 500000,
+        "savedAt": "2026. 7. 13. 오전 12:12:02",
+        "savedAtMs": 1783869122000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_lotte_monthly_2026-06-30_2026-07-30_1",
+        "cardId": "lotte",
+        "cardName": "스페셜 롯데카드(LG전자)",
+        "key": "monthly_2026-06-30_2026-07-30",
+        "rawKey": "monthly_2026-06-30_2026-07-30",
+        "label": "2026.06.30 ~ 2026.07.30",
+        "spent": 222060,
+        "target": 300000,
+        "savedAt": "2026. 7. 13. 오전 12:10:44",
+        "savedAtMs": 1783869044000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_woori_monthly_2026-06-30_2026-07-30_0",
+        "cardId": "woori",
+        "cardName": "LG전자 우리카드",
+        "key": "monthly_2026-06-30_2026-07-30",
+        "rawKey": "monthly_2026-06-30_2026-07-30",
+        "label": "2026.06.30 ~ 2026.07.30",
+        "spent": 170000,
+        "target": 300000,
+        "savedAt": "2026. 7. 13. 오전 12:10:07",
+        "savedAtMs": 1783869007000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_ssg_monthly_2026-06-30_2026-07-30_1",
+        "cardId": "ssg",
+        "cardName": "SSG닷컴 삼성카드",
+        "key": "monthly_2026-06-30_2026-07-30",
+        "rawKey": "monthly_2026-06-30_2026-07-30",
+        "label": "2026.06.30 ~ 2026.07.30",
+        "spent": 430009,
+        "target": 400000,
+        "savedAt": "2026. 7. 13. 오전 12:08:54",
+        "savedAtMs": 1783868934000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_kakao_monthly_2026-06-30_2026-07-30_0",
+        "cardId": "kakao",
+        "cardName": "카카오페이신용카드 삼성",
+        "key": "monthly_2026-06-30_2026-07-30",
+        "rawKey": "monthly_2026-06-30_2026-07-30",
+        "label": "2026.06.30 ~ 2026.07.30",
+        "spent": 48800,
+        "target": 300000,
+        "savedAt": "2026. 7. 1. 오후 3:07:15",
+        "savedAtMs": 1782886035000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_hipass_monthly_2026-06-30_2026-07-30_0",
+        "cardId": "hipass",
+        "cardName": "카드의정석2 후불하이패스+",
+        "key": "monthly_2026-06-30_2026-07-30",
+        "rawKey": "monthly_2026-06-30_2026-07-30",
+        "label": "2026.06.30 ~ 2026.07.30",
+        "spent": 0,
+        "target": 100000,
+        "savedAt": "2026. 7. 1. 오후 3:07:15",
+        "savedAtMs": 1782886035000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_ssg_monthly_2026-05-31_2026-06-29_0",
+        "cardId": "ssg",
+        "cardName": "SSG닷컴 삼성카드",
+        "key": "monthly_2026-05-31_2026-06-29",
+        "rawKey": "monthly_2026-05-31_2026-06-29",
+        "label": "2026.05.31 ~ 2026.06.29",
+        "spent": 404637,
+        "target": 400000,
+        "savedAt": "2026. 6. 27. 오후 8:29:49",
+        "savedAtMs": 1782559789000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_lotte_monthly_2026-05-31_2026-06-29_0",
+        "cardId": "lotte",
+        "cardName": "스페셜 롯데카드(LG전자)",
+        "key": "monthly_2026-05-31_2026-06-29",
+        "rawKey": "monthly_2026-05-31_2026-06-29",
+        "label": "2026.05.31 ~ 2026.06.29",
+        "spent": 323300,
+        "target": 300000,
+        "savedAt": "2026. 6. 27. 오후 4:54:23",
+        "savedAtMs": 1782546863000,
+        "source": "migration"
+      },
+      {
+        "id": "migrated_red_hyundai_2026-05-23_2026-06-22_0",
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "key": "monthly_2026-05-23_2026-06-30",
+        "rawKey": "monthly_2026-05-23_2026-06-30",
+        "label": "2026.05.23 ~ 2026.06.30",
+        "spent": 1687341,
+        "target": 1000000,
+        "savedAt": "2026. 6. 18. 오전 6:34:00",
+        "savedAtMs": 1781732040000,
+        "source": "migration",
+        "editedAtMs": 1785230327457,
+        "editedAt": "2026. 7. 28. 오후 6:18:47"
+      }
+    ],
+    "monthlyRecordLogVersion": 1
   },
   "subscriptions": [
     {
