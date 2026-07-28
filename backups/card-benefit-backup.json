@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.10",
-  "savedAt": "2026-07-28T09:36:18.479Z",
-  "savedAtMs": 1785231378479,
+  "savedAt": "2026-07-28T09:37:57.570Z",
+  "savedAtMs": 1785231477570,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -266,7 +266,7 @@
         },
         "monthly_2026-06-01_2026-06-30": {
           "label": "2026.06.01 ~ 2026.06.30",
-          "spent": 170000,
+          "spent": 315364,
           "target": 300000,
           "savedAt": "2026. 7. 13. 오전 12:10:00",
           "savedAtMs": 1783869000000,
@@ -292,15 +292,19 @@
       "mboost": {
         "hyundai_2026-06-24_2026-07-23": {
           "label": "2026.06.24 ~ 2026.07.23",
-          "spent": 735099,
+          "spent": 2149560,
           "target": 1000000,
-          "savedAt": "2026. 7. 19. 오후 3:22:28"
+          "savedAt": "2026. 7. 19. 오후 3:22:00",
+          "savedAtMs": 1784442120000,
+          "source": "migration"
         },
         "hyundai_2026-07-24_2026-08-23": {
           "label": "2026.07.24 ~ 2026.08.23",
-          "spent": 137300,
+          "spent": 299280,
           "target": 1000000,
-          "savedAt": "2026. 7. 25. 오후 11:27:05"
+          "savedAt": "2026. 7. 25. 오후 11:27:00",
+          "savedAtMs": 1784989620000,
+          "source": "migration"
         },
         "hyundai_2026-05-24_2026-06-23": {
           "label": "2026.05.24 ~ 2026.06.23",
@@ -312,7 +316,7 @@
         }
       }
     },
-    "lastBackupAt": 1785230654425,
+    "lastBackupAt": 1785231382339,
     "groups": [
       "현대",
       "생활",
@@ -443,10 +447,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1785231378479,
+      "updatedAt": 1785231477570,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1785231378479
+      "savedAt": 1785231477570
     },
     "monthlyRecordLog": [
       {
@@ -456,11 +460,13 @@
         "key": "hyundai_2026-07-24_2026-08-23",
         "rawKey": "hyundai_2026-07-24_2026-08-23",
         "label": "2026.07.24 ~ 2026.08.23",
-        "spent": 137300,
+        "spent": 299280,
         "target": 1000000,
-        "savedAt": "2026. 7. 25. 오후 11:27:05",
-        "savedAtMs": 1784989625000,
-        "source": "migration"
+        "savedAt": "2026. 7. 25. 오후 11:27:00",
+        "savedAtMs": 1784989620000,
+        "source": "migration",
+        "editedAtMs": 1785231425274,
+        "editedAt": "2026. 7. 28. 오후 6:37:05"
       },
       {
         "id": "migrated_lotte_monthly_2026-07-01_2026-07-31_2",
@@ -482,11 +488,13 @@
         "key": "hyundai_2026-06-24_2026-07-23",
         "rawKey": "hyundai_2026-06-24_2026-07-23",
         "label": "2026.06.24 ~ 2026.07.23",
-        "spent": 735099,
+        "spent": 2149560,
         "target": 1000000,
-        "savedAt": "2026. 7. 19. 오후 3:22:28",
-        "savedAtMs": 1784442148000,
-        "source": "migration"
+        "savedAt": "2026. 7. 19. 오후 3:22:00",
+        "savedAtMs": 1784442120000,
+        "source": "migration",
+        "editedAtMs": 1785231388927,
+        "editedAt": "2026. 7. 28. 오후 6:36:28"
       },
       {
         "id": "migrated_red_monthly_2026-07-01_2026-07-31_2",
@@ -538,13 +546,13 @@
         "key": "monthly_2026-06-01_2026-06-30",
         "rawKey": "monthly_2026-06-01_2026-06-30",
         "label": "2026.06.01 ~ 2026.06.30",
-        "spent": 170000,
+        "spent": 315364,
         "target": 300000,
         "savedAt": "2026. 7. 13. 오전 12:10:00",
         "savedAtMs": 1783869000000,
         "source": "migration",
-        "editedAtMs": 1785230584269,
-        "editedAt": "2026. 7. 28. 오후 6:23:04"
+        "editedAtMs": 1785231471836,
+        "editedAt": "2026. 7. 28. 오후 6:37:51"
       },
       {
         "id": "migrated_ssg_monthly_2026-06-30_2026-07-30_1",
