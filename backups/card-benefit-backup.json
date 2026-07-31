@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.10",
-  "savedAt": "2026-07-31T14:57:05.186Z",
-  "savedAtMs": 1785509825186,
+  "savedAt": "2026-07-31T14:58:45.961Z",
+  "savedAtMs": 1785509925961,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -250,11 +250,11 @@
         },
         "monthly_2026-07-01_2026-07-31": {
           "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 432909,
+          "spent": 458309,
           "target": 400000,
-          "savedAt": "2026. 7. 13. 오전 12:08:00",
-          "savedAtMs": 1783868880000,
-          "source": "migration"
+          "savedAt": "2026. 7. 31. 오후 11:58:42",
+          "savedAtMs": 1785509922763,
+          "source": "manual-save"
         }
       },
       "woori": {
@@ -318,7 +318,7 @@
         }
       }
     },
-    "lastBackupAt": 1785231937110,
+    "lastBackupAt": 1785509826702,
     "groups": [
       "현대",
       "생활",
@@ -340,7 +340,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 3502302
       },
@@ -356,7 +356,7 @@
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
@@ -405,7 +405,7 @@
         "group": "생활",
         "color": "#f97316",
         "target": 400000,
-        "spent": 430009,
+        "spent": 458309,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -413,7 +413,7 @@
         "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
-        "spentAsOfDate": "2026-07-14"
+        "spentAsOfDate": "2026-07-31"
       },
       {
         "id": "kakao",
@@ -449,12 +449,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1785509825186,
+      "updatedAt": 1785509925961,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1785509825186
+      "savedAt": 1785509925961
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1785509922763_nbyyoq",
+        "cardId": "ssg",
+        "cardName": "SSG닷컴 삼성카드",
+        "key": "monthly_2026-07-01_2026-07-31",
+        "label": "2026.07.01 ~ 2026.07.31",
+        "spent": 458309,
+        "target": 400000,
+        "savedAt": "2026. 7. 31. 오후 11:58:42",
+        "savedAtMs": 1785509922763,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1785509822050_1n2exm",
         "cardId": "mboost",
