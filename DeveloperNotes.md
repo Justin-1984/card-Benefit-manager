@@ -1,3 +1,16 @@
+# v7.4.11 Developer Notes
+
+- 구독 결제건은 `subscription.paymentRecords[periodKey|dueDate]`에 저장합니다.
+- 저장 필드: `plannedAmount`, `actualAmount`, `paidDate`, `includedInCurrentSpent`, `dueDate`, `updatedAt`.
+- `card.spent`는 사용자가 입력한 카드사 현재 사용금액이며 구독 금액을 직접 더하지 않습니다.
+- 예상 실적 계산: `현재 사용금액 - 현재금액 포함 구독액 + 현재 실적기간 전체 구독 예정/실제금액`.
+- 실제 결제금액이 있는 구독은 예정금액 대신 `actualAmount`를 사용합니다.
+- `includedInCurrentSpent=false`인 결제건은 실제 결제됨 상태여도 현재 사용금액에 포함된 것으로 보지 않습니다.
+- 기존 `appliedMonths`는 현재금액 포함 확인 호환용으로 유지합니다.
+- v7.4.10의 `monthlyRecordLog` 수정/삭제 구조와 카드별 기간 정책은 변경하지 않았습니다.
+
+---
+
 # v7.4.10 Developer Notes
 
 - `monthlyRecordLog` 입력 기록은 삭제뿐 아니라 직접 수정할 수 있습니다.
