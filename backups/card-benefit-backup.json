@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.11",
-  "savedAt": "2026-08-12T08:54:33.333Z",
-  "savedAtMs": 1786524873333,
+  "savedAt": "2026-08-12T09:01:20.034Z",
+  "savedAtMs": 1786525280034,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1786524803071,
+    "lastBackupAt": 1786524874721,
     "groups": [
       "현대",
       "생활",
@@ -453,7 +453,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 12000000,
         "annualSpent": 4123611
       },
@@ -562,10 +562,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786524873333,
+      "updatedAt": 1786525280034,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786524873333
+      "savedAt": 1786525280034
     },
     "monthlyRecordLog": [
       {
@@ -906,6 +906,39 @@
     "subscriptionApplyLog": [
       {
         "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1786524927056,
+        "amount": 49020,
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "subscriptionId": "sub_1783997166377",
+        "subscriptionName": "2591 Mobile",
+        "dueDate": "2026-08-14",
+        "mode": "actual-included"
+      },
+      {
+        "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1786524909055,
+        "amount": 67760,
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "subscriptionId": "sub_1783997135416",
+        "subscriptionName": "4056 Mobile",
+        "dueDate": "2026-08-14",
+        "mode": "actual-included"
+      },
+      {
+        "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1786524878141,
+        "amount": 28900,
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "subscriptionId": "sub_1786524802401",
+        "subscriptionName": "LG 전자 구독료",
+        "dueDate": "2026-08-11",
+        "mode": "actual-included"
+      },
+      {
+        "period": "monthly_2026-08-01_2026-08-31",
         "confirmedAt": 1786524870250,
         "amount": 19900,
         "cardId": "red",
@@ -1223,8 +1256,29 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "appliedMonths": {},
-      "paymentRecords": {},
+      "appliedMonths": {
+        "monthly_2026-08-01_2026-08-31": {
+          "confirmedAt": 1786524909055,
+          "amount": 67760,
+          "cardId": "red",
+          "cardName": "SC제일은행-the Red",
+          "subscriptionName": "4056 Mobile",
+          "dueDate": "2026-08-14",
+          "mode": "actual-payment"
+        }
+      },
+      "paymentRecords": {
+        "monthly_2026-08-01_2026-08-31|2026-08-14": {
+          "dueDate": "2026-08-14",
+          "plannedAmount": 67760,
+          "actualAmount": 67760,
+          "paid": true,
+          "paidDate": "2026-08-14",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1786524909055,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783997135416",
@@ -1239,8 +1293,29 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "appliedMonths": {},
-      "paymentRecords": {},
+      "appliedMonths": {
+        "monthly_2026-08-01_2026-08-31": {
+          "confirmedAt": 1786524927056,
+          "amount": 49020,
+          "cardId": "red",
+          "cardName": "SC제일은행-the Red",
+          "subscriptionName": "2591 Mobile",
+          "dueDate": "2026-08-14",
+          "mode": "actual-payment"
+        }
+      },
+      "paymentRecords": {
+        "monthly_2026-08-01_2026-08-31|2026-08-14": {
+          "dueDate": "2026-08-14",
+          "plannedAmount": 49020,
+          "actualAmount": 49020,
+          "paid": true,
+          "paidDate": "2026-08-14",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1786524927056,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783997166377",
@@ -1472,8 +1547,29 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "appliedMonths": {},
-      "paymentRecords": {},
+      "appliedMonths": {
+        "monthly_2026-08-01_2026-08-31": {
+          "confirmedAt": 1786524878141,
+          "amount": 28900,
+          "cardId": "red",
+          "cardName": "SC제일은행-the Red",
+          "subscriptionName": "LG 전자 구독료",
+          "dueDate": "2026-08-11",
+          "mode": "actual-payment"
+        }
+      },
+      "paymentRecords": {
+        "monthly_2026-08-01_2026-08-31|2026-08-11": {
+          "dueDate": "2026-08-11",
+          "plannedAmount": 28900,
+          "actualAmount": 28900,
+          "paid": true,
+          "paidDate": "2026-08-11",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1786524878141,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1786524802401",
