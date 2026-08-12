@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.11",
-  "savedAt": "2026-08-12T08:47:42.354Z",
-  "savedAtMs": 1786524462354,
+  "savedAt": "2026-08-12T08:53:21.858Z",
+  "savedAtMs": 1786524801858,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1786524350914,
+    "lastBackupAt": 1786524463683,
     "groups": [
       "현대",
       "생활",
@@ -453,7 +453,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 4123611
       },
@@ -562,10 +562,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786524462354,
+      "updatedAt": 1786524801857,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786524462354
+      "savedAt": 1786524801858
     },
     "monthlyRecordLog": [
       {
@@ -1418,6 +1418,22 @@
       "rate": 1380,
       "day": 11,
       "cardId": "woori"
+    },
+    {
+      "active": true,
+      "currency": "KRW",
+      "cycle": "monthly",
+      "autoApply": true,
+      "appliedMonths": {},
+      "paymentRecords": {},
+      "category": "구독",
+      "applyLog": [],
+      "id": "sub_1786524609405",
+      "name": "LG 전자 구독료",
+      "amount": 19900,
+      "rate": 1380,
+      "day": 11,
+      "cardId": "red"
     }
   ]
 }
