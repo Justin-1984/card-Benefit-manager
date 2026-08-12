@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.11",
-  "savedAt": "2026-08-12T09:07:14.087Z",
-  "savedAtMs": 1786525634087,
+  "savedAt": "2026-08-12T09:10:27.467Z",
+  "savedAtMs": 1786525827467,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -331,11 +331,11 @@
         },
         "monthly_2026-07-01_2026-07-31": {
           "label": "2026.07.01 ~ 2026.07.31",
-          "spent": 458309,
+          "spent": 432909,
           "target": 400000,
-          "savedAt": "2026. 7. 31. 오후 11:58:42",
-          "savedAtMs": 1785509922763,
-          "source": "manual-save"
+          "savedAt": "2026. 7. 13. 오전 12:08:00",
+          "savedAtMs": 1783868880000,
+          "source": "migration"
         },
         "monthly_2026-08-01_2026-08-31": {
           "label": "2026.08.01 ~ 2026.08.31",
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1786525281769,
+    "lastBackupAt": 1786525635648,
     "groups": [
       "현대",
       "생활",
@@ -506,7 +506,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-08-31"
@@ -562,10 +562,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786525634087,
+      "updatedAt": 1786525827467,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786525634087
+      "savedAt": 1786525827467
     },
     "monthlyRecordLog": [
       {
@@ -653,18 +653,6 @@
         "source": "period-close"
       },
       {
-        "id": "mr_1785595401608_uuxv0v",
-        "cardId": "woori",
-        "cardName": "LG전자 우리카드",
-        "key": "monthly_2026-08-01_2026-08-31",
-        "label": "2026.08.01 ~ 2026.08.31",
-        "spent": 315364,
-        "target": 300000,
-        "savedAt": "2026. 8. 1. 오후 11:43:21",
-        "savedAtMs": 1785595401608,
-        "source": "period-close"
-      },
-      {
         "id": "mr_1785595401608_lfz2hu",
         "cardId": "lotte",
         "cardName": "스페셜 롯데카드(LG전자)",
@@ -687,18 +675,6 @@
         "savedAt": "2026. 8. 1. 오후 11:43:21",
         "savedAtMs": 1785595401603,
         "source": "period-close"
-      },
-      {
-        "id": "mr_1785509922763_nbyyoq",
-        "cardId": "ssg",
-        "cardName": "SSG닷컴 삼성카드",
-        "key": "monthly_2026-07-01_2026-07-31",
-        "label": "2026.07.01 ~ 2026.07.31",
-        "spent": 458309,
-        "target": 400000,
-        "savedAt": "2026. 7. 31. 오후 11:58:42",
-        "savedAtMs": 1785509922763,
-        "source": "manual-save"
       },
       {
         "id": "mr_1785509822050_1n2exm",
