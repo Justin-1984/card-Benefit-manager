@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.11",
-  "savedAt": "2026-08-12T08:42:12.807Z",
-  "savedAtMs": 1786524132807,
+  "savedAt": "2026-08-12T08:44:15.895Z",
+  "savedAtMs": 1786524255895,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1786512317100,
+    "lastBackupAt": 1786524134339,
     "groups": [
       "현대",
       "생활",
@@ -506,7 +506,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-31"
@@ -562,10 +562,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786524132807,
+      "updatedAt": 1786524255894,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786524132807
+      "savedAt": 1786524255895
     },
     "monthlyRecordLog": [
       {
@@ -890,7 +890,42 @@
         "editedAt": "2026. 7. 28. 오후 6:18:47"
       }
     ],
-    "monthlyRecordLogVersion": 1
+    "monthlyRecordLogVersion": 1,
+    "subscriptionApplyLog": [
+      {
+        "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1786524252919,
+        "amount": 12700,
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "subscriptionId": "sub_1783997049966",
+        "subscriptionName": "가스비",
+        "dueDate": "2026-08-07",
+        "mode": "actual-included"
+      },
+      {
+        "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1786524179761,
+        "amount": 110000,
+        "cardId": "woori",
+        "cardName": "LG전자 우리카드",
+        "subscriptionId": "sub_1783997374315",
+        "subscriptionName": "태권도",
+        "dueDate": "2026-08-03",
+        "mode": "actual-included"
+      },
+      {
+        "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1786524155993,
+        "amount": 0,
+        "cardId": "lotte",
+        "cardName": "스페셜 롯데카드(LG전자)",
+        "subscriptionId": "sub_1783997350239",
+        "subscriptionName": "피아노",
+        "dueDate": "2026-08-03",
+        "mode": "actual-included"
+      }
+    ]
   },
   "subscriptions": [
     {
@@ -978,8 +1013,29 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "appliedMonths": {},
-      "paymentRecords": {},
+      "appliedMonths": {
+        "monthly_2026-08-01_2026-08-31": {
+          "confirmedAt": 1786524252919,
+          "amount": 12700,
+          "cardId": "red",
+          "cardName": "SC제일은행-the Red",
+          "subscriptionName": "가스비",
+          "dueDate": "2026-08-07",
+          "mode": "actual-payment"
+        }
+      },
+      "paymentRecords": {
+        "monthly_2026-08-01_2026-08-31|2026-08-07": {
+          "dueDate": "2026-08-07",
+          "plannedAmount": 14000,
+          "actualAmount": 12700,
+          "paid": true,
+          "paidDate": "2026-08-07",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1786524252919,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783997049966",
@@ -1106,8 +1162,29 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "appliedMonths": {},
-      "paymentRecords": {},
+      "appliedMonths": {
+        "monthly_2026-08-01_2026-08-31": {
+          "confirmedAt": 1786524155993,
+          "amount": 0,
+          "cardId": "lotte",
+          "cardName": "스페셜 롯데카드(LG전자)",
+          "subscriptionName": "피아노",
+          "dueDate": "2026-08-03",
+          "mode": "actual-payment"
+        }
+      },
+      "paymentRecords": {
+        "monthly_2026-08-01_2026-08-31|2026-08-03": {
+          "dueDate": "2026-08-03",
+          "plannedAmount": 150000,
+          "actualAmount": 0,
+          "paid": true,
+          "paidDate": "2026-08-03",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1786524155993,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783997350239",
@@ -1122,8 +1199,29 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "appliedMonths": {},
-      "paymentRecords": {},
+      "appliedMonths": {
+        "monthly_2026-08-01_2026-08-31": {
+          "confirmedAt": 1786524179761,
+          "amount": 110000,
+          "cardId": "woori",
+          "cardName": "LG전자 우리카드",
+          "subscriptionName": "태권도",
+          "dueDate": "2026-08-03",
+          "mode": "actual-payment"
+        }
+      },
+      "paymentRecords": {
+        "monthly_2026-08-01_2026-08-31|2026-08-03": {
+          "dueDate": "2026-08-03",
+          "plannedAmount": 170000,
+          "actualAmount": 110000,
+          "paid": true,
+          "paidDate": "2026-08-03",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1786524179761,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783997374315",
