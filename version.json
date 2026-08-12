@@ -1,25 +1,25 @@
 {
-  "version": "7.4.12",
-  "build": 7412,
+  "version": "7.4.13",
+  "build": 7413,
   "releaseDate": "2026-08-12",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.4.12 Subscription Pending Projection Fix",
-  "message": "아직 결제일이 오지 않은 구독도 반영예정 금액으로 포함해 추가 사용 필요액을 계산합니다.",
+  "title": "BenefitManager PWA v7.4.13 Subscription Pending Final Fix",
+  "message": "아직 결제일이 오지 않은 구독의 반영예정 금액이 0원으로 고정되는 문제를 재수정하고 구독 카드 추천 기능을 제거했습니다.",
   "releaseNotes": [
-    "아직 결제일이 오지 않은 구독도 현재 실적기간의 반영예정 금액에 포함",
-    "기존 구독 데이터에서 autoApply 값이 없거나 레거시 false로 저장된 항목은 실적 계산 포함으로 보정",
-    "사용자가 v7.4.12 이후 명시적으로 일정만 관리로 저장한 구독만 실적 계산에서 제외",
-    "카드 상세의 구독 금액 표시를 현재 포함/반영예정으로 명확화",
-    "실제 결제 금액 수정 및 현재 사용금액 포함 여부 조정 기능 유지"
+    "미래 결제일 구독도 현재 실적기간 안이면 예정금액으로 반영예정에 포함",
+    "기존 결제 기록에 actualAmount 0이 잘못 남아 있어도 미결제 상태면 예정금액을 우선 사용",
+    "실제 결제 입력이 완료된 기록만 실제금액으로 예상 실적 계산",
+    "구독 화면의 카드 추천 패널과 추천 카드 변경 기능 제거",
+    "카드 spent 직접 수정 없음, 카드/구독 저장 구조 분리 유지"
   ],
-  "name": "Subscription Pending Projection Fix",
-  "base": "v7.4.11 Subscription Actual Payment Fix",
+  "name": "Subscription Pending Final Fix",
+  "base": "v7.4.12 Subscription Pending Projection Fix",
   "updated": "2026-08-12",
   "notes": [
-    "card.spent에는 구독 금액을 직접 더하지 않음",
-    "반영예정 금액은 현재 사용금액에 아직 포함되지 않은 현재 실적기간 구독액",
-    "예상 실적 = 현재 사용금액 - 현재 포함 구독액 + 현재 실적기간 전체 구독 예정/실제금액",
-    "카드/구독 저장 구조 분리 유지"
+    "반영예정 = 현재 실적기간 안에 있고 현재 사용금액에 아직 포함되지 않은 활성 구독액",
+    "예정금액은 실제 결제 전까지 0원이 아니라 등록된 구독 금액으로 계산",
+    "실제금액은 사용자가 실제 결제 입력/수정을 완료한 경우에만 예정금액을 대체",
+    "추천 기능은 구독 화면에서 제거"
   ]
 }

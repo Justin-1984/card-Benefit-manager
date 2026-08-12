@@ -1,3 +1,12 @@
+# v7.4.13 Developer Notes
+
+- Base: v7.4.12 Subscription Pending Projection Fix
+- Fixed pending subscription amount fallback.
+- Pending records with stale `actualAmount: 0` are treated as planned amount unless the payment record is actual/paid.
+- Actual amount overrides planned amount only when `paid === true`, `mode === 'actual-payment'`, or `includedInCurrentSpent === true`.
+- Removed visible subscription recommendation UI and render call.
+- No card `spent` mutation. Card data and subscription data remain separated.
+
 # v7.4.12 Developer Notes
 
 - Fixed pending subscription projection for future due dates within current card performance period.
