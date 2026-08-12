@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.10",
-  "savedAt": "2026-08-01T14:43:24.116Z",
-  "savedAtMs": 1785595404116,
+  "savedAt": "2026-08-12T05:25:15.469Z",
+  "savedAtMs": 1786512315470,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -313,11 +313,11 @@
         },
         "monthly_2026-08-01_2026-08-31": {
           "label": "2026.08.01 ~ 2026.08.31",
-          "spent": 1474891,
+          "spent": 144321,
           "target": 1000000,
-          "savedAt": "2026. 8. 1. 오후 11:43:21",
-          "savedAtMs": 1785595401603,
-          "source": "period-close"
+          "savedAt": "2026. 8. 1. 오후 11:44:09",
+          "savedAtMs": 1785595449369,
+          "source": "manual-save"
         }
       },
       "ssg": {
@@ -415,10 +415,10 @@
         },
         "hyundai_2026-07-24_2026-08-23": {
           "label": "2026.07.24 ~ 2026.08.23",
-          "spent": 400950,
+          "spent": 456250,
           "target": 1000000,
-          "savedAt": "2026. 7. 31. 오후 11:57:02",
-          "savedAtMs": 1785509822050,
+          "savedAt": "2026. 8. 12. 오후 2:25:12",
+          "savedAtMs": 1786512312393,
           "source": "manual-save"
         },
         "hyundai_2026-05-24_2026-06-23": {
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1785509927702,
+    "lastBackupAt": 1785595405785,
     "groups": [
       "현대",
       "생활",
@@ -447,15 +447,15 @@
         "group": "현대",
         "color": "#e11d48",
         "target": 1000000,
-        "spent": 0,
-        "spentAsOfDate": "2026-07-31",
+        "spent": 144321,
+        "spentAsOfDate": "2026-08-31",
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
         "collapsed": true,
         "annualGoal": 12000000,
-        "annualSpent": 4977193
+        "annualSpent": 3646623
       },
       {
         "id": "mboost",
@@ -464,12 +464,12 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 400950,
+        "spent": 456250,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
@@ -562,12 +562,36 @@
       }
     ],
     "meta": {
-      "updatedAt": 1785595404115,
+      "updatedAt": 1786512315469,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1785595404116
+      "savedAt": 1786512315469
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1786512312393_niziw2",
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "key": "hyundai_2026-07-24_2026-08-23",
+        "label": "2026.07.24 ~ 2026.08.23",
+        "spent": 456250,
+        "target": 1000000,
+        "savedAt": "2026. 8. 12. 오후 2:25:12",
+        "savedAtMs": 1786512312393,
+        "source": "manual-save"
+      },
+      {
+        "id": "mr_1785595449369_vcvobg",
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "key": "monthly_2026-08-01_2026-08-31",
+        "label": "2026.08.01 ~ 2026.08.31",
+        "spent": 144321,
+        "target": 1000000,
+        "savedAt": "2026. 8. 1. 오후 11:44:09",
+        "savedAtMs": 1785595449369,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1785595401609_6xmlr3",
         "cardId": "hipass",
