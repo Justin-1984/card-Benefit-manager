@@ -1,3 +1,10 @@
+# v7.4.12 Developer Notes
+
+- Fixed pending subscription projection for future due dates within current card performance period.
+- Legacy subscriptions without explicit v7.4.12 manual schedule-only choice are treated as performance-applicable.
+- Manual opt-out is preserved only when `autoApply=false` and `autoApplyManual=true`.
+- `card.spent` is not mutated by subscription projection.
+
 # v7.4.11 Developer Notes
 
 - 구독 결제건은 `subscription.paymentRecords[periodKey|dueDate]`에 저장합니다.

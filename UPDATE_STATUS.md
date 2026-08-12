@@ -1,3 +1,10 @@
+# v7.4.12 업데이트 상태
+
+- 기준 버전: v7.4.11
+- 수정 범위: 구독 반영예정 계산 로직
+- 상태: JavaScript 문법 검사 및 ZIP 무결성 검사 예정
+- 핵심: 아직 날짜가 오지 않은 구독도 추가 사용 필요액 계산에 포함
+
 # UPDATE STATUS
 
 ## v7.4.11 Subscription Actual Payment Fix
