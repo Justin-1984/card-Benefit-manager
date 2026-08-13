@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.13",
-  "savedAt": "2026-08-13T13:44:15.942Z",
-  "savedAtMs": 1786628655942,
+  "savedAt": "2026-08-13T13:45:35.441Z",
+  "savedAtMs": 1786628735441,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -423,7 +423,7 @@
         }
       }
     },
-    "lastBackupAt": 1786624658677,
+    "lastBackupAt": 1786628657681,
     "groups": [
       "현대",
       "생활",
@@ -554,10 +554,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786628655942,
+      "updatedAt": 1786628735440,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786628655942
+      "savedAt": 1786628735441
     },
     "monthlyRecordLog": [
       {
@@ -1526,7 +1526,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "autoApplyManual": false,
+      "autoApplyManual": true,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524870250,
@@ -1553,11 +1553,11 @@
       "category": "구독",
       "applyLog": [],
       "id": "sub_1786524609405",
-      "name": "LG 전자 구독료",
-      "amount": 19900,
+      "name": "LG 전자 구독료-워시타워",
+      "amount": 61100,
       "rate": 1380,
       "day": 11,
-      "cardId": "red"
+      "cardId": "mboost"
     },
     {
       "active": true,
