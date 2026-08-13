@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.13",
-  "savedAt": "2026-08-13T14:02:59.664Z",
-  "savedAtMs": 1786629779664,
+  "savedAt": "2026-08-13T14:06:07.281Z",
+  "savedAtMs": 1786629967281,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -423,7 +423,7 @@
         }
       }
     },
-    "lastBackupAt": 1786628736940,
+    "lastBackupAt": 1786629781169,
     "groups": [
       "현대",
       "생활",
@@ -554,10 +554,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786629779664,
+      "updatedAt": 1786629967281,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786629779664
+      "savedAt": 1786629967281
     },
     "monthlyRecordLog": [
       {
@@ -873,6 +873,17 @@
     "monthlyRecordLogVersion": 1,
     "subscriptionApplyLog": [
       {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1786629964082,
+        "amount": 49020,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783997166377",
+        "subscriptionName": "2591 Mobile",
+        "dueDate": "2026-08-14",
+        "mode": "actual-included"
+      },
+      {
         "period": "monthly_2026-08-01_2026-08-31",
         "confirmedAt": 1786624654626,
         "amount": 1100,
@@ -1078,7 +1089,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "autoApplyManual": false,
+      "autoApplyManual": true,
       "appliedMonths": {},
       "paymentRecords": {},
       "category": "구독",
@@ -1088,14 +1099,14 @@
       "amount": 9900,
       "rate": 1380,
       "day": 14,
-      "cardId": "red"
+      "cardId": "mboost"
     },
     {
       "active": true,
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "autoApplyManual": false,
+      "autoApplyManual": true,
       "appliedMonths": {},
       "paymentRecords": {},
       "category": "구독",
@@ -1105,7 +1116,7 @@
       "amount": 36300,
       "rate": 1380,
       "day": 23,
-      "cardId": "red"
+      "cardId": "mboost"
     },
     {
       "active": true,
@@ -1281,13 +1292,22 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "autoApplyManual": false,
+      "autoApplyManual": true,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524927056,
           "amount": 49020,
           "cardId": "red",
           "cardName": "SC제일은행-the Red",
+          "subscriptionName": "2591 Mobile",
+          "dueDate": "2026-08-14",
+          "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1786629964082,
+          "amount": 49020,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
           "subscriptionName": "2591 Mobile",
           "dueDate": "2026-08-14",
           "mode": "actual-payment"
@@ -1303,6 +1323,16 @@
           "includedInCurrentSpent": true,
           "updatedAt": 1786524927056,
           "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23|2026-08-14": {
+          "dueDate": "2026-08-14",
+          "plannedAmount": 49020,
+          "actualAmount": 49020,
+          "paid": true,
+          "paidDate": "2026-08-14",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1786629964082,
+          "mode": "actual-payment"
         }
       },
       "category": "구독",
@@ -1312,14 +1342,14 @@
       "amount": 49020,
       "rate": 1380,
       "day": 14,
-      "cardId": "red"
+      "cardId": "mboost"
     },
     {
       "active": true,
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "autoApplyManual": false,
+      "autoApplyManual": true,
       "appliedMonths": {},
       "paymentRecords": {},
       "category": "구독",
@@ -1329,7 +1359,7 @@
       "amount": 11000,
       "rate": 1380,
       "day": 14,
-      "cardId": "red"
+      "cardId": "mboost"
     },
     {
       "active": true,
