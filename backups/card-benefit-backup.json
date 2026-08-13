@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
-  "version": "7.4.11",
-  "savedAt": "2026-08-12T09:10:27.467Z",
-  "savedAtMs": 1786525827467,
+  "version": "7.4.13",
+  "savedAt": "2026-08-13T12:37:37.168Z",
+  "savedAtMs": 1786624657168,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -284,14 +284,6 @@
           "savedAt": "2026. 6. 27. 오후 4:54:00",
           "savedAtMs": 1782546840000,
           "source": "migration"
-        },
-        "monthly_2026-08-01_2026-08-31": {
-          "label": "2026.08.01 ~ 2026.08.31",
-          "spent": 322030,
-          "target": 300000,
-          "savedAt": "2026. 8. 1. 오후 11:43:21",
-          "savedAtMs": 1785595401608,
-          "source": "period-close"
         }
       },
       "red": {
@@ -339,11 +331,11 @@
         },
         "monthly_2026-08-01_2026-08-31": {
           "label": "2026.08.01 ~ 2026.08.31",
-          "spent": 458309,
+          "spent": 40878,
           "target": 400000,
-          "savedAt": "2026. 8. 1. 오후 11:43:21",
-          "savedAtMs": 1785595401608,
-          "source": "period-close"
+          "savedAt": "2026. 8. 12. 오후 6:10:43",
+          "savedAtMs": 1786525843021,
+          "source": "manual-save"
         }
       },
       "woori": {
@@ -431,7 +423,7 @@
         }
       }
     },
-    "lastBackupAt": 1786525635648,
+    "lastBackupAt": 1786525828778,
     "groups": [
       "현대",
       "생활",
@@ -453,7 +445,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 4123611
       },
@@ -489,7 +481,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-31"
@@ -506,7 +498,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-08-31"
@@ -518,7 +510,7 @@
         "group": "생활",
         "color": "#f97316",
         "target": 400000,
-        "spent": 0,
+        "spent": 40878,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -526,7 +518,7 @@
         "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
-        "spentAsOfDate": "2026-07-31"
+        "spentAsOfDate": "2026-08-31"
       },
       {
         "id": "kakao",
@@ -562,12 +554,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786525827467,
+      "updatedAt": 1786624657168,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786525827467
+      "savedAt": 1786624657168
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1786525843021_gqy8ek",
+        "cardId": "ssg",
+        "cardName": "SSG닷컴 삼성카드",
+        "key": "monthly_2026-08-01_2026-08-31",
+        "label": "2026.08.01 ~ 2026.08.31",
+        "spent": 40878,
+        "target": 400000,
+        "savedAt": "2026. 8. 12. 오후 6:10:43",
+        "savedAtMs": 1786525843021,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1786525631072_qaz4x2",
         "cardId": "woori",
@@ -635,30 +639,6 @@
         "key": "monthly_2026-08-01_2026-08-31",
         "label": "2026.08.01 ~ 2026.08.31",
         "spent": 0,
-        "target": 300000,
-        "savedAt": "2026. 8. 1. 오후 11:43:21",
-        "savedAtMs": 1785595401608,
-        "source": "period-close"
-      },
-      {
-        "id": "mr_1785595401608_l43ks2",
-        "cardId": "ssg",
-        "cardName": "SSG닷컴 삼성카드",
-        "key": "monthly_2026-08-01_2026-08-31",
-        "label": "2026.08.01 ~ 2026.08.31",
-        "spent": 458309,
-        "target": 400000,
-        "savedAt": "2026. 8. 1. 오후 11:43:21",
-        "savedAtMs": 1785595401608,
-        "source": "period-close"
-      },
-      {
-        "id": "mr_1785595401608_lfz2hu",
-        "cardId": "lotte",
-        "cardName": "스페셜 롯데카드(LG전자)",
-        "key": "monthly_2026-08-01_2026-08-31",
-        "label": "2026.08.01 ~ 2026.08.31",
-        "spent": 322030,
         "target": 300000,
         "savedAt": "2026. 8. 1. 오후 11:43:21",
         "savedAtMs": 1785595401608,
@@ -894,6 +874,17 @@
     "subscriptionApplyLog": [
       {
         "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1786624654626,
+        "amount": 1100,
+        "cardId": "lotte",
+        "cardName": "스페셜 롯데카드(LG전자)",
+        "subscriptionId": "sub_1783997318930",
+        "subscriptionName": "APT 디지털 키",
+        "dueDate": "2026-08-13",
+        "mode": "actual-included"
+      },
+      {
+        "period": "monthly_2026-08-01_2026-08-31",
         "confirmedAt": 1786524927056,
         "amount": 49020,
         "cardId": "red",
@@ -1032,6 +1023,7 @@
       "currency": "USD",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {},
       "paymentRecords": {},
       "category": "구독",
@@ -1048,6 +1040,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524373628,
@@ -1085,6 +1078,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {},
       "paymentRecords": {},
       "category": "구독",
@@ -1101,6 +1095,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {},
       "paymentRecords": {},
       "category": "구독",
@@ -1117,6 +1112,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {},
       "paymentRecords": {},
       "category": "구독",
@@ -1133,6 +1129,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524252919,
@@ -1170,6 +1167,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524297515,
@@ -1207,6 +1205,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524285983,
@@ -1244,6 +1243,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524909055,
@@ -1281,6 +1281,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524927056,
@@ -1318,6 +1319,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {},
       "paymentRecords": {},
       "category": "구독",
@@ -1334,6 +1336,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524345928,
@@ -1371,8 +1374,30 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
-      "appliedMonths": {},
-      "paymentRecords": {},
+      "autoApplyManual": false,
+      "appliedMonths": {
+        "monthly_2026-08-01_2026-08-31": {
+          "confirmedAt": 1786624654626,
+          "amount": 1100,
+          "cardId": "lotte",
+          "cardName": "스페셜 롯데카드(LG전자)",
+          "subscriptionName": "APT 디지털 키",
+          "dueDate": "2026-08-13",
+          "mode": "actual-payment"
+        }
+      },
+      "paymentRecords": {
+        "monthly_2026-08-01_2026-08-31|2026-08-13": {
+          "dueDate": "2026-08-13",
+          "plannedAmount": 1100,
+          "actualAmount": 1100,
+          "paid": true,
+          "paidDate": "2026-08-13",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1786624654626,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783997318930",
@@ -1387,6 +1412,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524155993,
@@ -1424,6 +1450,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524179761,
@@ -1461,6 +1488,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524365075,
@@ -1498,6 +1526,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524870250,
@@ -1535,6 +1564,7 @@
       "currency": "KRW",
       "cycle": "monthly",
       "autoApply": true,
+      "autoApplyManual": false,
       "appliedMonths": {
         "monthly_2026-08-01_2026-08-31": {
           "confirmedAt": 1786524878141,
