@@ -1,3 +1,10 @@
+# v7.4.14 Developer Notes
+
+- 구독 리스트 렌더링을 `subscriptionCardMarkup()` 공통 카드 마크업으로 분리했습니다.
+- `renderSubscriptionListByCard()`를 추가해 연결 카드 기준 그룹을 구성합니다.
+- 보기 모드는 `benefit-manager-subscription-list-mode-v7.4`에 저장합니다.
+- 구독 금액 계산 함수와 카드 `spent` 데이터는 변경하지 않았습니다.
+
 # v7.4.13 Developer Notes
 
 - Base: v7.4.12 Subscription Pending Projection Fix
