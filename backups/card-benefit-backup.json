@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-15T00:48:56.599Z",
-  "savedAtMs": 1786754936599,
+  "savedAt": "2026-08-15T00:49:34.386Z",
+  "savedAtMs": 1786754974386,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -423,7 +423,7 @@
         }
       }
     },
-    "lastBackupAt": 1786703020042,
+    "lastBackupAt": 1786754937932,
     "groups": [
       "현대",
       "생활",
@@ -554,10 +554,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786754936599,
+      "updatedAt": 1786754974385,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786754936599
+      "savedAt": 1786754974386
     },
     "monthlyRecordLog": [
       {
@@ -873,6 +873,39 @@
     "monthlyRecordLogVersion": 1,
     "subscriptionApplyLog": [
       {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1786754971351,
+        "amount": 11100,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783997250636",
+        "subscriptionName": "iCloud",
+        "dueDate": "2026-08-14",
+        "mode": "actual-pending"
+      },
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1786754959099,
+        "amount": 67760,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783997135416",
+        "subscriptionName": "4056 Mobile",
+        "dueDate": "2026-08-14",
+        "mode": "actual-pending"
+      },
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1786754949421,
+        "amount": 9900,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783869633986",
+        "subscriptionName": "디즈니+",
+        "dueDate": "2026-08-14",
+        "mode": "actual-pending"
+      },
+      {
         "period": "monthly_2026-08-01_2026-08-31",
         "confirmedAt": 1786754934056,
         "amount": 26364,
@@ -1113,7 +1146,18 @@
       "autoApply": true,
       "autoApplyManual": true,
       "appliedMonths": {},
-      "paymentRecords": {},
+      "paymentRecords": {
+        "hyundai_2026-07-24_2026-08-23|2026-08-14": {
+          "dueDate": "2026-08-14",
+          "plannedAmount": 9900,
+          "actualAmount": 9900,
+          "paid": true,
+          "paidDate": "2026-08-14",
+          "includedInCurrentSpent": false,
+          "updatedAt": 1786754949421,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783869633986",
@@ -1298,6 +1342,16 @@
           "includedInCurrentSpent": true,
           "updatedAt": 1786524909055,
           "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23|2026-08-14": {
+          "dueDate": "2026-08-14",
+          "plannedAmount": 67760,
+          "actualAmount": 67760,
+          "paid": true,
+          "paidDate": "2026-08-14",
+          "includedInCurrentSpent": false,
+          "updatedAt": 1786754959099,
+          "mode": "actual-payment"
         }
       },
       "category": "구독",
@@ -1373,7 +1427,18 @@
       "autoApply": true,
       "autoApplyManual": true,
       "appliedMonths": {},
-      "paymentRecords": {},
+      "paymentRecords": {
+        "hyundai_2026-07-24_2026-08-23|2026-08-14": {
+          "dueDate": "2026-08-14",
+          "plannedAmount": 11000,
+          "actualAmount": 11100,
+          "paid": true,
+          "paidDate": "2026-08-14",
+          "includedInCurrentSpent": false,
+          "updatedAt": 1786754971351,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783997250636",
