@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-14T10:23:37.978Z",
-  "savedAtMs": 1786703017978,
+  "savedAt": "2026-08-15T00:48:56.599Z",
+  "savedAtMs": 1786754936599,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -423,7 +423,7 @@
         }
       }
     },
-    "lastBackupAt": 1786666936674,
+    "lastBackupAt": 1786703020042,
     "groups": [
       "현대",
       "생활",
@@ -554,10 +554,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786703017978,
+      "updatedAt": 1786754936599,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786703017978
+      "savedAt": 1786754936599
     },
     "monthlyRecordLog": [
       {
@@ -873,6 +873,17 @@
     "monthlyRecordLogVersion": 1,
     "subscriptionApplyLog": [
       {
+        "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1786754934056,
+        "amount": 26364,
+        "cardId": "woori",
+        "cardName": "LG전자 우리카드",
+        "subscriptionId": "sub_1783869294115",
+        "subscriptionName": "ChatGPT",
+        "dueDate": "2026-08-14",
+        "mode": "actual-pending"
+      },
+      {
         "period": "hyundai_2026-07-24_2026-08-23",
         "confirmedAt": 1786629964082,
         "amount": 49020,
@@ -1036,7 +1047,18 @@
       "autoApply": true,
       "autoApplyManual": false,
       "appliedMonths": {},
-      "paymentRecords": {},
+      "paymentRecords": {
+        "monthly_2026-08-01_2026-08-31|2026-08-14": {
+          "dueDate": "2026-08-14",
+          "plannedAmount": 30000,
+          "actualAmount": 26364,
+          "paid": true,
+          "paidDate": "2026-08-14",
+          "includedInCurrentSpent": false,
+          "updatedAt": 1786754934056,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783869294115",
