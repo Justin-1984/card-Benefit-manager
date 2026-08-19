@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-19T10:50:33.702Z",
-  "savedAtMs": 1787136633702,
+  "savedAt": "2026-08-19T10:54:03.047Z",
+  "savedAtMs": 1787136843047,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -365,10 +365,10 @@
         },
         "monthly_2026-08-01_2026-08-31": {
           "label": "2026.08.01 ~ 2026.08.31",
-          "spent": 229000,
+          "spent": 255364,
           "target": 300000,
-          "savedAt": "2026. 8. 12. 오후 6:07:11",
-          "savedAtMs": 1786525631072,
+          "savedAt": "2026. 8. 19. 오후 7:53:59",
+          "savedAtMs": 1787136839767,
           "source": "manual-save"
         }
       },
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1787136567658,
+    "lastBackupAt": 1787136635010,
     "groups": [
       "현대",
       "생활",
@@ -501,12 +501,12 @@
         "group": "엘지 할인용",
         "color": "#e11d48",
         "target": 300000,
-        "spent": 229000,
+        "spent": 255364,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "30만원 정기결제용 연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-08-31"
@@ -562,12 +562,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787136633702,
+      "updatedAt": 1787136843047,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787136633702
+      "savedAt": 1787136843047
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1787136839767_vsok8t",
+        "cardId": "woori",
+        "cardName": "LG전자 우리카드",
+        "key": "monthly_2026-08-01_2026-08-31",
+        "label": "2026.08.01 ~ 2026.08.31",
+        "spent": 255364,
+        "target": 300000,
+        "savedAt": "2026. 8. 19. 오후 7:53:59",
+        "savedAtMs": 1787136839767,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1787136630717_jd07al",
         "cardId": "lotte",
