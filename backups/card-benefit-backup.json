@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-19T10:49:25.826Z",
-  "savedAtMs": 1787136565826,
+  "savedAt": "2026-08-19T10:50:33.702Z",
+  "savedAtMs": 1787136633702,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -284,6 +284,14 @@
           "savedAt": "2026. 6. 27. 오후 4:54:00",
           "savedAtMs": 1782546840000,
           "source": "migration"
+        },
+        "monthly_2026-08-01_2026-08-31": {
+          "label": "2026.08.01 ~ 2026.08.31",
+          "spent": 67730,
+          "target": 300000,
+          "savedAt": "2026. 8. 19. 오후 7:50:30",
+          "savedAtMs": 1787136630717,
+          "source": "manual-save"
         }
       },
       "red": {
@@ -423,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1786754975705,
+    "lastBackupAt": 1787136567658,
     "groups": [
       "현대",
       "생활",
@@ -461,7 +469,7 @@
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
@@ -476,7 +484,7 @@
         "group": "엘지 할인용",
         "color": "#a855f7",
         "target": 300000,
-        "spent": 0,
+        "spent": 67730,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -554,12 +562,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787136565825,
+      "updatedAt": 1787136633702,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787136565825
+      "savedAt": 1787136633702
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1787136630717_jd07al",
+        "cardId": "lotte",
+        "cardName": "스페셜 롯데카드(LG전자)",
+        "key": "monthly_2026-08-01_2026-08-31",
+        "label": "2026.08.01 ~ 2026.08.31",
+        "spent": 67730,
+        "target": 300000,
+        "savedAt": "2026. 8. 19. 오후 7:50:30",
+        "savedAtMs": 1787136630717,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1787136563277_ia37py",
         "cardId": "mboost",
