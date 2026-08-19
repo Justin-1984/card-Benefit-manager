@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-19T11:05:36.692Z",
-  "savedAtMs": 1787137536692,
+  "savedAt": "2026-08-19T11:08:00.513Z",
+  "savedAtMs": 1787137680513,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1787136917020,
+    "lastBackupAt": 1787137538577,
     "groups": [
       "현대",
       "생활",
@@ -469,7 +469,7 @@
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
@@ -562,10 +562,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787137536692,
+      "updatedAt": 1787137680513,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787137536692
+      "savedAt": 1787137680513
     },
     "monthlyRecordLog": [
       {
@@ -929,6 +929,61 @@
     "monthlyRecordLogVersion": 1,
     "subscriptionApplyLog": [
       {
+        "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1787137676109,
+        "amount": 26364,
+        "cardId": "woori",
+        "cardName": "LG전자 우리카드",
+        "subscriptionId": "sub_1783869294115",
+        "subscriptionName": "ChatGPT",
+        "dueDate": "2026-08-14",
+        "mode": "actual-included"
+      },
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1787137584412,
+        "amount": 1100,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783997318930",
+        "subscriptionName": "APT 디지털 키",
+        "dueDate": "2026-08-13",
+        "mode": "actual-included"
+      },
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1787137575821,
+        "amount": 17000,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783869492357",
+        "subscriptionName": "넷플릭스",
+        "dueDate": "2026-08-12",
+        "mode": "actual-included"
+      },
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1787137558146,
+        "amount": 19900,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1786524802401",
+        "subscriptionName": "LG 전자 구독료 - 광파오븐",
+        "dueDate": "2026-08-11",
+        "mode": "actual-included"
+      },
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1787137553422,
+        "amount": 61100,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1786524609405",
+        "subscriptionName": "LG 전자 구독료-워시타워",
+        "dueDate": "2026-08-11",
+        "mode": "actual-included"
+      },
+      {
         "period": "hyundai_2026-07-24_2026-08-23",
         "confirmedAt": 1787137532451,
         "amount": 86370,
@@ -1146,7 +1201,17 @@
       "cycle": "monthly",
       "autoApply": true,
       "autoApplyManual": false,
-      "appliedMonths": {},
+      "appliedMonths": {
+        "monthly_2026-08-01_2026-08-31": {
+          "confirmedAt": 1787137676109,
+          "amount": 26364,
+          "cardId": "woori",
+          "cardName": "LG전자 우리카드",
+          "subscriptionName": "ChatGPT",
+          "dueDate": "2026-08-14",
+          "mode": "actual-payment"
+        }
+      },
       "paymentRecords": {
         "monthly_2026-08-01_2026-08-31|2026-08-14": {
           "dueDate": "2026-08-14",
@@ -1154,8 +1219,8 @@
           "actualAmount": 26364,
           "paid": true,
           "paidDate": "2026-08-14",
-          "includedInCurrentSpent": false,
-          "updatedAt": 1786754934056,
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787137676109,
           "mode": "actual-payment"
         }
       },
@@ -1183,6 +1248,15 @@
           "subscriptionName": "넷플릭스",
           "dueDate": "2026-08-12",
           "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1787137575821,
+          "amount": 17000,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
+          "subscriptionName": "넷플릭스",
+          "dueDate": "2026-08-12",
+          "mode": "actual-payment"
         }
       },
       "paymentRecords": {
@@ -1194,6 +1268,16 @@
           "paidDate": "2026-08-12",
           "includedInCurrentSpent": true,
           "updatedAt": 1786524373628,
+          "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23|2026-08-12": {
+          "dueDate": "2026-08-12",
+          "plannedAmount": 17000,
+          "actualAmount": 17000,
+          "paid": true,
+          "paidDate": "2026-08-12",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787137575821,
           "mode": "actual-payment"
         }
       },
@@ -1587,6 +1671,15 @@
           "subscriptionName": "APT 디지털 키",
           "dueDate": "2026-08-13",
           "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1787137584412,
+          "amount": 1100,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
+          "subscriptionName": "APT 디지털 키",
+          "dueDate": "2026-08-13",
+          "mode": "actual-payment"
         }
       },
       "paymentRecords": {
@@ -1598,6 +1691,16 @@
           "paidDate": "2026-08-13",
           "includedInCurrentSpent": true,
           "updatedAt": 1786624654626,
+          "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23|2026-08-13": {
+          "dueDate": "2026-08-13",
+          "plannedAmount": 1100,
+          "actualAmount": 1100,
+          "paid": true,
+          "paidDate": "2026-08-13",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787137584412,
           "mode": "actual-payment"
         }
       },
@@ -1739,6 +1842,15 @@
           "subscriptionName": "LG 전자 구독료",
           "dueDate": "2026-08-11",
           "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1787137553422,
+          "amount": 61100,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
+          "subscriptionName": "LG 전자 구독료-워시타워",
+          "dueDate": "2026-08-11",
+          "mode": "actual-payment"
         }
       },
       "paymentRecords": {
@@ -1750,6 +1862,16 @@
           "paidDate": "2026-08-11",
           "includedInCurrentSpent": true,
           "updatedAt": 1786524870250,
+          "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23|2026-08-11": {
+          "dueDate": "2026-08-11",
+          "plannedAmount": 61100,
+          "actualAmount": 61100,
+          "paid": true,
+          "paidDate": "2026-08-11",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787137553422,
           "mode": "actual-payment"
         }
       },
@@ -1777,6 +1899,15 @@
           "subscriptionName": "LG 전자 구독료",
           "dueDate": "2026-08-11",
           "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1787137558146,
+          "amount": 19900,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
+          "subscriptionName": "LG 전자 구독료 - 광파오븐",
+          "dueDate": "2026-08-11",
+          "mode": "actual-payment"
         }
       },
       "paymentRecords": {
@@ -1788,6 +1919,16 @@
           "paidDate": "2026-08-11",
           "includedInCurrentSpent": true,
           "updatedAt": 1786524878141,
+          "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23|2026-08-11": {
+          "dueDate": "2026-08-11",
+          "plannedAmount": 19900,
+          "actualAmount": 19900,
+          "paid": true,
+          "paidDate": "2026-08-11",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787137558146,
           "mode": "actual-payment"
         }
       },
