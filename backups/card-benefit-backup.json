@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-15T00:49:34.386Z",
-  "savedAtMs": 1786754974386,
+  "savedAt": "2026-08-19T10:49:25.826Z",
+  "savedAtMs": 1787136565826,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -407,10 +407,10 @@
         },
         "hyundai_2026-07-24_2026-08-23": {
           "label": "2026.07.24 ~ 2026.08.23",
-          "spent": 456250,
+          "spent": 859530,
           "target": 1000000,
-          "savedAt": "2026. 8. 12. 오후 2:25:12",
-          "savedAtMs": 1786512312393,
+          "savedAt": "2026. 8. 19. 오후 7:49:23",
+          "savedAtMs": 1787136563277,
           "source": "manual-save"
         },
         "hyundai_2026-05-24_2026-06-23": {
@@ -423,7 +423,7 @@
         }
       }
     },
-    "lastBackupAt": 1786754937932,
+    "lastBackupAt": 1786754975705,
     "groups": [
       "현대",
       "생활",
@@ -456,12 +456,12 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 456250,
+        "spent": 859530,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
@@ -554,12 +554,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1786754974385,
+      "updatedAt": 1787136565825,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1786754974386
+      "savedAt": 1787136565825
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1787136563277_ia37py",
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "key": "hyundai_2026-07-24_2026-08-23",
+        "label": "2026.07.24 ~ 2026.08.23",
+        "spent": 859530,
+        "target": 1000000,
+        "savedAt": "2026. 8. 19. 오후 7:49:23",
+        "savedAtMs": 1787136563277,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1786525843021_gqy8ek",
         "cardId": "ssg",
