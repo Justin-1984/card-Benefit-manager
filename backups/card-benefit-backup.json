@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-19T10:55:15.819Z",
-  "savedAtMs": 1787136915819,
+  "savedAt": "2026-08-19T11:05:36.692Z",
+  "savedAtMs": 1787137536692,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1787136844640,
+    "lastBackupAt": 1787136917020,
     "groups": [
       "현대",
       "생활",
@@ -523,7 +523,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-08-31"
@@ -562,10 +562,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787136915819,
+      "updatedAt": 1787137536692,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787136915819
+      "savedAt": 1787137536692
     },
     "monthlyRecordLog": [
       {
@@ -928,6 +928,17 @@
     ],
     "monthlyRecordLogVersion": 1,
     "subscriptionApplyLog": [
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1787137532451,
+        "amount": 86370,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783997281013",
+        "subscriptionName": "8343 Mobile",
+        "dueDate": "2026-08-11",
+        "mode": "actual-included"
+      },
       {
         "period": "hyundai_2026-07-24_2026-08-23",
         "confirmedAt": 1786754971351,
@@ -1519,6 +1530,15 @@
           "subscriptionName": "8343 Mobile",
           "dueDate": "2026-08-11",
           "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1787137532451,
+          "amount": 86370,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
+          "subscriptionName": "8343 Mobile",
+          "dueDate": "2026-08-11",
+          "mode": "actual-payment"
         }
       },
       "paymentRecords": {
@@ -1530,6 +1550,16 @@
           "paidDate": "2026-08-11",
           "includedInCurrentSpent": true,
           "updatedAt": 1786524345928,
+          "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23|2026-08-11": {
+          "dueDate": "2026-08-11",
+          "plannedAmount": 115000,
+          "actualAmount": 86370,
+          "paid": true,
+          "paidDate": "2026-08-11",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787137532451,
           "mode": "actual-payment"
         }
       },
