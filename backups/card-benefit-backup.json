@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-19T11:08:00.513Z",
-  "savedAtMs": 1787137680513,
+  "savedAt": "2026-08-20T12:48:55.997Z",
+  "savedAtMs": 1787230135998,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -287,10 +287,10 @@
         },
         "monthly_2026-08-01_2026-08-31": {
           "label": "2026.08.01 ~ 2026.08.31",
-          "spent": 67730,
+          "spent": 299400,
           "target": 300000,
-          "savedAt": "2026. 8. 19. 오후 7:50:30",
-          "savedAtMs": 1787136630717,
+          "savedAt": "2026. 8. 20. 오후 9:48:53",
+          "savedAtMs": 1787230133452,
           "source": "manual-save"
         }
       },
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1787137538577,
+    "lastBackupAt": 1787137681936,
     "groups": [
       "현대",
       "생활",
@@ -469,7 +469,7 @@
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
@@ -484,12 +484,12 @@
         "group": "엘지 할인용",
         "color": "#a855f7",
         "target": 300000,
-        "spent": 67730,
+        "spent": 299400,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-31"
@@ -562,12 +562,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787137680513,
+      "updatedAt": 1787230135997,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787137680513
+      "savedAt": 1787230135997
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1787230133452_tw6yt3",
+        "cardId": "lotte",
+        "cardName": "스페셜 롯데카드(LG전자)",
+        "key": "monthly_2026-08-01_2026-08-31",
+        "label": "2026.08.01 ~ 2026.08.31",
+        "spent": 299400,
+        "target": 300000,
+        "savedAt": "2026. 8. 20. 오후 9:48:53",
+        "savedAtMs": 1787230133452,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1787136912632_0q94o6",
         "cardId": "ssg",
@@ -928,6 +940,39 @@
     ],
     "monthlyRecordLogVersion": 1,
     "subscriptionApplyLog": [
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1787137693926,
+        "amount": 11100,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783997250636",
+        "subscriptionName": "iCloud",
+        "dueDate": "2026-08-14",
+        "mode": "actual-included"
+      },
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1787137686902,
+        "amount": 67760,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783997135416",
+        "subscriptionName": "4056 Mobile",
+        "dueDate": "2026-08-14",
+        "mode": "actual-included"
+      },
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1787137681851,
+        "amount": 9900,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783869633986",
+        "subscriptionName": "디즈니+",
+        "dueDate": "2026-08-14",
+        "mode": "actual-included"
+      },
       {
         "period": "monthly_2026-08-01_2026-08-31",
         "confirmedAt": 1787137676109,
@@ -1296,7 +1341,17 @@
       "cycle": "monthly",
       "autoApply": true,
       "autoApplyManual": true,
-      "appliedMonths": {},
+      "appliedMonths": {
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1787137681851,
+          "amount": 9900,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
+          "subscriptionName": "디즈니+",
+          "dueDate": "2026-08-14",
+          "mode": "actual-payment"
+        }
+      },
       "paymentRecords": {
         "hyundai_2026-07-24_2026-08-23|2026-08-14": {
           "dueDate": "2026-08-14",
@@ -1304,8 +1359,8 @@
           "actualAmount": 9900,
           "paid": true,
           "paidDate": "2026-08-14",
-          "includedInCurrentSpent": false,
-          "updatedAt": 1786754949421,
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787137681851,
           "mode": "actual-payment"
         }
       },
@@ -1481,6 +1536,15 @@
           "subscriptionName": "4056 Mobile",
           "dueDate": "2026-08-14",
           "mode": "actual-payment"
+        },
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1787137686902,
+          "amount": 67760,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
+          "subscriptionName": "4056 Mobile",
+          "dueDate": "2026-08-14",
+          "mode": "actual-payment"
         }
       },
       "paymentRecords": {
@@ -1500,8 +1564,8 @@
           "actualAmount": 67760,
           "paid": true,
           "paidDate": "2026-08-14",
-          "includedInCurrentSpent": false,
-          "updatedAt": 1786754959099,
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787137686902,
           "mode": "actual-payment"
         }
       },
@@ -1577,7 +1641,17 @@
       "cycle": "monthly",
       "autoApply": true,
       "autoApplyManual": true,
-      "appliedMonths": {},
+      "appliedMonths": {
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1787137693926,
+          "amount": 11100,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
+          "subscriptionName": "iCloud",
+          "dueDate": "2026-08-14",
+          "mode": "actual-payment"
+        }
+      },
       "paymentRecords": {
         "hyundai_2026-07-24_2026-08-23|2026-08-14": {
           "dueDate": "2026-08-14",
@@ -1585,8 +1659,8 @@
           "actualAmount": 11100,
           "paid": true,
           "paidDate": "2026-08-14",
-          "includedInCurrentSpent": false,
-          "updatedAt": 1786754971351,
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787137693926,
           "mode": "actual-payment"
         }
       },
