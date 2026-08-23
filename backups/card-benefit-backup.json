@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-23T13:55:10.078Z",
-  "savedAtMs": 1787493310078,
+  "savedAt": "2026-08-23T13:56:43.103Z",
+  "savedAtMs": 1787493403103,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -365,10 +365,10 @@
         },
         "monthly_2026-08-01_2026-08-31": {
           "label": "2026.08.01 ~ 2026.08.31",
-          "spent": 255364,
+          "spent": 312254,
           "target": 300000,
-          "savedAt": "2026. 8. 19. 오후 7:53:59",
-          "savedAtMs": 1787136839767,
+          "savedAt": "2026. 8. 23. 오후 10:55:55",
+          "savedAtMs": 1787493355837,
           "source": "manual-save"
         }
       },
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1787493217513,
+    "lastBackupAt": 1787493311604,
     "groups": [
       "현대",
       "생활",
@@ -453,7 +453,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 4218811
       },
@@ -489,7 +489,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-08-31"
@@ -501,7 +501,7 @@
         "group": "엘지 할인용",
         "color": "#e11d48",
         "target": 300000,
-        "spent": 255364,
+        "spent": 312254,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
@@ -562,12 +562,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787493310077,
+      "updatedAt": 1787493403103,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787493310078
+      "savedAt": 1787493403103
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1787493355837_15vn4g",
+        "cardId": "woori",
+        "cardName": "LG전자 우리카드",
+        "key": "monthly_2026-08-01_2026-08-31",
+        "label": "2026.08.01 ~ 2026.08.31",
+        "spent": 312254,
+        "target": 300000,
+        "savedAt": "2026. 8. 23. 오후 10:55:55",
+        "savedAtMs": 1787493355837,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1787493305839_o4154o",
         "cardId": "lotte",
@@ -988,6 +1000,17 @@
     ],
     "monthlyRecordLogVersion": 1,
     "subscriptionApplyLog": [
+      {
+        "period": "hyundai_2026-07-24_2026-08-23",
+        "confirmedAt": 1787493399706,
+        "amount": 36300,
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "subscriptionId": "sub_1783996926949",
+        "subscriptionName": "SK 인터넷",
+        "dueDate": "2026-08-23",
+        "mode": "actual-included"
+      },
       {
         "period": "hyundai_2026-07-24_2026-08-23",
         "confirmedAt": 1787137693926,
@@ -1427,8 +1450,29 @@
       "cycle": "monthly",
       "autoApply": true,
       "autoApplyManual": true,
-      "appliedMonths": {},
-      "paymentRecords": {},
+      "appliedMonths": {
+        "hyundai_2026-07-24_2026-08-23": {
+          "confirmedAt": 1787493399706,
+          "amount": 36300,
+          "cardId": "mboost",
+          "cardName": "SC 현대카드 M BOOST",
+          "subscriptionName": "SK 인터넷",
+          "dueDate": "2026-08-23",
+          "mode": "actual-payment"
+        }
+      },
+      "paymentRecords": {
+        "hyundai_2026-07-24_2026-08-23|2026-08-23": {
+          "dueDate": "2026-08-23",
+          "plannedAmount": 36300,
+          "actualAmount": 36300,
+          "paid": true,
+          "paidDate": "2026-08-23",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787493399706,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783996926949",
