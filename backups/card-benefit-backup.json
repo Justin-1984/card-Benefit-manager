@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-23T13:56:43.103Z",
-  "savedAtMs": 1787493403103,
+  "savedAt": "2026-08-23T14:00:14.424Z",
+  "savedAtMs": 1787493614424,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1787493311604,
+    "lastBackupAt": 1787493404342,
     "groups": [
       "현대",
       "생활",
@@ -453,7 +453,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 12000000,
         "annualSpent": 4218811
       },
@@ -562,10 +562,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787493403103,
+      "updatedAt": 1787493614423,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787493403103
+      "savedAt": 1787493614424
     },
     "monthlyRecordLog": [
       {
