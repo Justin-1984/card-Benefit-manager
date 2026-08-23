@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-20T12:48:55.997Z",
-  "savedAtMs": 1787230135998,
+  "savedAt": "2026-08-23T13:52:35.618Z",
+  "savedAtMs": 1787493155618,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -339,10 +339,10 @@
         },
         "monthly_2026-08-01_2026-08-31": {
           "label": "2026.08.01 ~ 2026.08.31",
-          "spent": 284243,
+          "spent": 451563,
           "target": 400000,
-          "savedAt": "2026. 8. 19. 오후 7:55:12",
-          "savedAtMs": 1787136912632,
+          "savedAt": "2026. 8. 23. 오후 10:52:33",
+          "savedAtMs": 1787493153065,
           "source": "manual-save"
         }
       },
@@ -431,7 +431,7 @@
         }
       }
     },
-    "lastBackupAt": 1787137681936,
+    "lastBackupAt": 1787230137617,
     "groups": [
       "현대",
       "생활",
@@ -489,7 +489,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-07-31"
@@ -518,12 +518,12 @@
         "group": "생활",
         "color": "#f97316",
         "target": 400000,
-        "spent": 284243,
+        "spent": 451563,
         "hidden": false,
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연회비: 15,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "spentAsOfDate": "2026-08-31"
@@ -562,12 +562,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787230135997,
+      "updatedAt": 1787493155617,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787230135997
+      "savedAt": 1787493155618
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1787493153065_8w37mq",
+        "cardId": "ssg",
+        "cardName": "SSG닷컴 삼성카드",
+        "key": "monthly_2026-08-01_2026-08-31",
+        "label": "2026.08.01 ~ 2026.08.31",
+        "spent": 451563,
+        "target": 400000,
+        "savedAt": "2026. 8. 23. 오후 10:52:33",
+        "savedAtMs": 1787493153065,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1787230133452_tw6yt3",
         "cardId": "lotte",
