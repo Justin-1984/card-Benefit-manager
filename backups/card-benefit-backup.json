@@ -1,13 +1,78 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.14",
-  "savedAt": "2026-08-23T14:00:14.424Z",
-  "savedAtMs": 1787493614424,
+  "savedAt": "2026-08-24T09:42:37.603Z",
+  "savedAtMs": 1787564557603,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
     "pinMboost": false,
     "history": [
+      {
+        "time": "2026. 8. 24. 오후 6:42:35",
+        "reason": "M BOOST 자동 기간 전환 전 저장 · SC 현대카드 M BOOST 1,084,530원",
+        "hyundai": "2026.08.24 ~ 2026.09.23",
+        "monthly": "2026.08.01 ~ 2026.08.31",
+        "total": 2867656,
+        "cards": [
+          {
+            "name": "SC제일은행-the Red",
+            "spent": 716509,
+            "target": 1000000,
+            "mPoint": 0,
+            "annualSpent": 4218811,
+            "annualGoal": 12000000
+          },
+          {
+            "name": "SC 현대카드 M BOOST",
+            "spent": 1084530,
+            "target": 1000000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "스페셜 롯데카드(LG전자)",
+            "spent": 302800,
+            "target": 300000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "LG전자 우리카드",
+            "spent": 312254,
+            "target": 300000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "SSG닷컴 삼성카드",
+            "spent": 451563,
+            "target": 400000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "카카오페이신용카드 삼성",
+            "spent": 0,
+            "target": 300000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          },
+          {
+            "name": "카드의정석2 후불하이패스+",
+            "spent": 0,
+            "target": 100000,
+            "mPoint": 0,
+            "annualSpent": 0,
+            "annualGoal": 0
+          }
+        ]
+      },
       {
         "time": "2026. 8. 1. 오후 11:43:21",
         "reason": "기타카드 자동 월초 전환 전 저장 · SC제일은행-the Red 1,474,891원, 스페셜 롯데카드(LG전자) 322,030원, LG전자 우리카드 315,364원, SSG닷컴 삼성카드 458,309원, 카카오페이신용카드 삼성 0원, 카드의정석2 후불하이패스+ 0원",
@@ -428,10 +493,18 @@
           "savedAt": "2026. 7. 13. 오전 12:12:00",
           "savedAtMs": 1783869120000,
           "source": "migration"
+        },
+        "hyundai_2026-08-24_2026-09-23": {
+          "label": "2026.08.24 ~ 2026.09.23",
+          "spent": 1084530,
+          "target": 1000000,
+          "savedAt": "2026. 8. 24. 오후 6:42:35",
+          "savedAtMs": 1787564555090,
+          "source": "period-close"
         }
       }
     },
-    "lastBackupAt": 1787493404342,
+    "lastBackupAt": 1787493616079,
     "groups": [
       "현대",
       "생활",
@@ -464,7 +537,7 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 1084530,
+        "spent": 0,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
@@ -562,12 +635,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787493614423,
+      "updatedAt": 1787564557602,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787493614424
+      "savedAt": 1787564557603
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1787564555090_c4ntwp",
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "key": "hyundai_2026-08-24_2026-09-23",
+        "label": "2026.08.24 ~ 2026.09.23",
+        "spent": 1084530,
+        "target": 1000000,
+        "savedAt": "2026. 8. 24. 오후 6:42:35",
+        "savedAtMs": 1787564555090,
+        "source": "period-close"
+      },
       {
         "id": "mr_1787493355837_15vn4g",
         "cardId": "woori",
