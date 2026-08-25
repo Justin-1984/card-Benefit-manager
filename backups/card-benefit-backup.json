@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.15",
-  "savedAt": "2026-08-25T06:23:26.147Z",
-  "savedAtMs": 1787639006147,
+  "savedAt": "2026-08-25T08:57:44.940Z",
+  "savedAtMs": 1787648264940,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -504,7 +504,7 @@
         }
       }
     },
-    "lastBackupAt": 1787564646293,
+    "lastBackupAt": 1787639007717,
     "groups": [
       "현대",
       "생활",
@@ -542,14 +542,14 @@
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
         "mPointEarned": 0,
         "mPointUsed": 0,
         "spentAsOfDate": "2026-09-23",
-        "easyPaySpent": 65500
+        "easyPaySpent": 80600
       },
       {
         "id": "lotte",
@@ -636,10 +636,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787639006146,
+      "updatedAt": 1787648264939,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787639006147
+      "savedAt": 1787648264940
     },
     "monthlyRecordLog": [
       {
