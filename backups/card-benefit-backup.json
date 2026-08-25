@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
-  "version": "7.4.14",
-  "savedAt": "2026-08-24T09:44:05.086Z",
-  "savedAtMs": 1787564645086,
+  "version": "7.4.15",
+  "savedAt": "2026-08-25T06:23:26.147Z",
+  "savedAtMs": 1787639006147,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -496,15 +496,15 @@
         },
         "hyundai_2026-08-24_2026-09-23": {
           "label": "2026.08.24 ~ 2026.09.23",
-          "spent": 1084530,
+          "spent": 35500,
           "target": 1000000,
-          "savedAt": "2026. 8. 24. 오후 6:42:35",
-          "savedAtMs": 1787564555090,
-          "source": "period-close"
+          "savedAt": "2026. 8. 24. 오후 6:44:54",
+          "savedAtMs": 1787564694828,
+          "source": "manual-save"
         }
       }
     },
-    "lastBackupAt": 1787564559151,
+    "lastBackupAt": 1787564646293,
     "groups": [
       "현대",
       "생활",
@@ -526,7 +526,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 4218811
       },
@@ -537,7 +537,7 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 0,
+        "spent": 35500,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
@@ -548,7 +548,8 @@
         "mPoint": 0,
         "mPointEarned": 0,
         "mPointUsed": 0,
-        "spentAsOfDate": "2026-08-23"
+        "spentAsOfDate": "2026-09-23",
+        "easyPaySpent": 65500
       },
       {
         "id": "lotte",
@@ -635,12 +636,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787564645086,
+      "updatedAt": 1787639006146,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787564645086
+      "savedAt": 1787639006147
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1787564694828_b98gfi",
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "key": "hyundai_2026-08-24_2026-09-23",
+        "label": "2026.08.24 ~ 2026.09.23",
+        "spent": 35500,
+        "target": 1000000,
+        "savedAt": "2026. 8. 24. 오후 6:44:54",
+        "savedAtMs": 1787564694828,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1787564555090_c4ntwp",
         "cardId": "mboost",
