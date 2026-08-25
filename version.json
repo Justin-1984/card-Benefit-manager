@@ -1,24 +1,26 @@
 {
-  "version": "7.4.14",
-  "build": 7414,
-  "releaseDate": "2026-08-13",
+  "version": "7.4.15",
+  "build": 7415,
+  "releaseDate": "2026-08-25",
   "dataVersion": "1.0",
   "channel": "beta",
-  "title": "BenefitManager PWA v7.4.14 Subscription Card Group View",
-  "message": "구독 리스트를 카드별로 묶어 볼 수 있는 보기 모드를 추가했습니다.",
+  "title": "BenefitManager PWA v7.4.15 M BOOST EasyPay Fix",
+  "message": "M BOOST는 M포인트 총액 대신 간편결제 5% 20만원 한도만 관리하고, 미래 구독 반영예정 계산을 보정했습니다.",
   "releaseNotes": [
-    "구독 리스트 기본 보기를 카드별 그룹으로 변경",
-    "카드별 월 구독 총액, 현재 포함, 반영예정, 예상 실적, 추가 사용 필요액 표시",
-    "날짜순 보기와 카드별 보기 전환 버튼 추가",
-    "기존 구독 실제금액 수정, 현재금액 포함/해제, ON-OFF, 삭제 기능 유지",
+    "M BOOST M포인트 총액/적립/사용/순증감 관리 UI 제거",
+    "M BOOST 간편결제 5% 20만원 한도 관리로 변경",
+    "간편결제 사용액, 남은 한도, 예상 5% 적립 M포인트만 표시",
+    "20만원 초과분과 1.5% 전환 계산은 제외",
+    "기준일이 미래로 잡혀도 오늘 이후 구독은 현재금액 포함 추정하지 않고 반영예정으로 유지",
+    "카드별 구독 보기와 실제 결제금액 수정 기능 유지",
     "카드 spent 직접 수정 없음, 카드/구독 저장 구조 분리 유지"
   ],
-  "name": "Subscription Card Group View",
-  "base": "v7.4.13 Subscription Pending Final Fix",
-  "updated": "2026-08-13",
+  "name": "M BOOST EasyPay Fix",
+  "base": "v7.4.14 Subscription Card Group View",
+  "updated": "2026-08-25",
   "notes": [
-    "카드별 보기에서는 연결 카드 기준으로 구독을 묶어 보여줍니다.",
-    "날짜순 보기로 전환하면 기존처럼 결제 예정일 순서로 확인할 수 있습니다.",
-    "구독 예정/실제금액 계산 로직은 v7.4.13을 유지합니다."
+    "M BOOST는 월 20만원 간편결제 5% 혜택만 별도 관리합니다.",
+    "현대카드 앱에서 50만원 전 상세 적립이 보이지 않아도 앱 안에서 간편결제 사용액을 수동 관리할 수 있습니다.",
+    "아직 결제일이 오지 않은 구독은 반영예정으로 유지됩니다."
   ]
 }
