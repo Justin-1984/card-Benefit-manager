@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.15",
-  "savedAt": "2026-08-27T03:33:32.691Z",
-  "savedAtMs": 1787801612691,
+  "savedAt": "2026-08-27T08:22:14.712Z",
+  "savedAtMs": 1787818934713,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -504,7 +504,7 @@
         }
       }
     },
-    "lastBackupAt": 1787801523784,
+    "lastBackupAt": 1787801614560,
     "groups": [
       "현대",
       "생활",
@@ -526,7 +526,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": false,
+        "collapsed": true,
         "annualGoal": 12000000,
         "annualSpent": 4527683
       },
@@ -542,14 +542,14 @@
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
         "mPointEarned": 0,
         "mPointUsed": 0,
         "spentAsOfDate": "2026-09-23",
-        "easyPaySpent": 80600
+        "easyPaySpent": 133600
       },
       {
         "id": "lotte",
@@ -636,10 +636,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787801612691,
+      "updatedAt": 1787818934712,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787801612691
+      "savedAt": 1787818934712
     },
     "monthlyRecordLog": [
       {
