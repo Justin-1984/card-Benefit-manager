@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.15",
-  "savedAt": "2026-08-27T03:32:01.849Z",
-  "savedAtMs": 1787801521849,
+  "savedAt": "2026-08-27T03:33:32.691Z",
+  "savedAtMs": 1787801612691,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -378,10 +378,10 @@
         },
         "monthly_2026-08-01_2026-08-31": {
           "label": "2026.08.01 ~ 2026.08.31",
-          "spent": 716509,
+          "spent": 1025381,
           "target": 1000000,
-          "savedAt": "2026. 8. 23. 오후 10:54:12",
-          "savedAtMs": 1787493252906,
+          "savedAt": "2026. 8. 27. 오후 12:33:29",
+          "savedAtMs": 1787801609593,
           "source": "manual-save"
         }
       },
@@ -504,7 +504,7 @@
         }
       }
     },
-    "lastBackupAt": 1787648267013,
+    "lastBackupAt": 1787801523784,
     "groups": [
       "현대",
       "생활",
@@ -520,7 +520,7 @@
         "group": "현대",
         "color": "#e11d48",
         "target": 1000000,
-        "spent": 716509,
+        "spent": 1025381,
         "spentAsOfDate": "2026-08-31",
         "hidden": false,
         "kind": "normal",
@@ -528,7 +528,7 @@
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
         "collapsed": false,
         "annualGoal": 12000000,
-        "annualSpent": 4218811
+        "annualSpent": 4527683
       },
       {
         "id": "mboost",
@@ -636,12 +636,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787801521848,
+      "updatedAt": 1787801612691,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787801521849
+      "savedAt": 1787801612691
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1787801609593_zmrprk",
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "key": "monthly_2026-08-01_2026-08-31",
+        "label": "2026.08.01 ~ 2026.08.31",
+        "spent": 1025381,
+        "target": 1000000,
+        "savedAt": "2026. 8. 27. 오후 12:33:29",
+        "savedAtMs": 1787801609593,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1787564694828_b98gfi",
         "cardId": "mboost",
