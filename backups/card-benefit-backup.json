@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.15",
-  "savedAt": "2026-08-25T08:57:44.940Z",
-  "savedAtMs": 1787648264940,
+  "savedAt": "2026-08-27T03:32:01.849Z",
+  "savedAtMs": 1787801521849,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -504,7 +504,7 @@
         }
       }
     },
-    "lastBackupAt": 1787639007717,
+    "lastBackupAt": 1787648267013,
     "groups": [
       "현대",
       "생활",
@@ -526,7 +526,7 @@
         "kind": "normal",
         "periodType": "monthly",
         "memo": "연 1,200만원 실적 목표 연회비: 300,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 12000000,
         "annualSpent": 4218811
       },
@@ -636,10 +636,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787648264939,
+      "updatedAt": 1787801521848,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787648264940
+      "savedAt": 1787801521849
     },
     "monthlyRecordLog": [
       {
@@ -1098,6 +1098,17 @@
     ],
     "monthlyRecordLogVersion": 1,
     "subscriptionApplyLog": [
+      {
+        "period": "monthly_2026-08-01_2026-08-31",
+        "confirmedAt": 1787801519301,
+        "amount": 296560,
+        "cardId": "red",
+        "cardName": "SC제일은행-the Red",
+        "subscriptionId": "sub_1783997013937",
+        "subscriptionName": "APT 관리비",
+        "dueDate": "2026-08-25",
+        "mode": "actual-included"
+      },
       {
         "period": "hyundai_2026-07-24_2026-08-23",
         "confirmedAt": 1787493399706,
@@ -1586,8 +1597,29 @@
       "cycle": "monthly",
       "autoApply": true,
       "autoApplyManual": false,
-      "appliedMonths": {},
-      "paymentRecords": {},
+      "appliedMonths": {
+        "monthly_2026-08-01_2026-08-31": {
+          "confirmedAt": 1787801519301,
+          "amount": 296560,
+          "cardId": "red",
+          "cardName": "SC제일은행-the Red",
+          "subscriptionName": "APT 관리비",
+          "dueDate": "2026-08-25",
+          "mode": "actual-payment"
+        }
+      },
+      "paymentRecords": {
+        "monthly_2026-08-01_2026-08-31|2026-08-25": {
+          "dueDate": "2026-08-25",
+          "plannedAmount": 260000,
+          "actualAmount": 296560,
+          "paid": true,
+          "paidDate": "2026-08-25",
+          "includedInCurrentSpent": true,
+          "updatedAt": 1787801519301,
+          "mode": "actual-payment"
+        }
+      },
       "category": "구독",
       "applyLog": [],
       "id": "sub_1783997013937",
