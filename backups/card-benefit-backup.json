@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.15",
-  "savedAt": "2026-08-29T09:03:56.840Z",
-  "savedAtMs": 1787994236840,
+  "savedAt": "2026-08-29T09:08:12.315Z",
+  "savedAtMs": 1787994492315,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -504,7 +504,7 @@
         }
       }
     },
-    "lastBackupAt": 1787818936555,
+    "lastBackupAt": 1787994238447,
     "groups": [
       "현대",
       "생활",
@@ -549,7 +549,7 @@
         "mPointEarned": 0,
         "mPointUsed": 0,
         "spentAsOfDate": "2026-09-23",
-        "easyPaySpent": 154600
+        "easyPaySpent": 155600
       },
       {
         "id": "lotte",
@@ -636,10 +636,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1787994236840,
+      "updatedAt": 1787994492315,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1787994236840
+      "savedAt": 1787994492315
     },
     "monthlyRecordLog": [
       {
