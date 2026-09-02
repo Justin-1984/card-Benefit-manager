@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.15",
-  "savedAt": "2026-09-02T01:27:58.270Z",
-  "savedAtMs": 1788312478270,
+  "savedAt": "2026-09-02T02:01:24.217Z",
+  "savedAtMs": 1788314484217,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -609,15 +609,15 @@
         },
         "hyundai_2026-08-24_2026-09-23": {
           "label": "2026.08.24 ~ 2026.09.23",
-          "spent": 35500,
+          "spent": 910940,
           "target": 1000000,
-          "savedAt": "2026. 8. 24. 오후 6:44:54",
-          "savedAtMs": 1787564694828,
+          "savedAt": "2026. 9. 2. 오전 11:01:21",
+          "savedAtMs": 1788314481666,
           "source": "manual-save"
         }
       }
     },
-    "lastBackupAt": 1788312413687,
+    "lastBackupAt": 1788312479525,
     "groups": [
       "현대",
       "생활",
@@ -650,12 +650,12 @@
         "group": "현대",
         "color": "#0ea5e9",
         "target": 1000000,
-        "spent": 35500,
+        "spent": 910940,
         "hidden": false,
         "kind": "mboost",
         "periodType": "hyundai",
         "memo": "간편결제 5% M포인트 확인 연회비: 30,000",
-        "collapsed": true,
+        "collapsed": false,
         "annualGoal": 0,
         "annualSpent": 0,
         "mPoint": 0,
@@ -749,12 +749,24 @@
       }
     ],
     "meta": {
-      "updatedAt": 1788312478270,
+      "updatedAt": 1788314484216,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1788312478270
+      "savedAt": 1788314484217
     },
     "monthlyRecordLog": [
+      {
+        "id": "mr_1788314481666_os5sfp",
+        "cardId": "mboost",
+        "cardName": "SC 현대카드 M BOOST",
+        "key": "hyundai_2026-08-24_2026-09-23",
+        "label": "2026.08.24 ~ 2026.09.23",
+        "spent": 910940,
+        "target": 1000000,
+        "savedAt": "2026. 9. 2. 오전 11:01:21",
+        "savedAtMs": 1788314481666,
+        "source": "manual-save"
+      },
       {
         "id": "mr_1788255257403_1zjw0g",
         "cardId": "hipass",
@@ -1786,7 +1798,7 @@
       "amount": 36300,
       "rate": 1380,
       "day": 23,
-      "cardId": "mboost"
+      "cardId": "red"
     },
     {
       "active": true,
