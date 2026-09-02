@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.15",
-  "savedAt": "2026-09-01T09:34:19.915Z",
-  "savedAtMs": 1788255259915,
+  "savedAt": "2026-09-02T01:26:52.151Z",
+  "savedAtMs": 1788312412151,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -617,7 +617,7 @@
         }
       }
     },
-    "lastBackupAt": 1787994493655,
+    "lastBackupAt": 1788255261540,
     "groups": [
       "현대",
       "생활",
@@ -749,10 +749,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1788255259914,
+      "updatedAt": 1788312412151,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1788255259915
+      "savedAt": 1788312412151
     },
     "monthlyRecordLog": [
       {
@@ -2375,7 +2375,7 @@
       "amount": 61100,
       "rate": 1380,
       "day": 11,
-      "cardId": "mboost"
+      "cardId": "red"
     },
     {
       "active": true,
