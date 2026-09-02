@@ -1,8 +1,8 @@
 {
   "app": "card-benefit-manager",
   "version": "7.4.15",
-  "savedAt": "2026-09-02T01:26:52.151Z",
-  "savedAtMs": 1788312412151,
+  "savedAt": "2026-09-02T01:27:58.270Z",
+  "savedAtMs": 1788312478270,
   "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
   "deviceName": "iPhone",
   "data": {
@@ -617,7 +617,7 @@
         }
       }
     },
-    "lastBackupAt": 1788255261540,
+    "lastBackupAt": 1788312413687,
     "groups": [
       "현대",
       "생활",
@@ -749,10 +749,10 @@
       }
     ],
     "meta": {
-      "updatedAt": 1788312412151,
+      "updatedAt": 1788312478270,
       "deviceId": "dev_1782546721302_5f2f63fd3b7e7",
       "deviceName": "iPhone",
-      "savedAt": 1788312412151
+      "savedAt": 1788312478270
     },
     "monthlyRecordLog": [
       {
@@ -1710,7 +1710,7 @@
       "amount": 17000,
       "rate": 1380,
       "day": 12,
-      "cardId": "mboost"
+      "cardId": "red"
     },
     {
       "active": true,
@@ -1748,7 +1748,7 @@
       "amount": 9900,
       "rate": 1380,
       "day": 14,
-      "cardId": "mboost"
+      "cardId": "red"
     },
     {
       "active": true,
@@ -2052,7 +2052,7 @@
       "amount": 49020,
       "rate": 1380,
       "day": 14,
-      "cardId": "mboost"
+      "cardId": "red"
     },
     {
       "active": true,
@@ -2090,7 +2090,7 @@
       "amount": 11000,
       "rate": 1380,
       "day": 14,
-      "cardId": "mboost"
+      "cardId": "red"
     },
     {
       "active": true,
@@ -2204,7 +2204,7 @@
       "amount": 1100,
       "rate": 1380,
       "day": 13,
-      "cardId": "mboost"
+      "cardId": "red"
     },
     {
       "active": true,
@@ -2432,7 +2432,7 @@
       "amount": 19900,
       "rate": 1380,
       "day": 11,
-      "cardId": "mboost"
+      "cardId": "red"
     }
   ]
 }
